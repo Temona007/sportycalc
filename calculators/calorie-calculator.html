@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free calorie calculator. Calculate daily calorie needs for maintenance, weight loss (deficit), or muscle gain (surplus).">
+  <meta name="keywords" content="calorie calculator, daily calorie needs, calorie deficit, calorie surplus">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/calorie-calculator.html">
+  <title>Calorie Calculator – Daily Calorie Needs | SportyCalc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Calorie Calculator","description":"Calculate daily calorie needs","applicationCategory":"HealthApplication","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/" class="nav-link">Guides</a>
+        <a href="../blog/" class="nav-link">Blog</a>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">Calculators</a>
+      <a href="../guides/" class="mobile-nav-link">Guides</a>
+      <a href="../blog/" class="mobile-nav-link">Blog</a>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>Calorie Calculator</span>
+      </nav>
+      <h1>Calorie Calculator</h1>
+      <p class="hero-desc">Calculate your daily calorie needs for maintenance, weight loss (deficit), or muscle gain (surplus). Based on your TDEE and goals.</p>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <h2>Your Goals</h2>
+          <form id="calorie-form">
+            <div class="input-group">
+              <label for="tdee">Your TDEE (maintenance calories)</label>
+              <input type="number" id="tdee" placeholder="2200" min="500">
+              <small>Use our <a href="tdee-calculator.html">TDEE calculator</a> if you don't know this</small>
+            </div>
+            <div class="input-group">
+              <label for="goal">Goal</label>
+              <select id="goal">
+                <option value="maintain">Maintain weight</option>
+                <option value="lose">Lose fat (deficit)</option>
+                <option value="gain">Gain muscle (surplus)</option>
+              </select>
+            </div>
+            <div class="input-group" id="deficit-group">
+              <label for="deficit">Daily deficit (calories)</label>
+              <input type="number" id="deficit" placeholder="500" min="100" value="500">
+              <small>~500 cal/day ≈ 1 lb/week loss</small>
+            </div>
+            <div class="input-group" id="surplus-group" style="display:none">
+              <label for="surplus">Daily surplus (calories)</label>
+              <input type="number" id="surplus" placeholder="300" min="100" value="300">
+              <small>~300–500 cal surplus for lean gain</small>
+            </div>
+            <button type="submit" class="calc-btn">Calculate</button>
+          </form>
+        </div>
+        <div class="content-body">
+          <h2>Calorie Targets</h2>
+          <p>To lose weight, eat below TDEE. To gain muscle, eat above. For maintenance, eat at TDEE. Extreme deficits or surpluses can be counterproductive.</p>
+        </div>
+      </div>
+      <aside class="results-card">
+        <h3>Your Results</h3>
+        <div class="result-item">
+          <span class="result-label">Target Calories</span>
+          <span class="result-value" id="result-calories">—</span>
+        </div>
+        <div class="chart-container">
+          <span>Chart — Calorie intake vs deficit/surplus</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related</h3>
+      <div class="related-links">
+        <a href="tdee-calculator.html">TDEE Calculator</a>
+        <a href="macro-calculator.html">Macro Calculator</a>
+        <a href="../blog/weight-loss-calculation-tips.html">Weight Loss Tips</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/" class="footer-link">Guides</a>
+          <a href="../blog/" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

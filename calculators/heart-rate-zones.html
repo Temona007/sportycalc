@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free heart rate zones calculator. Calculate training zones for cardio, fat burn, and endurance. Based on max HR.">
+  <meta name="keywords" content="heart rate zones calculator, training zones, cardio zones">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/heart-rate-zones.html">
+  <title>Heart Rate Zones Calculator | SportyCalc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Heart Rate Zones Calculator","description":"Calculate training heart rate zones","applicationCategory":"HealthApplication","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/" class="nav-link">Guides</a>
+        <a href="../blog/" class="nav-link">Blog</a>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">Calculators</a>
+      <a href="../guides/" class="mobile-nav-link">Guides</a>
+      <a href="../blog/" class="mobile-nav-link">Blog</a>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>Heart Rate Zones</span>
+      </nav>
+      <h1>Heart Rate Zones Calculator</h1>
+      <p class="hero-desc">Calculate your training heart rate zones for fat burn, cardio, and high-intensity training. Enter your age or measured max HR.</p>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <h2>Your Data</h2>
+          <form id="hr-form">
+            <div class="input-group">
+              <label for="method">Method</label>
+              <select id="method">
+                <option value="age">Estimate from age (220 - age)</option>
+                <option value="max">I know my max HR</option>
+              </select>
+            </div>
+            <div class="input-group" id="age-group">
+              <label for="age">Age (years)</label>
+              <input type="number" id="age" placeholder="30" min="10" max="100">
+            </div>
+            <div class="input-group" id="maxhr-group" style="display:none">
+              <label for="maxhr">Max Heart Rate (bpm)</label>
+              <input type="number" id="maxhr" placeholder="190" min="100" max="220">
+            </div>
+            <button type="submit" class="calc-btn">Calculate Zones</button>
+          </form>
+        </div>
+        <div class="content-body">
+          <h2>Understanding Zones</h2>
+          <p>Different zones target different goals: Zone 2 for endurance, Zone 3 for aerobic fitness, Zone 4–5 for intensity and performance.</p>
+        </div>
+      </div>
+      <aside class="results-card">
+        <h3>Your Zones</h3>
+        <div class="result-item">
+          <span class="result-label">Max HR</span>
+          <span class="result-value" id="result-maxhr">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Zone 2 (60–70%)</span>
+          <span class="result-value" id="result-z2">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Zone 3 (70–80%)</span>
+          <span class="result-value" id="result-z3">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Zone 4 (80–90%)</span>
+          <span class="result-value" id="result-z4">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Zone 5 (90–100%)</span>
+          <span class="result-value" id="result-z5">—</span>
+        </div>
+        <div class="chart-container">
+          <span>Chart — Zone breakdown (Chart.js)</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related</h3>
+      <div class="related-links">
+        <a href="1rm-calculator.html">1RM Calculator</a>
+        <a href="calories-burned.html">Calories Burned</a>
+        <a href="../guides/fitness-metrics-explained.html">Fitness Metrics Explained</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/" class="footer-link">Guides</a>
+          <a href="../blog/" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

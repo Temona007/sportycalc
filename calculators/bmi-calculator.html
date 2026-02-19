@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free BMI calculator online. Calculate your Body Mass Index with metric or imperial units. See where you fall on the healthy weight range with a visual chart.">
+  <meta name="keywords" content="BMI calculator, body mass index calculator, BMI calculator online, calculate BMI">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/bmi-calculator.html">
+  <title>BMI Calculator – Body Mass Index | SportyCalc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"BMI Calculator","description":"Calculate your Body Mass Index (BMI) with metric or imperial units","applicationCategory":"HealthApplication","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/" class="nav-link">Guides</a>
+        <a href="../blog/" class="nav-link">Blog</a>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">Calculators</a>
+      <a href="../guides/" class="mobile-nav-link">Guides</a>
+      <a href="../blog/" class="mobile-nav-link">Blog</a>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>BMI Calculator</span>
+      </nav>
+      <h1>BMI Calculator</h1>
+      <p class="hero-desc">Calculate your Body Mass Index — a baseline health metric used to categorize weight status. Supports metric and imperial units.</p>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <h2>Enter Your Details</h2>
+          <form id="bmi-form">
+            <div class="unit-toggle">
+              <span class="unit-toggle-label">Unit System</span>
+              <div class="unit-toggle-btns">
+                <button type="button" class="unit-btn" data-unit="imperial">Imperial</button>
+                <button type="button" class="unit-btn active" data-unit="metric">Metric</button>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="sex">Sex</label>
+                <select id="sex">
+                  <option value="male" selected>Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" value="35" min="18" max="120" placeholder="35" required>
+                <small>years</small>
+              </div>
+            </div>
+            <div id="height-metric" class="input-group">
+              <label for="height-cm">Height</label>
+              <input type="number" id="height-cm" value="178" min="100" max="250" step="0.1" placeholder="178" required>
+              <small id="height-unit">cm</small>
+            </div>
+            <div id="height-imperial" class="input-row" style="display:none">
+              <div class="input-group">
+                <label for="height-ft">Height</label>
+                <input type="number" id="height-ft" min="3" max="8" placeholder="5" required>
+                <small>ft</small>
+              </div>
+              <div class="input-group">
+                <label for="height-in">&nbsp;</label>
+                <input type="number" id="height-in" min="0" max="11" step="0.5" placeholder="10" required>
+                <small>in</small>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="weight">Weight</label>
+              <input type="number" id="weight" value="80" min="1" step="0.1" placeholder="80" required>
+              <small id="weight-unit">kg</small>
+            </div>
+            <button type="submit" class="calc-btn">Calculate BMI</button>
+          </form>
+        </div>
+
+        <div class="seo-content">
+          <h2>Understanding BMI (Body Mass Index)</h2>
+          <p>BMI is a simple screening tool that uses height and weight to estimate body fat. While it doesn't measure body fat directly, BMI correlates with more precise measurements and helps identify potential weight-related health risks.</p>
+          <h3>BMI Categories</h3>
+          <ul>
+            <li><strong>Obese:</strong> BMI 30 or higher</li>
+            <li><strong>Overweight:</strong> BMI 25 to 29.9</li>
+            <li><strong>Normal weight:</strong> BMI 18.5 to 24.9</li>
+            <li><strong>Underweight:</strong> BMI below 18.5</li>
+          </ul>
+          <h3>BMI Limitations</h3>
+          <p>BMI doesn't distinguish between muscle and fat. Athletes may have high BMI despite low body fat. Consider waist circumference, body fat percentage, and overall health markers for a complete picture.</p>
+          <h2>FAQ</h2>
+          <div class="faq-item">
+            <h3>What is a healthy BMI?</h3>
+            <p>A BMI between 18.5 and 24.9 is considered healthy for most adults. However, optimal BMI varies by age, sex, and muscle mass. Consult your doctor for personalized guidance.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How accurate is BMI?</h3>
+            <p>BMI is a useful screening tool but has limitations. It may overestimate body fat in athletes and underestimate it in older adults. Use it alongside other measurements for best results.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Does BMI apply to children?</h3>
+            <p>Children use age and sex-specific BMI percentiles rather than adult categories. A pediatrician can interpret your child's BMI correctly.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="results-card">
+        <div class="bmi-result-main">
+          <span class="bmi-value" id="result-bmi">25.3</span>
+          <span class="bmi-label">Your BMI</span>
+          <span class="bmi-category" id="result-category">Overweight</span>
+        </div>
+        <div class="bmi-scale" id="bmi-scale" aria-label="BMI range scale">
+          <div class="bmi-scale-bar">
+            <div class="bmi-scale-marker" id="bmi-marker" style="left: 41%"></div>
+          </div>
+          <div class="bmi-scale-ticks">
+            <span>15</span>
+            <span>18.5</span>
+            <span>25</span>
+            <span>30</span>
+            <span>40</span>
+          </div>
+        </div>
+        <div class="bmi-category-cards">
+          <div class="bmi-category-card" data-category="underweight">
+            <span class="bmi-card-range">&lt; 18.5</span>
+            <span class="bmi-card-label">Underweight</span>
+          </div>
+          <div class="bmi-category-card" data-category="normal">
+            <span class="bmi-card-range">18.5 – 24.9</span>
+            <span class="bmi-card-label">Normal</span>
+          </div>
+          <div class="bmi-category-card" data-category="overweight">
+            <span class="bmi-card-range">25 – 29.9</span>
+            <span class="bmi-card-label">Overweight</span>
+          </div>
+          <div class="bmi-category-card" data-category="obese">
+            <span class="bmi-card-range">≥ 30</span>
+            <span class="bmi-card-label">Obese</span>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="result-label" id="min-weight-label">Min Healthy Weight (kg)</span>
+          <span class="result-value" id="result-min-weight">59</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label" id="max-weight-label">Max Healthy Weight (kg)</span>
+          <span class="result-value" id="result-max-weight">79</span>
+        </div>
+        <div class="bmi-chart-section">
+          <h4>BMI Chart</h4>
+          <div class="chart-container">
+            <canvas id="bmi-chart" aria-label="BMI range chart"></canvas>
+          </div>
+        </div>
+        <div class="bmi-disclaimer">
+          <strong>⚠️ Important Health Disclaimer:</strong> BMI serves as a basic screening tool but does not consider factors like muscle mass, bone structure, or body fat distribution. People with high muscle content, such as athletes, might register a higher BMI despite having minimal body fat. Always seek advice from a medical professional for a thorough evaluation of your health.
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related Calculators</h3>
+      <div class="related-links">
+        <a href="body-fat-calculator.html">Body Fat Calculator</a>
+        <a href="tdee-calculator.html">TDEE Calculator</a>
+        <a href="bmr-calculator.html">BMR Calculator</a>
+        <a href="calorie-calculator.html">Calorie Calculator</a>
+        <a href="../guides/fitness-metrics-explained.html">Fitness Metrics Guide</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/" class="footer-link">Guides</a>
+          <a href="../blog/" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/bmi-calculator.js"></script>
+</body>
+</html>

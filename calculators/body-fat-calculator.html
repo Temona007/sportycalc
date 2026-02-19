@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free body fat calculator. Estimate body fat percentage using the Navy method (measurements). No calipers required.">
+  <meta name="keywords" content="body fat calculator, body fat percentage, Navy method calculator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/body-fat-calculator.html">
+  <title>Body Fat Calculator – Navy Method | SportyCalc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Body Fat Calculator","description":"Estimate body fat % with Navy method","applicationCategory":"HealthApplication","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/" class="nav-link">Guides</a>
+        <a href="../blog/" class="nav-link">Blog</a>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">Calculators</a>
+      <a href="../guides/" class="mobile-nav-link">Guides</a>
+      <a href="../blog/" class="mobile-nav-link">Blog</a>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>Body Fat Calculator</span>
+      </nav>
+      <h1>Body Fat Calculator</h1>
+      <p class="hero-desc">Estimate your body fat percentage using the Navy method — circumference measurements. No calipers needed. Works for men and women.</p>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <h2>Measurements</h2>
+          <form id="bodyfat-form">
+            <div class="unit-toggle">
+              <button type="button" class="unit-btn active" data-unit="metric">Metric</button>
+              <button type="button" class="unit-btn" data-unit="imperial">Imperial</button>
+            </div>
+            <div class="input-group">
+              <label for="gender">Gender</label>
+              <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="height">Height</label>
+              <input type="number" id="height" placeholder="170" min="1" step="0.1">
+              <small id="height-unit">cm</small>
+            </div>
+            <div class="input-group">
+              <label for="neck">Neck circumference</label>
+              <input type="number" id="neck" placeholder="38" min="1" step="0.1">
+              <small id="neck-unit">cm</small>
+            </div>
+            <div class="input-group" id="waist-group">
+              <label for="waist">Waist circumference (at navel)</label>
+              <input type="number" id="waist" placeholder="80" min="1" step="0.1">
+              <small id="waist-unit">cm</small>
+            </div>
+            <div class="input-group" id="hip-group">
+              <label for="hip">Hip circumference (widest point)</label>
+              <input type="number" id="hip" placeholder="95" min="1" step="0.1">
+              <small>Required for women</small>
+            </div>
+            <button type="submit" class="calc-btn">Calculate Body Fat %</button>
+          </form>
+        </div>
+        <div class="content-body">
+          <h2>Navy Method</h2>
+          <p>The Navy/DoD formula uses circumference measurements to estimate body fat. It's convenient and reasonably accurate when measurements are taken correctly.</p>
+        </div>
+      </div>
+      <aside class="results-card">
+        <h3>Your Results</h3>
+        <div class="result-item">
+          <span class="result-label">Body Fat %</span>
+          <span class="result-value" id="result-bf">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Category</span>
+          <span class="result-value" id="result-category">—</span>
+        </div>
+        <div class="chart-container">
+          <span>Chart — BF % range visualization</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related</h3>
+      <div class="related-links">
+        <a href="bmi-calculator.html">BMI Calculator</a>
+        <a href="macro-calculator.html">Macro Calculator</a>
+        <a href="../guides/fitness-metrics-explained.html">Fitness Metrics Explained</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/" class="footer-link">Guides</a>
+          <a href="../blog/" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

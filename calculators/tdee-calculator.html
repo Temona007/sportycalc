@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Master your calorie needs with our free TDEE calculator. Estimate total daily energy expenditure for weight loss, muscle building, or maintenance. Mifflin-St Jeor based, WHO-endorsed activity factors.">
+  <meta name="keywords" content="TDEE calculator, calculate TDEE, total daily energy expenditure">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/tdee-calculator.html">
+  <title>Master Your Calorie Needs: Free TDEE Calculator | SportyCalc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"TDEE Calculator","description":"Calculate Total Daily Energy Expenditure","applicationCategory":"HealthApplication","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/" class="nav-link">Guides</a>
+        <a href="../blog/" class="nav-link">Blog</a>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">Calculators</a>
+      <a href="../guides/" class="mobile-nav-link">Guides</a>
+      <a href="../blog/" class="mobile-nav-link">Blog</a>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>TDEE Calculator</span>
+      </nav>
+      <h1>Master Your Calorie Needs: Free TDEE Calculator</h1>
+      <p class="hero-desc">Ready to take control of your daily energy balance? Our TDEE Calculator estimates total calories your body burns in a day—perfect for weight loss, muscle building, or maintenance.</p>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <h2>Enter Your Details</h2>
+          <form id="tdee-form">
+            <div class="unit-toggle">
+              <button type="button" class="unit-btn active" data-unit="metric">Metric</button>
+              <button type="button" class="unit-btn" data-unit="imperial">Imperial</button>
+            </div>
+            <div class="input-group">
+              <label for="gender">Gender</label>
+              <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="age">Age (years)</label>
+              <input type="number" id="age" placeholder="30" min="15" max="100">
+            </div>
+            <div class="input-group">
+              <label for="weight">Weight</label>
+              <input type="number" id="weight" placeholder="70" min="1" step="0.1">
+              <small id="weight-unit">kg</small>
+            </div>
+            <div class="input-group">
+              <label for="height">Height</label>
+              <input type="number" id="height" placeholder="170" min="1" step="0.1">
+              <small id="height-unit">cm</small>
+            </div>
+            <div class="input-group">
+              <label for="activity">Activity Level</label>
+              <select id="activity">
+                <option value="1.2">Sedentary (little/no exercise)</option>
+                <option value="1.375">Light (1–3 days/week)</option>
+                <option value="1.55">Moderate (3–5 days/week)</option>
+                <option value="1.725">Active (6–7 days/week)</option>
+                <option value="1.9">Very Active (2x/day or physical job)</option>
+              </select>
+            </div>
+            <button type="submit" class="calc-btn">Calculate TDEE</button>
+          </form>
+        </div>
+        <div class="seo-content">
+          <p>Our TDEE Calculator (Total Daily Energy Expenditure) estimates the total calories your body burns in a day, combining your Basal Metabolic Rate (BMR) with your activity level. Perfect for anyone pursuing weight loss, muscle building, or maintenance, this tool helps you create realistic calorie targets without the guesswork.</p>
+
+          <h2>What is Total Daily Energy Expenditure (TDEE)?</h2>
+          <p>TDEE represents your overall daily calorie burn, factoring in not just your resting metabolism (BMR) but also physical activity, exercise, and even the thermic effect of food. It's calculated by multiplying your BMR by an activity multiplier based on your lifestyle—from sedentary to highly active. This gives a more complete picture than BMR alone, allowing you to set precise goals like a calorie deficit for fat loss or a surplus for gains.</p>
+          <p>Our calculator builds on the reliable Mifflin-St Jeor equation for BMR, then applies standard activity factors endorsed by health organizations like the World Health Organization (WHO). This approach ensures accuracy for everyday users, from beginners to fitness pros.</p>
+
+          <h2>How to Use Our TDEE Calculator</h2>
+          <ol>
+            <li><strong>Input Your Basics:</strong> Provide your age, gender, height, weight, and select your activity level (e.g., sedentary, lightly active, very active).</li>
+            <li><strong>Calculate Instantly:</strong> Click "Calculate" to get your TDEE in calories per day.</li>
+            <li><strong>Customize Your Plan:</strong> Adjust for goals—subtract 500 calories for safe weight loss, add 300 for bulking, or stick to your TDEE for maintenance.</li>
+          </ol>
+          <p><strong>Pro Tip:</strong> Start with our <a href="bmr-calculator.html">BMR Calculator</a> for your base rate, then level up to TDEE for a full daily breakdown!</p>
+
+          <h2>Why Calculate Your TDEE?</h2>
+          <ul>
+            <li><strong>Effective Weight Management:</strong> Pinpoint exactly how many calories to consume for sustainable results, avoiding plateaus or over-restriction.</li>
+            <li><strong>Tailored Fitness Strategies:</strong> Gym-goers and athletes can align nutrition with training intensity for optimal performance and recovery.</li>
+            <li><strong>Lifestyle Insights:</strong> Discover how your job, hobbies, or workouts impact your energy needs, promoting better health habits.</li>
+            <li><strong>Completely Free and Secure:</strong> No accounts needed—process everything locally in your browser for total privacy.</li>
+          </ul>
+          <p>If you're searching for "how to calculate TDEE" or "accurate online TDEE calculator," our tool stands out with user-friendly design and science-backed precision. Ideal for those wondering "what is total daily energy expenditure" or tracking progress in apps like MyFitnessPal.</p>
+
+          <h2>Common Questions About TDEE</h2>
+          <div class="faq-item">
+            <h3>How does TDEE differ from BMR?</h3>
+            <p>BMR is your resting burn; TDEE adds daily movement and activities.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Should I recalculate often?</h3>
+            <p>Yes, every 4-6 weeks or after lifestyle changes like starting a new workout routine.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is TDEE accurate for everyone?</h3>
+            <p>It's a strong estimate, but factors like muscle mass or hormones can vary—use it as a starting point.</p>
+          </div>
+
+          <p>Dive into your energy profile now! Use our TDEE Calculator above and fuel your goals with confidence.</p>
+
+          <div class="bmi-disclaimer">
+            <strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.
+          </div>
+        </div>
+      </div>
+      <aside class="results-card">
+        <h3>Your Results</h3>
+        <div class="result-item">
+          <span class="result-label">BMR</span>
+          <span class="result-value" id="result-bmr">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">TDEE (Maintenance)</span>
+          <span class="result-value" id="result-tdee">—</span>
+        </div>
+        <div class="chart-container">
+          <span>Chart placeholder — Calorie breakdown by activity</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related Calculators</h3>
+      <div class="related-links">
+        <a href="bmr-calculator.html">BMR Calculator</a>
+        <a href="bmi-calculator.html">BMI Calculator</a>
+        <a href="calorie-calculator.html">Calorie Calculator</a>
+        <a href="macro-calculator.html">Macro Calculator</a>
+        <a href="../guides/how-to-calculate-tdee.html">How to Calculate TDEE</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/" class="footer-link">Guides</a>
+          <a href="../blog/" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
