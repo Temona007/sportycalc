@@ -8,6 +8,11 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://sportycalc.com/calculators/water-intake.html">
   <title>Water Intake Calculator | SportyCalc</title>
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -22,8 +27,8 @@
       <a href="../index.html" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
       <div class="nav-links">
         <a href="index.html" class="nav-link active">Calculators</a>
-        <a href="../guides/" class="nav-link">Guides</a>
-        <a href="../blog/" class="nav-link">Blog</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
       </div>
       <div class="nav-actions">
         <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
@@ -35,8 +40,8 @@
     </div>
     <div class="mobile-nav">
       <a href="index.html" class="mobile-nav-link">Calculators</a>
-      <a href="../guides/" class="mobile-nav-link">Guides</a>
-      <a href="../blog/" class="mobile-nav-link">Blog</a>
+      <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+      <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
     </div>
   </nav>
 
@@ -56,56 +61,141 @@
     <div class="calculator-layout">
       <div class="calc-main">
         <div class="calc-form-card">
-          <h2>Your Profile</h2>
           <form id="water-form">
-            <div class="unit-toggle">
-              <button type="button" class="unit-btn active" data-unit="metric">Metric</button>
-              <button type="button" class="unit-btn" data-unit="imperial">Imperial</button>
+            <div class="form-header">
+              <h2>Your Profile</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Units</span>
+                <div class="unit-toggle-btns">
+                  <button type="button" class="unit-btn" data-unit="lb">lb</button>
+                  <button type="button" class="unit-btn active" data-unit="kg">kg</button>
+                </div>
+              </div>
             </div>
             <div class="input-group">
-              <label for="weight">Body weight</label>
-              <input type="number" id="weight" placeholder="70" min="1" step="0.1" required>
-              <small id="weight-unit">kg</small>
+              <label for="weight">Your Weight</label>
+              <div class="water-weight-wrap">
+                <input type="number" id="weight" value="70" placeholder="70" min="1" step="0.1" required>
+                <span class="water-weight-unit" id="weight-unit">kg</span>
+              </div>
             </div>
             <div class="input-group">
-              <label for="activity">Activity level</label>
-              <select id="activity">
-                <option value="1.0">Sedentary</option>
-                <option value="1.2">Light</option>
-                <option value="1.4">Moderate</option>
-                <option value="1.6">Active</option>
-                <option value="1.8">Very active / Athlete</option>
-              </select>
+              <span class="input-label">Activity Level</span>
+              <div class="water-activity-btns">
+                <label class="water-option-btn"><input type="radio" name="activity" value="sedentary"><span>Sedentary</span><small>little exercise</small></label>
+                <label class="water-option-btn"><input type="radio" name="activity" value="light"><span>Light</span><small>1–2×/week</small></label>
+                <label class="water-option-btn"><input type="radio" name="activity" value="moderate" checked><span>Moderate</span><small>3–5×/week</small></label>
+                <label class="water-option-btn"><input type="radio" name="activity" value="active"><span>Active</span><small>daily exercise</small></label>
+                <label class="water-option-btn"><input type="radio" name="activity" value="veryActive"><span>Very Active</span><small>intense daily</small></label>
+              </div>
             </div>
-            <button type="submit" class="calc-btn">Calculate Water</button>
+            <div class="input-group">
+              <span class="input-label">Climate</span>
+              <div class="water-climate-btns">
+                <label class="water-option-btn"><input type="radio" name="climate" value="temperate" checked><span>☀️ Temperate</span></label>
+                <label class="water-option-btn"><input type="radio" name="climate" value="hot"><span>🌡️ Hot/Humid</span></label>
+                <label class="water-option-btn"><input type="radio" name="climate" value="dry"><span>🏜️ Dry/Arid</span></label>
+              </div>
+            </div>
+            <div class="input-group water-checkbox-group">
+              <label class="water-checkbox-label">
+                <input type="checkbox" id="pregnant">
+                <span>Pregnant or nursing</span>
+              </label>
+            </div>
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate Water</button>
           </form>
         </div>
-        <div class="content-body">
-          <h2>Hydration Basics</h2>
-          <p>Water needs vary with body size, climate, and activity. This calculator gives a baseline; increase intake if you sweat heavily or train in heat.</p>
+        <div class="seo-content">
+          <p>Thirsty for better health? Our Water Intake Calculator estimates your daily hydration needs based on weight, activity level, climate, and factors like pregnancy or nursing. Proper hydration is crucial for energy, focus, digestion, and overall wellness—use this tool to avoid dehydration and optimize your water consumption without the hassle.</p>
+
+          <h2>What is Daily Water Intake?</h2>
+          <p>Daily water intake refers to the amount of fluid your body requires to function optimally, replacing losses from sweat, urine, breathing, and more. It's influenced by body weight (a common rule: half your weight in ounces), activity (more exercise means more water), climate (hot or dry areas increase needs), and special conditions like pregnancy (adding 300–500ml extra). Dehydration can cause fatigue, headaches, or poor performance, while overhydration is rare but possible.</p>
+          <p>Our calculator uses guidelines from health authorities like the Mayo Clinic and Institute of Medicine, starting with 30–35ml per kg of body weight, then adjusting for activity (up to +50%), climate (+10–20%), and pregnancy/nursing (+10–15%). Outputs include ounces, liters, cups, and bottles for easy tracking.</p>
+
+          <h2>How to Use Our Water Intake Calculator</h2>
+          <ol>
+            <li><strong>Select Units:</strong> Choose lbs or kg for weight.</li>
+            <li><strong>Enter Your Weight:</strong> Input your current body weight.</li>
+            <li><strong>Choose Activity Level:</strong> Pick from Sedentary (little exercise), Light (1–2×/week), Moderate (3–5×/week), Active (daily), or Very Active (intense daily).</li>
+            <li><strong>Select Climate:</strong> Opt for Temperate, Hot/Humid, or Dry/Arid.</li>
+            <li><strong>Account for Special Factors:</strong> Check if pregnant or nursing.</li>
+            <li><strong>Calculate:</strong> Get your daily intake in multiple units, like 282 oz (8.4L, 35 cups, 17 × 500ml bottles).</li>
+          </ol>
+          <p><strong>Pro Tip:</strong> Track with our <a href="calories-burned.html">Calories Burned Calculator</a> to see how exercise affects hydration, or pair with the <a href="protein-intake.html">Protein Intake</a> tool for a complete wellness plan!</p>
+
+          <h2>Why Calculate Your Water Intake?</h2>
+          <ul>
+            <li><strong>Personalized Hydration:</strong> Avoid generic advice—get needs tailored to your lifestyle for better skin, kidneys, and metabolism.</li>
+            <li><strong>Performance Boost:</strong> Athletes in hot climates can prevent cramps and fatigue by staying ahead of thirst.</li>
+            <li><strong>Health Prevention:</strong> Proper intake supports weight management, reduces kidney stone risk, and aids digestion.</li>
+            <li><strong>User-Friendly and Secure:</strong> Free tool with instant results—all data stays in your browser for privacy.</li>
+          </ul>
+
+          <p>Searching for "water intake calculator by weight" or "how much water should I drink a day"? Our accurate estimator handles queries like "daily water needs for athletes" or "hydration calculator pregnant," providing practical breakdowns.</p>
+
+          <h2>Common Questions About Water Intake</h2>
+          <ul>
+            <li><strong>Is the "8 glasses a day" rule accurate?</strong> It's a starting point, but personalized calculations are better—factors like activity vary it.</li>
+            <li><strong>Does coffee or tea count?</strong> Partially, but plain water is best; caffeinated drinks can be mildly dehydrating.</li>
+            <li><strong>How do I know if I'm hydrated?</strong> Check urine color (pale yellow is ideal) or signs like dry mouth.</li>
+            <li><strong>Adjust for food?</strong> Yes, fruits/veggies contribute ~20%, but the calculator focuses on fluids.</li>
+          </ul>
+
+          <p>Quench your curiosity! Use our Water Intake Calculator below and sip your way to better health.</p>
+
+          <h2>💡 Hydration Tips</h2>
+          <ul>
+            <li>Drink a glass of water first thing in the morning</li>
+            <li>Keep a water bottle with you throughout the day</li>
+            <li>Drink water before, during, and after exercise</li>
+            <li>If urine is dark yellow, you need more water</li>
+          </ul>
+
+          <div class="bmi-disclaimer">
+            <strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.
+          </div>
         </div>
       </div>
-      <aside class="results-card">
-        <h3>Your Results</h3>
-        <div class="result-item">
-          <span class="result-label">Daily water</span>
-          <span class="result-value" id="result-water">—</span>
+      <aside class="results-card" id="water-result-card">
+        <div class="water-result-main">
+          <span class="water-main-value" id="water-main-value">—</span>
+          <span class="water-main-unit" id="water-main-unit">oz</span>
+          <span class="water-main-label">Daily Water Intake</span>
         </div>
-        <div class="result-item">
-          <span class="result-label">Glasses (8 oz)</span>
-          <span class="result-value" id="result-glasses">—</span>
+        <div class="water-result-grid">
+          <div class="water-result-badge"><span class="water-badge-value" id="result-liters">—</span><span class="water-badge-label">Liters</span></div>
+          <div class="water-result-badge"><span class="water-badge-value" id="result-cups">—</span><span class="water-badge-label">Cups</span></div>
+          <div class="water-result-badge"><span class="water-badge-value" id="result-bottles">—</span><span class="water-badge-label">Bottles (500ml)</span></div>
         </div>
-        <div class="chart-container">
-          <span>Chart — Intake by activity level</span>
+        <div class="water-progress-tracker">
+          <div class="water-progress-label"><span>Today's goal</span><span id="water-drank-count">0 / —</span></div>
+          <div class="water-cups-visual" id="water-cups-visual" aria-label="Daily cups goal">
+            <!-- Filled by JS: max 7 cup icons + remainder -->
+          </div>
+          <div class="water-progress-bar"><div class="water-progress-fill" id="water-progress-fill"></div></div>
+          <button type="button" class="water-log-btn" id="water-log-glass">💧 +1 Glass</button>
+          <p class="water-progress-hint">Tap when you finish a glass to track progress!</p>
+        </div>
+        <div class="water-tips">
+          <h3>💡 Hydration Tips</h3>
+          <ul>
+            <li>If urine is dark yellow, you need more water</li>
+            <li>Drink water before, during, and after exercise</li>
+            <li>Keep a water bottle with you throughout the day</li>
+            <li>Drink a glass of water first thing in the morning</li>
+          </ul>
         </div>
       </aside>
     </div>
 
     <div class="related-section">
-      <h3>Related</h3>
+      <h3>Related Calculators</h3>
       <div class="related-links">
         <a href="protein-intake.html">Protein Intake</a>
         <a href="calories-burned.html">Calories Burned</a>
+        <a href="calorie-calculator.html">Calorie Calculator</a>
+        <a href="../guides/fitness-metrics-explained.html">Fitness Metrics Explained</a>
       </div>
     </div>
   </main>
@@ -115,8 +205,8 @@
       <div class="footer-inner">
         <div class="footer-links">
           <a href="index.html" class="footer-link">Calculators</a>
-          <a href="../guides/" class="footer-link">Guides</a>
-          <a href="../blog/" class="footer-link">Blog</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
           <a href="../about.html" class="footer-link">About</a>
           <a href="../contact.html" class="footer-link">Contact</a>
           <a href="../privacy.html" class="footer-link">Privacy</a>
@@ -129,5 +219,6 @@
 
   <script src="../js/theme.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/water-intake.js"></script>
 </body>
 </html>

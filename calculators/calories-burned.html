@@ -8,6 +8,11 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://sportycalc.com/calculators/calories-burned.html">
   <title>Calories Burned Calculator | SportyCalc</title>
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -22,8 +27,8 @@
       <a href="../index.html" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
       <div class="nav-links">
         <a href="index.html" class="nav-link active">Calculators</a>
-        <a href="../guides/" class="nav-link">Guides</a>
-        <a href="../blog/" class="nav-link">Blog</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
       </div>
       <div class="nav-actions">
         <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
@@ -35,8 +40,8 @@
     </div>
     <div class="mobile-nav">
       <a href="index.html" class="mobile-nav-link">Calculators</a>
-      <a href="../guides/" class="mobile-nav-link">Guides</a>
-      <a href="../blog/" class="mobile-nav-link">Blog</a>
+      <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+      <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
     </div>
   </nav>
 
@@ -56,52 +61,94 @@
     <div class="calculator-layout">
       <div class="calc-main">
         <div class="calc-form-card">
-          <h2>Activity Details</h2>
           <form id="calories-burned-form">
-            <div class="unit-toggle">
-              <button type="button" class="unit-btn active" data-unit="metric">Metric</button>
-              <button type="button" class="unit-btn" data-unit="imperial">Imperial</button>
+            <div class="form-header">
+              <h2>Activity Details</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Units</span>
+                <div class="unit-toggle-btns">
+                  <button type="button" class="unit-btn" data-unit="lb">lb</button>
+                  <button type="button" class="unit-btn active" data-unit="kg">kg</button>
+                </div>
+              </div>
             </div>
             <div class="input-group">
               <label for="weight">Body weight</label>
-              <input type="number" id="weight" placeholder="70" min="1" step="0.1" required>
-              <small id="weight-unit">kg</small>
+              <div class="protein-weight-wrap">
+                <input type="number" id="weight" value="70" placeholder="70" min="1" step="0.1" required>
+                <span class="protein-weight-unit" id="weight-unit">kg</span>
+              </div>
             </div>
             <div class="input-group">
               <label for="activity">Activity</label>
               <select id="activity">
-                <option value="3">Walking (slow)</option>
-                <option value="4">Walking (brisk)</option>
-                <option value="6">Running (easy)</option>
-                <option value="9">Running (moderate)</option>
-                <option value="12">Running (fast)</option>
-                <option value="5">Cycling (leisure)</option>
-                <option value="8">Cycling (moderate)</option>
-                <option value="4">Weight training</option>
-                <option value="8">HIIT</option>
-                <option value="3">Yoga</option>
+                <option value="run-moderate">Running: moderate</option>
               </select>
             </div>
-            <div class="input-group">
-              <label for="duration">Duration (minutes)</label>
-              <input type="number" id="duration" placeholder="30" min="1" max="300" required>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="duration-hours">Duration (hours)</label>
+                <input type="number" id="duration-hours" value="0" min="0" max="24" placeholder="0">
+              </div>
+              <div class="input-group">
+                <label for="duration-minutes">Duration (minutes)</label>
+                <input type="number" id="duration-minutes" value="30" min="0" max="59" placeholder="30">
+              </div>
             </div>
-            <button type="submit" class="calc-btn">Calculate</button>
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate</button>
           </form>
         </div>
-        <div class="content-body">
-          <h2>How It Works</h2>
-          <p>Estimates use MET (Metabolic Equivalent of Task) values — the energy cost of activities. Results are approximations; individual variation applies.</p>
+        <div class="seo-content">
+          <h2>What is Calories Burned?</h2>
+          <p>Calories burned refer to the energy your body uses during physical activities, measured in kcal (kilocalories). Factors like weight, intensity, duration, and type of exercise influence this—e.g., running burns more than walking at the same pace. For distance-based activities (walking, running, cycling), we use MET (Metabolic Equivalent of Task) values from compendiums like the one by the American College of Sports Medicine (ACSM). This provides accurate estimates to help offset daily calorie consumption and achieve goals like weight loss or endurance building.</p>
+          <p>Use this to estimate calories burned each day, complementing tools like <a href="tdee-calculator.html">TDEE</a> for a full picture of energy balance.</p>
+
+          <h2>How to Use Our Calories Burned Calculator</h2>
+          <ol>
+            <li><strong>Select Activity:</strong> Choose from options like walking, running, cycling, swimming, yoga, or strength training.</li>
+            <li><strong>Input Details:</strong> Enter your weight (lbs or kg), and either duration (hours and minutes) or—for distance-based modes—distance (miles or km for walking/running/cycling only).</li>
+            <li><strong>Add Intensity (Optional):</strong> Specify speed or effort level for refined accuracy.</li>
+            <li><strong>Calculate:</strong> Get instant calories burned, with breakdowns for total session or per hour.</li>
+          </ol>
+          <p><strong>Pro Tip:</strong> Combine with our <a href="heart-rate-zones.html">Heart Rate Zones Calculator</a> to track intensity, or use the <a href="tdee-calculator.html">TDEE tool</a> to see how activities fit into your daily expenditure!</p>
+
+          <h2>Why Calculate Calories Burned?</h2>
+          <ul>
+            <li><strong>Activity Tracking:</strong> Quantify workouts to motivate consistency and avoid underestimating effort.</li>
+            <li><strong>Weight Management:</strong> Balance burned calories against intake for deficits (loss) or surpluses (gains).</li>
+            <li><strong>Personalized Fitness:</strong> Adjust routines—e.g., see how cycling distance stacks up to running time.</li>
+            <li><strong>Free and Private:</strong> No apps required; all calculations happen in your browser for secure, quick insights.</li>
+          </ul>
+          <p>If you're searching for "calories burned calculator running" or "how many calories burned walking 5 miles," our versatile tool covers it. Great for "activity calories estimator" or comparing "cycling vs running calories burned."</p>
+
+          <h2>Common Questions About Calories Burned</h2>
+          <dl class="faq-list">
+            <dt>Duration vs. distance—which is better?</dt>
+            <dd>Use distance for pace-based activities like running; duration for timed ones like yoga.</dd>
+            <dt>How accurate are estimates?</dt>
+            <dd>Solid for general use, based on METs—but individual metabolism varies; wearables can refine.</dd>
+            <dt>Does it include daily activities?</dt>
+            <dd>Yes, add non-exercise like housework to estimate total daily burn.</dd>
+            <dt>Update for weight changes?</dt>
+            <dd>Yes, recalculate as weight affects burn rates.</dd>
+          </dl>
+          <p>Burn smarter, not harder! Try our Calories Burned Calculator above and energize your fitness journey.</p>
+
+          <p class="health-advisory" role="alert"><strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.</p>
         </div>
       </div>
-      <aside class="results-card">
+      <aside class="results-card" id="calories-result-card">
         <h3>Your Results</h3>
-        <div class="result-item">
-          <span class="result-label">Calories burned</span>
-          <span class="result-value" id="result-calories">—</span>
-        </div>
-        <div class="chart-container">
-          <span>Chart — Calories by activity type (Chart.js)</span>
+        <div class="calories-result-main">
+          <div class="calories-icon-badge" id="result-activity-icon" aria-hidden="true"></div>
+          <div class="result-item calories-result-row">
+            <span class="result-label">Calories burned</span>
+            <span class="calories-value-wrap">
+              <span class="result-value calories-value" id="result-calories">—</span>
+              <span class="calories-unit" id="result-calories-unit"></span>
+            </span>
+          </div>
+          <p class="calories-activity-hint" id="result-activity-name"></p>
         </div>
       </aside>
     </div>
@@ -121,8 +168,8 @@
       <div class="footer-inner">
         <div class="footer-links">
           <a href="index.html" class="footer-link">Calculators</a>
-          <a href="../guides/" class="footer-link">Guides</a>
-          <a href="../blog/" class="footer-link">Blog</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
           <a href="../about.html" class="footer-link">About</a>
           <a href="../contact.html" class="footer-link">Contact</a>
           <a href="../privacy.html" class="footer-link">Privacy</a>
@@ -135,5 +182,6 @@
 
   <script src="../js/theme.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/calories-burned.js"></script>
 </body>
 </html>

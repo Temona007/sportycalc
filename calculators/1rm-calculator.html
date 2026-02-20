@@ -8,6 +8,11 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://sportycalc.com/calculators/1rm-calculator.html">
   <title>1RM Calculator – One Rep Max | SportyCalc</title>
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -22,8 +27,8 @@
       <a href="../index.html" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
       <div class="nav-links">
         <a href="index.html" class="nav-link active">Calculators</a>
-        <a href="../guides/" class="nav-link">Guides</a>
-        <a href="../blog/" class="nav-link">Blog</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
       </div>
       <div class="nav-actions">
         <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
@@ -35,8 +40,8 @@
     </div>
     <div class="mobile-nav">
       <a href="index.html" class="mobile-nav-link">Calculators</a>
-      <a href="../guides/" class="mobile-nav-link">Guides</a>
-      <a href="../blog/" class="mobile-nav-link">Blog</a>
+      <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+      <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
     </div>
   </nav>
 
@@ -56,51 +61,118 @@
     <div class="calculator-layout">
       <div class="calc-main">
         <div class="calc-form-card">
-          <h2>Your Lift</h2>
           <form id="one-rm-form">
-            <div class="unit-toggle">
-              <button type="button" class="unit-btn active" data-unit="kg">kg</button>
-              <button type="button" class="unit-btn" data-unit="lb">lb</button>
+            <div class="form-header">
+              <h2>Your Lift</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Units</span>
+                <div class="unit-toggle-btns">
+                  <button type="button" class="unit-btn active" data-unit="kg">kg</button>
+                  <button type="button" class="unit-btn" data-unit="lb">lb</button>
+                </div>
+              </div>
             </div>
             <div class="input-group">
-              <label for="weight">Weight lifted</label>
-              <input type="number" id="weight" placeholder="100" min="1" step="0.5" required>
-              <small id="weight-unit">kg</small>
+              <label for="weight">Weight Lifted</label>
+              <div class="orm-weight-wrap">
+                <input type="number" id="weight" value="100" placeholder="100" min="1" step="0.5" required>
+                <span class="orm-weight-unit" id="weight-unit">kg</span>
+              </div>
             </div>
             <div class="input-group">
-              <label for="reps">Reps performed</label>
-              <input type="number" id="reps" placeholder="5" min="1" max="12" required>
-              <small>1–12 reps for best accuracy</small>
+              <label for="reps">Reps Completed</label>
+              <input type="number" id="reps" value="5" placeholder="5" min="1" max="12" required>
+              <small class="input-hint">Most accurate with 1–10 reps</small>
             </div>
-            <button type="submit" class="calc-btn">Calculate 1RM</button>
+            <div class="input-group">
+              <label for="method">Formula</label>
+              <select id="method">
+                <option value="brzycki">Brzycki (most common)</option>
+                <option value="epley">Epley</option>
+                <option value="lander">Lander</option>
+                <option value="average">Average of All</option>
+              </select>
+            </div>
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate my 1RM</button>
+            <h3 class="orm-table-heading">Training Percentages</h3>
+            <div class="orm-table-wrap">
+              <table class="orm-table">
+                <thead>
+                  <tr>
+                    <th>% of 1RM</th>
+                    <th>Weight</th>
+                    <th>Target Reps</th>
+                    <th>Training Zone</th>
+                  </tr>
+                </thead>
+                <tbody id="1rm-training-tbody">
+                  <tr><td colspan="4" class="text-muted">Enter weight and reps</td></tr>
+                </tbody>
+              </table>
+            </div>
           </form>
         </div>
-        <div class="content-body">
-          <h2>What is 1RM?</h2>
-          <p>One-rep max is the maximum weight you can lift for one repetition. It's used to set training percentages and track strength progress over time.</p>
+        <div class="seo-content">
+          <h2>What is One Rep Max (1RM)?</h2>
+          <p>One Rep Max refers to the heaviest weight you can lift for exactly one repetition with proper form. It's a key benchmark in strength sports like powerlifting or CrossFit, used to set training percentages for programs (e.g., 80% of 1RM for hypertrophy). Direct 1RM testing can be risky, so calculators provide safe estimates using sub-maximal lifts.</p>
+          <p>Our calculator supports multiple proven formulas:</p>
+          <ul>
+            <li><strong>Brzycki (most common):</strong> Ideal for general use, especially with 1–10 reps.</li>
+            <li><strong>Epley:</strong> Great for higher reps, emphasizing endurance.</li>
+            <li><strong>Lander:</strong> Accurate for varied rep ranges.</li>
+            <li><strong>Average of All:</strong> A balanced estimate combining formulas for reliability.</li>
+          </ul>
+          <p>Backed by exercise science from sources like the National Strength and Conditioning Association (NSCA), these methods use equations like Brzycki's: 1RM = weight × (36 / (37 − reps)).</p>
+
+          <h2>How to Use Our One Rep Max Calculator</h2>
+          <ol>
+            <li><strong>Select Units:</strong> Choose lbs or kg for weight.</li>
+            <li><strong>Input Your Lift:</strong> Enter the weight lifted and reps completed (best with 1–10 for accuracy).</li>
+            <li><strong>Pick a Formula:</strong> Opt for Brzycki, Epley, Lander, or Average.</li>
+            <li><strong>Calculate:</strong> Get your estimated 1RM instantly, plus training percentages (e.g., 50–90% for warm-ups to heavy sets).</li>
+          </ol>
+          <p><strong>Example:</strong> Lifted 152 lbs for 8 reps? Your estimated 1RM might be around 200 lbs, with breakdowns like 70% (140 lbs) for strength building.</p>
+          <p><strong>Pro Tip:</strong> Use this with our <a href="heart-rate-zones.html">Heart Rate Zones Calculator</a> for cardio integration, or pair with the <a href="protein-intake.html">Protein Intake</a> tool to fuel your gains!</p>
+
+          <h2>Why Calculate Your 1RM?</h2>
+          <ul>
+            <li><strong>Smart Programming:</strong> Base workouts on percentages—e.g., 85% for power, 65% for endurance—to avoid plateaus.</li>
+            <li><strong>Progress Tracking:</strong> Monitor strength improvements over time without maxing out every session.</li>
+            <li><strong>Injury Prevention:</strong> Estimate safely instead of pushing limits, especially for beginners or during deloads.</li>
+            <li><strong>Free and Secure:</strong> Quick results with no data sharing—perfect for gym apps or mobile use.</li>
+          </ul>
+
+          <p>Searching for "one rep max calculator online" or "how to calculate 1RM from reps"? Our multi-formula tool delivers precise estimates, ideal for "Brzycki 1RM calculator" or "training percentages based on 1RM."</p>
+
+          <h2>Common Questions About 1RM</h2>
+          <ul>
+            <li><strong>How accurate are these estimates?</strong> Very reliable for 1–10 reps; less so for higher—test periodically for validation.</li>
+            <li><strong>Which formula is best?</strong> Brzycki for most; try Average if unsure.</li>
+            <li><strong>Can I use it for any exercise?</strong> Yes—bench press, squat, deadlift, etc.; form matters for real-world application.</li>
+          </ul>
+
+          <p>Push your limits safely! Try our One Rep Max Calculator below and elevate your training.</p>
+
+          <div class="bmi-disclaimer">
+            <strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.
+          </div>
         </div>
       </div>
       <aside class="results-card">
-        <h3>Your Results</h3>
-        <div class="result-item">
-          <span class="result-label">1RM (Epley)</span>
-          <span class="result-value" id="result-1rm">—</span>
-        </div>
-        <div class="result-item">
-          <span class="result-label">Training percentages</span>
-          <span class="result-value" id="result-note">See below</span>
-        </div>
-        <div class="chart-container">
-          <span>Chart — % of 1RM by rep range</span>
+        <div class="orm-result-main">
+          <span class="orm-value" id="result-1rm">—</span>
+          <span class="orm-unit" id="result-1rm-unit"></span>
+          <span class="orm-label">Estimated 1RM</span>
         </div>
       </aside>
     </div>
 
     <div class="related-section">
-      <h3>Related</h3>
+      <h3>Related Calculators</h3>
       <div class="related-links">
         <a href="heart-rate-zones.html">Heart Rate Zones</a>
         <a href="protein-intake.html">Protein Intake</a>
+        <a href="calories-burned.html">Calories Burned</a>
         <a href="../guides/fitness-metrics-explained.html">Fitness Metrics Explained</a>
       </div>
     </div>
@@ -111,8 +183,8 @@
       <div class="footer-inner">
         <div class="footer-links">
           <a href="index.html" class="footer-link">Calculators</a>
-          <a href="../guides/" class="footer-link">Guides</a>
-          <a href="../blog/" class="footer-link">Blog</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
           <a href="../about.html" class="footer-link">About</a>
           <a href="../contact.html" class="footer-link">Contact</a>
           <a href="../privacy.html" class="footer-link">Privacy</a>
@@ -125,5 +197,6 @@
 
   <script src="../js/theme.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/1rm-calculator.js"></script>
 </body>
 </html>

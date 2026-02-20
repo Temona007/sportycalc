@@ -8,6 +8,11 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://sportycalc.com/calculators/macro-calculator.html">
   <title>Macro Calculator – Protein, Carbs, Fat | SportyCalc</title>
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -22,8 +27,8 @@
       <a href="../index.html" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
       <div class="nav-links">
         <a href="index.html" class="nav-link active">Calculators</a>
-        <a href="../guides/" class="nav-link">Guides</a>
-        <a href="../blog/" class="nav-link">Blog</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
       </div>
       <div class="nav-actions">
         <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
@@ -35,8 +40,8 @@
     </div>
     <div class="mobile-nav">
       <a href="index.html" class="mobile-nav-link">Calculators</a>
-      <a href="../guides/" class="mobile-nav-link">Guides</a>
-      <a href="../blog/" class="mobile-nav-link">Blog</a>
+      <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+      <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
     </div>
   </nav>
 
@@ -56,67 +61,146 @@
     <div class="calculator-layout">
       <div class="calc-main">
         <div class="calc-form-card">
-          <h2>Setup</h2>
+          <h2>Your Details</h2>
           <form id="macro-form">
             <div class="input-group">
-              <label for="calories">Daily calorie target</label>
-              <input type="number" id="calories" placeholder="2000" min="500">
+              <label for="calories">Daily Calories</label>
+              <input type="number" id="calories" value="2000" placeholder="2000" min="500" max="10000" required>
+              <small class="input-hint">Use our <a href="calorie-calculator.html">Calorie Calculator</a> if you don't know this</small>
             </div>
             <div class="input-group">
-              <label for="goal">Goal</label>
-              <select id="goal">
-                <option value="lose">Lose fat</option>
-                <option value="maintain">Maintain</option>
-                <option value="gain">Gain muscle</option>
-              </select>
+              <span class="input-label">Diet Preset</span>
+              <div class="macro-preset-btns">
+                <button type="button" class="macro-preset-btn active" data-preset="balanced" data-p="30" data-c="40" data-f="30">
+                  <span class="macro-preset-emoji">⚖️</span>
+                  <span>Balanced</span>
+                  <span class="macro-preset-ratios">30% P / 40% C / 30% F</span>
+                </button>
+                <button type="button" class="macro-preset-btn" data-preset="lowcarb" data-p="35" data-c="25" data-f="40">
+                  <span class="macro-preset-emoji">🥩</span>
+                  <span>Low Carb</span>
+                  <span class="macro-preset-ratios">35% P / 25% C / 40% F</span>
+                </button>
+                <button type="button" class="macro-preset-btn" data-preset="highprotein" data-p="40" data-c="35" data-f="25">
+                  <span class="macro-preset-emoji">💪</span>
+                  <span>High Protein</span>
+                  <span class="macro-preset-ratios">40% P / 35% C / 25% F</span>
+                </button>
+                <button type="button" class="macro-preset-btn" data-preset="keto" data-p="25" data-c="5" data-f="70">
+                  <span class="macro-preset-emoji">🥑</span>
+                  <span>Keto</span>
+                  <span class="macro-preset-ratios">25% P / 5% C / 70% F</span>
+                </button>
+              </div>
             </div>
-            <div class="input-group">
-              <label for="weight">Weight (kg)</label>
-              <input type="number" id="weight" placeholder="70" min="1" step="0.1">
-            </div>
-            <div class="input-group">
-              <label for="activity">Activity Level</label>
-              <select id="activity">
-                <option value="1.2">Sedentary</option>
-                <option value="1.375">Light</option>
-                <option value="1.55">Moderate</option>
-                <option value="1.725">Active</option>
-                <option value="1.9">Very Active</option>
-              </select>
+            <div class="input-group macro-custom-ratios">
+              <span class="input-label">Custom Ratios</span>
+              <div class="macro-ratio-inputs">
+                <div class="macro-ratio-row">
+                  <span class="macro-ratio-label">🥩 Protein</span>
+                  <span class="macro-ratio-value"><span id="macro-p-val">30</span>%</span>
+                  <input type="range" id="macro-p" value="30" min="5" max="80" step="1">
+                </div>
+                <div class="macro-ratio-row">
+                  <span class="macro-ratio-label">🍞 Carbs</span>
+                  <span class="macro-ratio-value"><span id="macro-c-val">40</span>%</span>
+                  <input type="range" id="macro-c" value="40" min="5" max="80" step="1">
+                </div>
+                <div class="macro-ratio-row">
+                  <span class="macro-ratio-label">🥑 Fat</span>
+                  <span class="macro-ratio-value"><span id="macro-f-val">30</span>%</span>
+                  <input type="range" id="macro-f" value="30" min="5" max="80" step="1">
+                </div>
+              </div>
+              <p class="macro-ratio-total"><strong>Total: <span id="macro-total">100</span>%</strong></p>
             </div>
             <button type="submit" class="calc-btn">Calculate Macros</button>
           </form>
         </div>
-        <div class="content-body">
-          <h2>Macro Splits</h2>
-          <p>Protein supports muscle; carbs fuel activity; fat is essential for hormones. The ideal split depends on your goals and preferences.</p>
+        <div class="seo-content">
+          <h2>What is a Macro Calculator?</h2>
+          <p>Macros—short for macronutrients—are the building blocks of your diet: proteins for muscle repair, carbs for energy, and fats for hormone health. A Macro Calculator takes your Total Daily Energy Expenditure (TDEE) or calorie target and allocates percentages or grams to each macro. It supports various diet styles, like high-protein for bodybuilding, low-carb keto for fat loss, or balanced for general wellness, ensuring your intake aligns with goals like weight loss, maintenance, or muscle gain.</p>
+          <p>Our calculator uses evidence-based guidelines from organizations like the International Society of Sports Nutrition (ISSN), with adjustable ratios for different preferences. It's flexible, allowing inputs for specific diets to optimize your meal planning.</p>
+
+          <h2>How to Use Our Macro Calculator</h2>
+          <ol>
+            <li><strong>Enter Your Details:</strong> Input your daily calories (from our Calorie or TDEE Calculator), age, weight, activity level, and select a diet style (e.g., high protein, keto, vegan-adapted).</li>
+            <li><strong>Customize Goals:</strong> Choose your focus—fat loss, muscle building, or endurance—and adjust macro ratios if needed.</li>
+            <li><strong>Receive Your Breakdown:</strong> Get grams and percentages for protein, carbs, and fats, plus tips for implementation.</li>
+          </ol>
+          <p><strong>Pro Tip:</strong> Integrate with our <a href="protein-intake.html">Protein Intake Calculator</a> for deeper protein focus, or pair with the <a href="calorie-calculator.html">Calorie Calculator</a> for seamless calorie-to-macro transitions!</p>
+
+          <h2>Why Use a Macro Calculator?</h2>
+          <ul>
+            <li><strong>Personalized Nutrition:</strong> Get a tailored split that matches your body type, goals, and preferences, avoiding one-size-fits-all diets.</li>
+            <li><strong>Diet Style Flexibility:</strong> Supports popular plans like keto (high fat, low carb), high protein (for athletes), or balanced (40/30/30 split), making it versatile for any lifestyle.</li>
+            <li><strong>Better Results:</strong> Tracking macros leads to improved body composition, energy levels, and adherence compared to calorie counting alone.</li>
+            <li><strong>Free, Secure, and Easy:</strong> No apps or logins—calculate privately in your browser with instant, actionable insights.</li>
+          </ul>
+          <p>If you're querying "macro calculator online" or "how to calculate macros for weight loss," our tool delivers precise, user-friendly results. Great for those exploring "protein carbs fat ratio" or adapting diets like "keto macro calculator."</p>
+
+          <h2>Common Questions About Macros</h2>
+          <div class="faq-item">
+            <h3>What are standard macro ratios?</h3>
+            <p>Balanced: 40% carbs, 30% protein, 30% fat; Keto: 5–10% carbs, 15–20% protein, 70–80% fat—adjust based on goals.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do I need to track macros daily?</h3>
+            <p>For best results, yes, using apps; but start with estimates and refine over time.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can it handle special diets?</h3>
+            <p>Absolutely—options for vegan, paleo, or custom tweaks ensure inclusivity.</p>
+          </div>
+
+          <p>Elevate your nutrition game! Use our Macro Calculator below and build meals that work for you.</p>
+
+          <div class="bmi-disclaimer">
+            <strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.
+          </div>
         </div>
       </div>
       <aside class="results-card">
-        <h3>Your Macros</h3>
-        <div class="result-item">
-          <span class="result-label">Protein</span>
-          <span class="result-value" id="result-protein">—</span>
+        <div class="macro-result-calories">
+          <span class="bmi-value" id="result-calories">2,000</span>
+          <span class="bmi-label">Daily Calories</span>
         </div>
-        <div class="result-item">
-          <span class="result-label">Carbs</span>
-          <span class="result-value" id="result-carbs">—</span>
+        <h4 class="macro-result-heading">Daily Macro Split</h4>
+        <div class="macro-chart-wrap">
+          <canvas id="macro-chart" aria-label="Macro split pie chart"></canvas>
         </div>
-        <div class="result-item">
-          <span class="result-label">Fat</span>
-          <span class="result-value" id="result-fat">—</span>
+        <div class="macro-result-item macro-result-protein">
+          <span class="macro-result-grams" id="result-protein">150g</span>
+          <span class="macro-result-label">PROTEIN</span>
+          <span class="macro-result-cal" id="result-protein-cal">600 cal</span>
         </div>
-        <div class="chart-container">
-          <span>Pie chart — Macro split (Chart.js)</span>
+        <div class="macro-result-item macro-result-carbs">
+          <span class="macro-result-grams" id="result-carbs">200g</span>
+          <span class="macro-result-label">CARBS</span>
+          <span class="macro-result-cal" id="result-carbs-cal">800 cal</span>
+        </div>
+        <div class="macro-result-item macro-result-fat">
+          <span class="macro-result-grams" id="result-fat">67g</span>
+          <span class="macro-result-label">FAT</span>
+          <span class="macro-result-cal" id="result-fat-cal">600 cal</span>
+        </div>
+        <div class="macro-quick-ref">
+          <h4>📊 Quick Reference</h4>
+          <table class="macro-ref-table">
+            <tr><td>PROTEIN</td><td>4 calories per gram</td></tr>
+            <tr><td>CARBS</td><td>4 calories per gram</td></tr>
+            <tr><td>FAT</td><td>9 calories per gram</td></tr>
+          </table>
         </div>
       </aside>
     </div>
 
     <div class="related-section">
-      <h3>Related</h3>
+      <h3>Related Calculators</h3>
       <div class="related-links">
-        <a href="protein-intake.html">Protein Intake</a>
         <a href="calorie-calculator.html">Calorie Calculator</a>
+        <a href="tdee-calculator.html">TDEE Calculator</a>
+        <a href="protein-intake.html">Protein Intake Calculator</a>
         <a href="../guides/macro-nutrition-guide.html">Macro Nutrition Guide</a>
       </div>
     </div>
@@ -127,8 +211,8 @@
       <div class="footer-inner">
         <div class="footer-links">
           <a href="index.html" class="footer-link">Calculators</a>
-          <a href="../guides/" class="footer-link">Guides</a>
-          <a href="../blog/" class="footer-link">Blog</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
           <a href="../about.html" class="footer-link">About</a>
           <a href="../contact.html" class="footer-link">Contact</a>
           <a href="../privacy.html" class="footer-link">Privacy</a>
@@ -139,7 +223,9 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../js/theme.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/macro-calculator.js"></script>
 </body>
 </html>

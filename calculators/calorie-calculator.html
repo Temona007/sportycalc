@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free calorie calculator. Calculate daily calorie needs for maintenance, weight loss (deficit), or muscle gain (surplus).">
-  <meta name="keywords" content="calorie calculator, daily calorie needs, calorie deficit, calorie surplus">
+  <meta name="description" content="Free calorie calculator (TDEE). Calculate daily calorie needs for weight loss, maintenance, or muscle gain. Mifflin-St Jeor formula, activity levels.">
+  <meta name="keywords" content="calorie calculator, daily calorie needs, TDEE, calorie deficit, calorie surplus">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://sportycalc.com/calculators/calorie-calculator.html">
   <title>Calorie Calculator – Daily Calorie Needs | SportyCalc</title>
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Calorie Calculator","description":"Calculate daily calorie needs","applicationCategory":"HealthApplication","offers":{"@type":"Offer","price":"0"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Calorie Calculator","description":"Calculate daily calorie needs for weight loss, maintenance, or muscle gain","applicationCategory":"HealthApplication","offers":{"@type":"Offer","price":"0"}}
   </script>
 </head>
 <body>
@@ -22,8 +27,8 @@
       <a href="../index.html" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
       <div class="nav-links">
         <a href="index.html" class="nav-link active">Calculators</a>
-        <a href="../guides/" class="nav-link">Guides</a>
-        <a href="../blog/" class="nav-link">Blog</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
       </div>
       <div class="nav-actions">
         <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
@@ -35,8 +40,8 @@
     </div>
     <div class="mobile-nav">
       <a href="index.html" class="mobile-nav-link">Calculators</a>
-      <a href="../guides/" class="mobile-nav-link">Guides</a>
-      <a href="../blog/" class="mobile-nav-link">Blog</a>
+      <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+      <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
     </div>
   </nav>
 
@@ -50,62 +55,202 @@
         <span>Calorie Calculator</span>
       </nav>
       <h1>Calorie Calculator</h1>
-      <p class="hero-desc">Calculate your daily calorie needs for maintenance, weight loss (deficit), or muscle gain (surplus). Based on your TDEE and goals.</p>
+      <p class="hero-desc">Calculate your daily calorie needs (TDEE) for weight loss, maintenance, or muscle gain. Enter your details and activity level.</p>
     </section>
 
     <div class="calculator-layout">
       <div class="calc-main">
         <div class="calc-form-card">
-          <h2>Your Goals</h2>
           <form id="calorie-form">
-            <div class="input-group">
-              <label for="tdee">Your TDEE (maintenance calories)</label>
-              <input type="number" id="tdee" placeholder="2200" min="500">
-              <small>Use our <a href="tdee-calculator.html">TDEE calculator</a> if you don't know this</small>
+            <div class="form-header">
+              <h2>Your Details</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Unit System</span>
+                <div class="unit-toggle-btns">
+                  <button type="button" class="unit-btn active" data-unit="metric">Metric</button>
+                  <button type="button" class="unit-btn" data-unit="imperial">Imperial</button>
+                </div>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="gender">Gender</label>
+                <select id="gender">
+                  <option value="male" selected>Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label for="age">Age, years</label>
+                <input type="number" id="age" value="35" min="15" max="100" placeholder="35" required>
+              </div>
+            </div>
+            <div class="input-row height-weight-row">
+              <div id="height-metric" class="input-group">
+                <label for="height-cm">Height, cm</label>
+                <input type="number" id="height-cm" value="178" min="100" max="250" step="0.1" placeholder="178" required>
+              </div>
+              <div class="input-group height-imperial-cell" style="display:none">
+                <label for="height-ft">Height, ft</label>
+                <input type="number" id="height-ft" min="3" max="8" placeholder="5" required>
+              </div>
+              <div class="input-group height-imperial-cell" style="display:none">
+                <label for="height-in">Height, in</label>
+                <input type="number" id="height-in" min="0" max="11" step="0.5" placeholder="10" required>
+              </div>
+              <div class="input-group">
+                <label for="weight" id="weight-label">Weight, kg</label>
+                <input type="number" id="weight" value="88" min="1" step="0.1" placeholder="88" required>
+              </div>
             </div>
             <div class="input-group">
-              <label for="goal">Goal</label>
-              <select id="goal">
-                <option value="maintain">Maintain weight</option>
-                <option value="lose">Lose fat (deficit)</option>
-                <option value="gain">Gain muscle (surplus)</option>
-              </select>
+              <span class="input-label">Activity Level</span>
+              <div class="activity-radios">
+                <label class="activity-radio">
+                  <input type="radio" name="activity" value="1.2">
+                  <span class="activity-icon">🪑</span>
+                  <div class="activity-content">
+                    <span class="activity-text">Sedentary</span>
+                    <span class="activity-desc">Little or no exercise, desk job</span>
+                  </div>
+                </label>
+                <label class="activity-radio">
+                  <input type="radio" name="activity" value="1.375">
+                  <span class="activity-icon">🚶</span>
+                  <div class="activity-content">
+                    <span class="activity-text">Lightly Active</span>
+                    <span class="activity-desc">Light exercise 1-3 days/week</span>
+                  </div>
+                </label>
+                <label class="activity-radio">
+                  <input type="radio" name="activity" value="1.55" checked>
+                  <span class="activity-icon">🏃</span>
+                  <div class="activity-content">
+                    <span class="activity-text">Moderately Active</span>
+                    <span class="activity-desc">Moderate exercise 3-5 days/week</span>
+                  </div>
+                </label>
+                <label class="activity-radio">
+                  <input type="radio" name="activity" value="1.725">
+                  <span class="activity-icon">🏋️</span>
+                  <div class="activity-content">
+                    <span class="activity-text">Very Active</span>
+                    <span class="activity-desc">Hard exercise 6-7 days/week</span>
+                  </div>
+                </label>
+                <label class="activity-radio">
+                  <input type="radio" name="activity" value="1.9">
+                  <span class="activity-icon">⚡</span>
+                  <div class="activity-content">
+                    <span class="activity-text">Extra Active</span>
+                    <span class="activity-desc">Very hard exercise, physical job</span>
+                  </div>
+                </label>
+              </div>
             </div>
-            <div class="input-group" id="deficit-group">
-              <label for="deficit">Daily deficit (calories)</label>
-              <input type="number" id="deficit" placeholder="500" min="100" value="500">
-              <small>~500 cal/day ≈ 1 lb/week loss</small>
-            </div>
-            <div class="input-group" id="surplus-group" style="display:none">
-              <label for="surplus">Daily surplus (calories)</label>
-              <input type="number" id="surplus" placeholder="300" min="100" value="300">
-              <small>~300–500 cal surplus for lean gain</small>
-            </div>
-            <button type="submit" class="calc-btn">Calculate</button>
+            <button type="submit" class="calc-btn">Calculate Calories</button>
           </form>
         </div>
-        <div class="content-body">
-          <h2>Calorie Targets</h2>
-          <p>To lose weight, eat below TDEE. To gain muscle, eat above. For maintenance, eat at TDEE. Extreme deficits or surpluses can be counterproductive.</p>
+        <div class="seo-content">
+          <h2>What is a Calorie Calculator?</h2>
+          <p>A Calorie Calculator determines your personalized daily calorie needs by factoring in your Basal Metabolic Rate (BMR), activity level, and specific objectives. It builds on your Total Daily Energy Expenditure (TDEE) to suggest intake levels: maintain at your TDEE, create a deficit for fat loss, or a surplus for building mass. Calories are units of energy from food, and balancing them is key to health and fitness.</p>
+          <p>We use proven formulas like the Mifflin-St Jeor equation for BMR, combined with activity multipliers from sources like the Harris-Benedict principles, to deliver accurate estimates. This method is supported by nutritional research from bodies like the Academy of Nutrition and Dietetics.</p>
+
+          <h2>How to Use Our Calorie Calculator</h2>
+          <ol>
+            <li><strong>Provide Your Info:</strong> Enter age, gender, height, weight, activity level, and your goal (e.g., lose 0.5 kg/week).</li>
+            <li><strong>Get Your Results:</strong> Press "Calculate" for a breakdown of recommended daily calories.</li>
+            <li><strong>Fine-Tune Your Diet:</strong> Integrate with our <a href="macro-calculator.html">Macro Calculator</a> to split calories into proteins, carbs, and fats.</li>
+          </ol>
+          <p><strong>Pro Tip:</strong> Pair this with our <a href="tdee-calculator.html">TDEE Calculator</a> for a deeper understanding of your energy burn, or track progress with our <a href="bmr-calculator.html">BMR tool</a>!</p>
+
+          <h2>Why Use a Calorie Calculator?</h2>
+          <ul>
+            <li><strong>Goal-Oriented Dieting:</strong> Set realistic targets to avoid under- or over-eating, promoting long-term success.</li>
+            <li><strong>Health and Wellness Boost:</strong> Ensure you're fueling your body properly for energy, mood, and overall vitality.</li>
+            <li><strong>Customized for You:</strong> Accounts for individual differences like age and activity, unlike generic advice.</li>
+            <li><strong>Totally Free and Private:</strong> Instant results with no data sharing—everything processes in your browser.</li>
+          </ul>
+          <p>Searching for "daily calorie calculator" or "how many calories do I need"? Our tool provides fast, science-based answers, making it ideal for beginners asking "what are daily calorie needs" or pros refining their plans.</p>
+
+          <h2>Common Questions About Calorie Needs</h2>
+          <div class="faq-item">
+            <h3>How accurate is this?</h3>
+            <p>It's a solid estimate, but consult a pro for personalized advice, especially with medical conditions.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do calories differ by gender?</h3>
+            <p>Yes, typically men have higher needs due to muscle mass, but it's individualized.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What if my goals change?</h3>
+            <p>Recalculate anytime—weight fluctuations or new routines can shift your needs.</p>
+          </div>
+
+          <p>Start fueling smarter! Try our Calorie Calculator above and transform your approach to nutrition.</p>
+
+          <div class="bmi-disclaimer">
+            <strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.
+          </div>
         </div>
       </div>
+
       <aside class="results-card">
-        <h3>Your Results</h3>
-        <div class="result-item">
-          <span class="result-label">Target Calories</span>
-          <span class="result-value" id="result-calories">—</span>
+        <div class="bmi-result-main">
+          <span class="bmi-value" id="result-tdee">2,826</span>
+          <span class="bmi-label">Daily Calories (TDEE)</span>
         </div>
-        <div class="chart-container">
-          <span>Chart — Calorie intake vs deficit/surplus</span>
+        <p class="calorie-bmr-line">Your Basal Metabolic Rate (BMR): <strong id="result-bmr">1,823</strong> calories</p>
+
+        <div class="calorie-goal-section">
+          <h4>What's Your Goal?</h4>
+          <div class="calorie-goal-btns">
+            <button type="button" class="calorie-goal-btn" data-goal="lose" title="Lose Weight">
+              <span class="calorie-goal-emoji">🔥</span>
+              <span>Lose Weight</span>
+            </button>
+            <button type="button" class="calorie-goal-btn active" data-goal="maintain" title="Maintain">
+              <span class="calorie-goal-emoji">⚖️</span>
+              <span>Maintain</span>
+            </button>
+            <button type="button" class="calorie-goal-btn" data-goal="gain" title="Gain Muscle">
+              <span class="calorie-goal-emoji">💪</span>
+              <span>Gain Muscle</span>
+            </button>
+          </div>
+          <div id="goal-lose-detail" class="calorie-goal-detail" style="display:none">
+            <div class="calorie-goal-row"><span id="cal-mild-loss">—</span><span class="goal-desc" data-metric="Mild Cut (0.25 kg/week)" data-imperial="Mild Cut (0.5 lb/week)">Mild Cut (0.25 kg/week)</span></div>
+            <div class="calorie-goal-row"><span id="cal-loss">—</span><span class="goal-desc" data-metric="Weight Loss (0.5 kg/week)" data-imperial="Weight Loss (1 lb/week)">Weight Loss (0.5 kg/week)</span></div>
+          </div>
+          <div id="goal-maintain-detail" class="calorie-goal-detail">
+            <div class="calorie-goal-row highlight"><span id="result-target">2,826</span><span>Maintenance</span></div>
+          </div>
+          <div id="goal-gain-detail" class="calorie-goal-detail" style="display:none">
+            <div class="calorie-goal-row"><span id="cal-lean-bulk">—</span><span class="goal-desc" data-metric="Lean Bulk (0.25 kg/week)" data-imperial="Lean Bulk (0.5 lb/week)">Lean Bulk (0.25 kg/week)</span></div>
+            <div class="calorie-goal-row"><span id="cal-moderate-bulk">—</span><span class="goal-desc" data-metric="Moderate Bulk (0.5 kg/week)" data-imperial="Moderate Bulk (1 lb/week)">Moderate Bulk (0.5 kg/week)</span></div>
+            <div class="calorie-goal-row"><span id="cal-aggressive-bulk">—</span><span class="goal-desc" data-metric="Aggressive Bulk (0.75 kg/week)" data-imperial="Aggressive Bulk (1.5 lb/week)">Aggressive Bulk (0.75 kg/week)</span></div>
+          </div>
+          <p class="calorie-goal-note"><span id="goal-note-text" data-metric="ℹ️ A 500 calorie deficit/surplus = ~0.5 kg change per week" data-imperial="ℹ️ A 500 calorie deficit/surplus = ~1 lb change per week">ℹ️ A 500 calorie deficit/surplus = ~0.5 kg change per week</span></p>
+        </div>
+
+        <div class="calorie-what-means">
+          <h4>📊 What This Means</h4>
+          <ul>
+            <li><strong>Deficit/Surplus:</strong> Eat below/above TDEE to lose/gain weight</li>
+            <li><strong>TDEE:</strong> Total daily energy expenditure including activity</li>
+            <li><strong>BMR:</strong> Calories burned at complete rest</li>
+          </ul>
         </div>
       </aside>
     </div>
 
     <div class="related-section">
-      <h3>Related</h3>
+      <h3>Related Calculators</h3>
       <div class="related-links">
         <a href="tdee-calculator.html">TDEE Calculator</a>
+        <a href="bmr-calculator.html">BMR Calculator</a>
         <a href="macro-calculator.html">Macro Calculator</a>
+        <a href="bmi-calculator.html">BMI Calculator</a>
         <a href="../blog/weight-loss-calculation-tips.html">Weight Loss Tips</a>
       </div>
     </div>
@@ -116,8 +261,8 @@
       <div class="footer-inner">
         <div class="footer-links">
           <a href="index.html" class="footer-link">Calculators</a>
-          <a href="../guides/" class="footer-link">Guides</a>
-          <a href="../blog/" class="footer-link">Blog</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
           <a href="../about.html" class="footer-link">About</a>
           <a href="../contact.html" class="footer-link">Contact</a>
           <a href="../privacy.html" class="footer-link">Privacy</a>
@@ -130,5 +275,6 @@
 
   <script src="../js/theme.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/calorie-calculator.js"></script>
 </body>
 </html>

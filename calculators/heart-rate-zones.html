@@ -8,6 +8,11 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://sportycalc.com/calculators/heart-rate-zones.html">
   <title>Heart Rate Zones Calculator | SportyCalc</title>
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -22,8 +27,8 @@
       <a href="../index.html" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
       <div class="nav-links">
         <a href="index.html" class="nav-link active">Calculators</a>
-        <a href="../guides/" class="nav-link">Guides</a>
-        <a href="../blog/" class="nav-link">Blog</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
       </div>
       <div class="nav-actions">
         <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
@@ -35,8 +40,8 @@
     </div>
     <div class="mobile-nav">
       <a href="index.html" class="mobile-nav-link">Calculators</a>
-      <a href="../guides/" class="mobile-nav-link">Guides</a>
-      <a href="../blog/" class="mobile-nav-link">Blog</a>
+      <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+      <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
     </div>
   </nav>
 
@@ -53,67 +58,126 @@
       <p class="hero-desc">Calculate your training heart rate zones for fat burn, cardio, and high-intensity training. Enter your age or measured max HR.</p>
     </section>
 
-    <div class="calculator-layout">
+    <div class="full-width-row">
+      <div class="wrapper">
+        <div class="calculator-layout">
       <div class="calc-main">
         <div class="calc-form-card">
           <h2>Your Data</h2>
           <form id="hr-form">
-            <div class="input-group">
-              <label for="method">Method</label>
+            <div id="age-group" class="input-group">
+              <label for="age">Your Age</label>
+              <input type="number" id="age" value="30" placeholder="30" min="10" max="100">
+            </div>
+            <div id="rhr-group" class="input-group">
+              <label for="rhr">Resting Heart Rate (optional)</label>
+              <input type="number" id="rhr" placeholder="60" min="40" max="100">
+              <small id="rhr-hint" class="input-hint" style="display:none">For more accurate Karvonen method</small>
+            </div>
+            <div id="method-group" class="input-group">
+              <label for="method">Calculation Method</label>
               <select id="method">
-                <option value="age">Estimate from age (220 - age)</option>
-                <option value="max">I know my max HR</option>
+                <option value="standard">Standard (220 − age)</option>
+                <option value="tanaka">Tanaka (208 − 0.7 × age)</option>
+                <option value="karvonen">Karvonen (uses resting HR)</option>
               </select>
             </div>
-            <div class="input-group" id="age-group">
-              <label for="age">Age (years)</label>
-              <input type="number" id="age" placeholder="30" min="10" max="100">
-            </div>
-            <div class="input-group" id="maxhr-group" style="display:none">
-              <label for="maxhr">Max Heart Rate (bpm)</label>
-              <input type="number" id="maxhr" placeholder="190" min="100" max="220">
-            </div>
-            <button type="submit" class="calc-btn">Calculate Zones</button>
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate Zones</button>
           </form>
         </div>
-        <div class="content-body">
-          <h2>Understanding Zones</h2>
-          <p>Different zones target different goals: Zone 2 for endurance, Zone 3 for aerobic fitness, Zone 4–5 for intensity and performance.</p>
+        <div class="seo-content">
+          <p>Our Heart Rate Zone Calculator helps you find your personalized training zones based on age, maximum heart rate, and optional resting heart rate. Whether you're a runner, cyclist, or gym-goer, understanding your zones ensures efficient training for fat burn, endurance, or peak performance—without overexertion.</p>
+
+          <h2>What are Heart Rate Zones?</h2>
+          <p>Heart rate zones divide your effort levels into categories (typically 1–5) based on a percentage of your maximum heart rate (MHR). This guides intensity: Zone 1 for easy recovery, up to Zone 5 for all-out sprints. Accurate zones prevent burnout and maximize benefits like improved cardio fitness or fat loss.</p>
+          <p>Our calculator supports multiple methods:</p>
+          <ul>
+            <li><strong>Standard (220 − age):</strong> A simple, widely used estimate for MHR.</li>
+            <li><strong>Tanaka (208 − 0.7 × age):</strong> More accurate for older adults, based on research.</li>
+            <li><strong>Karvonen:</strong> Uses resting heart rate (RHR) for precise, individualized zones—ideal for athletes.</li>
+          </ul>
+          <p>Backed by exercise physiology from sources like the American College of Sports Medicine (ACSM), these formulas help tailor zones to your fitness level.</p>
+
+          <h2>How to Use Our Heart Rate Zone Calculator</h2>
+          <ol>
+            <li><strong>Enter Your Age:</strong> The foundation for estimating MHR.</li>
+            <li><strong>Add Resting Heart Rate (Optional):</strong> Measure your pulse at rest (e.g., morning) for Karvonen accuracy.</li>
+            <li><strong>Select Method:</strong> Choose Standard, Tanaka, or Karvonen.</li>
+            <li><strong>Calculate Zones:</strong> Get instant breakdowns in beats per minute (bpm) for each zone.</li>
+          </ol>
+
+          <p><strong>Example:</strong> For a 30-year-old with MHR of 190 bpm:</p>
+          <ul>
+            <li>Zone 1 (Recovery): 95–114 bpm — Light activity, warm-up.</li>
+            <li>Zone 2 (Fat Burn): 114–133 bpm — Endurance, fat burning.</li>
+            <li>Zone 3 (Aerobic): 133–152 bpm — Cardio fitness.</li>
+            <li>Zone 4 (Anaerobic): 152–171 bpm — Speed and power.</li>
+            <li>Zone 5 (Maximum): 171–190 bpm — Peak effort, bursts.</li>
+          </ul>
+
+          <p><strong>Pro Tip:</strong> Pair with our <a href="calories-burned.html">Calories Burned Calculator</a> to track workout energy expenditure, or use our <a href="bmr-calculator.html">BMR Calculator</a> for overall fitness planning!</p>
+
+          <h2>Why Calculate Your Heart Rate Zones?</h2>
+          <ul>
+            <li><strong>Targeted Workouts:</strong> Train smarter—burn fat in Zone 2 or build speed in Zone 4 for better results.</li>
+            <li><strong>Injury Prevention:</strong> Stay in safe zones to avoid strain, especially for beginners or those with health concerns.</li>
+            <li><strong>Progress Tracking:</strong> Adjust as fitness improves; lower RHR means evolving zones.</li>
+            <li><strong>Free and Private:</strong> Quick calculations with no data storage—use it anywhere on mobile.</li>
+          </ul>
+
+          <p>If you're searching for "heart rate zone calculator by age" or "Karvonen heart rate zones," our tool offers reliable, method-flexible results. Perfect for queries like "training zones for running" or "how to find max heart rate."</p>
+
+          <h2>Common Questions About Heart Rate Zones</h2>
+          <ul>
+            <li><strong>How do I measure resting heart rate?</strong> Count your pulse for 60 seconds upon waking—aim for consistency.</li>
+            <li><strong>Which method is best?</strong> Karvonen for accuracy if you know RHR; Standard for quick estimates.</li>
+            <li><strong>Can zones change?</strong> Yes, with age, fitness gains, or weight loss—recalculate regularly.</li>
+          </ul>
+
+          <p>Find your optimal training zones now! Use our Heart Rate Zone Calculator below and elevate your fitness game.</p>
+
+          <div class="bmi-disclaimer">
+            <strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.
+          </div>
         </div>
       </div>
       <aside class="results-card">
-        <h3>Your Zones</h3>
-        <div class="result-item">
-          <span class="result-label">Max HR</span>
-          <span class="result-value" id="result-maxhr">—</span>
+        <div class="hr-result-max">
+          <span class="hr-max-value" id="result-maxhr">—</span>
+          <span class="hr-max-label">Max Heart Rate (bpm)</span>
         </div>
-        <div class="result-item">
+        <h3>Your Training Zones</h3>
+        <div class="result-item hr-zone hr-zone-1">
+          <span class="result-label">Zone 1 (50–60%)</span>
+          <span class="result-value" id="result-z1">—</span>
+        </div>
+        <div class="result-item hr-zone hr-zone-2">
           <span class="result-label">Zone 2 (60–70%)</span>
           <span class="result-value" id="result-z2">—</span>
         </div>
-        <div class="result-item">
+        <div class="result-item hr-zone hr-zone-3">
           <span class="result-label">Zone 3 (70–80%)</span>
           <span class="result-value" id="result-z3">—</span>
         </div>
-        <div class="result-item">
+        <div class="result-item hr-zone hr-zone-4">
           <span class="result-label">Zone 4 (80–90%)</span>
           <span class="result-value" id="result-z4">—</span>
         </div>
-        <div class="result-item">
+        <div class="result-item hr-zone hr-zone-5">
           <span class="result-label">Zone 5 (90–100%)</span>
           <span class="result-value" id="result-z5">—</span>
         </div>
-        <div class="chart-container">
-          <span>Chart — Zone breakdown (Chart.js)</span>
-        </div>
       </aside>
+        </div>
+      </div>
     </div>
 
     <div class="related-section">
-      <h3>Related</h3>
+      <h3>Related Calculators</h3>
       <div class="related-links">
-        <a href="1rm-calculator.html">1RM Calculator</a>
         <a href="calories-burned.html">Calories Burned</a>
+        <a href="bmr-calculator.html">BMR Calculator</a>
+        <a href="1rm-calculator.html">1RM Calculator</a>
         <a href="../guides/fitness-metrics-explained.html">Fitness Metrics Explained</a>
       </div>
     </div>
@@ -124,8 +188,8 @@
       <div class="footer-inner">
         <div class="footer-links">
           <a href="index.html" class="footer-link">Calculators</a>
-          <a href="../guides/" class="footer-link">Guides</a>
-          <a href="../blog/" class="footer-link">Blog</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
           <a href="../about.html" class="footer-link">About</a>
           <a href="../contact.html" class="footer-link">Contact</a>
           <a href="../privacy.html" class="footer-link">Privacy</a>
@@ -138,5 +202,6 @@
 
   <script src="../js/theme.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/heart-rate-zones.js"></script>
 </body>
 </html>
