@@ -65,13 +65,18 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ===================== Layout ===================== */
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 480px) {
+  .wrapper { padding: 0 1.5rem; }
 }
 
 /* ===================== Navigation ===================== */
@@ -83,6 +88,7 @@ body {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   transition: background var(--transition);
+  padding-top: env(safe-area-inset-top, 0);
 }
 
 .nav.nav-scrolled {
@@ -96,7 +102,12 @@ body {
   height: 64px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
+  min-width: 0;
+}
+
+@media (min-width: 480px) {
+  .nav-inner { padding: 0 1.5rem; }
 }
 
 .nav-logo {
@@ -105,6 +116,17 @@ body {
   gap: 0.5rem;
   text-decoration: none;
   color: var(--text-primary);
+  min-width: 0;
+}
+
+.nav-logo .nav-logo-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 359px) {
+  .nav-logo-text { font-size: 1rem; }
 }
 
 .nav-logo-text {
@@ -120,6 +142,7 @@ body {
   width: auto;
   display: block;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .nav-links {
@@ -130,6 +153,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-shrink: 0;
 }
 
 .theme-toggle {
@@ -184,11 +208,15 @@ body {
 .nav-toggle {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .nav-toggle span {
@@ -213,20 +241,30 @@ body {
 
 .mobile-nav {
   position: fixed;
-  top: 64px;
+  top: calc(64px + env(safe-area-inset-top, 0));
   left: 0;
   right: 0;
   bottom: 0;
   background: var(--bg);
-  padding: 2rem;
+  padding: 2rem 1.5rem 2rem;
   transform: translateX(100%);
   transition: transform 350ms ease;
   z-index: 99;
   overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  pointer-events: none;
 }
 
 .mobile-nav.open {
   transform: translateX(0);
+  pointer-events: auto;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
 }
 
 .mobile-nav-link {
@@ -380,6 +418,7 @@ body {
 .footer-inner {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
@@ -413,6 +452,34 @@ body {
   color: var(--text-muted);
 }
 
+.footer-credit {
+  flex-basis: 100%;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  text-align: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.footer-credit a {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color var(--transition);
+}
+
+.footer-credit a:hover {
+  color: var(--primary);
+}
+
+.footer-credit svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
 /* ===================== 404 Page ===================== */
 .error-page {
   padding: 120px 0;
@@ -441,6 +508,27 @@ body {
 /* ===================== Contact Page ===================== */
 .contact-section {
   padding-bottom: var(--section-gap);
+}
+
+.contact-section.contact-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-site-link {
+  text-align: center;
+}
+
+.contact-site-link a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color var(--transition);
+}
+
+.contact-site-link a:hover {
+  color: var(--primary);
 }
 
 .contact-form-card {
@@ -503,6 +591,23 @@ body {
   display: grid;
   gap: var(--section-gap);
   padding-bottom: var(--section-gap);
+}
+
+/* Mobile: show results right after form, before SEO content */
+@media (max-width: 991px) {
+  .calculator-layout .calc-main {
+    display: contents;
+  }
+  .calculator-layout .calc-form-card {
+    order: 1;
+  }
+  .calculator-layout .results-card {
+    order: 2;
+    position: static; /* no sticky when in flow between form and content */
+  }
+  .calculator-layout .seo-content {
+    order: 3;
+  }
 }
 
 @media (min-width: 992px) {

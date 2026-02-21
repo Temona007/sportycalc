@@ -12,19 +12,26 @@
   const body = document.body;
 
   if (navToggle && mobileNav) {
+    const closeMenu = () => {
+      mobileNav.classList.remove('open');
+      navToggle.classList.remove('active');
+      body.style.overflow = '';
+    };
+
     navToggle.addEventListener('click', () => {
       mobileNav.classList.toggle('open');
       navToggle.classList.toggle('active');
       body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
     });
 
-    // Close on link click (for anchor links)
+    // Close on link click (navigate away or anchor)
     mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-        navToggle.classList.remove('active');
-        body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) closeMenu();
     });
   }
 
