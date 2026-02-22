@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Free power-to-weight ratio calculator for athletes, cyclists, runners & fitness enthusiasts. Measure W/kg or hp/lb with science-backed formulas. Track performance, set goals, compare fairly—100% private, mobile-optimized.">
+  <meta name="keywords" content="power to weight ratio calculator, PWR calculator, watts per kg, cycling power, athletic performance, W/kg, hp per lb, fitness metrics, cycling climbing, strength to weight">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="SportyCalc">
+  <link rel="canonical" href="https://sportycalc.com/calculators/power-to-weight-calculator.html">
+  <title>Power-to-Weight Ratio Calculator | Free PWR for Cycling, Running, Fitness | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/power-to-weight-calculator.html">
+  <meta property="og:title" content="Power-to-Weight Ratio Calculator | Free PWR for Athletes | SportyCalc">
+  <meta property="og:description" content="Measure how efficiently you generate power relative to your weight. Free PWR calculator for cycling, running, climbing & weightlifting. W/kg, hp/lb—instant results, no data shared.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Power-to-Weight Ratio Calculator | SportyCalc">
+  <meta name="twitter:description" content="Free PWR calculator for cyclists, runners & athletes. Measure W/kg or hp/lb—instant results, 100% private.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Power-to-Weight Ratio Calculator",
+        "url": "https://sportycalc.com/calculators/power-to-weight-calculator.html",
+        "description": "Free power-to-weight ratio calculator for athletes, cyclists, runners and fitness enthusiasts. Measure W/kg or hp/lb with science-backed formulas.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Is a higher power-to-weight ratio better?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! It directly correlates with better acceleration and efficiency in weight-sensitive sports."}},
+          {"@type": "Question", "name": "How do I find my power output?", "acceptedAnswer": {"@type": "Answer", "text": "Use fitness apps, smart trainers, or estimate from activities with our Calories Burned Calculator."}},
+          {"@type": "Question", "name": "What's a good PWR for cycling?", "acceptedAnswer": {"@type": "Answer", "text": "Beginners: 2-3 W/kg; elites: 5-7 W/kg. For vehicles, a sports car might hit around 0.1 hp/lb."}},
+          {"@type": "Question", "name": "Can I use this for weight loss?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely—combine with our BMR and TDEE Calculators to balance power retention while cutting weight."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Calculators</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+    <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>Power-to-Weight Ratio</span>
+      </nav>
+      <h1>Power-to-Weight Ratio Calculator</h1>
+      <p class="hero-desc">Measure how efficiently you generate power relative to your weight. Essential for cycling, climbing, running, and weightlifting—where every ounce matters for speed, endurance, and acceleration.</p>
+    </section>
+
+    <section class="quiz-cta-section">
+      <a href="../fitness-quiz.html" class="quiz-cta-card">
+        <span class="quiz-cta-icon">🧠</span>
+        <div class="quiz-cta-content">
+          <h2 class="quiz-cta-title">Take the Quiz!</h2>
+          <p class="quiz-cta-desc">Test your fitness knowledge in 5 quick questions. Get instant green/red feedback and see how you score.</p>
+        </div>
+        <span class="quiz-cta-arrow">→</span>
+      </a>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <form id="pwr-form">
+            <div class="form-header">
+              <h2>Power & Weight</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Units</span>
+                <div class="unit-toggle-btns">
+                  <button type="button" class="unit-btn active" data-unit="metric">W / kg</button>
+                  <button type="button" class="unit-btn" data-unit="imperial">hp / lb</button>
+                </div>
+              </div>
+            </div>
+            <div class="input-group" id="power-group">
+              <label for="power">Power</label>
+              <div class="pwr-input-wrap">
+                <input type="number" id="power" value="250" placeholder="250" min="1" step="1" required>
+                <span class="pwr-unit" id="power-unit">W</span>
+              </div>
+              <small class="input-hint" id="power-hint">Cycling: use FTP or 20-min test avg</small>
+            </div>
+            <div class="input-group">
+              <label for="weight">Weight (mass)</label>
+              <div class="pwr-input-wrap">
+                <input type="number" id="weight" value="70" placeholder="70" min="1" step="0.1" required>
+                <span class="pwr-unit" id="weight-unit">kg</span>
+              </div>
+            </div>
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate Power-to-Weight Ratio</button>
+          </form>
+        </div>
+        <div class="seo-content">
+          <p>Are you an athlete, cyclist, runner, or fitness enthusiast looking to boost your performance? Our Power-to-Weight Ratio Calculator helps you measure how efficiently your body generates power relative to your weight. This essential metric, also known as PWR, is a game-changer for sports like cycling, climbing, running, and weightlifting, where every ounce matters for speed, endurance, and acceleration.</p>
+
+          <h2>What is Power-to-Weight Ratio and Why Does It Matter?</h2>
+          <p>The power-to-weight ratio (PWR) is a key indicator of athletic efficiency, calculated by dividing your power output by your body weight. In fitness and sports, a higher PWR means better performance per pound—think faster sprints, easier hill climbs, or stronger lifts. Unlike raw power metrics, PWR levels the playing field by accounting for body size, making it ideal for comparing your progress or benchmarking against pros.</p>
+          <p>For example:</p>
+          <ul>
+            <li><strong>Cyclists</strong> use PWR to gauge climbing ability (e.g., watts per kilogram).</li>
+            <li><strong>Runners and triathletes</strong> rely on it for speed optimization.</li>
+            <li><strong>Gym-goers</strong> track it for strength-to-weight gains in exercises like squats or deadlifts.</li>
+          </ul>
+          <p>At SportyCalc, we use science-backed formulas to deliver instant, accurate results—perfect for your training routine, whether you're prepping for a marathon or fine-tuning your CrossFit workouts.</p>
+
+          <h2>How to Calculate Power-to-Weight Ratio</h2>
+          <p>Using our free power-to-weight ratio calculator is simple and secure—no data is shared, and it's mobile-optimized for on-the-go use. Here's how it works:</p>
+          <ol>
+            <li><strong>Input Your Power Output:</strong> Enter your peak power in watts (W) or horsepower (hp). For athletes, this could come from a bike power meter, treadmill test, or estimated from workouts (try our integrated <a href="1rm-calculator.html">1RM Calculator</a> for strength-based estimates).</li>
+            <li><strong>Enter Your Weight:</strong> Use your body weight in kilograms (kg) or pounds (lb). For precision, measure without gear.</li>
+            <li><strong>Get Your PWR:</strong> Hit calculate to see your ratio in units like W/kg or hp/lb.</li>
+          </ol>
+          <p><strong>Formula:</strong></p>
+          <p>Power-to-Weight Ratio (PWR) = Power Output ÷ Weight</p>
+          <p><strong>Example:</strong> A cyclist producing 300 watts at 70 kg has a PWR of 4.29 W/kg—a solid benchmark for amateur riders. Compare this to pros who hit 6+ W/kg on climbs!</p>
+
+          <h2>Benefits of Tracking Your Power-to-Weight Ratio</h2>
+          <ul>
+            <li><strong>Improve Training:</strong> Identify if you need to build power (e.g., via our <a href="protein-intake.html">Protein Intake Calculator</a>) or shed weight (pair with our <a href="calorie-calculator.html">Calorie Calculator</a> for safe deficits).</li>
+            <li><strong>Set Goals:</strong> Track changes over time to measure fitness gains.</li>
+            <li><strong>Compare Fairly:</strong> PWR ignores absolute size, so it's great for diverse body types in sports.</li>
+            <li><strong>Enhance Nutrition and Recovery:</strong> Link it with our <a href="macro-calculator.html">Macro Calculator</a> or <a href="water-intake.html">Water Intake</a> tool for holistic health.</li>
+          </ul>
+
+          <h2>FAQs: Power-to-Weight Ratio Explained</h2>
+          <dl class="faq-list">
+            <dt>Is a higher power-to-weight ratio better?</dt>
+            <dd>Yes! It directly correlates with better acceleration and efficiency in weight-sensitive sports.</dd>
+            <dt>How do I find my power output?</dt>
+            <dd>Use fitness apps, smart trainers, or estimate from activities with our <a href="calories-burned.html">Calories Burned Calculator</a>.</dd>
+            <dt>What's a good PWR for cycling?</dt>
+            <dd>Beginners: 2–3 W/kg; elites: 5–7 W/kg. For vehicles (bonus tip), check car specs—e.g., a sports car might hit 0.1 hp/lb.</dd>
+            <dt>Can I use this for weight loss?</dt>
+            <dd>Absolutely—combine with our <a href="bmr-calculator.html">BMR</a> and <a href="tdee-calculator.html">TDEE Calculators</a> to balance power retention while cutting weight.</dd>
+          </dl>
+
+          <p>Ready to elevate your game? Try our Power-to-Weight Ratio Calculator above. It's free, private, and part of our suite of fitness tools designed for real results. Track smarter, perform better—calculate with confidence!</p>
+
+          <div class="bmi-disclaimer">
+            <strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.
+          </div>
+        </div>
+      </div>
+      <aside class="results-card" id="pwr-result-card">
+        <h3>Your Result</h3>
+        <div class="pwr-result-main">
+          <span class="pwr-value" id="result-pwr">—</span>
+          <span class="pwr-result-unit" id="result-pwr-unit"></span>
+        </div>
+        <p class="pwr-result-label" id="result-pwr-label">Power-to-weight ratio</p>
+        <div class="pwr-alt-values" id="pwr-alt-values"></div>
+        <div class="pwr-chart-section">
+          <h4>Compare Your PWR</h4>
+          <div class="chart-container">
+            <canvas id="pwr-chart" aria-label="Power-to-weight ratio comparison chart"></canvas>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related Calculators</h3>
+      <div class="related-links">
+        <a href="heart-rate-zones.html">Heart Rate Zones</a>
+        <a href="calories-burned.html">Calories Burned</a>
+        <a href="1rm-calculator.html">1RM Calculator</a>
+        <a href="../guides/fitness-metrics-explained.html">Fitness Metrics Explained</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc.</p>
+        <p class="footer-credit"><a href="https://riyaka.art/" target="_blank" rel="noopener noreferrer">Developed by Art R. <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 28 28" role="img"><path fill="#1F57C3" d="M12 1.155a4 4 0 014 0l8.124 4.69a4 4 0 012 3.464v9.382a4 4 0 01-2 3.464L16 26.845a4 4 0 01-4 0l-8.124-4.69a4 4 0 01-2-3.464V9.309a4 4 0 012-3.464L12 1.155z"></path><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.761 7.542l1.188 3.201 3.285.184a.78.78 0 01.448.173c.13.104.226.247.277.41a.9.9 0 01.01.504.858.858 0 01-.261.422L17.15 14.6l.854 3.328a.907.907 0 01-.025.507.857.857 0 01-.291.404.785.785 0 01-.919.02L14 16.984l-2.764 1.862a.784.784 0 01-.916-.012.855.855 0 01-.294-.4.906.906 0 01-.031-.505l.847-3.314-2.55-2.18a.858.858 0 01-.26-.421.9.9 0 01.01-.504.853.853 0 01.276-.41.782.782 0 01.448-.173l3.285-.184 1.188-3.201a.86.86 0 01.302-.394.79.79 0 01.918 0 .86.86 0 01.302.394z" clip-rule="evenodd"></path></svg></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators... (e.g. calorie, bmi)" autocomplete="off" aria-autocomplete="list" aria-controls="search-results">
+        <div id="search-results" class="search-results" role="listbox" aria-label="Calculator results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/power-to-weight-calculator.js"></script>
+</body>
+</html>

@@ -12,8 +12,8 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Fitness and nutrition guides: TDEE, macros, fitness metrics. Learn how to use calculators and interpret results.">
-  <meta name="keywords" content="fitness guides, TDEE guide, macro guide, BMR calculator guide, nutrition guides">
+  <meta name="description" content="Fitness and nutrition guides: TDEE, macros, calorie deficit diet, fitness metrics. Learn how to use calculators and interpret results.">
+  <meta name="keywords" content="fitness guides, TDEE guide, macro guide, calorie deficit diet guide, BMR calculator guide, nutrition guides">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://sportycalc.com/guides/index.html">
   <title>Fitness Guides | SportyCalc</title>
@@ -21,7 +21,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sportycalc.com/guides/index.html">
   <meta property="og:title" content="Fitness Guides | SportyCalc">
-  <meta property="og:description" content="Fitness and nutrition guides: TDEE, macros, fitness metrics. Learn how to use calculators and interpret results.">
+  <meta property="og:description" content="Fitness and nutrition guides: TDEE, macros, calorie deficit diet, fitness metrics. Learn how to use calculators and interpret results.">
   <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -29,10 +29,10 @@
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Fitness Guides | SportyCalc">
-  <meta name="twitter:description" content="Fitness and nutrition guides: TDEE, macros, fitness metrics.">
+  <meta name="twitter:description" content="Fitness and nutrition guides: TDEE, macros, calorie deficit diet, fitness metrics.">
   <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"CollectionPage","name":"Fitness Guides | SportyCalc","url":"https://sportycalc.com/guides/index.html","description":"Fitness and nutrition guides: TDEE, macros, fitness metrics."}
+  {"@context":"https://schema.org","@type":"CollectionPage","name":"Fitness Guides | SportyCalc","url":"https://sportycalc.com/guides/index.html","description":"Fitness and nutrition guides: TDEE, macros, calorie deficit diet, fitness metrics."}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,6 +48,9 @@
         <a href="index.html" class="nav-link active">Guides</a>
         <a href="../blog/index.html" class="nav-link">Blog</a>
         <a href="../calculators/bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
       </div>
       <div class="nav-actions">
         <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
@@ -94,6 +97,11 @@
           <h3>Fitness Metrics Explained</h3>
           <p>BMI, BMR, body fat, 1RM and more</p>
         </a>
+        <a href="calorie-deficit-diet-guide.html" class="calc-card">
+          <div class="calc-card-icon">📉</div>
+          <h3>Calorie Deficit Diet</h3>
+          <p>Your guide to safe and effective weight loss</p>
+        </a>
       </div>
     </section>
   </main>
@@ -116,7 +124,18 @@
     </div>
   </footer>
 
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators... (e.g. calorie, bmi)" autocomplete="off" aria-autocomplete="list" aria-controls="search-results">
+        <div id="search-results" class="search-results" role="listbox" aria-label="Calculator results"></div>
+      </div>
+    </div>
+  </div>
+
   <script src="../js/theme.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
 </body>
 </html>
