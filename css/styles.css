@@ -636,6 +636,26 @@ body {
   flex-shrink: 0;
 }
 
+.footer-strava-link {
+  margin-left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 24px;
+  min-height: 24px;
+}
+.footer-strava-link img,
+.footer-strava-link svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
+}
+
+
+
 /* ===================== 404 Page ===================== */
 .error-page {
   padding: 120px 0;
@@ -1068,6 +1088,15 @@ body {
 
 .result-value.highlight {
   color: var(--primary);
+}
+
+.result-item-highlight {
+  background: var(--primary-focus);
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0 0;
+  border-radius: var(--radius-btn);
+  border-bottom: none;
+  border-left: 3px solid var(--primary);
 }
 
 /* Calorie deficit calculator */

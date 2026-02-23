@@ -19,7 +19,9 @@
     { title: 'Water Intake', subtitle: 'Daily hydration', href: 'water-intake.html', keywords: 'water intake hydration daily' },
     { title: 'Calories Burned', subtitle: 'Activity calories', href: 'calories-burned.html', keywords: 'calories burned activity exercise' },
     { title: 'Power-to-Weight', subtitle: 'W/kg, hp/lb ratio', href: 'power-to-weight-calculator.html', keywords: 'power weight ratio pwr cycling watts' },
-    { title: 'Calorie Deficit', subtitle: 'Time to reach target weight', href: 'calorie-deficit-calculator.html', keywords: 'calorie deficit weight loss diet target date' }
+    { title: 'Calorie Deficit', subtitle: 'Time to reach target weight', href: 'calorie-deficit-calculator.html', keywords: 'calorie deficit weight loss diet target date' },
+    { title: 'Healthy Weight Calculator', subtitle: 'Ideal body weight, Robinson, Miller, Devine, Hamwi', href: 'healthy-weight-calculator.html', keywords: 'ideal weight healthy weight IBW ideal body weight Robinson Miller Devine Hamwi BMI range' },
+    { title: 'Ideal Body Weight Calculator', subtitle: 'IBW, Robinson, Miller, Devine, Hamwi', href: 'ideal-body-weight-calculator.html', keywords: 'ideal body weight IBW calculator Devine Robinson Miller Hamwi formula' }
   ];
 
   function getCalcBasePath() {

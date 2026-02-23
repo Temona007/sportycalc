@@ -12,31 +12,31 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Unlock your metabolism with our free BMR calculator. Estimate calories burned at rest using the Mifflin-St Jeor equation. Perfect for weight loss, muscle gain, and personalized nutrition.">
-  <meta name="keywords" content="BMR calculator, basal metabolic rate calculator, metabolism calculator">
+  <meta name="description" content="Ideal body weight calculator (IBW) by height and gender. Devine formula and others for medical dosing, fitness goals. Free, private.">
+  <meta name="keywords" content="ideal body weight calculator Devine formula, IBW for height and gender, IBW calculator, ideal weight">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://sportycalc.com/calculators/bmr-calculator.html">
-  <title>Unlock Your Metabolism: Free BMR Calculator | SportyCalc</title>
+  <link rel="canonical" href="https://sportycalc.com/calculators/ideal-body-weight-calculator.html">
+  <title>Ideal Body Weight Calculator – IBW | SportyCalc</title>
   <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sportycalc.com/calculators/bmr-calculator.html">
-  <meta property="og:title" content="Unlock Your Metabolism: Free BMR Calculator | SportyCalc">
-  <meta property="og:description" content="Unlock your metabolism with our free BMR calculator. Estimate calories burned at rest using the Mifflin-St Jeor equation. Perfect for weight loss, muscle gain, and personalized nutrition.">
+  <meta property="og:url" content="https://sportycalc.com/calculators/ideal-body-weight-calculator.html">
+  <meta property="og:title" content="Ideal Body Weight Calculator – IBW | SportyCalc">
+  <meta property="og:description" content="Ideal body weight calculator (IBW) by height and gender. Devine formula for medical dosing and fitness goals. Free and private.">
   <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="SportyCalc">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Unlock Your Metabolism: Free BMR Calculator | SportyCalc">
-  <meta name="twitter:description" content="Unlock your metabolism with our free BMR calculator. Mifflin-St Jeor equation for weight loss and muscle gain.">
+  <meta name="twitter:title" content="Ideal Body Weight Calculator – IBW | SportyCalc">
+  <meta name="twitter:description" content="Ideal body weight calculator (IBW) by height and gender. Devine formula for medical dosing and fitness goals.">
   <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"BMR Calculator","url":"https://sportycalc.com/calculators/bmr-calculator.html","description":"Calculate Basal Metabolic Rate","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Ideal Body Weight Calculator","url":"https://sportycalc.com/calculators/ideal-body-weight-calculator.html","description":"Ideal body weight calculator (IBW) by height and gender. Devine formula for medical dosing and fitness goals. Free and private.","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
   </script>
 </head>
 <body>
@@ -76,10 +76,10 @@
         <span>/</span>
         <a href="index.html">Calculators</a>
         <span>/</span>
-        <span>BMR Calculator</span>
+        <span>Ideal Body Weight Calculator</span>
       </nav>
-      <h1>Unlock Your Metabolism: <br> Free BMR Calculator</h1>
-      <p class="hero-desc">Are you ready to understand your body's energy needs? Our BMR Calculator (Basal Metabolic Rate) estimates the calories your body burns at rest—the first step toward personalized nutrition and fitness plans.</p>
+      <h1>Ideal Body Weight Calculator</h1>
+      <p class="hero-desc">Aiming for a precise target? Our Ideal Body Weight Calculator (IBW) estimates the optimal weight for your height and gender using trusted formulas, often used in medical and fitness contexts. Whether for dosing medications, setting training goals, or tracking progress, this tool delivers a focused benchmark to guide your efforts.</p>
     </section>
 
     <section class="quiz-cta-section">
@@ -97,7 +97,7 @@
       <div class="calc-main">
         <div class="calc-form-card">
           <h2>Enter Your Details</h2>
-          <form id="bmr-form">
+          <form id="healthy-weight-form">
             <div class="unit-toggle">
               <span class="unit-toggle-label">Unit System</span>
               <div class="unit-toggle-btns">
@@ -107,21 +107,21 @@
             </div>
             <div class="input-row">
               <div class="input-group">
-                <label for="gender">Gender</label>
-                <select id="gender" required>
+                <label for="sex">Gender</label>
+                <select id="sex">
                   <option value="male" selected>Male</option>
                   <option value="female">Female</option>
                 </select>
               </div>
               <div class="input-group">
-                <label for="age">Age (years)</label>
-                <input type="number" id="age" value="33" min="15" max="100" placeholder="33" required>
+                <label for="age">Age</label>
+                <input type="number" id="age" value="25" min="2" max="80" placeholder="25" required>
                 <small>years</small>
               </div>
             </div>
             <div id="height-metric" class="input-group">
               <label for="height-cm">Height</label>
-              <input type="number" id="height-cm" value="178" min="100" max="250" step="0.1" placeholder="178" required>
+              <input type="number" id="height-cm" value="180" min="100" max="250" step="0.1" placeholder="180" required>
               <small id="height-unit">cm</small>
             </div>
             <div id="height-imperial" class="input-row" style="display:none">
@@ -136,100 +136,89 @@
                 <small>in</small>
               </div>
             </div>
-            <div class="input-group">
-              <label for="weight">Weight</label>
-              <input type="number" id="weight" value="88" min="1" step="0.1" placeholder="88" required>
-              <small id="weight-unit">kg</small>
-            </div>
-            <button type="submit" class="calc-btn">Calculate BMR</button>
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate</button>
           </form>
         </div>
+
         <div class="seo-content">
-          <p>Our BMR Calculator (Basal Metabolic Rate) is a powerful tool designed to help you estimate the calories your body burns at rest. Whether you're aiming for weight loss, muscle gain, or simply maintaining a healthy lifestyle, knowing your BMR is the first step toward personalized nutrition and fitness plans.</p>
+          <h2>What is Ideal Body Weight?</h2>
+          <p>Ideal Body Weight represents a theoretical "perfect" weight based on height, assuming average build and minimal body fat. The primary Devine formula (developed for clinical use) starts at 50kg (men) or 45.5kg (women) for 152cm, adding 2.3kg per inch over. Adjustments like Peterson or others refine for accuracy. Backed by medical resources, it's handy for scenarios like anesthesia or nutrition planning, but remember—it's an estimate, not a one-size-fits-all.</p>
+          <p>Our calculator incorporates these methods for reliable results, emphasizing practicality over rigidity.</p>
 
-          <h2>What is Basal Metabolic Rate (BMR)?</h2>
-          <p>Basal Metabolic Rate represents the minimum number of calories your body requires to perform essential functions like breathing, circulating blood, and regulating temperature while at complete rest. It's influenced by factors such as age, gender, height, weight, and body composition. Unlike other metrics, BMR focuses solely on your resting energy expenditure, providing a foundation for calculating your Total Daily Energy Expenditure (TDEE).</p>
-          <p>Our calculator uses the scientifically validated Mifflin-St Jeor equation, widely regarded as one of the most accurate formulas for estimating BMR. Backed by research from the American Dietetic Association, this method outperforms older equations like Harris-Benedict for modern populations.</p>
-
-          <h2>How to Use Our BMR Calculator</h2>
-          <ol>
-            <li><strong>Enter Your Details:</strong> Input your age, gender, height (in cm or inches), and weight (in kg or lbs).</li>
-            <li><strong>Get Instant Results:</strong> Hit "Calculate" to receive your personalized BMR in calories per day.</li>
-            <li><strong>Apply It to Your Goals:</strong> Use your BMR to adjust your daily calorie intake—subtract for weight loss, add for gains, or maintain for balance.</li>
-          </ol>
-          <p><strong>Pro Tip:</strong> For even better accuracy, combine your BMR with our <a href="tdee-calculator.html">TDEE Calculator</a> to factor in your activity level!</p>
-
-          <h2>Why Calculate Your BMR?</h2>
+          <h2>How to Use Our Ideal Body Weight Calculator</h2>
           <ul>
-            <li><strong>Personalized Weight Management:</strong> Tailor your diet to avoid guesswork and achieve sustainable results.</li>
-            <li><strong>Fitness Optimization:</strong> Athletes and gym enthusiasts can fine-tune macros and training based on precise energy needs.</li>
-            <li><strong>Health Insights:</strong> Understanding your metabolism helps identify if factors like thyroid function or muscle mass are affecting your energy levels.</li>
-            <li><strong>Free and Private:</strong> No sign-ups required—your data stays in your browser for 100% privacy.</li>
+            <li><strong>Enter Details:</strong> Provide height (in cm or inches), age, and gender.</li>
+            <li><strong>Compare Formulas:</strong> We show Devine, Robinson, Miller, Hamwi, and the healthy BMI range side-by-side.</li>
+            <li><strong>Get Your IBW:</strong> Receive calculated weights in kg or lbs for each formula—use the range as your benchmark.</li>
           </ul>
-          <p>Many users search for "how to calculate BMR accurately" or "best online BMR calculator," and our tool delivers quick, reliable results without the fluff. Whether you're a beginner exploring "what is basal metabolic rate" or an expert tracking progress, this calculator empowers you with data-driven decisions.</p>
+          <p><strong>Pro Tip:</strong> Use alongside our <a href="tdee-calculator.html">TDEE Calculator</a> to set calorie needs at your IBW, or integrate with the <a href="macro-calculator.html">Macro Calculator</a> for diet tweaks!</p>
 
-          <h2>Common Questions About BMR</h2>
+          <h2>Why Calculate Your Ideal Body Weight?</h2>
+          <ul>
+            <li><strong>Targeted Fitness Planning:</strong> Set specific goals for weight loss/gain, aligning with bodybuilding or athletic standards.</li>
+            <li><strong>Medical Insights:</strong> Useful for healthcare pros calculating doses or assessing nutritional status.</li>
+            <li><strong>Progress Benchmark:</strong> Track how close you are to an "ideal" while prioritizing health over aesthetics.</li>
+            <li><strong>Totally Free and Private:</strong> Instant, browser-based calculations with no data sharing.</li>
+          </ul>
+          <p>If you're querying "ideal body weight calculator Devine formula" or "IBW for height and gender," our tool provides precise, adjustable estimates for real-world application.</p>
+
+          <h2>Common Questions About Ideal Body Weight</h2>
           <div class="faq-item">
-            <h3>Is BMR the same as RMR?</h3>
-            <p>Resting Metabolic Rate (RMR) is similar but includes slight activity; BMR is strictly at rest.</p>
+            <h3>Does it account for muscle?</h3>
+            <p>Basic formulas don't—athletes may exceed IBW healthily; use body fat tools for context.</p>
           </div>
           <div class="faq-item">
-            <h3>How often should I recalculate?</h3>
-            <p>Update every few months or after significant weight changes.</p>
+            <h3>How does it differ from healthy weight?</h3>
+            <p>IBW is a single number; healthy is a range—explore our <a href="healthy-weight-calculator.html">Healthy Weight Calculator</a> for broader views.</p>
           </div>
           <div class="faq-item">
-            <h3>Can BMR change?</h3>
-            <p>Yes, with age, muscle building, or hormonal shifts—recalculate as needed.</p>
+            <h3>When to use adjustments?</h3>
+            <p>For obesity or extremes, adjusted IBW modifies for actual weight—ideal for clinical settings.</p>
           </div>
 
-          <p>Ready to boost your metabolism knowledge? Try our BMR Calculator above and take control of your health journey today!</p>
+          <p><strong>Optimize your form!</strong> Try our Ideal Body Weight Calculator above and fine-tune your path to peak condition.</p>
 
+          <div class="home-disclaimer">
+            <strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.
           </div>
+        </div>
       </div>
+
       <aside class="results-card">
-        <div class="bmi-result-main">
-          <span class="bmi-value" id="result-bmr">1,833</span>
-          <span class="bmi-label">Your BMR</span>
-          <span class="bmi-category">calories/day at rest</span>
-        </div>
-        <div class="bmi-chart-section">
-          <h4>BMR vs Activity Level</h4>
-          <div class="chart-container">
-            <canvas id="bmr-chart" aria-label="BMR and TDEE by activity level"></canvas>
+        <h3>Ideal Weight Based on Popular Formulas</h3>
+        <div class="healthy-weight-results">
+          <div class="result-item">
+            <span class="result-label">Robinson (1983)</span>
+            <span class="result-value" id="result-robinson">72.6 kg</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Miller (1983)</span>
+            <span class="result-value" id="result-miller">71.5 kg</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Devine (1974)</span>
+            <span class="result-value" id="result-devine">75.0 kg</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Hamwi (1964)</span>
+            <span class="result-value" id="result-hamwi">77.3 kg</span>
+          </div>
+          <div class="result-item result-item-highlight">
+            <span class="result-label">Healthy BMI Range</span>
+            <span class="result-value" id="result-bmi-range">59.9 – 81.0 kg</span>
           </div>
         </div>
-        <div class="bmr-calorie-table-wrap">
-          <h4>Daily calorie needs based on activity level</h4>
-          <div class="table-responsive">
-            <table class="bmr-calorie-table">
-              <thead>
-                <tr>
-                  <th>Activity Level</th>
-                  <th>Calories</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Sedentary: little or no exercise</td><td id="cal-sedentary">—</td></tr>
-                <tr><td>Exercise 1-3 times/week</td><td id="cal-light">—</td></tr>
-                <tr><td>Exercise 4-5 times/week</td><td id="cal-moderate">—</td></tr>
-                <tr><td>Daily exercise or intense exercise 3-4 times/week</td><td id="cal-active">—</td></tr>
-                <tr><td>Intense exercise 6-7 times/week</td><td id="cal-very">—</td></tr>
-                <tr><td>Very intense exercise daily, or physical job</td><td id="cal-extra">—</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="bmr-table-note"><strong>Exercise:</strong> 15-30 minutes of elevated heart rate activity. <strong>Intense exercise:</strong> 45-120 minutes of elevated heart rate activity. <strong>Very intense exercise:</strong> 2+ hours of elevated heart rate activity.</p>
-        </div>
-        </aside>
+      </aside>
     </div>
 
     <div class="related-section">
       <h3>Related Calculators</h3>
       <div class="related-links">
-        <a href="tdee-calculator.html">TDEE Calculator</a>
-        <a href="calorie-calculator.html">Calorie Calculator</a>
+        <a href="healthy-weight-calculator.html">Healthy Weight Calculator</a>
         <a href="bmi-calculator.html">BMI Calculator</a>
-        <a href="../guides/how-to-calculate-tdee.html">How to Calculate TDEE</a>
+        <a href="body-fat-calculator.html">Body Fat Calculator</a>
+        <a href="calorie-calculator.html">Calorie Calculator</a>
+        <a href="../guides/fitness-metrics-explained.html">Fitness Metrics Guide</a>
       </div>
     </div>
   </main>
@@ -264,10 +253,9 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../js/theme.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/search.js"></script>
-  <script src="../js/bmr-calculator.js"></script>
+  <script src="../js/healthy-weight-calculator.js"></script>
 </body>
 </html>
