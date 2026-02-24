@@ -3052,3 +3052,117 @@ body {
 .quiz-retake-btn {
   margin-top: 0.5rem;
 }
+
+/* Running Pace Calculator */
+.pace-input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.pace-unit-hint {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.pace-results-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pace-result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-btn);
+  border-left: 4px solid transparent;
+  transition: background 0.2s ease;
+}
+
+.pace-tier-short {
+  background: rgba(34, 197, 94, 0.12);
+  border-left-color: #22C55E;
+}
+
+.pace-tier-short .pace-result-label {
+  color: #16A34A;
+}
+
+.pace-tier-short .pace-result-value {
+  font-weight: 600;
+  color: #15803D;
+}
+
+.pace-tier-mid {
+  background: rgba(59, 130, 246, 0.12);
+  border-left-color: #3B82F6;
+}
+
+.pace-tier-mid .pace-result-label {
+  color: #2563EB;
+}
+
+.pace-tier-mid .pace-result-value {
+  font-weight: 600;
+  color: #1D4ED8;
+}
+
+.pace-tier-half {
+  background: rgba(249, 115, 22, 0.12);
+  border-left-color: #F97316;
+}
+
+.pace-tier-half .pace-result-label {
+  color: #EA580C;
+}
+
+.pace-tier-half .pace-result-value {
+  font-weight: 600;
+  color: #C2410C;
+}
+
+.pace-tier-long {
+  background: rgba(168, 85, 247, 0.12);
+  border-left-color: #A855F7;
+}
+
+.pace-tier-long .pace-result-label {
+  color: #9333EA;
+}
+
+.pace-tier-long .pace-result-value {
+  font-weight: 600;
+  color: #7E22CE;
+}
+
+[data-theme="dark"] .pace-tier-short {
+  background: rgba(34, 197, 94, 0.15);
+}
+
+[data-theme="dark"] .pace-tier-short .pace-result-label { color: #4ADE80; }
+[data-theme="dark"] .pace-tier-short .pace-result-value { color: #22C55E; }
+
+[data-theme="dark"] .pace-tier-mid {
+  background: rgba(59, 130, 246, 0.15);
+}
+
+[data-theme="dark"] .pace-tier-mid .pace-result-label { color: #60A5FA; }
+[data-theme="dark"] .pace-tier-mid .pace-result-value { color: #3B82F6; }
+
+[data-theme="dark"] .pace-tier-half {
+  background: rgba(249, 115, 22, 0.15);
+}
+
+[data-theme="dark"] .pace-tier-half .pace-result-label { color: #FB923C; }
+[data-theme="dark"] .pace-tier-half .pace-result-value { color: #F97316; }
+
+[data-theme="dark"] .pace-tier-long {
+  background: rgba(168, 85, 247, 0.15);
+}
+
+[data-theme="dark"] .pace-tier-long .pace-result-label { color: #C084FC; }
+[data-theme="dark"] .pace-tier-long .pace-result-value { color: #A855F7; }

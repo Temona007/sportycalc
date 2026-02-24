@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Running pace calculator to predict finish times for 5K, 10K, half marathon, marathon, 50K. Enter pace in min/mi or min/km. Free, private, no sign-up.">
+  <meta name="keywords" content="running pace calculator, race time predictor, running pace calculator predict times, race pace estimator, 5K 10K marathon finish time, pace to time">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/running-pace-calculator.html">
+  <title>Running Pace Calculator – Race Time Predictor | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/running-pace-calculator.html">
+  <meta property="og:title" content="Running Pace Calculator – Race Time Predictor | SportyCalc">
+  <meta property="og:description" content="Predict finish times for 5K, 10K, half marathon, marathon, 50K based on your running pace. Free and private.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Running Pace Calculator | SportyCalc">
+  <meta name="twitter:description" content="Predict finish times for 5K, 10K, half marathon, marathon, 50K based on your running pace.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Running Pace Calculator","url":"https://sportycalc.com/calculators/running-pace-calculator.html","description":"Predict race finish times from running pace for 5K, 10K, half marathon, marathon, 50K","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Calculators</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+    <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>Running Pace Calculator</span>
+      </nav>
+      <h1>Running Pace Calculator</h1>
+      <p class="hero-desc">Ready to forecast your race times? Whether you're training for a 5K, marathon, or just tracking daily runs, this calculator provides quick predictions to set goals, plan splits, and optimize your pacing strategy for better endurance and results.</p>
+    </section>
+
+    <section class="quiz-cta-section">
+      <a href="../fitness-quiz.html" class="quiz-cta-card">
+        <span class="quiz-cta-icon">🧠</span>
+        <div class="quiz-cta-content">
+          <h2 class="quiz-cta-title">Take the Quiz!</h2>
+          <p class="quiz-cta-desc">Test your fitness knowledge in 5 quick questions. Get instant green/red feedback and see how you score.</p>
+        </div>
+        <span class="quiz-cta-arrow">→</span>
+      </a>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <h2>Your Expected Pace</h2>
+          <form id="pace-form">
+            <div class="unit-toggle">
+              <span class="unit-toggle-label">Pace Unit</span>
+              <div class="unit-toggle-btns">
+                <button type="button" class="unit-btn" data-unit="mikm">min/km</button>
+                <button type="button" class="unit-btn active" data-unit="mimi">min/mi</button>
+              </div>
+            </div>
+            <div class="pace-input-row">
+              <div class="input-group">
+                <label for="pace-min">Minutes</label>
+                <input type="number" id="pace-min" value="12" min="3" max="30" placeholder="12" required>
+              </div>
+              <div class="input-group">
+                <label for="pace-sec">Seconds</label>
+                <input type="number" id="pace-sec" value="0" min="0" max="59" placeholder="0" required>
+              </div>
+            </div>
+            <p class="pace-unit-hint" id="pace-unit-hint">per mile</p>
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate Finish Times</button>
+          </form>
+        </div>
+
+        <div class="seo-content">
+          <h2>What is a Running Pace Calculator?</h2>
+          <p>Running pace refers to the time it takes to cover a unit of distance, typically in minutes per mile (min/mi) or minutes per kilometer (min/km). This calculator uses your input pace to predict total times for standard race distances and mile/km increments. It employs simple multiplication: time = pace × distance, with precise conversions for metric equivalents (e.g., 5K = 3.10686 miles). Backed by basic physics of constant effort, it assumes flat terrain and steady pacing—real-world factors like hills or fatigue may vary results.</p>
+          <p>Ideal for beginners estimating first-race times or pros fine-tuning splits, it focuses on forward predictions without needing advanced data.</p>
+
+          <h2>How to Use Our Running Pace Calculator</h2>
+          <ul>
+            <li><strong>Select Units:</strong> Choose min/mi or min/km for pace, and miles or kilometers for distances.</li>
+            <li><strong>Enter Your Pace:</strong> Input your expected pace (e.g., 11:00 min/mi).</li>
+            <li><strong>View Predictions:</strong> Get instant finish times for distances like 1 mi/km, 5K, 10K, 10 mi, half marathon, marathon, 50K, and intermediates (up to 31 mi/km).</li>
+            <li><strong>Analyze Splits:</strong> See breakdown times for checkpoints to maintain consistent effort.</li>
+          </ul>
+          <p><strong>Pro Tip:</strong> Pair with our <a href="heart-rate-zones.html" title="Heart Rate Zones Calculator">Heart Rate Zones Calculator</a> to align pace with training intensity, or use the <a href="calories-burned.html" title="Calories Burned Calculator">Calories Burned Calculator</a> to estimate energy expenditure during runs!</p>
+
+          <h2>Why Use a Running Pace Calculator?</h2>
+          <ul>
+            <li><strong>Race Preparation:</strong> Predict finish times to set realistic goals and avoid burnout—small pace adjustments can shave minutes off your PR.</li>
+            <li><strong>Training Optimization:</strong> Understand how pace impacts endurance; use splits for interval sessions or long runs.</li>
+            <li><strong>Motivation Boost:</strong> Visualize progress—track how improving pace shortens times across distances.</li>
+            <li><strong>Free and Private:</strong> No logins required; calculations run in your browser for secure, on-the-go use.</li>
+          </ul>
+          <p>Searching for "running pace calculator predict times" or "race pace estimator like Strava"? Our tool delivers accurate, user-friendly forecasts for all levels of runners.</p>
+
+          <h2>Common Questions About Running Pace</h2>
+          <div class="faq-item">
+            <h3>How accurate are predictions?</h3>
+            <p>Strong for flat courses at constant effort; adjust for real conditions like elevation or weather.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can it calculate pace from time and distance?</h3>
+            <p>This version focuses on time from pace (like Strava); for reverse, input trial values to estimate.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What distances are covered?</h3>
+            <p>From 1 mi/km to marathon/50K, including popular races—custom distances coming soon.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Does it factor in age or fitness?</h3>
+            <p>No, it's pace-based; for personalized plans, combine with our <a href="tdee-calculator.html" title="TDEE Calculator">TDEE Calculator</a>.</p>
+          </div>
+
+          <p><strong>Lace up and plan ahead!</strong> Try our Running Pace Calculator above and hit your stride with confidence.</p>
+        </div>
+      </div>
+
+      <aside class="results-card pace-results-card">
+        <h3>Estimated Finish Times</h3>
+        <p class="results-card-subtitle" id="pace-display">At 12:00 /mi</p>
+        <div class="pace-results-grid" id="pace-results">
+          <!-- Filled by JS -->
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related Calculators</h3>
+      <div class="related-links">
+        <a href="calories-burned.html" title="Calories Burned Calculator">Calories Burned</a>
+        <a href="heart-rate-zones.html" title="Heart Rate Zones Calculator">Heart Rate Zones</a>
+        <a href="tdee-calculator.html" title="TDEE Calculator">TDEE Calculator</a>
+        <a href="calorie-deficit-calculator.html" title="Calorie Deficit Calculator">Calorie Deficit</a>
+        <a href="../guides/fitness-metrics-explained.html" title="Fitness Metrics Explained">Fitness Metrics Guide</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc.</p>
+        <p class="footer-credit"><a href="https://riyaka.art/" target="_blank" rel="noopener noreferrer">Developed by Art R. <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 28 28" role="img"><path fill="#1F57C3" d="M12 1.155a4 4 0 014 0l8.124 4.69a4 4 0 012 3.464v9.382a4 4 0 01-2 3.464L16 26.845a4 4 0 01-4 0l-8.124-4.69a4 4 0 01-2-3.464V9.309a4 4 0 012-3.464L12 1.155z"></path><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.761 7.542l1.188 3.201 3.285.184a.78.78 0 01.448.173c.13.104.226.247.277.41a.9.9 0 01.01.504.858.858 0 01-.261.422L17.15 14.6l.854 3.328a.907.907 0 01-.025.507.857.857 0 01-.291.404.785.785 0 01-.919.02L14 16.984l-2.764 1.862a.784.784 0 01-.916-.012.855.855 0 01-.294-.4.906.906 0 01-.031-.505l.847-3.314-2.55-2.18a.858.858 0 01-.26-.421.9.9 0 01.01-.504.853.853 0 01.276-.41.782.782 0 01.448-.173l3.285-.184 1.188-3.201a.86.86 0 01.302-.394.79.79 0 01.918 0 .86.86 0 01.302.394z" clip-rule="evenodd"></path></svg></a>
+          <a href="https://www.strava.com/athletes/22196700" target="_blank" rel="noopener noreferrer" class="footer-strava-link" aria-label="Art R. on Strava"><img src="../images/strava_logo.webp" alt="" width="20" height="20" loading="lazy"></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators... (e.g. calorie, bmi)" autocomplete="off" aria-autocomplete="list" aria-controls="search-results">
+        <div id="search-results" class="search-results" role="listbox" aria-label="Calculator results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/running-pace-calculator.js"></script>
+</body>
+</html>
