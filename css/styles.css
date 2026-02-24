@@ -2757,6 +2757,18 @@ body {
   background: rgba(249, 87, 0, 0.2);
 }
 
+.calc-card-coming-soon {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.calc-card-coming-soon:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--border);
+}
+
 /* Content page (guides, blog, about) */
 .content-page {
   padding: var(--section-gap) 0;
@@ -3051,6 +3063,26 @@ body {
 
 .quiz-retake-btn {
   margin-top: 0.5rem;
+}
+
+.quiz-cta-inline {
+  margin: 1rem 0;
+}
+
+.quiz-cta-text {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.quiz-cta-text a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.quiz-cta-text a:hover {
+  text-decoration: underline;
 }
 
 /* Running Pace Calculator */
