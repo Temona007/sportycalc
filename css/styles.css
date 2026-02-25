@@ -3198,3 +3198,106 @@ body {
 
 [data-theme="dark"] .pace-tier-long .pace-result-label { color: #C084FC; }
 [data-theme="dark"] .pace-tier-long .pace-result-value { color: #A855F7; }
+
+/* VO2 Max Calculator */
+.method-inputs {
+  margin-top: 1rem;
+}
+
+.time-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.time-input-row input {
+  width: 4rem;
+}
+
+.time-sep {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.vo2-result-main {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.vo2-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.vo2-unit {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+
+.vo2-category {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-btn);
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.vo2-cat-poor { background: rgba(239, 68, 68, 0.2); color: #DC2626; }
+.vo2-cat-fair { background: rgba(249, 115, 22, 0.2); color: #EA580C; }
+.vo2-cat-average { background: rgba(234, 179, 8, 0.2); color: #CA8A04; }
+.vo2-cat-good { background: rgba(34, 197, 94, 0.2); color: #16A34A; }
+.vo2-cat-excellent { background: rgba(59, 130, 246, 0.2); color: #2563EB; }
+.vo2-cat-superior { background: rgba(168, 85, 247, 0.2); color: #7C3AED; }
+
+.vo2-chart-section {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.vo2-chart-section h4 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.vo2-chart-section .chart-container {
+  min-height: 200px;
+  margin-top: 0;
+}
+
+/* Protein in Food Calculator */
+.protein-food-result {
+  text-align: center;
+}
+
+.protein-food-value-wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.protein-food-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.protein-food-unit {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.protein-food-name {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
