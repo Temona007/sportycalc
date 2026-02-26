@@ -1,13 +1,13 @@
 {
   "redirects": [
     {
+      "source": "/index.html",
+      "destination": "https://sportycalc.com/",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.sportycalc.com"
-        }
-      ],
+      "has": [{"type": "host", "value": "www.sportycalc.com"}],
       "destination": "https://sportycalc.com/$1",
       "permanent": true
     }
