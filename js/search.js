@@ -13,6 +13,7 @@
     { title: 'Calorie Calculator', subtitle: 'Daily calorie needs', href: 'calorie-calculator.html', keywords: 'calorie calories daily needs diet' },
     { title: 'Macro Calculator', subtitle: 'Protein, carbs, fat', href: 'macro-calculator.html', keywords: 'macro macros protein carbs fat nutrition' },
     { title: 'Body Fat Calculator', subtitle: 'Navy method estimate', href: 'body-fat-calculator.html', keywords: 'body fat navy percentage' },
+    { title: 'Lean Body Mass Calculator', subtitle: 'Boer formula, LBM estimate', href: 'lean-body-mass-calculator.html', keywords: 'lean body mass LBM fat free mass Boer formula body composition' },
     { title: 'Heart Rate Zones', subtitle: 'Training zones', href: 'heart-rate-zones.html', keywords: 'heart rate zones cardio training' },
     { title: '1RM Calculator', subtitle: 'One-rep max', href: '1rm-calculator.html', keywords: '1rm one rep max strength lift' },
     { title: 'Protein Intake', subtitle: 'Daily protein needs', href: 'protein-intake.html', keywords: 'protein intake daily muscle' },
