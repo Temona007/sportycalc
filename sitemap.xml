@@ -199,6 +199,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sportycalc.com/guides/body-fat-percentage-guide.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sportycalc.com/blog/index.html</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -225,6 +231,12 @@
   <url>
     <loc>https://sportycalc.com/blog/essential-health-tips.html</loc>
     <lastmod>2026-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sportycalc.com/blog/fitness-trends-2026-weight-loss.html</loc>
+    <lastmod>2026-02-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
