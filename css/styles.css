@@ -3349,3 +3349,187 @@ body {
   color: var(--text-secondary);
   margin-top: 0.5rem;
 }
+
+/* Sleep Cycle Calculator */
+.sleep-mode-toggle {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.sleep-mode-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+
+.sleep-mode-btn:hover {
+  border-color: var(--text-secondary);
+  color: var(--text-primary);
+}
+
+.sleep-mode-btn.active {
+  border-color: var(--primary);
+  background: rgba(249, 87, 0, 0.12);
+  color: var(--primary);
+}
+
+.sleep-mode-icon {
+  font-size: 1.25rem;
+}
+
+.sleep-panel-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.sleep-result-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.sleep-placeholder-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.sleep-result-placeholder p {
+  font-size: 0.9375rem;
+  max-width: 240px;
+  line-height: 1.5;
+}
+
+.sleep-results-card .sleep-result-heading {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.sleep-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.sleep-option {
+  padding: 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  animation: sleepOptionFadeIn 0.4s ease-out both;
+}
+
+.sleep-option-recommended {
+  border-color: var(--primary);
+  background: rgba(249, 87, 0, 0.08);
+  box-shadow: 0 0 0 1px rgba(249, 87, 0, 0.2);
+}
+
+.sleep-option-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.sleep-option-time {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.sleep-option-recommended .sleep-option-time {
+  color: var(--primary);
+}
+
+.sleep-option-badge {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.5rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 4px;
+}
+
+.sleep-option-desc {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+@keyframes sleepOptionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sleep-chart-wrap {
+  height: 180px;
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background: var(--bg-elevated);
+  border-radius: var(--radius);
+}
+
+.sleep-cycle-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.sleep-cycle-badge {
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 0.2rem 0.5rem;
+  background: var(--bg-elevated);
+  border-radius: 4px;
+}
+
+.sleep-reset-btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.sleep-reset-btn:hover {
+  color: var(--text-secondary);
+  border-color: var(--text-secondary);
+}
