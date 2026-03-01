@@ -1817,6 +1817,151 @@ body {
   font-size: 0.875rem;
 }
 
+/* Waist to Hip Ratio (WHR) Calculator */
+.whr-result-main {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.whr-value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.2;
+  transition: color var(--transition);
+}
+
+.whr-label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+.whr-category {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-btn);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.whr-category-low {
+  background: rgba(34, 197, 94, 0.2);
+  color: #16a34a;
+}
+
+.whr-category-moderate {
+  background: rgba(234, 179, 8, 0.2);
+  color: #ca8a04;
+}
+
+.whr-category-high {
+  background: rgba(239, 68, 68, 0.2);
+  color: #dc2626;
+}
+
+.whr-scale {
+  margin: 1.5rem 0;
+}
+
+.whr-scale-bar {
+  position: relative;
+  height: 12px;
+  background: linear-gradient(to right,
+    rgba(34, 197, 94, 0.4) 0%,
+    rgba(234, 179, 8, 0.4) 50%,
+    rgba(239, 68, 68, 0.4) 100%
+  );
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.whr-scale-marker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 20px;
+  background: var(--primary);
+  border-radius: 2px;
+  transition: left 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.whr-scale-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.whr-category-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.whr-category-card {
+  padding: 0.75rem 0.5rem;
+  background: var(--bg-elevated);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-btn);
+  text-align: center;
+  transition: all var(--transition);
+}
+
+.whr-category-card .whr-card-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.whr-category-card .whr-card-range {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.whr-category-card.active {
+  border-color: var(--primary);
+  background: rgba(249, 87, 0, 0.12);
+}
+
+.whr-category-card.active .whr-card-label,
+.whr-category-card.active .whr-card-range {
+  color: var(--primary);
+}
+
+.whr-chart-section {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.whr-chart-section h4 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.whr-chart-section .chart-container {
+  min-height: 200px;
+  margin-top: 0;
+}
+
+@media (max-width: 479px) {
+  .whr-category-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 .bmr-calorie-table-wrap {
   margin-top: 1.5rem;
   padding-top: 1rem;
