@@ -2,7 +2,7 @@
 
 SEO-optimized fitness calculator website for sportycalc.com.
 
-## Structure
+## Structure,
 
 ```
 /
