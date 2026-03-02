@@ -11,6 +11,7 @@
     { title: 'BMR Calculator', subtitle: 'Basal Metabolic Rate', href: 'bmr-calculator.html', keywords: 'bmr metabolic rate calories base' },
     { title: 'TDEE Calculator', subtitle: 'Total Daily Energy Expenditure', href: 'tdee-calculator.html', keywords: 'tdee calories daily expenditure' },
     { title: 'Calorie Calculator', subtitle: 'Daily calorie needs', href: 'calorie-calculator.html', keywords: 'calorie calories daily needs diet' },
+    { title: 'Carbohydrate Calculator', subtitle: 'Daily carbohydrate intake', href: 'carbohydrate-calculator.html', keywords: 'carbohydrate carb carbs intake daily grams carbohydrate calculator' },
     { title: 'Macro Calculator', subtitle: 'Protein, carbs, fat', href: 'macro-calculator.html', keywords: 'macro macros protein carbs fat nutrition' },
     { title: 'Body Fat Calculator', subtitle: 'Navy method estimate', href: 'body-fat-calculator.html', keywords: 'body fat navy percentage' },
     { title: 'Waist to Hip Ratio', subtitle: 'WHR calculator, WHO thresholds', href: 'waist-hip-ratio-calculator.html', keywords: 'waist hip ratio WHR body shape health risk' },
