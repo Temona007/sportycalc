@@ -1621,6 +1621,73 @@ body {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+/* BAC (Blood Alcohol Concentration) Calculator – animated result */
+.bac-result-main {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.bac-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.bac-value-wrap {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.bac-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.bac-unit {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.bac-status-badge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-btn);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  background: rgba(249, 87, 0, 0.08);
+  color: var(--primary);
+}
+
+.bac-legal-note {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.bac-result-reveal .bac-result-main {
+  animation: bacReveal 0.5s ease;
+}
+
+.bac-result-reveal .bac-value {
+  animation: bacValuePulse 0.6s ease 0.1s both;
+}
+
+@keyframes bacReveal {
+  from { opacity: 0; transform: translateY(-10px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes bacValuePulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
 /* FAQ list (calories & other calculators) */
 .seo-content .faq-list {
   margin: 1rem 0;
