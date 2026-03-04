@@ -3062,6 +3062,30 @@ body {
   font-size: 0.9375rem;
 }
 
+.content-body ul,
+.content-body ol {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.content-body ul { list-style-type: disc; }
+.content-body ol { list-style-type: decimal; }
+
+.content-body a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.content-body a:hover {
+  text-decoration: underline;
+}
+
+.content-meta {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
 /* Guide table (TDEE guide etc.) */
 .table-wrap {
   overflow-x: auto;
@@ -3084,6 +3108,15 @@ body {
   color: var(--text-primary);
 }
 .guide-table td { color: var(--text-secondary); }
+
+.guide-table td a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.guide-table td a:hover {
+  text-decoration: underline;
+}
 
 /* TDEE guide goal cards */
 .tdee-goals {
