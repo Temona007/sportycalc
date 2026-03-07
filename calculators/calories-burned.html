@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8276223173310357"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Free calories burned calculator. Estimate calories burned during exercise and daily activities based on weight and duration.">
+  <meta name="keywords" content="calories burned calculator, exercise calories, activity calories">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/calories-burned.html">
+  <title>Calories Burned Calculator | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/calories-burned.html">
+  <meta property="og:title" content="Calories Burned Calculator | SportyCalc">
+  <meta property="og:description" content="Free calories burned calculator. Estimate calories burned during exercise and daily activities based on weight and duration.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calories Burned Calculator | SportyCalc">
+  <meta name="twitter:description" content="Free calories burned calculator. Estimate calories burned during exercise and daily activities.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Calories Burned Calculator","url":"https://sportycalc.com/calculators/calories-burned.html","description":"Estimate calories burned by activity","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <a href="../fitness-quiz.html" class="nav-link nav-link-brand">Quiz</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Calculators</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+    <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+    <a href="../fitness-quiz.html" class="mobile-nav-link mobile-nav-link-brand">Quiz</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>Calories Burned</span>
+      </nav>
+      <h1>Calories Burned Calculator</h1>
+      <p class="hero-desc">Estimate how many calories you burn during different exercises and activities. Based on body weight, duration, and MET values.</p>
+    </section>
+
+    <section class="quiz-cta-section">
+      <a href="../fitness-quiz/fitness-knowledge.html" class="quiz-cta-card">
+        <span class="quiz-cta-icon">🧠</span>
+        <div class="quiz-cta-content">
+          <h2 class="quiz-cta-title">Take the Quiz!</h2>
+          <p class="quiz-cta-desc">Test your fitness knowledge in 5 quick questions. Get instant green/red feedback and see how you score.</p>
+        </div>
+        <span class="quiz-cta-arrow">→</span>
+      </a>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <form id="calories-burned-form">
+            <div class="form-header">
+              <h2>Activity Details</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Units</span>
+                <div class="unit-toggle-btns">
+                  <button type="button" class="unit-btn" data-unit="lb">lb</button>
+                  <button type="button" class="unit-btn active" data-unit="kg">kg</button>
+                </div>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="weight">Body weight</label>
+              <div class="protein-weight-wrap">
+                <input type="number" id="weight" value="70" placeholder="70" min="1" step="0.1" required>
+                <span class="protein-weight-unit" id="weight-unit">kg</span>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="activity">Activity</label>
+              <select id="activity">
+                <option value="run-moderate">Running: moderate</option>
+              </select>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="duration-hours">Duration (hours)</label>
+                <input type="number" id="duration-hours" value="0" min="0" max="24" placeholder="0">
+              </div>
+              <div class="input-group">
+                <label for="duration-minutes">Duration (minutes)</label>
+                <input type="number" id="duration-minutes" value="30" min="0" max="59" placeholder="30">
+              </div>
+            </div>
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate</button>
+          </form>
+        </div>
+        <div class="seo-content">
+          <h2>What is Calories Burned?</h2>
+          <p>Calories burned refer to the energy your body uses during physical activities, measured in kcal (kilocalories). Factors like weight, intensity, duration, and type of exercise influence this—e.g., running burns more than walking at the same pace. For distance-based activities (walking, running, cycling), we use MET (Metabolic Equivalent of Task) values from compendiums like the one by the American College of Sports Medicine (ACSM). This provides accurate estimates to help offset daily calorie consumption and achieve goals like weight loss or endurance building.</p>
+          <p>Use this to estimate calories burned each day, complementing tools like <a href="tdee-calculator.html">TDEE</a> for a full picture of energy balance.</p>
+
+          <h2>How to Use Our Calories Burned Calculator</h2>
+          <ol>
+            <li><strong>Select Activity:</strong> Choose from options like walking, running, cycling, swimming, yoga, or strength training.</li>
+            <li><strong>Input Details:</strong> Enter your weight (lbs or kg), and either duration (hours and minutes) or—for distance-based modes—distance (miles or km for walking/running/cycling only).</li>
+            <li><strong>Add Intensity (Optional):</strong> Specify speed or effort level for refined accuracy.</li>
+            <li><strong>Calculate:</strong> Get instant calories burned, with breakdowns for total session or per hour.</li>
+          </ol>
+          <p><strong>Pro Tip:</strong> Combine with our <a href="heart-rate-zones.html">Heart Rate Zones Calculator</a> to track intensity, or use the <a href="tdee-calculator.html">TDEE tool</a> to see how activities fit into your daily expenditure!</p>
+
+          <h2>Why Calculate Calories Burned?</h2>
+          <ul>
+            <li><strong>Activity Tracking:</strong> Quantify workouts to motivate consistency and avoid underestimating effort.</li>
+            <li><strong>Weight Management:</strong> Balance burned calories against intake for deficits (loss) or surpluses (gains).</li>
+            <li><strong>Personalized Fitness:</strong> Adjust routines—e.g., see how cycling distance stacks up to running time.</li>
+            <li><strong>Free and Private:</strong> No apps required; all calculations happen in your browser for secure, quick insights.</li>
+          </ul>
+          <p>If you're searching for "calories burned calculator running" or "how many calories burned walking 5 miles," our versatile tool covers it. Great for "activity calories estimator" or comparing "cycling vs running calories burned."</p>
+
+          <h2>Common Questions About Calories Burned</h2>
+          <dl class="faq-list">
+            <dt>Duration vs. distance—which is better?</dt>
+            <dd>Use distance for pace-based activities like running; duration for timed ones like yoga.</dd>
+            <dt>How accurate are estimates?</dt>
+            <dd>Solid for general use, based on METs—but individual metabolism varies; wearables can refine.</dd>
+            <dt>Does it include daily activities?</dt>
+            <dd>Yes, add non-exercise like housework to estimate total daily burn.</dd>
+            <dt>Update for weight changes?</dt>
+            <dd>Yes, recalculate as weight affects burn rates.</dd>
+          </dl>
+          <p>Burn smarter, not harder! Try our Calories Burned Calculator above and energize your fitness journey.</p>
+
+          <p class="health-advisory" role="alert"><strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.</p>
+        </div>
+      </div>
+      <aside class="results-card" id="calories-result-card">
+        <h3>Your Results</h3>
+        <div class="calories-result-main">
+          <div class="calories-icon-badge" id="result-activity-icon" aria-hidden="true"></div>
+          <div class="result-item calories-result-row">
+            <span class="result-label">Calories burned</span>
+            <span class="calories-value-wrap">
+              <span class="result-value calories-value" id="result-calories">—</span>
+              <span class="calories-unit" id="result-calories-unit"></span>
+            </span>
+          </div>
+          <p class="calories-activity-hint" id="result-activity-name"></p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related</h3>
+      <div class="related-links">
+        <a href="tdee-calculator.html">TDEE Calculator</a>
+        <a href="heart-rate-zones.html">Heart Rate Zones</a>
+        <a href="calorie-calculator.html">Calorie Calculator</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc.</p>
+        <p class="footer-credit"><a href="https://riyaka.art/" target="_blank" rel="noopener noreferrer">Developed by Art R. <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 28 28" role="img"><path fill="#1F57C3" d="M12 1.155a4 4 0 014 0l8.124 4.69a4 4 0 012 3.464v9.382a4 4 0 01-2 3.464L16 26.845a4 4 0 01-4 0l-8.124-4.69a4 4 0 01-2-3.464V9.309a4 4 0 012-3.464L12 1.155z"></path><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.761 7.542l1.188 3.201 3.285.184a.78.78 0 01.448.173c.13.104.226.247.277.41a.9.9 0 01.01.504.858.858 0 01-.261.422L17.15 14.6l.854 3.328a.907.907 0 01-.025.507.857.857 0 01-.291.404.785.785 0 01-.919.02L14 16.984l-2.764 1.862a.784.784 0 01-.916-.012.855.855 0 01-.294-.4.906.906 0 01-.031-.505l.847-3.314-2.55-2.18a.858.858 0 01-.26-.421.9.9 0 01.01-.504.853.853 0 01.276-.41.782.782 0 01.448-.173l3.285-.184 1.188-3.201a.86.86 0 01.302-.394.79.79 0 01.918 0 .86.86 0 01.302.394z" clip-rule="evenodd"></path></svg></a>
+          <a href="https://www.strava.com/athletes/22196700" target="_blank" rel="noopener noreferrer" class="footer-strava-link" aria-label="Art R. on Strava"><img src="../images/strava_logo.webp" alt="" width="20" height="20" loading="lazy"></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators... (e.g. calorie, bmi)" autocomplete="off" aria-autocomplete="list" aria-controls="search-results">
+        <div id="search-results" class="search-results" role="listbox" aria-label="Calculator results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/calories-burned.js"></script>
+</body>
+</html>

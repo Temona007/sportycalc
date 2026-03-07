@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8276223173310357"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Free protein intake calculator. Calculate daily protein needs based on weight, activity level, and goals.">
+  <meta name="keywords" content="protein intake calculator, daily protein needs, protein calculator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/protein-intake.html">
+  <title>Protein Intake Calculator | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/protein-intake.html">
+  <meta property="og:title" content="Protein Intake Calculator | SportyCalc">
+  <meta property="og:description" content="Free protein intake calculator. Calculate daily protein needs based on weight, activity level, and goals.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Protein Intake Calculator | SportyCalc">
+  <meta name="twitter:description" content="Free protein intake calculator. Calculate daily protein needs based on weight, activity level, and goals.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Protein Intake Calculator","url":"https://sportycalc.com/calculators/protein-intake.html","description":"Calculate daily protein needs","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <a href="../fitness-quiz.html" class="nav-link nav-link-brand">Quiz</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Calculators</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+    <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+    <a href="../fitness-quiz.html" class="mobile-nav-link mobile-nav-link-brand">Quiz</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>Protein Intake</span>
+      </nav>
+      <h1>Protein Intake Calculator</h1>
+      <p class="hero-desc">Calculate your daily protein needs based on body weight, activity level, and goals (maintenance, fat loss, or muscle gain).</p>
+    </section>
+
+    <section class="quiz-cta-section">
+      <a href="../fitness-quiz/fitness-knowledge.html" class="quiz-cta-card">
+        <span class="quiz-cta-icon">🧠</span>
+        <div class="quiz-cta-content">
+          <h2 class="quiz-cta-title">Take the Quiz!</h2>
+          <p class="quiz-cta-desc">Test your fitness knowledge in 5 quick questions. Get instant green/red feedback and see how you score.</p>
+        </div>
+        <span class="quiz-cta-arrow">→</span>
+      </a>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <form id="protein-form">
+            <div class="form-header">
+              <h2>Your Profile</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Units</span>
+                <div class="unit-toggle-btns">
+                  <button type="button" class="unit-btn" data-unit="lb">lb</button>
+                  <button type="button" class="unit-btn active" data-unit="kg">kg</button>
+                </div>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="weight">Your Weight</label>
+              <div class="protein-weight-wrap">
+                <input type="number" id="weight" value="70" placeholder="70" min="1" step="0.1" required>
+                <span class="protein-weight-unit" id="weight-unit">kg</span>
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">Your Goal</span>
+              <div class="protein-goal-btns">
+                <label class="protein-goal-btn">
+                  <input type="radio" name="goal" value="sedentary">
+                  <span class="protein-goal-emoji">🪑</span>
+                  <span class="protein-goal-label">Sedentary</span>
+                </label>
+                <label class="protein-goal-btn">
+                  <input type="radio" name="goal" value="active" checked>
+                  <span class="protein-goal-emoji">🏃</span>
+                  <span class="protein-goal-label">Active</span>
+                </label>
+                <label class="protein-goal-btn">
+                  <input type="radio" name="goal" value="build">
+                  <span class="protein-goal-emoji">💪</span>
+                  <span class="protein-goal-label">Build Muscle</span>
+                </label>
+                <label class="protein-goal-btn">
+                  <input type="radio" name="goal" value="athlete">
+                  <span class="protein-goal-emoji">🏆</span>
+                  <span class="protein-goal-label">Athlete</span>
+                </label>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="meals">Meals per day</label>
+              <select id="meals">
+                <option value="3">3 meals</option>
+                <option value="4" selected>4 meals</option>
+                <option value="5">5 meals</option>
+              </select>
+            </div>
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate Protein</button>
+          </form>
+        </div>
+        <div class="seo-content">
+          <p>Wondering how much protein you really need? Our Protein Intake Calculator estimates your daily protein requirements based on body weight, activity level, and goals like maintenance, fat loss, or muscle gain. Whether you're a sedentary office worker, an active runner, or a dedicated athlete, this tool helps you optimize intake for better muscle repair, energy, and results—without overcomplicating your diet.</p>
+
+          <h2>What is Daily Protein Intake?</h2>
+          <p>Protein is an essential macronutrient that builds and repairs tissues, supports immune function, and aids in hormone production. Your daily needs vary by factors like weight (in kg or lbs), lifestyle (sedentary to athlete), and objectives—higher for muscle building or during calorie deficits to preserve lean mass. Guidelines from sources like the International Society of Sports Nutrition (ISSN) recommend 1.2–2.2 grams per kg of body weight, depending on activity.</p>
+          <p>Our calculator uses evidence-based ranges: sedentary (1.2–1.6 g/kg), active (1.4–1.8 g/kg), muscle building (1.6–2.0 g/kg), and athletes (1.8–2.2 g/kg). It also factors in meals per day for practical per-meal breakdowns, making it easy to hit targets with whole foods or supplements.</p>
+
+          <h2>How to Use Our Protein Intake Calculator</h2>
+          <ol>
+            <li><strong>Select Units:</strong> Choose lbs or kg for weight.</li>
+            <li><strong>Enter Your Weight:</strong> Input your current body weight.</li>
+            <li><strong>Pick Your Goal:</strong> Select from 🪑 Sedentary (little exercise), 🏃 Active (moderate workouts), 💪 Build Muscle (strength training), or 🏆 Athlete (intense sports).</li>
+            <li><strong>Meals Per Day:</strong> Choose 3, 4, or 5 meals to get per-meal suggestions.</li>
+            <li><strong>Calculate:</strong> Get your total daily protein in grams, plus meal breakdowns for easy planning.</li>
+          </ol>
+          <p><strong>Pro Tip:</strong> Combine with our <a href="macro-calculator.html">Macro Calculator</a> to integrate protein into your full carb and fat split, or use the <a href="calorie-calculator.html">Calorie Calculator</a> for overall energy balance!</p>
+
+          <h2>Why Calculate Your Protein Needs?</h2>
+          <ul>
+            <li><strong>Muscle Repair and Growth:</strong> Ensures you're getting enough to recover from workouts and build strength.</li>
+            <li><strong>Satiety and Weight Management:</strong> Protein promotes fullness, helping with fat loss without hunger.</li>
+            <li><strong>Metabolic Health:</strong> Supports a healthy metabolism, especially for athletes or those in deficits who need more per kg.</li>
+            <li><strong>Customized and Convenient:</strong> Tailors to your profile for realistic, achievable targets—no generic advice.</li>
+            <li><strong>Free and Private:</strong> Instant results processed in your browser, with no data shared.</li>
+          </ul>
+
+          <p>If you're searching for "protein intake calculator by weight" or "how much protein per day for muscle gain," our tool provides accurate, goal-specific estimates. Ideal for beginners asking "daily protein needs calculator" or pros fine-tuning for performance.</p>
+
+          <h2>Common Questions About Protein Intake</h2>
+          <ul>
+            <li><strong>How much protein for fat loss?</strong> Aim for 1.6–2.2 g/kg to preserve muscle—higher in deficits.</li>
+            <li><strong>Does activity level matter?</strong> Yes; sedentary folks need less than athletes to avoid excess calories.</li>
+            <li><strong>Can I split it over meals?</strong> Absolutely—our calculator suggests even distribution for better absorption (20–40g per meal).</li>
+            <li><strong>Sources of protein?</strong> Lean meats, eggs, dairy, beans, or supplements—focus on variety for complete aminos.</li>
+          </ul>
+
+          <p>Power up your nutrition! Use our Protein Intake Calculator below and hit your goals with precision.</p>
+
+          <div class="bmi-disclaimer">
+            <strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.
+          </div>
+        </div>
+      </div>
+      <aside class="results-card">
+        <div class="protein-result-main">
+          <span class="protein-result-value" id="result-protein">—</span>
+          <span class="protein-result-label">Daily Protein</span>
+        </div>
+        <div class="protein-per-meal">
+          <span class="protein-per-meal-value" id="result-per-meal">—</span>
+          <span class="protein-per-meal-label" id="result-meals-note">per meal</span>
+        </div>
+        <h3 class="protein-food-heading">Food Sources (per 100g)</h3>
+        <div class="protein-food-list">
+          <div class="protein-food-item"><span class="protein-food-emoji">🍗</span><span>Chicken Breast</span><strong>31g</strong></div>
+          <div class="protein-food-item"><span class="protein-food-emoji">🥚</span><span>Eggs (2 large)</span><strong>12g</strong></div>
+          <div class="protein-food-item"><span class="protein-food-emoji">🐟</span><span>Salmon</span><strong>25g</strong></div>
+          <div class="protein-food-item"><span class="protein-food-emoji">🥛</span><span>Greek Yogurt</span><strong>10g</strong></div>
+          <div class="protein-food-item"><span class="protein-food-emoji">🫘</span><span>Lentils (cooked)</span><strong>9g</strong></div>
+          <div class="protein-food-item"><span class="protein-food-emoji">🧀</span><span>Cottage Cheese</span><strong>11g</strong></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related</h3>
+      <div class="related-links">
+        <a href="macro-calculator.html">Macro Calculator</a>
+        <a href="calorie-calculator.html">Calorie Calculator</a>
+        <a href="../guides/macro-nutrition-guide.html">Macro Nutrition Guide</a>
+        <a href="../blog/nutrition-vs-metabolism.html">Nutrition vs Metabolism</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc.</p>
+        <p class="footer-credit"><a href="https://riyaka.art/" target="_blank" rel="noopener noreferrer">Developed by Art R. <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 28 28" role="img"><path fill="#1F57C3" d="M12 1.155a4 4 0 014 0l8.124 4.69a4 4 0 012 3.464v9.382a4 4 0 01-2 3.464L16 26.845a4 4 0 01-4 0l-8.124-4.69a4 4 0 01-2-3.464V9.309a4 4 0 012-3.464L12 1.155z"></path><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.761 7.542l1.188 3.201 3.285.184a.78.78 0 01.448.173c.13.104.226.247.277.41a.9.9 0 01.01.504.858.858 0 01-.261.422L17.15 14.6l.854 3.328a.907.907 0 01-.025.507.857.857 0 01-.291.404.785.785 0 01-.919.02L14 16.984l-2.764 1.862a.784.784 0 01-.916-.012.855.855 0 01-.294-.4.906.906 0 01-.031-.505l.847-3.314-2.55-2.18a.858.858 0 01-.26-.421.9.9 0 01.01-.504.853.853 0 01.276-.41.782.782 0 01.448-.173l3.285-.184 1.188-3.201a.86.86 0 01.302-.394.79.79 0 01.918 0 .86.86 0 01.302.394z" clip-rule="evenodd"></path></svg></a>
+          <a href="https://www.strava.com/athletes/22196700" target="_blank" rel="noopener noreferrer" class="footer-strava-link" aria-label="Art R. on Strava"><img src="../images/strava_logo.webp" alt="" width="20" height="20" loading="lazy"></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators... (e.g. calorie, bmi)" autocomplete="off" aria-autocomplete="list" aria-controls="search-results">
+        <div id="search-results" class="search-results" role="listbox" aria-label="Calculator results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/protein-intake.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8276223173310357"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Free VO2 max calculator. Estimate maximal oxygen uptake using resting heart rate or 1.5 mile run. Rockport, Cooper, and ACSM formulas. Track fitness, set goals—no lab needed.">
+  <meta name="keywords" content="VO2 max calculator, aerobic capacity, maximal oxygen uptake, Rockport walk test, Cooper test, cardio fitness, estimate VO2 max without test">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/vo2-max-calculator.html">
+  <title>VO2 Max Calculator – Aerobic Capacity | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/vo2-max-calculator.html">
+  <meta property="og:title" content="VO2 Max Calculator – Aerobic Capacity | SportyCalc">
+  <meta property="og:description" content="Estimate your maximal aerobic capacity using resting heart rate or 1.5 mile run test. Free and private.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VO2 Max Calculator | SportyCalc">
+  <meta name="twitter:description" content="Estimate your maximal aerobic capacity. Resting HR or 1.5 mile run test.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"VO2 Max Calculator","url":"https://sportycalc.com/calculators/vo2-max-calculator.html","description":"Estimate maximal aerobic capacity (VO2 max) using resting heart rate or 1.5 mile run test","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <a href="../fitness-quiz.html" class="nav-link nav-link-brand">Quiz</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Calculators</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+    <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+    <a href="../fitness-quiz.html" class="mobile-nav-link mobile-nav-link-brand">Quiz</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>VO2 Max Calculator</span>
+      </nav>
+      <h1>VO2 Max Calculator</h1>
+      <p class="hero-desc">VO2 Max Calculator estimates your maximal oxygen uptake—a key indicator of cardiovascular health and athletic potential. Using proven methods like heart rate ratios and the 1.5 mile run test, this tool helps runners, cyclists, and fitness enthusiasts gauge endurance without lab equipment. Track improvements, set training goals, and unlock better performance today.</p>
+    </section>
+
+    <section class="quiz-cta-section">
+      <a href="../fitness-quiz/fitness-knowledge.html" class="quiz-cta-card">
+        <span class="quiz-cta-icon">🧠</span>
+        <div class="quiz-cta-content">
+          <h2 class="quiz-cta-title">Take the Quiz!</h2>
+          <p class="quiz-cta-desc">Test your fitness knowledge in 5 quick questions. Get instant green/red feedback and see how you score.</p>
+        </div>
+        <span class="quiz-cta-arrow">→</span>
+      </a>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <h2>Estimate Your VO2 Max</h2>
+          <form id="vo2-form">
+            <div class="input-group">
+              <label for="method">Test Method</label>
+              <select id="method">
+                <option value="resting">Resting Heart Rate (no exercise)</option>
+                <option value="run15">1.5 Mile Run / Walk Test</option>
+              </select>
+            </div>
+
+            <div class="input-row">
+              <div class="input-group">
+                <label for="age">Age (years)</label>
+                <input type="number" id="age" value="30" min="15" max="90" placeholder="30" required>
+              </div>
+              <div class="input-group">
+                <label for="sex">Sex</label>
+                <select id="sex">
+                  <option value="male" selected>Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="resting-inputs" class="method-inputs">
+              <div class="input-group">
+                <label for="resting-hr">Resting Heart Rate (bpm)</label>
+                <input type="number" id="resting-hr" value="60" min="40" max="100" placeholder="60">
+                <span class="input-hint">Measure after waking, before getting up. Count beats for 20 sec × 3.</span>
+              </div>
+            </div>
+
+            <div id="run15-inputs" class="method-inputs" style="display:none">
+              <div class="input-group">
+                <label for="time-min">1.5 Mile Time</label>
+                <div class="time-input-row">
+                  <input type="number" id="time-min" value="12" min="6" max="30" placeholder="12">
+                  <span class="time-sep">min</span>
+                  <input type="number" id="time-sec" value="0" min="0" max="59" placeholder="0">
+                  <span class="time-sep">sec</span>
+                </div>
+                <span class="input-hint">Cover 1.5 miles (2414 m) as fast as you can. Run or walk.</span>
+              </div>
+            </div>
+
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate VO2 Max</button>
+          </form>
+        </div>
+
+        <div class="seo-content">
+          <h2>What is VO2 Max?</h2>
+          <p>VO2 Max measures the maximum amount of oxygen your body can utilize during intense exercise, expressed in milliliters per kilogram per minute (mL/kg/min). It's influenced by genetics, age, training, and factors like altitude. Higher values indicate better aerobic capacity, correlating with endurance in sports like running or cycling. Formulas from sources like the American College of Sports Medicine (ACSM) include:</p>
+          <ul>
+            <li><strong>Resting Heart Rate Method:</strong> VO2 Max ≈ 15 × (HRmax / HRrest), where HRmax is 220 − age.</li>
+            <li><strong>Rockport Walk Test:</strong> VO2 Max = 132.853 − (0.0769 × weight in lbs) − (0.3877 × age) + (6.315 × gender; 1 for male, 0 for female) − (3.2649 × time in minutes) − (0.1565 × heart rate).</li>
+            <li><strong>Cooper Test:</strong> VO2 Max = (distance in meters − 504.9) / 44.73 for a 12-minute run.</li>
+          </ul>
+          <p>Our calculator supports these non-invasive estimates for accessible insights.</p>
+
+          <h2>How to Use Our VO2 Max Calculator</h2>
+          <ul>
+            <li><strong>Choose a Method:</strong> Select Resting HR (quickest), or 1.5 Mile Run/Walk (similar to Cooper-style tests).</li>
+            <li><strong>Enter Details:</strong> Provide age, gender, and method-specific data (e.g., resting heart rate for Resting HR, or run time for the 1.5 mile test).</li>
+            <li><strong>Calculate:</strong> Get your VO2 Max score, fitness level (e.g., excellent, average), and percentile ranking on the chart.</li>
+          </ul>
+          <p><strong>Pro Tip:</strong> Integrate with our <a href="heart-rate-zones.html" title="Heart Rate Zones Calculator">Heart Rate Zones Calculator</a> for targeted workouts, or pair with the <a href="running-pace-calculator.html" title="Running Pace Calculator">Running Pace Calculator</a> to predict race times based on your VO2!</p>
+
+          <h2>Why Calculate Your VO2 Max?</h2>
+          <ul>
+            <li><strong>Fitness Benchmarking:</strong> Assess your cardio health and compare to age/gender norms—e.g., elite athletes often exceed 60 mL/kg/min.</li>
+            <li><strong>Training Optimization:</strong> Use it to tailor intervals or endurance sessions, preventing overtraining and boosting efficiency.</li>
+            <li><strong>Health Monitoring:</strong> Lower VO2 links to risks like heart disease; tracking motivates lifestyle changes.</li>
+            <li><strong>Free, Private, and Accurate:</strong> Browser-based with no data storage—ideal for quick checks on mobile.</li>
+          </ul>
+          <p>Searching for "VO2 max calculator online" or "estimate VO2 max without test"? Our multi-method tool provides reliable, science-backed results for all fitness levels.</p>
+
+          <h2>Common Questions About VO2 Max</h2>
+          <div class="faq-item">
+            <h3>How accurate are these estimates?</h3>
+            <p>Field tests like Rockport are within 10–15% of lab results—great for home use, but pros may opt for gas analysis.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can VO2 Max improve?</h3>
+            <p>Yes, with consistent cardio and strength training—recalculate every 4–6 weeks.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What's a good VO2 Max?</h3>
+            <p>Varies by age/gender: 35–40 mL/kg/min is average for adults; over 50 is excellent.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Does it differ for sports?</h3>
+            <p>Runners often use Cooper; cyclists may prefer FTP-based methods—adapt as needed.</p>
+          </div>
+
+          <p><strong>Boost your aerobic power!</strong> Try our VO2 Max Calculator above and take your training to the next level.</p>
+
+          <p class="health-advisory" role="alert">
+            <strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.
+          </p>
+        </div>
+      </div>
+
+      <aside class="results-card">
+        <h3>Your VO2 Max</h3>
+        <p class="results-card-subtitle" id="vo2-subtitle">Enter your data above</p>
+        <div class="vo2-result-main" id="vo2-result-main">
+          <span class="vo2-value" id="vo2-value">—</span>
+          <span class="vo2-unit">ml/kg/min</span>
+        </div>
+        <p class="vo2-category" id="vo2-category"></p>
+
+        <div class="vo2-chart-section">
+          <h4>Fitness Level Chart</h4>
+          <div class="chart-container">
+            <canvas id="vo2-chart" aria-label="VO2 max fitness level comparison chart"></canvas>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related Calculators</h3>
+      <div class="related-links">
+        <a href="heart-rate-zones.html" title="Heart Rate Zones Calculator">Heart Rate Zones</a>
+        <a href="running-pace-calculator.html" title="Running Pace Calculator">Running Pace</a>
+        <a href="calories-burned.html" title="Calories Burned Calculator">Calories Burned</a>
+        <a href="tdee-calculator.html" title="TDEE Calculator">TDEE Calculator</a>
+        <a href="../guides/fitness-metrics-explained.html" title="Fitness Metrics Explained">Fitness Metrics Guide</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc.</p>
+        <p class="footer-credit"><a href="https://riyaka.art/" target="_blank" rel="noopener noreferrer">Developed by Art R. <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 28 28" role="img"><path fill="#1F57C3" d="M12 1.155a4 4 0 014 0l8.124 4.69a4 4 0 012 3.464v9.382a4 4 0 01-2 3.464L16 26.845a4 4 0 01-4 0l-8.124-4.69a4 4 0 01-2-3.464V9.309a4 4 0 012-3.464L12 1.155z"></path><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.761 7.542l1.188 3.201 3.285.184a.78.78 0 01.448.173c.13.104.226.247.277.41a.9.9 0 01.01.504.858.858 0 01-.261.422L17.15 14.6l.854 3.328a.907.907 0 01-.025.507.857.857 0 01-.291.404.785.785 0 01-.919.02L14 16.984l-2.764 1.862a.784.784 0 01-.916-.012.855.855 0 01-.294-.4.906.906 0 01-.031-.505l.847-3.314-2.55-2.18a.858.858 0 01-.26-.421.9.9 0 01.01-.504.853.853 0 01.276-.41.782.782 0 01.448-.173l3.285-.184 1.188-3.201a.86.86 0 01.302-.394.79.79 0 01.918 0 .86.86 0 01.302.394z" clip-rule="evenodd"></path></svg></a>
+          <a href="https://www.strava.com/athletes/22196700" target="_blank" rel="noopener noreferrer" class="footer-strava-link" aria-label="Art R. on Strava"><img src="../images/strava_logo.webp" alt="" width="20" height="20" loading="lazy"></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators... (e.g. calorie, bmi)" autocomplete="off" aria-autocomplete="list" aria-controls="search-results">
+        <div id="search-results" class="search-results" role="listbox" aria-label="Calculator results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/vo2-max-calculator.js"></script>
+</body>
+</html>

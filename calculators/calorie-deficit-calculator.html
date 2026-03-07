@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8276223173310357"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Free calorie deficit calculator. Estimate how long to reach your target weight. Mifflin-St Jeor formula, TDEE-based. Healthy 300-500 cal/day deficit for sustainable weight loss.">
+  <meta name="keywords" content="calorie deficit calculator, weight loss calculator, calorie deficit for weight loss, how long to lose weight">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/calorie-deficit-calculator.html">
+  <title>Calorie Deficit Calculator – How Long to Reach Your Goal | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/calorie-deficit-calculator.html">
+  <meta property="og:title" content="Calorie Deficit Calculator | SportyCalc">
+  <meta property="og:description" content="Estimate how long to reach your target weight. Mifflin-St Jeor based, 300-500 cal/day deficit for healthy loss.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calorie Deficit Calculator | SportyCalc">
+  <meta name="twitter:description" content="Estimate how long to reach your target weight. Mifflin-St Jeor based.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Calorie Deficit Calculator","url":"https://sportycalc.com/calculators/calorie-deficit-calculator.html","description":"Estimate calorie deficit and time to reach target weight","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <a href="../fitness-quiz.html" class="nav-link nav-link-brand">Quiz</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Calculators</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+    <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+    <a href="../fitness-quiz.html" class="mobile-nav-link mobile-nav-link-brand">Quiz</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>Calorie Deficit</span>
+      </nav>
+      <h1>Calorie Deficit Calculator</h1>
+      <p class="hero-desc">Estimate how long it will take to reach your target weight with a healthy calorie deficit. Uses Mifflin-St Jeor BMR and activity level for accurate TDEE—aim for 300–500 cal/day deficit for sustainable weight loss.</p>
+    </section>
+
+    <section class="quiz-cta-section">
+      <a href="../fitness-quiz/fitness-knowledge.html" class="quiz-cta-card">
+        <span class="quiz-cta-icon">🧠</span>
+        <div class="quiz-cta-content">
+          <h2 class="quiz-cta-title">Take the Quiz!</h2>
+          <p class="quiz-cta-desc">Test your fitness knowledge in 5 quick questions. Get instant green/red feedback and see how you score.</p>
+        </div>
+        <span class="quiz-cta-arrow">→</span>
+      </a>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <h2>Your Details</h2>
+          <form id="deficit-form">
+            <div class="unit-toggle">
+              <button type="button" class="unit-btn active" data-unit="metric">Metric</button>
+              <button type="button" class="unit-btn" data-unit="imperial">Imperial</button>
+            </div>
+            <div class="input-group">
+              <label for="gender">Sex</label>
+              <select id="gender">
+                <option value="male" selected>Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" value="30" placeholder="30" min="15" max="100">
+              </div>
+              <div class="input-group">
+                <label for="height">Height</label>
+                <div class="cd-input-wrap">
+                  <input type="number" id="height" value="170" placeholder="170" min="1" step="0.1">
+                  <span id="height-unit">cm</span>
+                </div>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="weight">Current weight</label>
+                <div class="cd-input-wrap">
+                  <input type="number" id="weight" value="80" placeholder="80" min="1" step="0.1">
+                  <span id="weight-unit">kg</span>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="target-weight">Target weight</label>
+                <div class="cd-input-wrap">
+                  <input type="number" id="target-weight" value="75" placeholder="75" min="1" step="0.1">
+                  <span id="target-weight-unit">kg</span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="activity">Activity level</label>
+              <select id="activity">
+                <option value="1.2">Sedentary (little/no exercise)</option>
+                <option value="1.375" selected>Light (1–3 days/week)</option>
+                <option value="1.55">Moderate (3–5 days/week)</option>
+                <option value="1.725">Active (6–7 days/week)</option>
+                <option value="1.9">Very Active (2x/day or physical job)</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Mode</label>
+              <div class="cd-mode-btns">
+                <button type="button" class="cd-mode-btn active" data-mode="deficit">By deficit (cal/day)</button>
+                <button type="button" class="cd-mode-btn" data-mode="date">By target date</button>
+              </div>
+            </div>
+            <div id="deficit-mode" class="cd-mode-panel">
+              <div class="input-group">
+                <label for="deficit">Daily calorie deficit</label>
+                <select id="deficit">
+                  <option value="250">250 cal/day (~0.25 kg/week)</option>
+                  <option value="375">375 cal/day (~0.4 kg/week)</option>
+                  <option value="500" selected>500 cal/day (~0.5 kg/week)</option>
+                  <option value="750">750 cal/day (~0.75 kg/week)</option>
+                  <option value="1000">1,000 cal/day (~1 kg/week)</option>
+                </select>
+              </div>
+            </div>
+            <div id="date-mode" class="cd-mode-panel" style="display:none">
+              <div class="input-group">
+                <label for="target-date">Target date</label>
+                <input type="date" id="target-date">
+              </div>
+            </div>
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate</button>
+          </form>
+        </div>
+        <div class="seo-content">
+          <p>Struggling to lose weight effectively? Our Calorie Deficit Calculator at SportyCalc.com is your go-to tool for creating a personalized plan to burn fat while maintaining energy and muscle. A calorie deficit—consuming fewer calories than you burn—is the science-backed foundation of weight loss, helping you shed pounds safely without crash diets or extreme measures.</p>
+
+          <h2>What is a Calorie Deficit and Why Does It Matter?</h2>
+          <p>A calorie deficit occurs when your daily calorie intake is lower than your <a href="tdee-calculator.html">Total Daily Energy Expenditure (TDEE)</a>, prompting your body to use stored fat for energy. This method is essential for healthy weight management, as it promotes gradual loss (0.5–1 kg per week) to avoid muscle breakdown or metabolic slowdown.</p>
+          <p>Why track it? Without calculation, you might undereat (leading to fatigue) or overeat (stalling progress). Our calculator uses proven formulas to tailor your deficit based on age, weight, height, activity level, and goals—ideal for beginners, athletes, or anyone optimizing body composition.</p>
+
+          <h2>How to Calculate Your Calorie Deficit</h2>
+          <p>Our free calorie deficit calculator makes it effortless and precise. No guesswork—just input your details for instant results:</p>
+          <ul>
+            <li><strong>Enter Your Basics:</strong> Age, gender, height (cm or inches), and weight (kg or lbs).</li>
+            <li><strong>Select Activity Level:</strong> From sedentary to very active—honest assessment ensures accuracy.</li>
+            <li><strong>Set Your Goal:</strong> Choose a daily deficit (250–500 cal for gradual loss, up to 1,000 for faster results), or pick a target date for a custom plan.</li>
+            <li><strong>Calculate:</strong> Get your recommended daily intake, plus tips on macros and tracking.</li>
+          </ul>
+          <p><strong>Formula:</strong> Calorie Deficit = TDEE − Daily Calorie Intake</p>
+          <p>(We use the Mifflin-St Jeor equation for BMR, then multiply by activity factor for TDEE.)</p>
+          <p><strong>Example:</strong> A 30-year-old woman, 165 cm tall, 70 kg, moderately active, has a TDEE of ~2,200 calories. For a 500-calorie deficit (1 lb/week loss), aim for 1,700 calories/day. Track with our integrated <a href="macro-calculator.html">Macro Calculator</a> for balanced meals.</p>
+
+          <h2>Benefits of Using a Calorie Deficit Calculator</h2>
+          <ul>
+            <li><strong>Personalized Weight Loss:</strong> Avoid one-size-fits-all diets; get targets suited to your lifestyle.</li>
+            <li><strong>Prevent Plateaus:</strong> Adjust as you lose weight—recalculate every 4–6 weeks.</li>
+            <li><strong>Support Muscle Retention:</strong> Pair with our <a href="protein-intake.html">Protein Intake Calculator</a> to prioritize protein (1.6–2.2 g/kg body weight).</li>
+            <li><strong>Holistic Health:</strong> Combine with <a href="bmr-calculator.html">BMR</a>, <a href="bmi-calculator.html">BMI</a>, and <a href="water-intake.html">Water Intake</a> tools for full-body wellness, reducing risks like nutrient deficiencies.</li>
+            <li><strong>Long-Term Success:</strong> Focus on sustainable habits, not quick fixes, for lasting results.</li>
+          </ul>
+
+          <h2>FAQs: Calorie Deficit Explained</h2>
+          <p><strong>How much deficit is safe?</strong> 500–1,000 calories/day for 0.5–1 kg/week loss. Avoid over 30% to prevent health issues.</p>
+          <p><strong>Can I eat back exercise calories?</strong> Yes, for accuracy—use our <a href="calories-burned.html">Calories Burned Calculator</a> to adjust.</p>
+          <p><strong>What's the difference from BMR?</strong> BMR is resting burn; TDEE includes activity. Deficit targets are below TDEE.</p>
+          <p><strong>Is it good for building muscle?</strong> For recomp (fat loss + muscle gain), use a small deficit with strength training—check our <a href="1rm-calculator.html">1RM Calculator</a>.</p>
+          <p><strong>How do I track calories?</strong> Apps like MyFitnessPal work great; start with our <a href="calorie-calculator.html">Daily Calorie Calculator</a> for estimates.</p>
+
+          <p>Ready to kickstart your transformation? Use our Calorie Deficit Calculator above—it's free, user-friendly, and packed with features to guide your journey. Calculate, commit, conquer!</p>
+
+          <div class="bmi-disclaimer">
+            <strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.
+          </div>
+        </div>
+      </div>
+      <aside class="results-card" id="deficit-result-card">
+        <h3>Your Plan</h3>
+        <div class="cd-result-main">
+          <span class="cd-value" id="result-intake">—</span>
+          <span class="cd-unit">cal/day</span>
+          <span class="cd-label">Recommended intake</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Daily deficit</span>
+          <span class="result-value" id="result-deficit">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Time to goal</span>
+          <span class="result-value" id="result-weeks">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">TDEE (maintenance)</span>
+          <span class="result-value" id="result-tdee">—</span>
+        </div>
+        <div class="cd-chart-section">
+          <h4>Weight projection</h4>
+          <div class="chart-container">
+            <canvas id="deficit-chart" aria-label="Weight projection chart"></canvas>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related Calculators &amp; Guides</h3>
+      <div class="related-links">
+        <a href="../guides/calorie-deficit-diet-guide.html">Calorie Deficit Diet Guide</a>
+        <a href="tdee-calculator.html">TDEE Calculator</a>
+        <a href="bmr-calculator.html">BMR Calculator</a>
+        <a href="calorie-calculator.html">Calorie Calculator</a>
+        <a href="macro-calculator.html">Macro Calculator</a>
+        <a href="../guides/how-to-calculate-tdee.html">How to Calculate TDEE</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc.</p>
+        <p class="footer-credit"><a href="https://riyaka.art/" target="_blank" rel="noopener noreferrer">Developed by Art R. <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 28 28" role="img"><path fill="#1F57C3" d="M12 1.155a4 4 0 014 0l8.124 4.69a4 4 0 012 3.464v9.382a4 4 0 01-2 3.464L16 26.845a4 4 0 01-4 0l-8.124-4.69a4 4 0 01-2-3.464V9.309a4 4 0 012-3.464L12 1.155z"></path><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.761 7.542l1.188 3.201 3.285.184a.78.78 0 01.448.173c.13.104.226.247.277.41a.9.9 0 01.01.504.858.858 0 01-.261.422L17.15 14.6l.854 3.328a.907.907 0 01-.025.507.857.857 0 01-.291.404.785.785 0 01-.919.02L14 16.984l-2.764 1.862a.784.784 0 01-.916-.012.855.855 0 01-.294-.4.906.906 0 01-.031-.505l.847-3.314-2.55-2.18a.858.858 0 01-.26-.421.9.9 0 01.01-.504.853.853 0 01.276-.41.782.782 0 01.448-.173l3.285-.184 1.188-3.201a.86.86 0 01.302-.394.79.79 0 01.918 0 .86.86 0 01.302.394z" clip-rule="evenodd"></path></svg></a>
+          <a href="https://www.strava.com/athletes/22196700" target="_blank" rel="noopener noreferrer" class="footer-strava-link" aria-label="Art R. on Strava"><img src="../images/strava_logo.webp" alt="" width="20" height="20" loading="lazy"></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators... (e.g. calorie, bmi)" autocomplete="off" aria-autocomplete="list" aria-controls="search-results">
+        <div id="search-results" class="search-results" role="listbox" aria-label="Calculator results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/calorie-deficit-calculator.js"></script>
+</body>
+</html>

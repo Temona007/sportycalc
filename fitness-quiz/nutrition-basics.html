@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-FH137XCNSH');</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8276223173310357"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta name="description" content="Free nutrition quiz: test your diet knowledge on macros, vitamins, and balanced eating. 10 questions with instant feedback. Perfect before using our Macro or Calorie Calculator.">
+  <meta name="keywords" content="free nutrition quiz, diet knowledge quiz, macros quiz, nutrition test">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/fitness-quiz/nutrition-basics.html">
+  <title>Nutrition Basics Quiz: Test Your Diet Knowledge | SportyCalc</title>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/fitness-quiz/nutrition-basics.html">
+  <meta property="og:title" content="Nutrition Basics Quiz | SportyCalc">
+  <meta property="og:description" content="Test your diet knowledge on macros, vitamins, and balanced eating. Free 10-question quiz.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Nutrition Basics Quiz","url":"https://sportycalc.com/fitness-quiz/nutrition-basics.html","description":"Test your diet knowledge on macros, vitamins, and balanced eating.","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"},"learningResourceType":"Quiz"}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="../calculators/index.html" class="nav-link">Calculators</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
+        <a href="../calculators/bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <a href="../fitness-quiz.html" class="nav-link nav-link-brand">Quiz</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"><span class="theme-moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span><span class="theme-sun" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span></button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav">
+    <a href="../calculators/index.html" class="mobile-nav-link">Calculators</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+    <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
+    <a href="../calculators/bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+    <a href="../fitness-quiz.html" class="mobile-nav-link mobile-nav-link-brand">Quiz</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="/">Home</a><span>/</span><a href="../fitness-quiz.html">Quizzes</a><span>/</span><span>Nutrition Basics</span>
+      </nav>
+      <h1>Nutrition Basics Quiz</h1>
+      <p class="hero-desc">Test your diet knowledge on macros, vitamins, and balanced eating. 10 questions with instant feedback.</p>
+    </section>
+
+    <section class="quiz-section">
+      <div class="quiz-progress">
+        <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
+        <span class="quiz-progress-text" id="quiz-progress-text">1 / 10</span>
+      </div>
+      <div id="quiz-container">
+        <div class="quiz-question" id="quiz-question"></div>
+        <div class="quiz-answers" id="quiz-answers"></div>
+        <div class="quiz-feedback" id="quiz-feedback"></div>
+      </div>
+      <div class="quiz-nav">
+        <button type="button" class="btn-ghost quiz-prev" id="quiz-prev" disabled>← Previous</button>
+        <button type="button" class="btn-primary quiz-next" id="quiz-next">Next →</button>
+      </div>
+    </section>
+
+    <section class="quiz-result" id="quiz-result" hidden>
+      <h2>Quiz Complete!</h2>
+      <p class="quiz-score" id="quiz-score"></p>
+      <p class="quiz-score-desc" id="quiz-score-desc"></p>
+      <div class="quiz-cta-inline" id="quiz-cta-inline"></div>
+      <a href="../fitness-quiz.html" class="btn-primary quiz-retake">← Back to Quizzes</a>
+      <button type="button" class="btn-ghost quiz-retake-btn" id="quiz-retake">Take Again</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="../calculators/index.html" class="footer-link">Calculators</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc. Free fitness calculators.</p>
+        <p class="footer-credit"><a href="https://riyaka.art/" target="_blank" rel="noopener noreferrer">Developed by Art R.</a> <a href="https://www.strava.com/athletes/22196700" target="_blank" rel="noopener noreferrer" class="footer-strava-link" aria-label="Art R. on Strava"><img src="../images/strava_logo.webp" alt="" width="20" height="20" loading="lazy"></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators..." autocomplete="off">
+        <div id="search-results" class="search-results" role="listbox"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/theme.js"></script>
+  <script>
+    const myQuestions = [
+      { question: "What macronutrient is primarily used for muscle repair?", answers: { a: "Carbs", b: "Fats", c: "Protein", d: "Fiber" }, correctAnswer: "c", feedback: "Protein supports tissue repair; use our Protein Intake Calculator to find your daily needs!" },
+      { question: "How many calories are in 1 gram of fat?", answers: { a: "4", b: "7", c: "9", d: "12" }, correctAnswer: "c", feedback: "Fats are calorie-dense at 9 kcal/g." },
+      { question: "Which vitamin is crucial for bone health and calcium absorption?", answers: { a: "Vitamin C", b: "Vitamin D", c: "Vitamin A", d: "Vitamin K" }, correctAnswer: "b", feedback: "Vitamin D pairs with calcium for strong bones." },
+      { question: "What does \"empty calories\" refer to?", answers: { a: "Nutrient-rich foods", b: "High-fiber items", c: "Sugary drinks with no nutrients", d: "Protein shakes" }, correctAnswer: "c", feedback: "They provide energy without vitamins/minerals." },
+      { question: "How much water should an average adult drink daily?", answers: { a: "1L", b: "2-3L", c: "5L", d: "10L" }, correctAnswer: "b", feedback: "Aim for 2-3 liters; check our Water Intake Calculator for personalized amounts." },
+      { question: "Which food is a good source of omega-3 fatty acids?", answers: { a: "Salmon", b: "Bread", c: "Apples", d: "Cheese" }, correctAnswer: "a", feedback: "Fatty fish like salmon support heart health." },
+      { question: "What is the main function of carbohydrates?", answers: { a: "Build muscle", b: "Provide energy", c: "Aid digestion", d: "Boost immunity" }, correctAnswer: "b", feedback: "Carbs are the body's primary fuel source." },
+      { question: "How much fiber do adults need daily?", answers: { a: "5-10g", b: "25-30g", c: "50g", d: "100g" }, correctAnswer: "b", feedback: "Fiber aids digestion and satiety." },
+      { question: "Which mineral helps regulate blood pressure?", answers: { a: "Iron", b: "Potassium", c: "Zinc", d: "Magnesium" }, correctAnswer: "b", feedback: "Potassium balances sodium levels." },
+      { question: "What is a \"superfood\" example rich in antioxidants?", answers: { a: "Blueberries", b: "Potato chips", c: "White rice", d: "Candy" }, correctAnswer: "a", feedback: "Berries fight oxidative stress." }
+    ];
+
+    const ctaHint = '<p class="quiz-cta-text"><strong>Scored low on macros?</strong> Try our <a href="../calculators/macro-calculator.html">Macro Calculator</a>!</p>';
+
+    let currentQuestion = 0;
+    const userAnswers = [];
+    const questionEl = document.getElementById('quiz-question');
+    const answersEl = document.getElementById('quiz-answers');
+    const feedbackEl = document.getElementById('quiz-feedback');
+    const prevBtn = document.getElementById('quiz-prev');
+    const nextBtn = document.getElementById('quiz-next');
+    const progressBar = document.getElementById('quiz-progress-bar');
+    const progressText = document.getElementById('quiz-progress-text');
+    const quizContainer = document.getElementById('quiz-container');
+    const quizResult = document.getElementById('quiz-result');
+    const quizScore = document.getElementById('quiz-score');
+    const quizScoreDesc = document.getElementById('quiz-score-desc');
+    const quizCtaInline = document.getElementById('quiz-cta-inline');
+    const quizRetakeBtn = document.getElementById('quiz-retake');
+
+    function showQuestion(index) {
+      const q = myQuestions[index];
+      questionEl.textContent = q.question;
+      answersEl.innerHTML = '';
+      Object.keys(q.answers).forEach(letter => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'quiz-answer-btn';
+        btn.dataset.letter = letter;
+        btn.textContent = q.answers[letter];
+        btn.addEventListener('click', () => selectAnswer(letter));
+        answersEl.appendChild(btn);
+      });
+      feedbackEl.innerHTML = '';
+      feedbackEl.className = 'quiz-feedback';
+      if (userAnswers[index] !== undefined) {
+        markAnsweredAnswers(index);
+        showFeedback(index);
+      }
+      updateNav();
+      updateProgress();
+    }
+
+    function selectAnswer(letter) {
+      if (userAnswers[currentQuestion] !== undefined) return;
+      userAnswers[currentQuestion] = letter;
+      markAnsweredAnswers(currentQuestion);
+      showFeedback(currentQuestion);
+    }
+
+    function markAnsweredAnswers(index) {
+      const correct = myQuestions[index].correctAnswer;
+      const chosen = userAnswers[index];
+      answersEl.querySelectorAll('.quiz-answer-btn').forEach(btn => {
+        btn.disabled = true;
+        const letter = btn.dataset.letter;
+        if (letter === correct) btn.classList.add('quiz-answer-correct');
+        else if (letter === chosen) btn.classList.add('quiz-answer-wrong');
+      });
+    }
+
+    function showFeedback(index) {
+      const correct = myQuestions[index].correctAnswer;
+      const chosen = userAnswers[index];
+      const isCorrect = chosen === correct;
+      feedbackEl.className = 'quiz-feedback ' + (isCorrect ? 'quiz-feedback-correct' : 'quiz-feedback-wrong');
+      const feedback = myQuestions[index].feedback || 'The correct answer is: ' + myQuestions[index].answers[correct];
+      feedbackEl.textContent = (isCorrect ? '✓ Correct! ' : '✗ ') + feedback;
+    }
+
+    function updateNav() {
+      prevBtn.disabled = currentQuestion === 0;
+      nextBtn.textContent = (currentQuestion === myQuestions.length - 1 && userAnswers[currentQuestion] !== undefined) ? 'See Results' : (currentQuestion === myQuestions.length - 1 ? 'Select an answer' : 'Next →');
+    }
+
+    function updateProgress() {
+      progressBar.style.setProperty('--quiz-progress', ((currentQuestion + 1) / myQuestions.length) * 100 + '%');
+      progressText.textContent = (currentQuestion + 1) + ' / ' + myQuestions.length;
+    }
+
+    function goNext() {
+      if (currentQuestion === myQuestions.length - 1) {
+        if (userAnswers[currentQuestion] === undefined) return;
+        showResults();
+      } else {
+        currentQuestion++;
+        showQuestion(currentQuestion);
+      }
+    }
+
+    function goPrev() {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        showQuestion(currentQuestion);
+      }
+    }
+
+    function showResults() {
+      const correct = userAnswers.filter((a, i) => a === myQuestions[i].correctAnswer).length;
+      const total = myQuestions.length;
+      const pct = Math.round((correct / total) * 100);
+      quizContainer.parentElement.style.display = 'none';
+      quizResult.hidden = false;
+      quizScore.textContent = correct + ' / ' + total + ' (' + pct + '%)';
+      if (pct === 100) quizScoreDesc.textContent = 'Perfect! You know your nutrition fundamentals.';
+      else if (pct >= 80) quizScoreDesc.textContent = 'Great job! You\'re well-informed about diet basics.';
+      else if (pct >= 60) quizScoreDesc.textContent = 'Good effort! Try our calculators and guides to learn more.';
+      else quizScoreDesc.textContent = 'Keep learning! Explore our Macro Calculator and guides for evidence-based info.';
+      quizCtaInline.innerHTML = ctaHint;
+    }
+
+    function resetQuiz() {
+      currentQuestion = 0;
+      userAnswers.length = 0;
+      quizResult.hidden = true;
+      quizContainer.parentElement.style.display = 'block';
+      showQuestion(0);
+    }
+
+    prevBtn.addEventListener('click', goPrev);
+    nextBtn.addEventListener('click', () => {
+      if (currentQuestion === myQuestions.length - 1 && userAnswers[currentQuestion] === undefined) return;
+      goNext();
+    });
+    quizRetakeBtn.addEventListener('click', resetQuiz);
+    showQuestion(0);
+  </script>
+  <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
+</body>
+</html>

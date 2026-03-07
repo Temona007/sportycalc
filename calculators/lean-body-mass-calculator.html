@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8276223173310357"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Free lean body mass calculator. Boer & James formulas. Track muscle vs. fat for bodybuilding, dieting, athletes. Weight, height, gender. Optional body fat % for exact LBM.">
+  <meta name="keywords" content="lean body mass calculator, LBM calculator, fat-free mass, Boer formula, James formula, body composition, muscle tracking">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/lean-body-mass-calculator.html">
+  <title>Lean Body Mass Calculator – Boer Formula | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/lean-body-mass-calculator.html">
+  <meta property="og:title" content="Lean Body Mass Calculator – Boer Formula | SportyCalc">
+  <meta property="og:description" content="Free lean body mass calculator. Estimate LBM using the Boer formula. Weight, height, gender. Optional body fat % for exact results.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lean Body Mass Calculator | SportyCalc">
+  <meta name="twitter:description" content="Free lean body mass calculator. Boer formula. Weight, height, gender. Optional body fat %.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Lean Body Mass Calculator","url":"https://sportycalc.com/calculators/lean-body-mass-calculator.html","description":"Estimate lean body mass using the Boer formula (1984). Weight, height, gender. Optional body fat % for exact results.","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <a href="../fitness-quiz.html" class="nav-link nav-link-brand">Quiz</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Calculators</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+    <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+    <a href="../fitness-quiz.html" class="mobile-nav-link mobile-nav-link-brand">Quiz</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>Lean Body Mass</span>
+      </nav>
+      <h1>Lean Body Mass Calculator</h1>
+      <p class="hero-desc">Estimate your fat-free body weight with Boer or James formulas. Track muscle vs. fat for bodybuilding, dieting, or athletic goals. Optional body fat % for exact LBM.</p>
+    </section>
+
+    <section class="quiz-cta-section">
+      <a href="../fitness-quiz/fitness-knowledge.html" class="quiz-cta-card">
+        <span class="quiz-cta-icon">🧠</span>
+        <div class="quiz-cta-content">
+          <h2 class="quiz-cta-title">Take the Quiz!</h2>
+          <p class="quiz-cta-desc">Test your fitness knowledge in 5 quick questions. Get instant green/red feedback and see how you score.</p>
+        </div>
+        <span class="quiz-cta-arrow">→</span>
+      </a>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <form id="lbm-form">
+            <div class="form-header">
+              <h2>Your Measurements</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Units</span>
+                <div class="unit-toggle-btns">
+                  <button type="button" class="unit-btn active" data-unit="metric">Metric</button>
+                  <button type="button" class="unit-btn" data-unit="imperial">Imperial</button>
+                </div>
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">Gender</span>
+              <div class="bf-gender-btns">
+                <button type="button" class="lbm-gender-btn active" data-gender="male">
+                  <span class="bf-gender-emoji">♂️</span>
+                  <span>Male</span>
+                </button>
+                <button type="button" class="lbm-gender-btn" data-gender="female">
+                  <span class="bf-gender-emoji">♀️</span>
+                  <span>Female</span>
+                </button>
+              </div>
+            </div>
+            <div id="height-metric" class="input-group">
+              <label for="height-cm">Height, cm</label>
+              <input type="number" id="height-cm" value="178" min="100" max="250" step="0.1" placeholder="178" required>
+            </div>
+            <div id="height-imperial" class="input-row" style="display:none">
+              <div class="input-group">
+                <label for="height-ft">Height, ft</label>
+                <input type="number" id="height-ft" min="3" max="8" placeholder="5">
+              </div>
+              <div class="input-group">
+                <label for="height-in">Height, in</label>
+                <input type="number" id="height-in" min="0" max="11" step="0.5" placeholder="10">
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="weight" id="weight-label">Weight, kg</label>
+              <input type="number" id="weight" value="75" min="1" step="0.1" placeholder="75" required>
+            </div>
+            <div class="input-group">
+              <span class="input-label">Formula</span>
+              <div class="formula-toggle">
+                <button type="button" class="formula-btn active" data-formula="boer">Boer (simpler)</button>
+                <button type="button" class="formula-btn" data-formula="james">James (weight-focused)</button>
+              </div>
+              <small class="input-hint">Boer uses height+weight; James emphasizes weight/height ratio</small>
+            </div>
+            <div class="input-group">
+              <label for="bodyfat">Body fat % <span class="input-optional">(optional)</span></label>
+              <input type="number" id="bodyfat" min="0" max="100" step="0.1" placeholder="Leave blank for formula estimate">
+              <small class="input-hint">If you know your body fat %, enter it for a more accurate LBM</small>
+            </div>
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate Lean Body Mass</button>
+          </form>
+        </div>
+        <div class="seo-content">
+          <p>Tracking muscle gains or fat loss? Our <strong>Lean Body Mass Calculator</strong> (LBM Calculator) estimates your fat-free body weight—everything except fat, like muscles, bones, and organs—using reliable formulas. Ideal for bodybuilders, dieters, and athletes, this tool helps you monitor true progress beyond the scale, focusing on muscle vs. fat for optimized training and nutrition.</p>
+
+          <h2>What is Lean Body Mass (LBM)?</h2>
+          <p>Lean Body Mass represents your total body weight minus body fat, providing insights into your muscular and skeletal structure. Unlike total weight, LBM highlights composition changes from workouts or diets. We use proven equations like:</p>
+          <ul>
+            <li><strong>Boer Formula:</strong> For men: LBM = (0.407 × weight in kg) + (0.267 × height in cm) − 19.2; For women: LBM = (0.252 × weight) + (0.473 × height) − 48.3.</li>
+            <li><strong>James Formula:</strong> For men: LBM = (1.1 × weight) − 128 × (weight² / height²); For women: LBM = (1.07 × weight) − 148 × (weight² / height²).</li>
+          </ul>
+          <p>Backed by fitness research, these methods offer quick estimates without advanced scans, complementing tools like DEXA for home use.</p>
+
+          <h2>How to Use Our Lean Body Mass Calculator</h2>
+          <ol>
+            <li><strong>Input Your Details:</strong> Enter weight (kg or lbs), height (cm or inches), and gender.</li>
+            <li><strong>Select Formula:</strong> Choose Boer (simpler) or James (weight-focused) for your estimate.</li>
+            <li><strong>Calculate:</strong> Get your LBM in kg or lbs, plus tips on interpretation.</li>
+          </ol>
+          <p><strong>Pro Tip:</strong> Pair with our <a href="body-fat-calculator.html">Body Fat Calculator</a> to derive LBM from fat percentage, or use alongside the <a href="protein-intake.html">Protein Intake Calculator</a> to fuel muscle maintenance!</p>
+
+          <h2>Why Calculate Your Lean Body Mass?</h2>
+          <ul>
+            <li><strong>Muscle vs. Fat Tracking:</strong> See real gains for bodybuilding—e.g., increasing LBM signals effective training.</li>
+            <li><strong>Diet Optimization:</strong> Dieters can adjust calories without losing muscle; great for cutting phases.</li>
+            <li><strong>Goal Setting:</strong> Tailor programs around LBM for strength (link to our <a href="1rm-calculator.html">1RM Calculator</a>) or recovery.</li>
+            <li><strong>Privacy Emphasized:</strong> All data processes in your browser—no servers, no sharing—for secure, instant results.</li>
+          </ul>
+
+          <p>Searching for "lean body mass calculator Boer formula" or "calculate LBM online"? Our accurate, multi-formula tool delivers personalized insights for muscle-building goals.</p>
+
+          <h2>Common Questions About Lean Body Mass</h2>
+          <ul>
+            <li><strong>How does LBM differ from BMI?</strong> LBM focuses on fat-free mass; BMI is overall—better for athletes ignoring muscle.</li>
+            <li><strong>Is it accurate for everyone?</strong> Estimates are solid but vary by body type; recalculate after changes.</li>
+            <li><strong>Can women use it?</strong> Yes, formulas adjust for gender—women typically have lower LBM due to body comp.</li>
+            <li><strong>Why track LBM?</strong> It guides protein needs and prevents muscle loss during deficits.</li>
+          </ul>
+
+          <p>Unlock your composition! Try our Lean Body Mass Calculator below and refine your fitness strategy.</p>
+
+          <div class="bmi-disclaimer">
+            <strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.
+          </div>
+        </div>
+      </div>
+      <aside class="results-card">
+        <div class="bmi-result-main bf-result-header" id="result-lbm-wrap">
+          <span class="bmi-value" id="result-lbm">59</span>
+          <span class="bmi-label" id="lbm-label">Lean Body Mass (kg)</span>
+        </div>
+        <div class="bf-mass-results">
+          <div class="bf-mass-item bf-mass-fat">
+            <span class="bf-mass-value" id="result-fat-mass">16</span><span class="bf-mass-unit" id="fat-mass-unit">kg</span>
+            <span class="bf-mass-label">Fat Mass</span>
+          </div>
+          <div class="bf-mass-item bf-mass-lean">
+            <span class="bf-mass-value" id="result-lbm-secondary">59</span><span class="bf-mass-unit" id="lbm-secondary-unit">kg</span>
+            <span class="bf-mass-label">LBM</span>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="result-label">LBM % of body weight</span>
+          <span class="result-value" id="result-lbm-pct">—</span>
+        </div>
+        <div class="bf-chart-wrap">
+          <h4>Body Composition</h4>
+          <canvas id="lbm-composition-chart" aria-label="Body composition: lean mass vs fat mass"></canvas>
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related Calculators</h3>
+      <div class="related-links">
+        <a href="body-fat-calculator.html">Body Fat Calculator</a>
+        <a href="bmi-calculator.html">BMI Calculator</a>
+        <a href="bmr-calculator.html">BMR Calculator</a>
+        <a href="macro-calculator.html">Macro Calculator</a>
+        <a href="../guides/fitness-metrics-explained.html">Fitness Metrics Explained</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc.</p>
+        <p class="footer-credit"><a href="https://riyaka.art/" target="_blank" rel="noopener noreferrer">Developed by Art R. <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 28 28" role="img"><path fill="#1F57C3" d="M12 1.155a4 4 0 014 0l8.124 4.69a4 4 0 012 3.464v9.382a4 4 0 01-2 3.464L16 26.845a4 4 0 01-4 0l-8.124-4.69a4 4 0 01-2-3.464V9.309a4 4 0 012-3.464L12 1.155z"></path><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.761 7.542l1.188 3.201 3.285.184a.78.78 0 01.448.173c.13.104.226.247.277.41a.9.9 0 01.01.504.858.858 0 01-.261.422L17.15 14.6l.854 3.328a.907.907 0 01-.025.507.857.857 0 01-.291.404.785.785 0 01-.919.02L14 16.984l-2.764 1.862a.784.784 0 01-.916-.012.855.855 0 01-.294-.4.906.906 0 01-.031-.505l.847-3.314-2.55-2.18a.858.858 0 01-.26-.421.9.9 0 01.01-.504.853.853 0 01.276-.41.782.782 0 01.448-.173l3.285-.184 1.188-3.201a.86.86 0 01.302-.394.79.79 0 01.918 0 .86.86 0 01.302.394z" clip-rule="evenodd"></path></svg></a>
+          <a href="https://www.strava.com/athletes/22196700" target="_blank" rel="noopener noreferrer" class="footer-strava-link" aria-label="Art R. on Strava"><img src="../images/strava_logo.webp" alt="" width="20" height="20" loading="lazy"></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators... (e.g. calorie, bmi)" autocomplete="off" aria-autocomplete="list" aria-controls="search-results">
+        <div id="search-results" class="search-results" role="listbox" aria-label="Calculator results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/lean-body-mass-calculator.js"></script>
+</body>
+</html>
