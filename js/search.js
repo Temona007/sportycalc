@@ -15,6 +15,7 @@
     { title: 'Fat Intake Calculator', subtitle: 'Daily dietary fat needs', href: 'fat-intake-calculator.html', keywords: 'fat intake calculator dietary fat saturated fat daily fat grams' },
     { title: 'Macro Calculator', subtitle: 'Protein, carbs, fat', href: 'macro-calculator.html', keywords: 'macro macros protein carbs fat nutrition' },
     { title: 'Body Fat Calculator', subtitle: 'Navy method estimate', href: 'body-fat-calculator.html', keywords: 'body fat navy percentage' },
+    { title: 'Body Surface Area Calculator', subtitle: 'BSA: Du Bois, Mosteller, Haycock', href: 'body-surface-area-calculator.html', keywords: 'body surface area BSA calculator Du Bois Mosteller Haycock metabolic' },
     { title: 'Waist to Hip Ratio', subtitle: 'WHR calculator, WHO thresholds', href: 'waist-hip-ratio-calculator.html', keywords: 'waist hip ratio WHR body shape health risk' },
     { title: 'Lean Body Mass Calculator', subtitle: 'Boer formula, LBM estimate', href: 'lean-body-mass-calculator.html', keywords: 'lean body mass LBM fat free mass Boer formula body composition' },
     { title: 'Heart Rate Zones', subtitle: 'Training zones', href: 'heart-rate-zones.html', keywords: 'heart rate zones cardio training' },

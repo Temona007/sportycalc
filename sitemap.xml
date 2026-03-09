@@ -91,6 +91,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://sportycalc.com/calculators/body-surface-area-calculator.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://sportycalc.com/calculators/body-fat-calculator.html</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -237,6 +243,12 @@
   <url>
     <loc>https://sportycalc.com/blog/weight-loss-calculation-tips.html</loc>
     <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sportycalc.com/blog/10-beginner-workouts-weight-loss-calorie-calculators.html</loc>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8276223173310357"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Free Body Surface Area (BSA) Calculator for athletes: Estimate your BSA using Du Bois, Mosteller, and other formulas based on height, weight, and gender. Discover how BSA enhances metabolic rate tracking, nutrition dosing, and recovery in sports for optimal performance in 2026.">
+  <meta name="keywords" content="body surface area calculator, BSA calculator, Du Bois formula, Mosteller formula, metabolic mass, athlete BSA, sports nutrition dosing">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/body-surface-area-calculator.html">
+  <title>Body Surface Area Calculator: Accurate BSA for Athletes &amp; Fitness Tracking | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/body-surface-area-calculator.html">
+  <meta property="og:title" content="Body Surface Area Calculator: Accurate BSA for Athletes &amp; Fitness Tracking | SportyCalc">
+  <meta property="og:description" content="Free BSA Calculator for athletes: Estimate BSA using Du Bois, Mosteller formulas. Enhance metabolic rate tracking, nutrition dosing, and recovery in sports for 2026.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Body Surface Area Calculator: Accurate BSA for Athletes | SportyCalc">
+  <meta name="twitter:description" content="Free BSA Calculator for athletes: Du Bois, Mosteller formulas. Metabolic rate tracking, nutrition dosing, recovery in sports for 2026.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Body Surface Area Calculator","url":"https://sportycalc.com/calculators/body-surface-area-calculator.html","description":"Free BSA Calculator for athletes: Du Bois, Mosteller formulas. Metabolic rate tracking, nutrition dosing, recovery in sports for 2026.","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <a href="../fitness-quiz.html" class="nav-link nav-link-brand">Quiz</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Calculators</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+    <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+    <a href="../fitness-quiz.html" class="mobile-nav-link mobile-nav-link-brand">Quiz</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>Body Surface Area</span>
+      </nav>
+      <h1>Body Surface Area Calculator: Accurate BSA for Athletes &amp; Fitness Tracking</h1>
+      <p class="hero-desc">Estimate your BSA using Du Bois, Mosteller, and other formulas. Enhance metabolic rate tracking, nutrition dosing, and recovery in sports for optimal performance in 2026.</p>
+    </section>
+
+    <section class="quiz-cta-section">
+      <a href="../fitness-quiz/fitness-knowledge.html" class="quiz-cta-card">
+        <span class="quiz-cta-icon">🧠</span>
+        <div class="quiz-cta-content">
+          <h2 class="quiz-cta-title">Take the Quiz!</h2>
+          <p class="quiz-cta-desc">Test your fitness knowledge in 5 quick questions. Get instant green/red feedback and see how you score.</p>
+        </div>
+        <span class="quiz-cta-arrow">→</span>
+      </a>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <form id="bsa-form">
+            <div class="form-header">
+              <h2>Your Measurements</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Units</span>
+                <div class="unit-toggle-btns">
+                  <button type="button" class="unit-btn active" data-unit="metric">Metric</button>
+                  <button type="button" class="unit-btn" data-unit="imperial">Imperial</button>
+                </div>
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">Gender</span>
+              <div class="bf-gender-btns">
+                <button type="button" class="bsa-gender-btn active" data-gender="male">
+                  <span class="bf-gender-emoji">♂️</span>
+                  <span>Male</span>
+                </button>
+                <button type="button" class="bsa-gender-btn" data-gender="female">
+                  <span class="bf-gender-emoji">♀️</span>
+                  <span>Female</span>
+                </button>
+              </div>
+              <small class="input-hint">Adjusts for body composition in Schlich formula</small>
+            </div>
+            <div class="input-row">
+              <div id="height-metric" class="input-group">
+                <label for="height-cm">Height</label>
+                <input type="number" id="height-cm" value="178" min="50" max="250" step="0.1" placeholder="178" required>
+                <small id="height-unit">cm</small>
+              </div>
+              <div id="height-imperial" class="input-row" style="display:none">
+                <div class="input-group">
+                  <label for="height-ft">Height</label>
+                  <input type="number" id="height-ft" min="2" max="8" placeholder="5">
+                  <small>ft</small>
+                </div>
+                <div class="input-group">
+                  <label for="height-in">&nbsp;</label>
+                  <input type="number" id="height-in" min="0" max="11" step="0.5" placeholder="10">
+                  <small>in</small>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="weight">Weight</label>
+                <input type="number" id="weight" value="80" min="2" max="500" step="0.1" placeholder="80" required>
+                <small id="weight-unit">kg</small>
+              </div>
+            </div>
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate BSA</button>
+          </form>
+        </div>
+
+        <div class="seo-content">
+          <h2>Body Surface Area Calculator: Accurate BSA for Athletes &amp; Fitness Tracking</h2>
+          <p>Body Surface Area (BSA) measures the total external surface of your body, offering a more precise indicator of metabolic mass than weight alone. For athletes and fitness enthusiasts, BSA is invaluable for personalizing nutrition plans, estimating energy needs, dosing supplements (like electrolytes or caffeine), and assessing recovery protocols. Unlike BMI, which can misrepresent muscular builds, BSA accounts for your overall size to better predict metabolic demands—crucial for endurance sports, weight-class training, or injury rehab. Our free BSA Calculator on SportyCalc.com uses proven formulas like Du Bois and Mosteller, inputting your height, weight, and gender for instant results in m². Pair it with our <a href="tdee-calculator.html">TDEE Calculator</a> or <a href="body-fat-calculator.html">Body Fat Percentage</a> tool for a comprehensive athletic profile, helping you optimize training and avoid overtraining in 2026.</p>
+
+          <h2>How Our Body Surface Area Calculator Works</h2>
+          <p>Our tool is user-friendly and backed by clinical formulas, with adaptations for active individuals. It computes BSA across multiple methods for comparison, highlighting the most reliable for your body type.</p>
+
+          <h3>Inputs</h3>
+          <ul>
+            <li><strong>Gender</strong> (male or female—adjusts for body composition differences in athletes)</li>
+            <li><strong>Height</strong> (in cm or feet/inches)</li>
+            <li><strong>Weight</strong> (in kg or lbs—use current training weight for accuracy)</li>
+          </ul>
+
+          <h3>Outputs</h3>
+          <ul>
+            <li>BSA in m² for each formula (e.g., Du Bois as default)</li>
+            <li>Average BSA comparison (e.g., vs. typical athletes)</li>
+            <li>Insights: How your BSA impacts calorie needs, hydration, or supplement dosing</li>
+          </ul>
+
+          <p><strong>Example:</strong> A 180 cm, 80 kg male athlete might have a Du Bois BSA of ~2.0 m², suggesting higher energy requirements for intense sessions.</p>
+
+          <h2>Popular BSA Formulas</h2>
+          <p>BSA formulas estimate surface area using height (H in cm) and weight (W in kg), outputting in m². We include the most validated ones, with Du Bois preferred for athletes due to its accuracy across body types (obese or lean).</p>
+
+          <div class="table-responsive">
+            <table class="macro-ref-table">
+              <thead>
+                <tr><th>Formula</th><th>Equation</th><th>Notes</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Du Bois</strong></td><td>0.007184 × W<sup>0.425</sup> × H<sup>0.725</sup></td><td>Most widely used; ideal for metabolic needs in sports</td></tr>
+                <tr><td><strong>Mosteller</strong></td><td>√(H × W / 3600) or 0.016667 × W<sup>0.5</sup> × H<sup>0.5</sup></td><td>Quick for on-the-go athlete calculations</td></tr>
+                <tr><td><strong>Haycock</strong></td><td>0.024265 × W<sup>0.5378</sup> × H<sup>0.3964</sup></td><td>Validated for all ages; useful for youth athletes</td></tr>
+                <tr><td><strong>Gehan &amp; George</strong></td><td>0.0235 × W<sup>0.51456</sup> × H<sup>0.42246</sup></td><td>Precise for clinical sports medicine</td></tr>
+                <tr><td><strong>Boyd</strong></td><td>0.03330 × W<sup>(0.6157 − 0.0188×log₁₀(W))</sup> × H<sup>0.3</sup></td><td>Good for extreme body compositions (e.g., bodybuilders)</td></tr>
+                <tr><td><strong>Fujimoto</strong></td><td>0.008883 × W<sup>0.444</sup> × H<sup>0.663</sup></td><td>Adjustable for diverse athletes</td></tr>
+                <tr><td><strong>Takahira</strong></td><td>0.007241 × W<sup>0.425</sup> × H<sup>0.725</sup></td><td>Similar to Du Bois, for verification</td></tr>
+                <tr><td><strong>Schlich</strong></td><td>Women: 0.000975482 × W<sup>0.46</sup> × H<sup>1.08</sup>; Men: 0.000579479 × W<sup>0.38</sup> × H<sup>1.24</sup></td><td>Gender-specific for physiological differences</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Average BSA Values</h2>
+          <p>Reference these averages to benchmark your results. Athletes often have higher BSA due to muscle mass, impacting sweat rates and nutrient needs.</p>
+          <div class="table-responsive">
+            <table class="macro-ref-table">
+              <thead>
+                <tr><th>Category</th><th>Average BSA (m²)</th><th>Notes for Athletes</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Newborn Child</td><td>0.25</td><td>N/A</td></tr>
+                <tr><td>Two-Year-Old Child</td><td>0.5</td><td>Youth training baseline</td></tr>
+                <tr><td>Ten-Year-Old Child</td><td>1.14</td><td>Junior athletes</td></tr>
+                <tr><td>Adult Female</td><td>1.6</td><td>Endurance sports (e.g., marathoners)</td></tr>
+                <tr><td>Adult Male</td><td>1.9</td><td>Strength sports (e.g., weightlifters)</td></tr>
+                <tr><td>Elite Male Athlete (e.g., Basketball)</td><td>2.2–2.5</td><td>Higher due to height/mass</td></tr>
+                <tr><td>Elite Female Athlete (e.g., Gymnast)</td><td>1.5–1.8</td><td>Lower but efficient metabolic mass</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Why Calculate Body Surface Area? Benefits for Sports and Fitness</h2>
+          <p>BSA provides a superior measure of metabolic mass (fat-free body components like muscles and organs) over simple weight, making it essential for athletes.</p>
+          <ul>
+            <li><strong>Metabolic Insights:</strong> Better estimates energy expenditure—use with our <a href="tdee-calculator.html">TDEE Calculator</a> for precise calorie plans.</li>
+            <li><strong>Nutrition &amp; Supplement Dosing:</strong> Adjusts macros or ergogenic aids (e.g., creatine per m²) to avoid under/over-dosing.</li>
+            <li><strong>Hydration &amp; Recovery:</strong> Predicts sweat loss in hot training; aids in IV fluid estimates post-injury.</li>
+            <li><strong>Performance Optimization:</strong> In sports medicine, BSA refines cardiac output assessments.</li>
+            <li><strong>Limitations:</strong> Less accurate at extremes (very tall/short or obese/lean); combine with <a href="bmi-calculator.html">BMI</a> or <a href="waist-hip-ratio-calculator.html">WHR</a> for full picture.</li>
+          </ul>
+          <p>Research from the Archives of Internal Medicine supports Du Bois for diverse body types, enhancing its use in athletic training.</p>
+
+          <h2>How to Measure Height and Weight Accurately for BSA</h2>
+          <p>For reliable results, especially in sports tracking:</p>
+          <ul>
+            <li><strong>Height:</strong> Stand barefoot against a wall, heels together, looking straight ahead. Measure from floor to head top—use a stadiometer if possible.</li>
+            <li><strong>Weight:</strong> Use a calibrated scale in minimal clothing, morning after fasting, post-void. Athletes: Measure consistently (e.g., pre-training).</li>
+            <li><strong>Tips:</strong> Average 2–3 readings; avoid post-workout (dehydration skews weight). For team sports, measure in off-season for baseline.</li>
+          </ul>
+
+          <h2>The Role of BSA in Athletic Performance</h2>
+          <p>In fitness, BSA correlates with basal metabolic rate, helping tailor diets for fat loss or bulking without losing performance. For example, higher BSA athletes (e.g., swimmers) need more carbs/fats—link to our <a href="carbohydrate-calculator.html">Carbohydrate</a> or <a href="fat-intake-calculator.html">Fat Intake</a> Calculators. It also aids in gear sizing or heat stress predictions for outdoor sports.</p>
+
+          <h2>Tips to Use BSA in Your Training</h2>
+          <ul>
+            <li><strong>Integrate with Tools:</strong> Combine BSA with our <a href="macro-calculator.html">Macro Calculator</a> for surface-area-based dosing.</li>
+            <li><strong>Monitor Changes:</strong> Recalculate during bulking/cutting phases to adjust nutrition.</li>
+            <li><strong>For Women:</strong> Use gender-specific formulas like Schlich for hormone-influenced body comp.</li>
+            <li><strong>Health Caution:</strong> Consult pros for medical uses; BSA isn't a standalone diagnostic.</li>
+            <li><strong>Athlete Hack:</strong> Track BSA trends with body fat % for lean mass gains.</li>
+          </ul>
+
+          <h2>FAQs</h2>
+          <div class="faq-item">
+            <h3>What is a normal BSA for athletes?</h3>
+            <p>Around 1.6–1.9 m² for adults, but elites can reach 2.5 m². Use the calculator to compare.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Why is BSA better than BMI for fitness?</h3>
+            <p>BSA focuses on metabolic mass, ignoring fat—ideal for muscular athletes where BMI overestimates "overweight."</p>
+          </div>
+          <div class="faq-item">
+            <h3>Which formula is best for sports?</h3>
+            <p>Du Bois for general use; Mosteller for quick estimates during training.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can BSA help with weight loss goals?</h3>
+            <p>Yes—scales energy needs more accurately; pair with our <a href="calorie-deficit-calculator.html">Calorie Deficit Calculator</a>.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is BSA affected by muscle mass?</h3>
+            <p>Yes, higher muscle increases BSA, boosting metabolic demands—great for performance planning.</p>
+          </div>
+
+          <p>Start calculating your BSA today on SportyCalc.com for smarter training. Explore our related tools like <a href="bmi-calculator.html">BMI</a> and <a href="sleep-cycle-calculator.html">Sleep Cycle</a> for full athletic optimization!</p>
+
+          <div class="bmi-disclaimer">
+            <strong>⚠️ Important:</strong> This calculator provides estimates for informational purposes only. Do not use for medical dosing decisions—always consult a healthcare professional.
+          </div>
+        </div>
+      </div>
+
+      <aside class="results-card">
+        <div class="bmi-result-main bsa-result-main">
+          <span class="bmi-value bsa-value-animated" id="result-bsa">1.95</span>
+          <span class="bmi-label">m² (Du Bois)</span>
+        </div>
+        <p class="calorie-bmr-line"><span id="result-bsa-ft">21.0</span> ft²</p>
+
+        <div class="macro-chart-wrap bsa-chart-wrap">
+          <canvas id="bsa-chart" aria-label="BSA comparison by formula"></canvas>
+        </div>
+
+        <div class="macro-quick-ref">
+          <h4>📊 All Formulas</h4>
+          <table class="macro-ref-table" id="bsa-formulas-table">
+            <thead>
+              <tr><th>Formula</th><th>BSA (m²)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Du Bois</td><td id="res-dubois">—</td></tr>
+              <tr><td>Mosteller</td><td id="res-mosteller">—</td></tr>
+              <tr><td>Haycock</td><td id="res-haycock">—</td></tr>
+              <tr><td>Gehan & George</td><td id="res-gehan">—</td></tr>
+              <tr><td>Boyd</td><td id="res-boyd">—</td></tr>
+              <tr><td>Fujimoto</td><td id="res-fujimoto">—</td></tr>
+              <tr><td>Takahira</td><td id="res-takahira">—</td></tr>
+              <tr><td>Schlich</td><td id="res-schlich">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="macro-quick-ref">
+          <h4>📏 Average BSA Reference</h4>
+          <table class="macro-ref-table">
+            <tr><td>Adult male</td><td>~1.9 m²</td></tr>
+            <tr><td>Adult female</td><td>~1.6 m²</td></tr>
+            <tr><td>Elite male athlete</td><td>2.2–2.5 m²</td></tr>
+            <tr><td>Elite female athlete</td><td>1.5–1.8 m²</td></tr>
+          </table>
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related Calculators</h3>
+      <div class="related-links">
+        <a href="tdee-calculator.html">TDEE Calculator</a>
+        <a href="body-fat-calculator.html">Body Fat Calculator</a>
+        <a href="bmi-calculator.html">BMI Calculator</a>
+        <a href="macro-calculator.html">Macro Calculator</a>
+        <a href="calorie-calculator.html">Calorie Calculator</a>
+        <a href="carbohydrate-calculator.html">Carbohydrate Calculator</a>
+        <a href="fat-intake-calculator.html">Fat Intake Calculator</a>
+        <a href="sleep-cycle-calculator.html">Sleep Cycle Calculator</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc.</p>
+        <p class="footer-credit"><a href="https://riyaka.art/" target="_blank" rel="noopener noreferrer">Developed by Art R. <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 28 28" role="img"><path fill="#1F57C3" d="M12 1.155a4 4 0 014 0l8.124 4.69a4 4 0 012 3.464v9.382a4 4 0 01-2 3.464L16 26.845a4 4 0 01-4 0l-8.124-4.69a4 4 0 01-2-3.464V9.309a4 4 0 012-3.464L12 1.155z"></path></svg></a>
+          <a href="https://www.strava.com/athletes/22196700" target="_blank" rel="noopener noreferrer" class="footer-strava-link" aria-label="Art R. on Strava"><img src="../images/strava_logo.webp" alt="" width="20" height="20" loading="lazy"></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators... (e.g. calorie, bmi)" autocomplete="off" aria-autocomplete="list" aria-controls="search-results">
+        <div id="search-results" class="search-results" role="listbox" aria-label="Calculator results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/body-surface-area-calculator.js"></script>
+</body>
+</html>
