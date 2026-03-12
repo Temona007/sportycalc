@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8276223173310357"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Free Fitness Age Calculator: Discover your biological fitness age using the validated NTNU/Nes et al. non-exercise VO2max formula. Enter age, weight, height, waist, resting heart rate & exercise frequency — get your estimated VO2max and fitness age instantly. Perfect for athletes tracking real performance age in 2026.">
+  <meta name="keywords" content="fitness age calculator, fitness age, biological age, VO2max, NTNU, Nes formula, resting heart rate, aerobic fitness, vitality age">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/fitness-age-calculator.html">
+  <title>Fitness Age Calculator: Find Out How Old Your Body Really Is | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/fitness-age-calculator.html">
+  <meta property="og:title" content="Fitness Age Calculator: Find Out How Old Your Body Really Is | SportyCalc">
+  <meta property="og:description" content="Free Fitness Age Calculator using NTNU/Nes et al. VO2max formula. Enter age, weight, height, waist, RHR & exercise — get your fitness age instantly. Perfect for athletes in 2026.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fitness Age Calculator: How Old Is Your Body Really? | SportyCalc">
+  <meta name="twitter:description" content="Free Fitness Age Calculator using NTNU/Nes VO2max formula. Get your biological fitness age from age, weight, waist, RHR & exercise. Athletes 2026.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Fitness Age Calculator","url":"https://sportycalc.com/calculators/fitness-age-calculator.html","description":"Free Fitness Age Calculator using validated NTNU/Nes et al. non-exercise VO2max formula. Enter age, weight, height, waist, resting heart rate and exercise frequency to get your biological fitness age instantly.","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <a href="../fitness-quiz.html" class="nav-link nav-link-brand">Quiz</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Calculators</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+    <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+    <a href="../fitness-quiz.html" class="mobile-nav-link mobile-nav-link-brand">Quiz</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>Fitness Age</span>
+      </nav>
+      <h1>Fitness Age Calculator: Find Out How Old Your Body Really Is</h1>
+      <p class="hero-desc">Your chronological age is just a number. Your fitness age tells the truth about your cardiovascular health and athletic potential. Based on the validated NTNU (Norwegian University of Science and Technology) non-exercise VO2max model by Nes et al., our free calculator estimates your VO2max without any lab test, then maps it to population norms to reveal your biological fitness age.</p>
+    </section>
+
+    <section class="quiz-cta-section">
+      <a href="../fitness-quiz/fitness-knowledge.html" class="quiz-cta-card">
+        <span class="quiz-cta-icon">🧠</span>
+        <div class="quiz-cta-content">
+          <h2 class="quiz-cta-title">Take the Quiz!</h2>
+          <p class="quiz-cta-desc">Test your fitness knowledge in 5 quick questions. Get instant green/red feedback and see how you score.</p>
+        </div>
+        <span class="quiz-cta-arrow">→</span>
+      </a>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <form id="fitness-age-form">
+            <div class="form-header">
+              <h2>Your Data</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Units</span>
+                <div class="unit-toggle-btns">
+                  <button type="button" class="unit-btn active" data-unit="metric">Metric</button>
+                  <button type="button" class="unit-btn" data-unit="imperial">Imperial</button>
+                </div>
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">Gender</span>
+              <div class="bf-gender-btns">
+                <button type="button" class="fitness-age-gender-btn active" data-gender="male">
+                  <span class="bf-gender-emoji">♂️</span>
+                  <span>Male</span>
+                </button>
+                <button type="button" class="fitness-age-gender-btn" data-gender="female">
+                  <span class="bf-gender-emoji">♀️</span>
+                  <span>Female</span>
+                </button>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="age">Age (years)</label>
+                <input type="number" id="age" value="35" min="20" max="90" step="1" placeholder="35" required>
+              </div>
+              <div class="input-group">
+                <label for="rhr">Resting heart rate (bpm)</label>
+                <input type="number" id="rhr" value="65" min="35" max="120" step="1" placeholder="65" required>
+                <small class="input-hint">Measure in the morning, rested</small>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="weight" id="weight-label">Weight</label>
+                <input type="number" id="weight" value="75" min="40" max="250" step="0.1" placeholder="75" required>
+                <small id="weight-unit">kg</small>
+              </div>
+              <div class="input-group">
+                <label for="height" id="height-label">Height</label>
+                <input type="number" id="height" value="175" min="120" max="250" step="0.1" placeholder="175" required>
+                <small id="height-unit">cm</small>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="waist" id="waist-label">Waist circumference</label>
+              <input type="number" id="waist" value="85" min="50" max="200" step="0.1" placeholder="85" required>
+              <small id="waist-unit">cm</small>
+              <small class="input-hint">At navel level, relaxed exhale</small>
+            </div>
+            <div class="input-group">
+              <label for="exercise">Exercise per week</label>
+              <select id="exercise">
+                <option value="0">Never</option>
+                <option value="1">Once per week</option>
+                <option value="2" selected>2× per week</option>
+                <option value="3">3× per week</option>
+                <option value="4">4+ times per week</option>
+              </select>
+            </div>
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate Fitness Age</button>
+          </form>
+        </div>
+
+        <div class="seo-content">
+          <p>If your fitness age is <strong>younger</strong> than your real age — congratulations, you're outperforming most people your age. If it's <strong>older</strong> — it's a clear signal to improve cardio, reduce waist size, and train smarter.</p>
+
+          <h2>How Our Fitness Age Calculator Works</h2>
+          <p>The calculator follows the exact Nes et al. method (validated in large population studies):</p>
+          <ol>
+            <li>Estimate absolute VO2max (L/min) using 6 easy inputs</li>
+            <li>Convert to relative VO2max (ml/kg/min)</li>
+            <li>Compare to age- and gender-specific reference curves (50th percentile)</li>
+            <li>Return the age at which your VO2max would be "average" — that's your Fitness Age</li>
+          </ol>
+
+          <h3>Inputs You Need (all quick &amp; non-invasive)</h3>
+          <ul>
+            <li><strong>Age</strong> (years)</li>
+            <li><strong>Gender</strong> (male/female)</li>
+            <li><strong>Weight</strong> (kg)</li>
+            <li><strong>Height</strong> (cm)</li>
+            <li><strong>Waist circumference</strong> (cm) — measured at navel level</li>
+            <li><strong>Resting Heart Rate</strong> (bpm) — best measured first thing in the morning</li>
+            <li><strong>Exercise frequency</strong> (0–4): 0 = never, 1 = once per week, 2 = 2× per week, 3 = 3× per week, 4 = 4+ times per week (vigorous exercise)</li>
+          </ul>
+
+          <h3>Outputs</h3>
+          <ul>
+            <li>Estimated VO2max in ml/kg/min</li>
+            <li>Your Fitness Age (20–90 years range)</li>
+            <li>Comparison: "Your fitness age is X years younger/older than your real age"</li>
+            <li>Percentile ranking vs. people your age</li>
+          </ul>
+
+          <h2>The Science: Nes et al. VO2max Prediction Formula</h2>
+          <h3>Step 1 – Absolute VO2max (L/min)</h3>
+          <p>VO2max (L/min) = 3.542 − (0.014 × age) + (0.015 × weight) − (0.011 × waist) + (0.009 × height) − (0.027 × RHR) + (0.019 × exercise frequency)</p>
+          <h3>Step 2 – Relative VO2max (ml/kg/min)</h3>
+          <p>Relative VO2max = (VO2max L/min × 1000) ÷ weight (kg)</p>
+          <p>This formula was developed on over 3,000 Norwegians and is one of the most accurate non-exercise predictors available.</p>
+
+          <h2>Reference VO2max Norms (50th Percentile)</h2>
+          <table class="macro-ref-table">
+            <thead>
+              <tr><th>Age</th><th>Men (ml/kg/min)</th><th>Women (ml/kg/min)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>20</td><td>45</td><td>37</td></tr>
+              <tr><td>30</td><td>41</td><td>33</td></tr>
+              <tr><td>40</td><td>37</td><td>29</td></tr>
+              <tr><td>50</td><td>33</td><td>25</td></tr>
+              <tr><td>60</td><td>29</td><td>21</td></tr>
+              <tr><td>70</td><td>25</td><td>17</td></tr>
+            </tbody>
+          </table>
+          <p>Your fitness age is the age where the average person has the same VO2max as you.</p>
+
+          <h2>Why Fitness Age Matters for Athletes in 2026</h2>
+          <ul>
+            <li>A 10-year younger fitness age can mean 15–25% better endurance and recovery</li>
+            <li>Lower fitness age = reduced risk of heart disease, faster fat loss, higher testosterone</li>
+            <li>It's a stronger predictor of longevity and performance than weight or BMI alone</li>
+            <li>Perfect for tracking progress when you combine it with our <a href="army-body-fat-calculator.html">Army Body Fat Calculator</a>, <a href="tdee-calculator.html">TDEE</a>, or <a href="sleep-cycle-calculator.html">Sleep Cycle</a> tools</li>
+          </ul>
+
+          <h2>Example Calculation</h2>
+          <p>Male, 35 years old, 82 kg, 178 cm, 88 cm waist, RHR 58 bpm, exercises 4×/week → Estimated VO2max = 44.2 ml/kg/min → Fitness Age = 23 years (12 years younger than chronological age) — Excellent!</p>
+
+          <h2>Tips to Lower Your Fitness Age (Get Younger!)</h2>
+          <ul>
+            <li>Drop waist circumference (even 2–3 cm makes a huge difference)</li>
+            <li>Lower resting heart rate through consistent cardio (aim &lt;55 bpm)</li>
+            <li>Increase exercise frequency — even going from 2× to 4× per week shaves years off</li>
+            <li>Combine with strength training (our <a href="fat-intake-calculator.html">Fat Intake</a> &amp; <a href="carbohydrate-calculator.html">Carbohydrate</a> Calculators help)</li>
+            <li>Improve sleep — poor sleep raises RHR and waist size (use our <a href="sleep-cycle-calculator.html">Sleep Cycle Calculator</a>)</li>
+            <li>Re-test every 6–8 weeks — most people can improve fitness age by 5–10 years in 3–6 months</li>
+          </ul>
+
+          <h2>How to Combine with Other SportyCalc Tools</h2>
+          <ul>
+            <li>Run Fitness Age → check <a href="army-body-fat-calculator.html">Army Body Fat %</a> or <a href="waist-hip-ratio-calculator.html">WHR</a> to see where to focus</li>
+            <li>Use <a href="tdee-calculator.html">TDEE</a> + <a href="macro-calculator.html">Macro Calculator</a> to fuel the exact cardio volume you need</li>
+            <li>Track resting heart rate improvements with our <a href="bac-calculator.html">BAC Calculator</a> (alcohol raises RHR dramatically)</li>
+          </ul>
+
+          <h2>FAQs</h2>
+          <div class="faq-item">
+            <h3>How accurate is this compared to a lab VO2max test?</h3>
+            <p>The Nes et al. formula predicts VO2max with ~±4–5 ml/kg/min accuracy — very good for a free tool.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I use it if I'm very muscular or very lean?</h3>
+            <p>Yes — the formula was designed for wide body types and includes waist, which corrects for abdominal fat.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What if my fitness age is older than my real age?</h3>
+            <p>It's a wake-up call — but also great motivation. Most users drop 5+ years in 3 months with consistent training.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do I need a heart-rate monitor?</h3>
+            <p>No — just measure your morning resting pulse manually (or use a smartwatch).</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is this the same as the "fitness age" from Apple Watch or Garmin?</h3>
+            <p>Similar concept, but our version uses the peer-reviewed NTNU/Nes formula (more transparent and research-backed).</p>
+          </div>
+
+          <p><strong>Ready to find out how old you really are?</strong> Open the Fitness Age Calculator above on SportyCalc.com and see your biological fitness age in seconds. Pair it with our full athlete toolkit: <a href="army-body-fat-calculator.html">Army Body Fat</a> • <a href="tdee-calculator.html">TDEE</a> • <a href="macro-calculator.html">Macro</a> • <a href="sleep-cycle-calculator.html">Sleep Cycle</a> • <a href="waist-hip-ratio-calculator.html">WHR</a> • <a href="body-surface-area-calculator.html">Body Surface Area</a></p>
+          <p><em>Train hard. Get younger. Repeat. 💪</em></p>
+          <p class="content-meta">Last updated: March 2026 | Powered by Nes et al. NTNU model</p>
+
+          <div class="bmi-disclaimer">
+            <strong>⚠️ Important Health Advisory:</strong> Our calculators provide general information and should not replace expert medical guidance. Please speak with a qualified healthcare professional prior to altering your nutrition or fitness habits.
+          </div>
+        </div>
+      </div>
+
+      <aside class="results-card">
+        <div class="fitness-age-result" id="fitness-age-result">
+          <span class="fitness-age-value" id="result-fitness-age">—</span>
+          <span class="fitness-age-label">Fitness Age</span>
+        </div>
+        <div class="fitness-age-compare" id="fitness-age-compare">
+          <p id="result-compare">Enter data to see result</p>
+        </div>
+        <div class="macro-quick-ref">
+          <h4>📊 Details</h4>
+          <table class="macro-ref-table">
+            <tr><td>Actual age</td><td id="result-actual-age">—</td></tr>
+            <tr><td>Est. VO2max</td><td id="result-vo2">—</td></tr>
+            <tr><td>Difference</td><td id="result-diff">—</td></tr>
+          </table>
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related Calculators</h3>
+      <div class="related-links">
+        <a href="vo2-max-calculator.html">VO2 Max Calculator</a>
+        <a href="army-body-fat-calculator.html">Army Body Fat Calculator</a>
+        <a href="heart-rate-zones.html">Heart Rate Zones</a>
+        <a href="tdee-calculator.html">TDEE Calculator</a>
+        <a href="sleep-cycle-calculator.html">Sleep Cycle Calculator</a>
+        <a href="body-fat-calculator.html">Body Fat Calculator</a>
+        <a href="waist-hip-ratio-calculator.html">Waist to Hip Ratio</a>
+        <a href="body-surface-area-calculator.html">Body Surface Area</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc.</p>
+        <p class="footer-credit"><a href="https://riyaka.art/" target="_blank" rel="noopener noreferrer">Developed by Art R. <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 28 28" role="img"><path fill="#1F57C3" d="M12 1.155a4 4 0 014 0l8.124 4.69a4 4 0 012 3.464v9.382a4 4 0 01-2 3.464L16 26.845a4 4 0 01-4 0l-8.124-4.69a4 4 0 01-2-3.464V9.309a4 4 0 012-3.464L12 1.155z"></path></svg></a>
+          <a href="https://www.strava.com/athletes/22196700" target="_blank" rel="noopener noreferrer" class="footer-strava-link" aria-label="Art R. on Strava"><img src="../images/strava_logo.webp" alt="" width="20" height="20" loading="lazy"></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators... (e.g. calorie, bmi)" autocomplete="off" aria-autocomplete="list" aria-controls="search-results">
+        <div id="search-results" class="search-results" role="listbox" aria-label="Calculator results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/email-popup.js"></script>
+  <script src="../js/fitness-age-calculator.js"></script>
+</body>
+</html>

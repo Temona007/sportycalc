@@ -30,6 +30,7 @@
     { title: 'Ideal Body Weight Calculator', subtitle: 'IBW, Robinson, Miller, Devine, Hamwi', href: 'ideal-body-weight-calculator.html', keywords: 'ideal body weight IBW calculator Devine Robinson Miller Hamwi formula' },
     { title: 'Running Pace Calculator', subtitle: '5K, 10K, marathon finish time', href: 'running-pace-calculator.html', keywords: 'running pace calculator race time 5K 10K marathon pace' },
     { title: 'VO2 Max Calculator', subtitle: 'Aerobic capacity estimate', href: 'vo2-max-calculator.html', keywords: 'vo2 max aerobic capacity oxygen uptake fitness cardio' },
+    { title: 'Fitness Age Calculator', subtitle: 'How young does your body perform?', href: 'fitness-age-calculator.html', keywords: 'fitness age calculator vitality age VO2max resting heart rate aerobic fitness' },
     { title: 'Protein in Food Calculator', subtitle: 'Estimate protein in common foods', href: 'protein-in-food-calculator.html', keywords: 'protein in food protein calculator food nutrition' },
     { title: 'Sleep Cycle Calculator', subtitle: 'Ideal bedtime & wake time', href: 'sleep-cycle-calculator.html', keywords: 'sleep cycle calculator bedtime wake time sleep cycles' },
     { title: 'BAC Calculator', subtitle: 'Blood Alcohol Concentration estimate', href: 'bac-calculator.html', keywords: 'bac blood alcohol concentration drink driving legal limit drunk' },

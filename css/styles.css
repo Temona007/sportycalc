@@ -2591,7 +2591,8 @@ body {
 .bf-gender-btn,
 .lbm-gender-btn,
 .bsa-gender-btn,
-.army-bf-gender-btn {
+.army-bf-gender-btn,
+.fitness-age-gender-btn {
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -2613,7 +2614,8 @@ body {
 .bf-gender-btn:hover,
 .lbm-gender-btn:hover,
 .bsa-gender-btn:hover,
-.army-bf-gender-btn:hover {
+.army-bf-gender-btn:hover,
+.fitness-age-gender-btn:hover {
   border-color: var(--text-secondary);
   color: var(--text-primary);
 }
@@ -2621,7 +2623,8 @@ body {
 .bf-gender-btn.active,
 .lbm-gender-btn.active,
 .bsa-gender-btn.active,
-.army-bf-gender-btn.active {
+.army-bf-gender-btn.active,
+.fitness-age-gender-btn.active {
   border-color: var(--primary);
   background: rgba(249, 87, 0, 0.12);
   color: var(--primary);
@@ -2799,6 +2802,35 @@ body {
   background: var(--bg-elevated);
   border-radius: var(--radius-btn);
   min-height: 180px;
+}
+
+/* Fitness Age Calculator */
+.fitness-age-result {
+  text-align: center;
+  padding: 1rem 0;
+}
+.fitness-age-value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary);
+}
+.fitness-age-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+.fitness-age-compare {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-btn);
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+.fitness-age-compare p {
+  margin: 0;
 }
 .army-bf-chart-wrap canvas {
   max-height: 200px;
@@ -3948,4 +3980,163 @@ body {
 .sleep-reset-btn:hover {
   color: var(--text-secondary);
   border-color: var(--text-secondary);
+}
+
+/* ===================== Email Popup (calculator pages) ===================== */
+.email-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.email-popup-overlay.email-popup-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.email-popup-modal {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background: var(--bg);
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: email-popup-fade 0.3s ease;
+}
+
+@keyframes email-popup-fade {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.email-popup-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+.email-popup-close:hover {
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+
+.email-popup-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--text-primary);
+}
+
+.email-popup-text {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0 0 1.25rem;
+  line-height: 1.5;
+}
+
+.email-popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.email-popup-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: var(--font);
+  color: var(--text-primary);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.email-popup-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-focus);
+}
+
+.email-popup-input::placeholder {
+  color: var(--text-muted);
+}
+
+.email-popup-error {
+  font-size: 0.8125rem;
+  color: #DC2626;
+  min-height: 1.25rem;
+}
+
+.email-popup-btn {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font);
+  color: #fff;
+  background: var(--primary);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.email-popup-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.email-popup-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.email-popup-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.email-popup-disclaimer {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 1rem 0 0;
+  text-align: center;
+}
+
+.email-popup-success {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #16A34A;
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
 }
