@@ -3130,6 +3130,19 @@ body {
   margin-bottom: 1.25rem;
 }
 
+.what-sportycalc-section {
+  padding: var(--section-gap) 0;
+  border-top: 1px solid var(--border);
+}
+
+.what-sportycalc-desc {
+  max-width: 56ch;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
 .guides-preview-section {
   padding: var(--section-gap) 0;
   border-top: 1px solid var(--border);
