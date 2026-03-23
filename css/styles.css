@@ -2630,7 +2630,8 @@ body {
 }
 
 /* Body fat calculator */
-.bf-gender-btns {
+.bf-gender-btns,
+.afpt-gender-btns {
   display: flex;
   gap: 0.5rem;
 }
@@ -2639,7 +2640,8 @@ body {
 .lbm-gender-btn,
 .bsa-gender-btn,
 .army-bf-gender-btn,
-.fitness-age-gender-btn {
+.fitness-age-gender-btn,
+.afpt-gender-btn {
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -2662,7 +2664,8 @@ body {
 .lbm-gender-btn:hover,
 .bsa-gender-btn:hover,
 .army-bf-gender-btn:hover,
-.fitness-age-gender-btn:hover {
+.fitness-age-gender-btn:hover,
+.afpt-gender-btn:hover {
   border-color: var(--text-secondary);
   color: var(--text-primary);
 }
@@ -2671,7 +2674,8 @@ body {
 .lbm-gender-btn.active,
 .bsa-gender-btn.active,
 .army-bf-gender-btn.active,
-.fitness-age-gender-btn.active {
+.fitness-age-gender-btn.active,
+.afpt-gender-btn.active {
   border-color: var(--primary);
   background: rgba(249, 87, 0, 0.12);
   color: var(--primary);
