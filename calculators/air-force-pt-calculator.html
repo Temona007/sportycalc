@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8276223173310357"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Free US Air Force PT Calculator 2026: Calculate your Physical Fitness Readiness Assessment (PFRA) score with 2-mile run (or HAMR), push-ups (or hand-release), sit-ups (or alternatives), and Waist-to-Height Ratio (WHtR). Get composite score, PASS/FAIL status, and component breakdowns for Air Force readiness on SportyCalc.com.">
+  <meta name="keywords" content="Air Force PT calculator, PFRA, USAF fitness test, 2026 PT standards, 2 mile run, HAMR, waist to height ratio, WHtR, DAFMAN 36-2905, physical fitness readiness assessment">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/air-force-pt-calculator.html">
+  <title>Air Force PT Calculator: Score Your 2026 PFRA Fitness Test Instantly | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/air-force-pt-calculator.html">
+  <meta property="og:title" content="Air Force PT Calculator: 2026 PFRA Score | SportyCalc">
+  <meta property="og:description" content="Calculate your PFRA score: 2-mile run, HAMR, push-ups, WHtR, sit-ups. Composite score, PASS/FAIL, component breakdowns.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Air Force PT Calculator 2026 PFRA | SportyCalc">
+  <meta name="twitter:description" content="Calculate your PFRA score: 2-mile run, HAMR, WHtR, push-ups, sit-ups. Composite, PASS/FAIL, component breakdowns.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Air Force PT Calculator","url":"https://sportycalc.com/calculators/air-force-pt-calculator.html","description":"Free US Air Force PT Calculator 2026: Calculate your PFRA score with 2-mile run, HAMR, push-ups, sit-ups, WHtR. Composite score, PASS/FAIL, component breakdowns.","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  </script>
+  <style>
+    .afpt-gender-btns { display: flex; gap: 0.5rem; }
+    .afpt-gender-btn { flex: 1; padding: 0.5rem 1rem; border: 1px solid var(--border, #333); border-radius: 8px; background: var(--bg-2, #222); cursor: pointer; transition: all 0.2s; }
+    .afpt-gender-btn.active { border-color: var(--accent, #4a9eff); background: rgba(74, 158, 255, 0.15); }
+    .afpt-run-row { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+    .afpt-run-row input { width: 4rem; }
+    .afpt-result-main { text-align: center; padding: 1rem 0; }
+    .afpt-score { font-size: 2.5rem; font-weight: 700; color: var(--accent); }
+    .afpt-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; margin-top: 0.5rem; }
+    .afpt-badge-pass { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+    .afpt-badge-fail { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+    .afpt-badge-excellent { background: rgba(34, 197, 94, 0.3); }
+    .afpt-component { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid var(--border, #333); }
+    .afpt-status { font-size: 0.85rem; }
+    .afpt-status-ok { color: #22c55e; }
+    .afpt-status-fail { color: #ef4444; }
+    .afpt-hint { font-size: 0.8rem; color: var(--muted, #888); margin-top: 0.25rem; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Calculators</a>
+        <a href="../guides/index.html" class="nav-link">Guides</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <a href="../fitness-quiz.html" class="nav-link nav-link-brand">Quiz</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Calculators</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Guides</a>
+    <a href="../blog/index.html" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+    <a href="../fitness-quiz.html" class="mobile-nav-link mobile-nav-link-brand">Quiz</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Calculators</a>
+        <span>/</span>
+        <span>Air Force PT</span>
+      </nav>
+      <h1>Air Force PT Calculator: Score Your 2026 PFRA Fitness Test Instantly</h1>
+      <p class="hero-desc">The US Air Force Physical Fitness Readiness Assessment (PFRA) uses a 100-point system: cardiorespiratory (50 pts), body composition via Waist-to-Height Ratio (20 pts), strength (15 pts), core (15 pts). Input your age, gender, and performance data for composite score, PASS/FAIL status, and component breakdowns. Perfect for Airmen prepping for official tests or civilians tracking military-level fitness on SportyCalc.com.</p>
+    </section>
+
+    <section class="quiz-cta-section">
+      <a href="../fitness-quiz/fitness-knowledge.html" class="quiz-cta-card">
+        <span class="quiz-cta-icon">🧠</span>
+        <div class="quiz-cta-content">
+          <h2 class="quiz-cta-title">Take the Quiz!</h2>
+          <p class="quiz-cta-desc">Test your fitness knowledge in 5 quick questions. Get instant green/red feedback and see how you score.</p>
+        </div>
+        <span class="quiz-cta-arrow">→</span>
+      </a>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <form id="afpt-form">
+            <h2>Enter Your Results</h2>
+            <div class="input-group">
+              <span class="input-label">Gender</span>
+              <div class="afpt-gender-btns">
+                <button type="button" class="afpt-gender-btn active" data-gender="male">
+                  <span class="bf-gender-emoji">♂️</span> Male
+                </button>
+                <button type="button" class="afpt-gender-btn" data-gender="female">
+                  <span class="bf-gender-emoji">♀️</span> Female
+                </button>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="afpt-age">Age (years)</label>
+              <input type="number" id="afpt-age" value="25" min="18" max="65" step="1" required>
+              <small class="input-hint">Used for age-group standards (18–65)</small>
+            </div>
+            <div class="input-group">
+              <label>2-Mile Run Time</label>
+              <div class="afpt-run-row">
+                <input type="number" id="afpt-run-min" value="14" min="0" max="30" placeholder="Min" aria-label="Minutes"> <span>:</span>
+                <input type="number" id="afpt-run-sec" value="0" min="0" max="59" placeholder="Sec" aria-label="Seconds">
+              </div>
+              <small id="afpt-run-hint" class="afpt-hint">Select age and gender to see min/max times</small>
+            </div>
+            <div class="input-group">
+              <label for="afpt-pushups">Push-ups (reps)</label>
+              <input type="number" id="afpt-pushups" value="40" min="0" max="100" placeholder="40">
+              <small id="afpt-push-hint" class="afpt-hint">Min/max by age and gender</small>
+            </div>
+            <div class="input-group">
+              <label for="afpt-situps">Sit-ups (reps)</label>
+              <input type="number" id="afpt-situps" value="45" min="0" max="80" placeholder="45">
+              <small id="afpt-sit-hint" class="afpt-hint">Min/max by age and gender</small>
+            </div>
+            <div class="input-group">
+              <label for="afpt-waist">Waist Circumference (inches)</label>
+              <input type="number" id="afpt-waist" value="32" min="20" max="60" step="0.1" placeholder="32">
+              <small class="input-hint">Measured at navel level</small>
+            </div>
+            <div class="input-group">
+              <label>Height</label>
+              <div class="afpt-run-row">
+                <input type="number" id="afpt-height-ft" value="5" min="4" max="7" placeholder="ft"> ft
+                <input type="number" id="afpt-height-in" value="10" min="0" max="11" placeholder="in"> in
+              </div>
+              <small class="input-hint">For Waist-to-Height Ratio (WHtR)</small>
+            </div>
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate PT Score</button>
+          </form>
+        </div>
+
+        <div class="seo-content">
+          <h2>Air Force PT Calculator: Score Your 2026 PFRA Fitness Test Instantly</h2>
+          <p>The US Air Force Physical Fitness Readiness Assessment (PFRA) is the official test of Airmen's physical readiness, emphasizing long-term health, endurance, strength, and body composition. Updated in early 2026 (effective March 1 diagnostic phase, official from July/September), the test uses a 100-point system across four components: cardiorespiratory fitness (50 pts), body composition via Waist-to-Height Ratio (WHtR, 20 pts), muscular strength (15 pts), and core endurance (15 pts).</p>
+          <p>Our free Air Force PT Calculator on SportyCalc.com replicates the 2026 scoring logic from official PFRA charts (DAFMAN 36-2905 revisions and AFPC scoring tables). Input your age, gender, and performance data to get your composite score, PASS/FAIL status, component points, and health risk insights. Perfect for Airmen prepping for official tests, diagnostic periods, or civilians tracking military-level fitness. Pair it with our <a href="fitness-age-calculator.html">Fitness Age Calculator</a>, <a href="tdee-calculator.html">TDEE</a>, or <a href="macro-calculator.html">Macro</a> tools for complete optimization in 2026.</p>
+
+          <h2>How the Air Force PT Calculator Works</h2>
+          <p>The calculator uses the updated 2026 scoring model:</p>
+          <ul>
+            <li><strong>Total Score:</strong> 100 points maximum</li>
+            <li><strong>PASS Requirements:</strong> ≥75 composite points AND minimums met in each component</li>
+            <li><strong>Minimums:</strong> Roughly 20% of max per component (e.g., ~10 pts cardio, ~4 pts WHtR, ~3 pts strength/core)</li>
+          </ul>
+          <h3>Components</h3>
+          <ul>
+            <li><strong>Cardiorespiratory (50 pts):</strong> 2-mile run time or 20m HAMR shuttles</li>
+            <li><strong>Body Composition (20 pts):</strong> Waist-to-Height Ratio (WHtR)</li>
+            <li><strong>Strength (15 pts):</strong> Push-ups (1 min) or hand-release push-ups (2 min)</li>
+            <li><strong>Core Endurance (15 pts):</strong> Sit-ups (1 min), cross-leg reverse crunches (2 min), or forearm plank (timed)</li>
+          </ul>
+          <h3>Inputs Needed</h3>
+          <ul>
+            <li>Age group (18–24, 25–29, 30–34, etc., up to 60+)</li>
+            <li>Gender</li>
+            <li>Cardiorespiratory: 2-mile run time (mm:ss) OR HAMR shuttles count</li>
+            <li>WHtR: Waist (inches) and height (inches)</li>
+            <li>Strength: Push-ups reps (or hand-release)</li>
+            <li>Core: Sit-ups reps (or alternative)</li>
+          </ul>
+          <h3>Outputs</h3>
+          <ul>
+            <li>Points per component</li>
+            <li>Composite score (0–100)</li>
+            <li>PASS/FAIL + health risk category (low/moderate/high from WHtR)</li>
+            <li>Breakdown: Excellent (≥90), Satisfactory (75–89.9), Unsatisfactory (&lt;75)</li>
+            <li>Tips: How to improve weak areas with nutrition/recovery</li>
+          </ul>
+          <p><em>Note: This uses estimates from March 2026 PFRA charts (AFPC). For official scores, refer to current AFPC tables or your unit.</em></p>
+
+          <h2>2026 Air Force PFRA Components &amp; Scoring Overview</h2>
+          <h3>1. Cardiorespiratory (50 pts max)</h3>
+          <p>Options: 2-mile run or 20m High Aerobic Multi-shuttle Run (HAMR). Scoring: Linear interpolation — best time/shuttles = 50 pts, worst = 0 pts (age/gender-specific). Example (Males 25–29, 2-mile run): ~11:00–13:25 = high points; slower times scale down. HAMR: Higher shuttles = higher points (e.g., 90+ shuttles often max).</p>
+          <h3>2. Body Composition – Waist-to-Height Ratio (20 pts max)</h3>
+          <p>WHtR = waist (in) / height (in). Scoring:</p>
+          <ul>
+            <li>≤0.49: 20 pts (Low Risk)</li>
+            <li>0.50–0.54: Moderate Risk (linear decay 19–15 pts)</li>
+            <li>0.55–0.59: High Risk (12.5–2.5 pts)</li>
+            <li>≥0.60: 0 pts (High Risk, automatic component fail)</li>
+          </ul>
+          <h3>3. Strength – Push-ups or Hand-Release (15 pts max)</h3>
+          <p>Push-ups (1 min) or hand-release (2 min). Linear: Min reps = 0 pts, max reps = 15 pts (age/gender tables). Example (Males 25–29): ~30 min reps → low points; 60+ → max.</p>
+          <h3>4. Core Endurance – Sit-ups, Crunches, or Plank (15 pts max)</h3>
+          <p>Similar linear scaling (min to max reps/seconds). Alternatives allow choice for comfort/injury accommodation.</p>
+          <p>Passing: ≥75 total + no component below minimum → Satisfactory (or Excellent ≥90). Failures trigger fitness improvement programs.</p>
+
+          <h2>Why Track Air Force PT Scores?</h2>
+          <ul>
+            <li><strong>Readiness:</strong> Meet bi-annual requirements (every 6 months)</li>
+            <li><strong>Health Focus:</strong> WHtR emphasizes long-term metabolic health over BMI</li>
+            <li><strong>Performance Edge:</strong> High scores correlate with better mission capability and lower injury risk</li>
+            <li><strong>Motivation:</strong> See incremental gains — e.g., shaving seconds off run time adds big points</li>
+          </ul>
+
+          <h2>Tips to Improve Your Air Force PT Score</h2>
+          <ul>
+            <li><strong>Cardio Base:</strong> Build with Zone 2 walking/running (use our <a href="../blog/heart-rate-zone-2-training-2026.html">Heart Rate Zone 2 guide</a>)</li>
+            <li><strong>Body Comp:</strong> Reduce waist via deficit + strength (<a href="macro-calculator.html">Macro</a> &amp; <a href="calorie-deficit-calculator.html">Calorie Deficit</a> Calculators)</li>
+            <li><strong>Strength/Core:</strong> Train reps weekly; use progressive overload</li>
+            <li><strong>Recovery:</strong> Optimize sleep (<a href="sleep-cycle-calculator.html">Sleep Cycle Calculator</a>) and fuel (<a href="carbohydrate-calculator.html">Carbohydrate Calculator</a>)</li>
+            <li><strong>Track Trends:</strong> Recalculate monthly; pair with <a href="fitness-age-calculator.html">Fitness Age</a> for overall progress</li>
+          </ul>
+
+          <h2>FAQs</h2>
+          <div class="faq-item">
+            <h3>When do the 2026 standards apply?</h3>
+            <p>Diagnostic March–June 2026; official scoring from July/September onward (check AFPC for exacts).</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I choose alternatives?</h3>
+            <p>Yes — run vs HAMR, push-ups vs hand-release, sit-ups vs crunches/plank.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What if I fail WHtR?</h3>
+            <p>High WHtR (≥0.60) often fails the component — focus on waist reduction first.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is this official?</h3>
+            <p>Uses public 2026 PFRA logic/charts — for final scores, use AFPC tools or unit assessments.</p>
+          </div>
+
+          <p>Start scoring your Air Force PT test today on SportyCalc.com. For more military fitness tools, explore our <a href="army-body-fat-calculator.html">Army Body Fat Calculator</a> and <a href="fitness-age-calculator.html">Fitness Age Calculator</a>!</p>
+          <p><em>Train hard, stay ready. 💪</em></p>
+
+          <div class="bmi-disclaimer">
+            <strong>⚠️ Important:</strong> For reference only. Not affiliated with or endorsed by the US Air Force. Always consult DAFMAN 36-2905 and official .mil resources for accurate scoring.
+          </div>
+        </div>
+      </div>
+
+      <aside class="results-card">
+        <div class="afpt-result-main">
+          <span class="afpt-score" id="afpt-result-score">0</span>
+          <span class="afpt-label"> / 100</span>
+          <div class="afpt-badge afpt-badge-fail" id="afpt-result-badge">—</div>
+        </div>
+        <p class="afpt-hint" id="afpt-result-total">Run + WHtR + Push + Sit</p>
+        <div class="macro-quick-ref">
+          <h4>Component Breakdown</h4>
+          <div class="afpt-component">
+            <span>Cardiorespiratory (2-mile)</span>
+            <span id="afpt-result-run">— / 50</span>
+          </div>
+          <p id="afpt-result-run-status" class="afpt-status">—</p>
+          <div class="afpt-component">
+            <span>Body Composition (WHtR)</span>
+            <span id="afpt-result-whr">— / 20</span>
+          </div>
+          <p id="afpt-result-whr-status" class="afpt-status">—</p>
+          <div class="afpt-component">
+            <span>Strength (Push-ups)</span>
+            <span id="afpt-result-push">— / 15</span>
+          </div>
+          <p id="afpt-result-push-status" class="afpt-status">—</p>
+          <div class="afpt-component">
+            <span>Core (Sit-ups)</span>
+            <span id="afpt-result-sit">— / 15</span>
+          </div>
+          <p id="afpt-result-sit-status" class="afpt-status">—</p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related Calculators</h3>
+      <div class="related-links">
+        <a href="army-body-fat-calculator.html">Army Body Fat Calculator</a>
+        <a href="fitness-age-calculator.html">Fitness Age Calculator</a>
+        <a href="waist-hip-ratio-calculator.html">Waist to Hip Ratio</a>
+        <a href="tdee-calculator.html">TDEE Calculator</a>
+        <a href="macro-calculator.html">Macro Calculator</a>
+        <a href="running-pace-calculator.html">Running Pace Calculator</a>
+        <a href="vo2-max-calculator.html">VO2 Max Calculator</a>
+        <a href="calories-burned.html">Calories Burned</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Calculators</a>
+          <a href="../guides/index.html" class="footer-link">Guides</a>
+          <a href="../blog/index.html" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../faq.html" class="footer-link">FAQ</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-explore">
+          Explore more tools:
+          <a href="https://gpafind.com/" target="_blank" rel="noopener noreferrer">GPA Calculator</a> |
+          <a href="https://renovationcostcalc.com/" target="_blank" rel="noopener noreferrer">Renovation Cost Estimator</a>
+        </p>
+        <p class="footer-copy">© 2026 SportyCalc. Free fitness calculators.</p>
+        <p class="footer-credit"><a href="https://riyaka.art/" target="_blank" rel="noopener noreferrer">Developed by Art R. <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 28 28" role="img"><path fill="#1F57C3" d="M12 1.155a4 4 0 014 0l8.124 4.69a4 4 0 012 3.464v9.382a4 4 0 01-2 3.464L16 26.845a4 4 0 01-4 0l-8.124-4.69a4 4 0 01-2-3.464V9.309a4 4 0 012-3.464L12 1.155z"></path></svg></a>
+          <a href="https://www.strava.com/athletes/22196700" target="_blank" rel="noopener noreferrer" class="footer-strava-link" aria-label="Art R. on Strava"><img src="../images/strava_logo.webp" alt="" width="20" height="20" loading="lazy"></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators... (e.g. calorie, bmi)" autocomplete="off" aria-autocomplete="list" aria-controls="search-results">
+        <div id="search-results" class="search-results" role="listbox" aria-label="Calculator results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/email-popup.js"></script>
+  <script src="../js/air-force-pt-calculator.js"></script>
+</body>
+</html>
