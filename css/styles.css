@@ -3637,17 +3637,6 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.quiz-hero-intro .quiz-intro-list {
-  margin: 0.5rem auto 1rem;
-  padding-left: 1.35rem;
-  max-width: 36rem;
-  color: var(--text-secondary);
-}
-
-.quiz-hero-intro .quiz-intro-list li {
-  margin-bottom: 0.35rem;
-}
-
 .quiz-tool-line {
   font-size: 0.9375rem;
   color: var(--text-secondary);
