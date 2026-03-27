@@ -733,6 +733,22 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
   padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Tablet: noticeably wider than the default 720px narrow card */
+@media (min-width: 768px) {
+  .contact-form-card {
+    max-width: 960px;
+  }
+}
+
+/* Laptop / desktop: use nearly the full site content width (wrapper is 1200px) */
+@media (min-width: 1024px) {
+  .contact-layout .contact-form-card {
+    max-width: min(1120px, 100%);
+  }
 }
 
 .contact-form-card textarea {
@@ -3619,6 +3635,17 @@ body {
 
 .quiz-hero-intro p {
   margin-bottom: 0.75rem;
+}
+
+.quiz-hero-intro .quiz-intro-list {
+  margin: 0.5rem auto 1rem;
+  padding-left: 1.35rem;
+  max-width: 36rem;
+  color: var(--text-secondary);
+}
+
+.quiz-hero-intro .quiz-intro-list li {
+  margin-bottom: 0.35rem;
 }
 
 .quiz-tool-line {
