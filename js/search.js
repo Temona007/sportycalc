@@ -33,6 +33,7 @@
     { title: 'VO2 Max Calculator', subtitle: 'Aerobic capacity estimate', href: 'vo2-max-calculator.html', keywords: 'vo2 max aerobic capacity oxygen uptake fitness cardio' },
     { title: 'Fitness Age Calculator', subtitle: 'How young does your body perform?', href: 'fitness-age-calculator.html', keywords: 'fitness age calculator vitality age VO2max resting heart rate aerobic fitness' },
     { title: 'Protein in Food Calculator', subtitle: 'Estimate protein in common foods', href: 'protein-in-food-calculator.html', keywords: 'protein in food protein calculator food nutrition' },
+    { title: 'McDonald’s Nutrition Calculator', subtitle: '2026 meal builder: calories, macros, sodium', href: 'mcdonalds-nutrition-calculator.html', keywords: 'mcdonalds nutrition calculator 2026 fast food calories meal macros sodium athletes' },
     { title: 'Sleep Cycle Calculator', subtitle: 'Ideal bedtime & wake time', href: 'sleep-cycle-calculator.html', keywords: 'sleep cycle calculator bedtime wake time sleep cycles' },
     { title: 'BAC Calculator', subtitle: 'Blood Alcohol Concentration estimate', href: 'bac-calculator.html', keywords: 'bac blood alcohol concentration drink driving legal limit drunk' },
     { title: 'Pregnancy Weight Gain Calculator', subtitle: 'IOM guidelines, healthy gain range', href: 'pregnancy-weight-gain-calculator.html', keywords: 'pregnancy weight gain calculator pregnancy weight IOM guidelines healthy pregnancy' }
