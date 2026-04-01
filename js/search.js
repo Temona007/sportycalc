@@ -34,6 +34,7 @@
     { title: 'Fitness Age Calculator', subtitle: 'How young does your body perform?', href: 'fitness-age-calculator.html', keywords: 'fitness age calculator vitality age VO2max resting heart rate aerobic fitness' },
     { title: 'Protein in Food Calculator', subtitle: 'Estimate protein in common foods', href: 'protein-in-food-calculator.html', keywords: 'protein in food protein calculator food nutrition' },
     { title: 'McDonald’s Nutrition Calculator', subtitle: '2026 meal builder: calories, macros, sodium', href: 'mcdonalds-nutrition-calculator.html', keywords: 'mcdonalds nutrition calculator 2026 fast food calories meal macros sodium athletes' },
+    { title: 'Chipotle Nutrition Calculator', subtitle: 'Calories & macros for bowl, burrito, salad (2026)', href: 'chipotle-nutrition-calculator.html', keywords: 'chipotle nutrition calculator chipotle calories online nutrition calculator macros fitness 2026' },
     { title: 'Sleep Cycle Calculator', subtitle: 'Ideal bedtime & wake time', href: 'sleep-cycle-calculator.html', keywords: 'sleep cycle calculator bedtime wake time sleep cycles' },
     { title: 'BAC Calculator', subtitle: 'Blood Alcohol Concentration estimate', href: 'bac-calculator.html', keywords: 'bac blood alcohol concentration drink driving legal limit drunk' },
     { title: 'Pregnancy Weight Gain Calculator', subtitle: 'IOM guidelines, healthy gain range', href: 'pregnancy-weight-gain-calculator.html', keywords: 'pregnancy weight gain calculator pregnancy weight IOM guidelines healthy pregnancy' }

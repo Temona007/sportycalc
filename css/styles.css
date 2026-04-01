@@ -4534,3 +4534,202 @@ body {
   margin: 0;
   line-height: 1.45;
 }
+
+/* ===================== Chipotle Nutrition Calculator ===================== */
+.chip-form-card fieldset {
+  border: none;
+  margin: 0 0 1.35rem;
+  padding: 0;
+}
+
+.chip-form-card fieldset:last-of-type {
+  margin-bottom: 0;
+}
+
+.chip-legend {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.65rem;
+  padding: 0;
+}
+
+.chip-legend-hint {
+  font-weight: 400;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.chip-base-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+  gap: 0.6rem;
+}
+
+.chip-base-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-elevated);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition), color var(--transition);
+  outline: none;
+  box-shadow: none;
+}
+
+.chip-base-card:has(:checked) {
+  border-color: var(--primary);
+  background: rgba(249, 87, 0, 0.08);
+  color: var(--text-primary);
+}
+
+.chip-base-card input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* Single ring for keyboard focus — avoid a second ring on top of the selected border */
+.chip-base-card:has(input:focus-visible) {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+.chip-base-card:has(:checked):has(input:focus-visible) {
+  box-shadow: none;
+}
+
+.chip-radio-list,
+.chip-check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.chip-check-wrap {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
+}
+
+.chip-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.chip-inline input {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--primary);
+}
+
+.chip-qty-block {
+  margin-top: 0.5rem;
+}
+
+.chip-qty-main {
+  font-weight: 500;
+}
+
+.chip-qty-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0.35rem 0 0 1.55rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.chip-qty-row select {
+  padding: 0.35rem 0.5rem;
+  font-size: 0.875rem;
+  font-family: var(--font);
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.chip-official-link {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 1.25rem 0 0;
+}
+
+.chip-page-disclaimer {
+  margin-top: 1.25rem;
+}
+
+.chip-seo {
+  margin-top: var(--section-gap);
+}
+
+.chip-hero-desc p {
+  margin: 0 auto 0.85rem;
+  max-width: 42rem;
+}
+
+.chip-hero-desc p:last-child {
+  margin-bottom: 0;
+}
+
+.chip-results-card {
+  position: sticky;
+  top: 5.5rem;
+}
+
+.chip-total-hero {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.chip-total-cal-wrap {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.chip-kcal {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.chip-dv-wrap {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+.chip-dv-hint {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.chip-total-grid {
+  margin-bottom: 1rem;
+}
+
+.chip-clear-btn {
+  width: 100%;
+}
