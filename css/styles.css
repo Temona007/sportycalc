@@ -3543,6 +3543,10 @@ button.page-share-btn {
   color: var(--primary);
 }
 
+.page-share-section--after-calculator {
+  margin-top: var(--section-gap);
+}
+
 .quiz-cta-section {
   margin-bottom: var(--section-gap);
 }
