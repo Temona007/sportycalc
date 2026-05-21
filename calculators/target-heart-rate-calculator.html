@@ -12,31 +12,31 @@
      crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Free GFR Calculator – Estimate your Glomerular Filtration Rate using MDRD, CKD-EPI, and Mayo Quadratic formulas. Includes adult and pediatric (Schwartz) calculations. Get accurate kidney function estimates with our GFR calculator.">
-  <meta name="keywords" content="GFR calculator, eGFR, creatinine, MDRD, CKD-EPI, Schwartz, kidney function">
+  <meta name="description" content="Free Target Heart Rate Calculator – Calculate your ideal heart rate zones using multiple formulas (Haskell &amp; Fox, Tanaka, Nes). Supports % of Max HR, Karvonen method, and Borg RPE. Perfect for Zone 2 training, fat loss, and performance.">
+  <meta name="keywords" content="target heart rate calculator, Zone 2 training, Karvonen, Haskell Fox, Tanaka, Nes max HR, Borg RPE">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://sportycalc.com/calculators/gfr-calculator.html">
-  <title>GFR Calculator – Estimate Kidney Function (eGFR) | SportyCalc</title>
+  <link rel="canonical" href="https://sportycalc.com/calculators/target-heart-rate-calculator.html">
+  <title>Target Heart Rate Calculator | SportyCalc</title>
   <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sportycalc.com/calculators/gfr-calculator.html">
-  <meta property="og:title" content="GFR Calculator – Estimate Kidney Function | SportyCalc">
-  <meta property="og:description" content="Free GFR Calculator – MDRD, CKD-EPI, Mayo Quadratic for adults; Schwartz for children. Kidney function estimates in mL/min/1.73 m².">
+  <meta property="og:url" content="https://sportycalc.com/calculators/target-heart-rate-calculator.html">
+  <meta property="og:title" content="Target Heart Rate Calculator | SportyCalc">
+  <meta property="og:description" content="Free target HR zones: Haskell &amp; Fox, Tanaka, Nes formulas. Max HR % and Karvonen zones, Borg RPE targets. Ideal for Zone 2, fat loss &amp; performance.">
   <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="SportyCalc">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="GFR Calculator – Estimate Kidney Function | SportyCalc">
-  <meta name="twitter:description" content="Free GFR Calculator – MDRD, CKD-EPI, Mayo Quadratic, and Schwartz. Educational kidney function estimates.">
+  <meta name="twitter:title" content="Target Heart Rate Calculator | SportyCalc">
+  <meta name="twitter:description" content="Target heart rate calculator with multiple MHR formulas, Karvonen, % max HR zones, and Borg RPE integration.">
   <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"GFR Calculator","url":"https://sportycalc.com/calculators/gfr-calculator.html","description":"Free GFR calculator: MDRD, CKD-EPI, Mayo Quadratic (adults) and Schwartz (pediatric). Educational eGFR estimates in mL/min/1.73 m².","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Target Heart Rate Calculator","url":"https://sportycalc.com/calculators/target-heart-rate-calculator.html","description":"Free target heart rate zones using Haskell-Fox, Tanaka, Nes MHR formulas; % max HR and Karvonen zones; Borg 6–20 and CR10 RPE targets.","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
   </script>
 </head>
 <body>
@@ -78,10 +78,10 @@
         <span>/</span>
         <a href="index.html">Calculators</a>
         <span>/</span>
-        <span>GFR Calculator</span>
+        <span>Target Heart Rate Calculator</span>
       </nav>
-      <h1>GFR Calculator: Estimate Kidney Function (Glomerular Filtration Rate)</h1>
-      <p class="hero-desc">Free estimated GFR (eGFR) from serum creatinine — adult and pediatric modes. Results in mL/min/1.73 m² using MDRD, CKD-EPI, Mayo Quadratic, and Schwartz.</p>
+      <h1>Target Heart Rate Calculator: Find Your Ideal Training Zones</h1>
+      <p class="hero-desc">Personalized zones from Haskell &amp; Fox, Tanaka, or Nes MHR formulas (or measured max HR). Use % max HR or Karvonen — plus Borg 6–20 / CR10 for RPE-linked targets.</p>
     </section>
 
     <div class="calculator-layout">
@@ -89,204 +89,164 @@
         <div class="calc-form-card">
           <div class="form-header">
             <h2>Inputs</h2>
-            <div class="unit-toggle unit-toggle-top-right">
-              <span class="unit-toggle-label">Mode</span>
-              <div class="unit-toggle-btns">
-                <button type="button" class="unit-btn gfr-mode-btn active" data-mode="adult">Adult 18+</button>
-                <button type="button" class="unit-btn gfr-mode-btn" data-mode="child">Child ≤18</button>
-              </div>
-            </div>
           </div>
-
-          <p id="gfr-error" class="input-hint" style="color: var(--danger, #c0392b); min-height: 1.25em;" role="alert"></p>
-
-          <form id="gfr-form-adult">
+          <p id="thr-error" class="input-hint" style="color: var(--danger, #c0392b); min-height: 1.25em;" role="alert"></p>
+          <form id="thr-form">
             <div class="input-row">
               <div class="input-group">
-                <label for="gfr-adult-scr">Serum creatinine</label>
-                <input type="number" id="gfr-adult-scr" min="0.01" step="any" required placeholder="e.g. 1.0">
+                <label for="thr-age">Age</label>
+                <input type="number" id="thr-age" min="10" max="100" value="36" required>
+                <small>years</small>
               </div>
               <div class="input-group">
-                <span class="input-label">Unit</span>
-                <div class="unit-toggle-btns">
-                  <button type="button" class="unit-btn gfr-scr-unit-btn active" data-scr-unit="mgdl">mg/dL</button>
-                  <button type="button" class="unit-btn gfr-scr-unit-btn" data-scr-unit="umol">µmol/L</button>
-                </div>
+                <label for="thr-measured-mhr">Measured max HR <span class="input-optional">(optional)</span></label>
+                <input type="number" id="thr-measured-mhr" min="100" max="230" placeholder="Override formula">
+                <small>bpm from test</small>
               </div>
             </div>
             <div class="input-row">
               <div class="input-group">
-                <label for="gfr-adult-age">Age (years)</label>
-                <input type="number" id="gfr-adult-age" min="18" max="120" step="1" required placeholder="50">
+                <label for="thr-rhr">Resting HR <span class="input-optional">(optional)</span></label>
+                <input type="number" id="thr-rhr" min="30" max="120" placeholder="e.g. 60">
+                <small>Required for Karvonen &amp; Borg</small>
               </div>
               <div class="input-group">
-                <label for="gfr-adult-sex">Sex</label>
-                <select id="gfr-adult-sex">
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
+                <label for="thr-mhr-formula">Max HR formula</label>
+                <select id="thr-mhr-formula">
+                  <option value="haskell">Haskell &amp; Fox (1971): 220 − age</option>
+                  <option value="tanaka">Tanaka et al. (2001): 208 − 0.7 × age</option>
+                  <option value="nes">Nes et al. (2013): 211 − 0.64 × age</option>
                 </select>
-              </div>
-              <div class="input-group">
-                <label for="gfr-adult-race">Race (MDRD / CKD-EPI factor)</label>
-                <select id="gfr-adult-race">
-                  <option value="notblack">Not Black</option>
-                  <option value="black">Black</option>
-                </select>
-              </div>
-            </div>
-            <button type="submit" class="calc-btn">Calculate adult eGFR</button>
-          </form>
-
-          <form id="gfr-form-child" hidden>
-            <div class="input-row">
-              <div class="input-group">
-                <label for="gfr-child-scr">Serum creatinine</label>
-                <input type="number" id="gfr-child-scr" min="0.01" step="any" required placeholder="e.g. 0.6">
-              </div>
-              <div class="input-group">
-                <span class="input-label">Unit</span>
-                <div class="unit-toggle-btns">
-                  <button type="button" class="unit-btn gfr-scr-unit-btn active" data-scr-unit="mgdl">mg/dL</button>
-                  <button type="button" class="unit-btn gfr-scr-unit-btn" data-scr-unit="umol">µmol/L</button>
-                </div>
               </div>
             </div>
             <div class="input-group">
-              <span class="input-label">Height</span>
-              <div class="unit-toggle-btns" style="margin-bottom: 0.75rem;">
-                <button type="button" class="unit-btn gfr-height-unit-btn active" data-height-unit="cm">cm</button>
-                <button type="button" class="unit-btn gfr-height-unit-btn" data-height-unit="ftin">ft / in</button>
-              </div>
-              <div id="gfr-child-height-cm-wrap" class="input-row">
-                <div class="input-group">
-                  <label for="gfr-child-height-cm">Height (cm)</label>
-                  <input type="number" id="gfr-child-height-cm" min="40" max="250" step="0.1" placeholder="120">
-                </div>
-              </div>
-              <div id="gfr-child-height-im-wrap" class="input-row" hidden>
-                <div class="input-group">
-                  <label for="gfr-child-height-ft">ft</label>
-                  <input type="number" id="gfr-child-height-ft" min="1" max="8" step="1" placeholder="4">
-                </div>
-                <div class="input-group">
-                  <label for="gfr-child-height-in">in</label>
-                  <input type="number" id="gfr-child-height-in" min="0" max="11.99" step="0.1" placeholder="0">
-                </div>
-              </div>
+              <label for="thr-intensity">Intensity / zones</label>
+              <select id="thr-intensity">
+                <option value="pct-max" selected>% of maximum HR (5 zones)</option>
+                <option value="karvonen">Karvonen — % of heart-rate reserve (5 zones)</option>
+                <option value="borg620">Borg 6–20 — single target HR</option>
+                <option value="borg10">Borg CR10 (0–10) — single target HR</option>
+              </select>
             </div>
-            <button type="submit" class="calc-btn">Calculate pediatric eGFR (Schwartz)</button>
+            <div id="thr-rpe-group" class="input-group" hidden>
+              <label for="thr-rpe-value">RPE value</label>
+              <input type="number" id="thr-rpe-value" step="any" placeholder="13 or 4">
+              <small id="thr-rpe-hint" class="input-hint"></small>
+            </div>
+            <button type="submit" class="calc-btn">Calculate</button>
           </form>
         </div>
       </div>
 
-      <aside class="results-card" id="gfr-results-aside" aria-live="polite">
-        <div class="bmi-result-main" id="gfr-result-hero">
-          <span class="bmi-value" id="gfr-primary-value">—</span>
-          <span class="bmi-label" id="gfr-primary-label">eGFR (mL/min/1.73 m²)</span>
-          <span class="gfr-results-caption bmi-category" id="gfr-results-caption">CKD-EPI (primary)</span>
+      <aside class="results-card" id="thr-results-aside" aria-live="polite">
+        <div class="bmi-result-main">
+          <span class="bmi-value" id="thr-result-max">—</span>
+          <span class="bmi-label">Max HR (bpm)</span>
+          <span class="gfr-results-caption bmi-category" id="thr-result-caption">Training zones</span>
         </div>
-        <p class="results-card-subtitle" id="gfr-stage-hint">Enter your details and tap Calculate.</p>
-        <div id="gfr-adult-rows-wrap">
-          <h3 class="results-card-heading">All adult estimates</h3>
+        <p class="results-card-subtitle" id="thr-result-subtitle"></p>
+        <div class="result-item" id="thr-result-hrr-row" hidden>
+          <span class="result-label">Heart-rate reserve</span>
+          <span class="result-value" id="thr-result-hrr">—</span>
+        </div>
+        <div id="thr-zones-results">
+          <h3 class="results-card-heading">Zone ranges (bpm)</h3>
           <div class="result-item">
-            <span class="result-label">MDRD (IDMS)</span>
-            <span class="result-value" id="gfr-out-mdrd">—</span>
+            <span class="result-label">Zone 1 (50–60%)</span>
+            <span class="result-value" id="thr-z1">—</span>
           </div>
           <div class="result-item">
-            <span class="result-label">CKD-EPI 2009</span>
-            <span class="result-value" id="gfr-out-ckd">—</span>
+            <span class="result-label">Zone 2 (60–70%)</span>
+            <span class="result-value" id="thr-z2">—</span>
           </div>
           <div class="result-item">
-            <span class="result-label">Mayo Quadratic</span>
-            <span class="result-value" id="gfr-out-mayo">—</span>
+            <span class="result-label">Zone 3 (70–80%)</span>
+            <span class="result-value" id="thr-z3">—</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Zone 4 (80–90%)</span>
+            <span class="result-value" id="thr-z4">—</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Zone 5 (90–100%)</span>
+            <span class="result-value" id="thr-z5">—</span>
           </div>
         </div>
-        <div id="gfr-child-rows-wrap" hidden>
-          <h3 class="results-card-heading">Pediatric</h3>
-          <div class="result-item">
-            <span class="result-label">Schwartz</span>
-            <span class="result-value" id="gfr-out-schwartz">—</span>
-          </div>
+        <div class="result-item result-item-highlight" id="thr-rpe-result-row" hidden>
+          <span class="result-label">Target HR</span>
+          <span class="result-value highlight" id="thr-result-single-thr">—</span>
         </div>
-        <p class="input-hint" style="margin: 1rem 0 0;">Educational estimate only; not a medical diagnosis.</p>
       </aside>
     </div>
 
     <div class="seo-content">
-      <p>The Glomerular Filtration Rate (GFR) is the best overall indicator of kidney function. It measures how well your kidneys are filtering waste from your blood.</p>
-      <p>Our free GFR Calculator provides accurate estimates using the most widely used medical formulas: MDRD, CKD-EPI (2009), and Mayo Quadratic for adults, plus the Schwartz formula for children.</p>
-      <p><strong>Important:</strong> This tool is for educational and informational purposes only. It is not a substitute for professional medical advice or laboratory testing. Always consult a doctor for health-related decisions.</p>
+      <p>Knowing your target heart rate is one of the most effective ways to train smarter, burn fat more efficiently, improve endurance, and avoid overtraining.</p>
+      <p>Our Target Heart Rate Calculator gives you personalized heart rate zones using multiple scientifically validated formulas, including the popular Haskell &amp; Fox, Tanaka, and Nes methods. Whether you're a beginner, serious athlete, or training for military PT, this tool helps you stay in the right intensity zone.</p>
 
-      <h2>How Our GFR Calculator Works</h2>
-      <p>Choose <strong>Adult 18+</strong> or <strong>Child ≤18</strong> at the top of the calculator; each mode applies the appropriate formulas.</p>
-      <h3>For Adults (18+ years)</h3>
-      <ul>
-        <li><strong>MDRD Formula</strong> (Modification of Diet in Renal Disease)</li>
-        <li><strong>CKD-EPI 2009</strong> creatinine equation (race-inclusive)</li>
-        <li><strong>Mayo Quadratic Equation</strong></li>
-      </ul>
-      <h3>For Children (≤18 years)</h3>
-      <ul>
-        <li><strong>Schwartz Formula</strong></li>
-      </ul>
-      <h3>Inputs required</h3>
-      <ul>
-        <li><strong>Age</strong> (adults: 18+)</li>
-        <li><strong>Sex</strong></li>
-        <li><strong>Serum creatinine</strong> (mg/dL or µmol/L)</li>
-        <li><strong>Race</strong> (for MDRD and CKD-EPI in adult mode)</li>
-        <li><strong>Height</strong> (children only; cm or ft/in)</li>
-      </ul>
-      <p>These equations do not require body weight. All results are shown in <strong>mL/min/1.73 m²</strong> (standardized to body surface area).</p>
+      <h2>How Our Target Heart Rate Calculator Works</h2>
+      <p>We offer flexible and accurate calculations based on your preferences:</p>
 
-      <h2>Understanding Your GFR Results</h2>
-      <p>The table below summarizes typical GFR ranges and CKD stages for context. Staging in real clinical practice also depends on urine findings, albuminuria, and trends — not GFR alone.</p>
+      <h3>1. Maximum Heart Rate (MHR) Calculation</h3>
+      <p>You can choose from three proven formulas:</p>
+      <ul>
+        <li><strong>Haskell &amp; Fox (1971):</strong> MHR = 220 − Age <em>(most commonly used)</em></li>
+        <li><strong>Tanaka et al. (2001):</strong> MHR = 208 − (0.7 × Age) <em>(often considered more accurate)</em></li>
+        <li><strong>Nes et al. (2013):</strong> MHR = 211 − (0.64 × Age) <em>(recent research-based)</em></li>
+      </ul>
+      <p>You can also override with your personally measured Max HR for the highest accuracy.</p>
+
+      <h3>2. Training Zone Methods</h3>
+      <ul>
+        <li><strong>% of Maximum HR</strong> – Simple and widely used</li>
+        <li><strong>Karvonen Method (Heart Rate Reserve)</strong> – More precise as it considers your resting heart rate</li>
+      </ul>
+
+      <h3>3. Borg RPE Scale Integration</h3>
+      <p>Enter your desired Rating of Perceived Exertion (Borg 6–20 or CR10 scale) to get a recommended target heart rate.</p>
+
+      <h2>Heart Rate Training Zones</h2>
       <div class="table-responsive">
         <table class="macro-ref-table">
           <thead>
             <tr>
-              <th>GFR (mL/min/1.73 m²)</th>
-              <th>Stage</th>
-              <th>Meaning</th>
+              <th>Zone</th>
+              <th>Intensity</th>
+              <th>% of Max HR</th>
+              <th>% of Heart Rate Reserve (Karvonen)</th>
+              <th>Best For</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>90 or above</td><td>G1</td><td>Normal or high kidney function</td></tr>
-            <tr><td>60–89</td><td>G2</td><td>Mildly decreased</td></tr>
-            <tr><td>45–59</td><td>G3a</td><td>Mild to moderate decrease</td></tr>
-            <tr><td>30–44</td><td>G3b</td><td>Moderate to severe decrease</td></tr>
-            <tr><td>15–29</td><td>G4</td><td>Severe decrease</td></tr>
-            <tr><td>Below 15</td><td>G5</td><td>Kidney failure</td></tr>
+            <tr><td>1</td><td>Very Light</td><td>50–60%</td><td>50–60%</td><td>Warm-up, Recovery</td></tr>
+            <tr><td>2</td><td>Light / Moderate</td><td>60–70%</td><td>60–70%</td><td>Fat Burning, Endurance Base</td></tr>
+            <tr><td>3</td><td>Moderate</td><td>70–80%</td><td>70–80%</td><td>Aerobic Fitness</td></tr>
+            <tr><td>4</td><td>Hard</td><td>80–90%</td><td>80–90%</td><td>Anaerobic Threshold</td></tr>
+            <tr><td>5</td><td>Maximum</td><td>90–100%</td><td>90–100%</td><td>Peak Performance, Speed</td></tr>
           </tbody>
         </table>
       </div>
+      <p>Zone 2 is especially popular in 2026 for sustainable fat loss and building a strong aerobic base.</p>
 
-      <h2>Why Use This GFR Calculator?</h2>
+      <h2>Why Use This Target Heart Rate Calculator?</h2>
       <ul>
-        <li>Get three adult estimates at once for better comparison</li>
-        <li>Supports both mg/dL and µmol/L creatinine units</li>
-        <li>Includes pediatric calculation using the Schwartz formula</li>
-        <li>Fast, free, and easy to use</li>
-        <li>Helps you understand kidney health trends over time (alongside labs from your care team)</li>
-      </ul>
-      <p><strong>Note on race:</strong> This calculator uses the classic 2009 CKD-EPI equation with race adjustment, consistent with many clinical references. Newer race-free equations are available but not used here to match standard reference calculator behavior.</p>
-
-      <h2>Who Should Use a GFR Calculator?</h2>
-      <ul>
-        <li>People with diabetes, high blood pressure, or family history of kidney disease</li>
-        <li>Athletes monitoring long-term health</li>
-        <li>Individuals taking medications that affect kidney function</li>
-        <li>Anyone curious about their kidney health</li>
+        <li>Compare multiple Max HR formulas for better accuracy</li>
+        <li>Use Karvonen method for personalized results</li>
+        <li>Get target heart rates based on how hard you feel (RPE)</li>
+        <li>Ideal for runners, cyclists, athletes, and military training</li>
+        <li>Helps you train in the right zone for your specific goal</li>
       </ul>
 
-      <h2>Tips for Healthy Kidneys</h2>
+      <h2>Pro Tips for Using Heart Rate Zones</h2>
       <ul>
-        <li>Stay well hydrated</li>
-        <li>Control blood pressure and blood sugar</li>
-        <li>Maintain a healthy weight</li>
-        <li>Avoid excessive use of NSAIDs (painkillers)</li>
-        <li>Get regular check-ups if you have risk factors</li>
+        <li>Most people should spend 70–80% of their training time in Zone 2</li>
+        <li>Use a chest strap heart rate monitor for the best accuracy</li>
+        <li>Recalculate your zones every 3–6 months as your fitness improves</li>
+        <li>Combine with our <a href="fitness-age-calculator.html">Fitness Age Calculator</a> to track cardiovascular progress</li>
       </ul>
+
+      <p><strong>Disclaimer:</strong> Heart rate calculations are estimates. Individual responses vary. This tool is for educational purposes only and should not replace professional medical advice. Consult a doctor before beginning any intense training program.</p>
+
+      <p><strong>Ready to train smarter?</strong> Calculate your personal target heart rate zones using the tool above and take your training to the next level.</p>
     </div>
 
     <section class="page-share-section page-share-section--after-calculator" data-page-share aria-labelledby="page-share-heading">
@@ -369,7 +329,7 @@
   <script src="../js/main.js"></script>
   <script src="../js/search.js"></script>
   <script src="../js/email-popup.js"></script>
-  <script src="../js/gfr-calculator.js"></script>
+  <script src="../js/target-heart-rate-calculator.js"></script>
   <script src="../js/page-share.js"></script>
 </body>
 </html>

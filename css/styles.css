@@ -1149,6 +1149,17 @@ body {
   top: 88px;
 }
 
+.results-card .results-card-heading {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin: 1rem 0 0.25rem;
+  color: var(--text-primary);
+}
+
+.results-card .results-card-heading:first-of-type {
+  margin-top: 0.5rem;
+}
+
 .results-card h3 {
   font-size: 1rem;
   font-weight: 600;

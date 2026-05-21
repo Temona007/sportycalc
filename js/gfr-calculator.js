@@ -13,10 +13,6 @@
     return value;
   }
 
-  /**
-   * IDMS-traceable MDRD Study Equation (Scr in mg/dL).
-   * GFR = 175 × Scr^(-1.154) × age^(-0.203) × 0.742 [if female] × 1.212 [if Black]
-   */
   function gfrMdrd(scrMgDl, ageYears, female, black) {
     return (
       175 *
@@ -27,10 +23,6 @@
     );
   }
 
-  /**
-   * CKD-EPI creatinine equation (2009) — coefficients from NKDEP / calculator.net.
-   * Uses κ = 0.7 (female) or 0.9 (male); α = −0.329 / −0.411 below κ, else −1.209.
-   */
   function gfrCkdEpi(scrMgDl, ageYears, female, black) {
     var kappa = female ? 0.7 : 0.9;
     var lowScr = female ? scrMgDl <= 0.7 : scrMgDl <= 0.9;
@@ -39,9 +31,6 @@
     return coef * Math.pow(scrMgDl / kappa, alpha) * Math.pow(0.993, ageYears);
   }
 
-  /**
-   * Mayo Quadratic: if Scr < 0.8 use 0.8. GFR = exp(1.911 + 5.249/Scr − 2.114/Scr² − 0.00686×age − 0.205 [female]).
-   */
   function gfrMayo(scrMgDl, ageYears, female) {
     var s = scrMgDl < 0.8 ? 0.8 : scrMgDl;
     var x =
@@ -53,9 +42,6 @@
     return Math.exp(x);
   }
 
-  /**
-   * Schwartz (pediatric, as on calculator.net): GFR = 0.413 × height(cm) / Scr(mg/dL).
-   */
   function gfrSchwartz(heightCm, scrMgDl) {
     return (0.413 * heightCm) / scrMgDl;
   }
@@ -68,13 +54,24 @@
     });
   }
 
-  function getAdultScrUnit(form) {
+  /** Rough GFR-only context (not diagnostic; full CKD staging uses more than GFR). */
+  function stageHintLine(g) {
+    if (!isFinite(g) || g <= 0) return 'Enter your details and tap Calculate.';
+    if (g >= 90) return 'GFR alone often falls in G1–G2 discussion range — urine and trends matter.';
+    if (g >= 60) return 'GFR alone may align with G2 range if persistent — confirm with your clinician.';
+    if (g >= 45) return 'GFR alone may align with G3a range — medical follow-up is important.';
+    if (g >= 30) return 'GFR alone may align with G3b range — seek clinical guidance.';
+    if (g >= 15) return 'GFR alone may align with G4 range — urgent nephrology input is typical.';
+    return 'GFR alone may align with G5 range — this is a medical emergency context.';
+  }
+
+  function getScrUnit(form) {
     var active = form.querySelector('.gfr-scr-unit-btn.active');
     return (active && active.getAttribute('data-scr-unit')) || 'mgdl';
   }
 
-  function getChildHeightCm(form) {
-    var mode = form.querySelector('.gfr-height-unit-btn.active');
+  function getChildHeightCm() {
+    var mode = document.querySelector('#gfr-form-child .gfr-height-unit-btn.active');
     var u = (mode && mode.getAttribute('data-height-unit')) || 'cm';
     if (u === 'cm') {
       var cm = parseFloat(document.getElementById('gfr-child-height-cm').value);
@@ -92,14 +89,25 @@
     el.style.display = on ? '' : 'none';
   }
 
+  function resetOutputs(isAdultMode) {
+    document.getElementById('gfr-out-mdrd').textContent = '—';
+    document.getElementById('gfr-out-ckd').textContent = '—';
+    document.getElementById('gfr-out-mayo').textContent = '—';
+    document.getElementById('gfr-out-schwartz').textContent = '—';
+    document.getElementById('gfr-primary-value').textContent = '—';
+    document.getElementById('gfr-stage-hint').textContent = 'Enter your details and tap Calculate.';
+    var cap = document.getElementById('gfr-results-caption');
+    if (cap) cap.textContent = isAdultMode ? 'CKD-EPI (primary)' : 'Schwartz';
+  }
+
   function init() {
     var adultForm = document.getElementById('gfr-form-adult');
     var childForm = document.getElementById('gfr-form-child');
     if (!adultForm || !childForm) return;
 
-    var resultsBlock = document.getElementById('gfr-results');
     var errEl = document.getElementById('gfr-error');
-
+    var wrapAdult = document.getElementById('gfr-adult-rows-wrap');
+    var wrapChild = document.getElementById('gfr-child-rows-wrap');
     var modeBtns = document.querySelectorAll('.gfr-mode-btn');
 
     function setMode(mode) {
@@ -110,7 +118,9 @@
       var adult = mode === 'adult';
       setVisible(adultForm, adult);
       setVisible(childForm, !adult);
-      resultsBlock.hidden = true;
+      if (wrapAdult) wrapAdult.hidden = !adult;
+      if (wrapChild) wrapChild.hidden = adult;
+      resetOutputs(adult);
       errEl.textContent = '';
     }
 
@@ -156,23 +166,20 @@
       var scrRaw = parseFloat(document.getElementById('gfr-adult-scr').value);
       var female = document.getElementById('gfr-adult-sex').value === 'female';
       var black = document.getElementById('gfr-adult-race').value === 'black';
-      var unit = getAdultScrUnit(adultForm);
+      var unit = getScrUnit(adultForm);
 
       if (!age || age < 18 || age > 120) {
         errEl.textContent = 'Age should be between 18 and 120 for the adult equations.';
-        resultsBlock.hidden = true;
         return;
       }
       if (!scrRaw || scrRaw <= 0) {
         errEl.textContent = 'Enter a valid serum creatinine.';
-        resultsBlock.hidden = true;
         return;
       }
 
       var scrMg = scrToMgDl(scrRaw, unit === 'umol' ? 'umol' : 'mgdl');
       if (!isFinite(scrMg) || scrMg <= 0) {
         errEl.textContent = 'Invalid creatinine after unit conversion.';
-        resultsBlock.hidden = true;
         return;
       }
 
@@ -183,29 +190,24 @@
       document.getElementById('gfr-out-mdrd').textContent = fmt(m);
       document.getElementById('gfr-out-ckd').textContent = fmt(c);
       document.getElementById('gfr-out-mayo').textContent = fmt(y);
-      document.getElementById('gfr-adult-rows').hidden = false;
-      document.getElementById('gfr-child-rows').hidden = true;
-      resultsBlock.hidden = false;
-
-      var cap = resultsBlock.querySelector('.gfr-results-caption');
-      if (cap) cap.textContent = 'Adult estimates (mL/min/1.73 m²).';
+      document.getElementById('gfr-primary-value').textContent = fmt(c);
+      document.getElementById('gfr-results-caption').textContent = 'CKD-EPI (2009)';
+      document.getElementById('gfr-stage-hint').textContent = stageHintLine(c);
     });
 
     childForm.addEventListener('submit', function (e) {
       e.preventDefault();
       errEl.textContent = '';
       var scrRaw = parseFloat(document.getElementById('gfr-child-scr').value);
-      var unit = getAdultScrUnit(childForm);
-      var hCm = getChildHeightCm(childForm);
+      var unit = getScrUnit(childForm);
+      var hCm = getChildHeightCm();
 
       if (!scrRaw || scrRaw <= 0) {
         errEl.textContent = 'Enter a valid serum creatinine.';
-        resultsBlock.hidden = true;
         return;
       }
       if (!hCm || hCm < 40 || hCm > 250) {
         errEl.textContent = 'Enter height (about 40–250 cm).';
-        resultsBlock.hidden = true;
         return;
       }
 
@@ -213,12 +215,9 @@
       var s = gfrSchwartz(hCm, scrMg);
 
       document.getElementById('gfr-out-schwartz').textContent = fmt(s);
-      document.getElementById('gfr-adult-rows').hidden = true;
-      document.getElementById('gfr-child-rows').hidden = false;
-      resultsBlock.hidden = false;
-
-      var cap = resultsBlock.querySelector('.gfr-results-caption');
-      if (cap) cap.textContent = 'Pediatric Schwartz estimate (mL/min/1.73 m²).';
+      document.getElementById('gfr-primary-value').textContent = fmt(s);
+      document.getElementById('gfr-results-caption').textContent = 'Schwartz';
+      document.getElementById('gfr-stage-hint').textContent = stageHintLine(s);
     });
 
     setMode('adult');

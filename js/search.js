@@ -22,6 +22,7 @@
     { title: 'Waist to Hip Ratio', subtitle: 'WHR calculator, WHO thresholds', href: 'waist-hip-ratio-calculator.html', keywords: 'waist hip ratio WHR body shape health risk' },
     { title: 'Lean Body Mass Calculator', subtitle: 'Boer formula, LBM estimate', href: 'lean-body-mass-calculator.html', keywords: 'lean body mass LBM fat free mass Boer formula body composition' },
     { title: 'Heart Rate Zones', subtitle: 'Training zones', href: 'heart-rate-zones.html', keywords: 'heart rate zones cardio training' },
+    { title: 'Target Heart Rate Calculator', subtitle: 'Zones, Karvonen, Borg RPE', href: 'target-heart-rate-calculator.html', keywords: 'target heart rate Karvonen Borg RPE max HR training zones' },
     { title: '1RM Calculator', subtitle: 'One-rep max', href: '1rm-calculator.html', keywords: '1rm one rep max strength lift' },
     { title: 'Protein Intake', subtitle: 'Daily protein needs', href: 'protein-intake.html', keywords: 'protein intake daily muscle' },
     { title: 'Water Intake', subtitle: 'Daily hydration', href: 'water-intake.html', keywords: 'water intake hydration daily' },
