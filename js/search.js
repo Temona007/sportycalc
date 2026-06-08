@@ -17,6 +17,7 @@
     { title: 'Body Fat Calculator', subtitle: 'Navy method estimate', href: 'body-fat-calculator.html', keywords: 'body fat navy percentage' },
     { title: 'Army Body Fat Calculator', subtitle: 'One-site tape method (2023)', href: 'army-body-fat-calculator.html', keywords: 'army body fat tape test ABCP Army Body Composition Program circumference' },
     { title: 'Air Force PT Calculator', subtitle: '2026 standards: 2-mile run, WHtR, push-ups, sit-ups', href: 'air-force-pt-calculator.html', keywords: 'air force PT USAF fitness test 2 mile run push ups sit ups waist height ratio DAFMAN 36-2905 PFA' },
+    { title: 'Push-up Test Calculator', subtitle: 'Percentile & fitness rating by age and gender', href: 'push-up-test-calculator.html', keywords: 'push-up test calculator push up percentile Nieman Z-score fitness rating muscular endurance military PT' },
     { title: 'Body Surface Area Calculator', subtitle: 'BSA: Du Bois, Mosteller, Haycock', href: 'body-surface-area-calculator.html', keywords: 'body surface area BSA calculator Du Bois Mosteller Haycock metabolic' },
     { title: 'GFR Calculator', subtitle: 'eGFR: MDRD, CKD-EPI, Mayo, Schwartz', href: 'gfr-calculator.html', keywords: 'GFR calculator eGFR glomerular filtration rate creatinine MDRD CKD EPI kidney' },
     { title: 'Waist to Hip Ratio', subtitle: 'WHR calculator, WHO thresholds', href: 'waist-hip-ratio-calculator.html', keywords: 'waist hip ratio WHR body shape health risk' },
