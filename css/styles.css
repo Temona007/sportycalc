@@ -2708,7 +2708,7 @@ body {
   color: var(--primary);
 }
 
-/* Push-up test: solid fill for clear selected state */
+/* Push-up test: black fill when selected */
 .pushup-gender-btn {
   flex: 1;
   display: flex;
@@ -2734,16 +2734,16 @@ body {
 }
 
 .pushup-gender-btn.active {
-  border-color: #222222;
-  background: #222222;
+  border-color: #000000;
+  background: #000000;
   color: #ffffff;
   font-weight: 600;
 }
 
 [data-theme="dark"] .pushup-gender-btn.active {
   border-color: #ffffff;
-  background: #ffffff;
-  color: #111111;
+  background: #000000;
+  color: #ffffff;
 }
 
 .bf-gender-emoji {
