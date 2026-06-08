@@ -135,8 +135,12 @@
 
   genderBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-      genderBtns.forEach((b) => b.classList.remove('active'));
+      genderBtns.forEach((b) => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
       gender = btn.dataset.gender;
       updateUI();
     });

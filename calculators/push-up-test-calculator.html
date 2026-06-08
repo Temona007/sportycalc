@@ -39,13 +39,6 @@
   {"@context":"https://schema.org","@type":"WebApplication","name":"Push-up Test Calculator","url":"https://sportycalc.com/calculators/push-up-test-calculator.html","description":"Free push-up test calculator with percentile ranking and fitness rating based on Nieman (1999) normative data and Z-score calculation.","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
   </script>
   <style>
-    .pushup-gender-btns { display: flex; gap: 0.5rem; }
-    .pushup-gender-btn {
-      flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.35rem;
-      padding: 0.65rem 1rem; border: 1px solid var(--border, #333); border-radius: 8px;
-      background: var(--card-bg, #1a1a1a); color: var(--text, #eee); cursor: pointer; font: inherit;
-    }
-    .pushup-gender-btn.active { border-color: var(--accent); background: rgba(var(--accent-rgb, 34, 197, 94), 0.12); }
     .pushup-result-main { text-align: center; padding: 0.5rem 0 1rem; }
     .pushup-score-value { font-size: 3rem; font-weight: 700; color: var(--accent); line-height: 1; }
     .pushup-score-label { font-size: 0.85rem; color: var(--muted, #888); margin-top: 0.25rem; }
@@ -140,12 +133,14 @@
             <h2>Your Test Results</h2>
             <div class="input-group">
               <span class="input-label">Gender</span>
-              <div class="pushup-gender-btns">
-                <button type="button" class="pushup-gender-btn active" data-gender="male">
-                  <span class="bf-gender-emoji">♂️</span> Male
+              <div class="bf-gender-btns">
+                <button type="button" class="pushup-gender-btn active" data-gender="male" aria-pressed="true">
+                  <span class="bf-gender-emoji">♂️</span>
+                  <span>Male</span>
                 </button>
-                <button type="button" class="pushup-gender-btn" data-gender="female">
-                  <span class="bf-gender-emoji">♀️</span> Female
+                <button type="button" class="pushup-gender-btn" data-gender="female" aria-pressed="false">
+                  <span class="bf-gender-emoji">♀️</span>
+                  <span>Female</span>
                 </button>
               </div>
             </div>

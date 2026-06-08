@@ -2668,7 +2668,8 @@ body {
 .bsa-gender-btn,
 .army-bf-gender-btn,
 .fitness-age-gender-btn,
-.afpt-gender-btn {
+.afpt-gender-btn,
+.pushup-gender-btn {
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -2692,7 +2693,8 @@ body {
 .bsa-gender-btn:hover,
 .army-bf-gender-btn:hover,
 .fitness-age-gender-btn:hover,
-.afpt-gender-btn:hover {
+.afpt-gender-btn:hover,
+.pushup-gender-btn:hover {
   border-color: var(--text-secondary);
   color: var(--text-primary);
 }
@@ -2702,7 +2704,8 @@ body {
 .bsa-gender-btn.active,
 .army-bf-gender-btn.active,
 .fitness-age-gender-btn.active,
-.afpt-gender-btn.active {
+.afpt-gender-btn.active,
+.pushup-gender-btn.active {
   border-color: var(--primary);
   background: rgba(249, 87, 0, 0.12);
   color: var(--primary);
