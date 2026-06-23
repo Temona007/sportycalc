@@ -41,6 +41,7 @@
     { title: 'Burger King Nutrition Calculator', subtitle: 'BK meal builder: calories, macros, sodium', href: 'burger-king-nutrition-calculator.html', keywords: 'burger king nutrition calculator bk calories calories macros fast food meal builder 2026' },
     { title: 'Sleep Cycle Calculator', subtitle: 'Ideal bedtime & wake time', href: 'sleep-cycle-calculator.html', keywords: 'sleep cycle calculator bedtime wake time sleep cycles' },
     { title: 'BAC Calculator', subtitle: 'Blood Alcohol Concentration estimate', href: 'bac-calculator.html', keywords: 'bac blood alcohol concentration drink driving legal limit drunk' },
+    { title: 'Sports Wager Calculator', subtitle: 'Odds, payout, parlay & implied probability', href: 'sports-wager-calculator.html', keywords: 'sports wager calculator betting odds parlay payout implied probability american decimal fractional' },
     { title: 'Pregnancy Weight Gain Calculator', subtitle: 'IOM guidelines, healthy gain range', href: 'pregnancy-weight-gain-calculator.html', keywords: 'pregnancy weight gain calculator pregnancy weight IOM guidelines healthy pregnancy' }
   ];
 
