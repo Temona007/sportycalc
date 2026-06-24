@@ -42,7 +42,8 @@
     { title: 'Sleep Cycle Calculator', subtitle: 'Ideal bedtime & wake time', href: 'sleep-cycle-calculator.html', keywords: 'sleep cycle calculator bedtime wake time sleep cycles' },
     { title: 'BAC Calculator', subtitle: 'Blood Alcohol Concentration estimate', href: 'bac-calculator.html', keywords: 'bac blood alcohol concentration drink driving legal limit drunk' },
     { title: 'Sports Wager Calculator', subtitle: 'Odds, payout, parlay & implied probability', href: 'sports-wager-calculator.html', keywords: 'sports wager calculator betting odds parlay payout implied probability american decimal fractional' },
-    { title: 'Pregnancy Weight Gain Calculator', subtitle: 'IOM guidelines, healthy gain range', href: 'pregnancy-weight-gain-calculator.html', keywords: 'pregnancy weight gain calculator pregnancy weight IOM guidelines healthy pregnancy' }
+    { title: 'Pregnancy Weight Gain Calculator', subtitle: 'IOM guidelines, healthy gain range', href: 'pregnancy-weight-gain-calculator.html', keywords: 'pregnancy weight gain calculator pregnancy weight IOM guidelines healthy pregnancy' },
+    { title: 'Bra Size Calculator', subtitle: 'US, UK, EU sizes from measurements', href: 'bra-size-calculator.html', keywords: 'bra size calculator cup size underbust bust bra converter US UK EU' }
   ];
 
   function getCalcBasePath() {

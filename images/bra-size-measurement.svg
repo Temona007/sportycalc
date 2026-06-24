@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" role="img" aria-labelledby="bra-measure-title">
+  <title id="bra-measure-title">Bust and underbust measurement guide</title>
+  <rect width="320" height="280" fill="#FAFAFA" rx="12"/>
+  <ellipse cx="160" cy="72" rx="28" ry="32" fill="#FFE8DC" stroke="#525252" stroke-width="1.5"/>
+  <path d="M132 98 C132 130 148 200 160 220 C172 200 188 130 188 98" fill="#FFE8DC" stroke="#525252" stroke-width="1.5"/>
+  <path d="M118 118 Q160 138 202 118" fill="none" stroke="#F95700" stroke-width="3" stroke-dasharray="6 4"/>
+  <path d="M112 168 Q160 182 208 168" fill="none" stroke="#1F57C3" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="214" y="122" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#F95700">Bust</text>
+  <text x="214" y="172" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#1F57C3">Underbust</text>
+  <text x="24" y="252" font-family="Inter, Arial, sans-serif" font-size="11" fill="#525252">Fullest part of chest (orange) · Firm line under breasts (blue)</text>
+</svg>

@@ -3101,6 +3101,22 @@ body {
   text-decoration: underline;
 }
 
+.bra-measure-figure {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.bra-measure-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border);
+}
+
+.bra-measure-figure figcaption {
+  margin-top: 0.5rem;
+}
+
 /* FAQ */
 .faq-item {
   margin-bottom: 1rem;
