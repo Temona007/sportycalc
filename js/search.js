@@ -33,6 +33,7 @@
     { title: 'Healthy Weight Calculator', subtitle: 'Ideal body weight, Robinson, Miller, Devine, Hamwi', href: 'healthy-weight-calculator.html', keywords: 'ideal weight healthy weight IBW ideal body weight Robinson Miller Devine Hamwi BMI range' },
     { title: 'Ideal Body Weight Calculator', subtitle: 'IBW, Robinson, Miller, Devine, Hamwi', href: 'ideal-body-weight-calculator.html', keywords: 'ideal body weight IBW calculator Devine Robinson Miller Hamwi formula' },
     { title: 'Running Pace Calculator', subtitle: '5K, 10K, marathon finish time', href: 'running-pace-calculator.html', keywords: 'running pace calculator race time 5K 10K marathon pace' },
+    { title: 'Cycling Cadence Calculator', subtitle: 'Cadence, speed & gear ratio', href: 'cycling-cadence-calculator.html', keywords: 'cycling cadence calculator bike speed RPM gear ratio chainring cog wheel' },
     { title: 'VO2 Max Calculator', subtitle: 'Aerobic capacity estimate', href: 'vo2-max-calculator.html', keywords: 'vo2 max aerobic capacity oxygen uptake fitness cardio' },
     { title: 'Fitness Age Calculator', subtitle: 'How young does your body perform?', href: 'fitness-age-calculator.html', keywords: 'fitness age calculator vitality age VO2max resting heart rate aerobic fitness' },
     { title: 'Protein in Food Calculator', subtitle: 'Estimate protein in common foods', href: 'protein-in-food-calculator.html', keywords: 'protein in food protein calculator food nutrition' },

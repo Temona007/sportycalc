@@ -4946,3 +4946,28 @@ button.page-share-btn {
 .chip-clear-btn {
   width: 100%;
 }
+
+/* Cycling cadence calculator */
+.cadence-section-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1.25rem;
+  color: var(--text-primary);
+}
+
+.cadence-table-hint {
+  margin: -0.25rem 0 0.75rem;
+}
+
+.cadence-table .cadence-row-optimal td {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.cadence-table .cadence-row-current td {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cadence-table .cadence-row-current.cadence-row-optimal td {
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+}

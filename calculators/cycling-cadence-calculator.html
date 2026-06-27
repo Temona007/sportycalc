@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8276223173310357" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Free cycling cadence calculator — convert between cadence (RPM) and speed from wheel size, chainring, and cog. Real-time gear ratio and cadence table.">
+  <meta name="keywords" content="cycling cadence calculator, bike speed cadence, gear ratio calculator, RPM to speed cycling, wheel circumference">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/cycling-cadence-calculator.html">
+  <title>Cycling Cadence Calculator | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/cycling-cadence-calculator.html">
+  <meta property="og:title" content="Cycling Cadence Calculator | SportyCalc">
+  <meta property="og:description" content="Convert cadence and speed from your bike setup. Wheel presets, gear ratio, and cadence reference table.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cycling Cadence Calculator | SportyCalc">
+  <meta name="twitter:description" content="Convert cadence and speed from wheel size, chainring, and cog.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.min.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Cycling Cadence Calculator","url":"https://sportycalc.com/calculators/cycling-cadence-calculator.html","description":"Convert cycling cadence and speed from wheel size, chainring, and cog teeth.","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="SportyCalc" title="SportyCalc - Home" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="/calculators/" class="nav-link active">Calculators</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <a href="../fitness-quiz.html" class="nav-link nav-link-brand">Quiz</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="/calculators/" class="mobile-nav-link">Calculators</a>
+    <a href="/guides/" class="mobile-nav-link">Guides</a>
+    <a href="/blog/" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+    <a href="../fitness-quiz.html" class="mobile-nav-link mobile-nav-link-brand">Quiz</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/calculators/">Calculators</a>
+        <span>/</span>
+        <span>Cycling Cadence Calculator</span>
+      </nav>
+      <h1>Cycling Cadence Calculator</h1>
+      <p class="hero-desc">Convert between cadence and speed from your wheel size and gear ratio — updated live as you type.</p>
+    </section>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <form id="cadence-form">
+            <div class="form-header">
+              <h2>Bike Parameters</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Wheel units</span>
+                <div class="unit-toggle-btns">
+                  <button type="button" class="unit-btn active" data-dim="mm">mm</button>
+                  <button type="button" class="unit-btn" data-dim="in">in</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="wheel-preset">Wheel preset</label>
+              <select id="wheel-preset">
+                <option value="custom">Custom</option>
+                <option value="road700x25" selected>700×25c Road</option>
+                <option value="road700x28">700×28c Road</option>
+                <option value="road700x32">700×32c Endurance</option>
+                <option value="gravel700x40">700×40c Gravel</option>
+                <option value="gravel650x47">650×47b Gravel</option>
+                <option value="mtb29x22">29×2.2" MTB</option>
+                <option value="mtb275x24">27.5×2.4" MTB</option>
+              </select>
+            </div>
+
+            <div class="input-row">
+              <div class="input-group">
+                <label for="rim-size">Rim (BSD)</label>
+                <div class="pwr-input-wrap">
+                  <input type="number" id="rim-size" value="622" min="1" step="1" required>
+                  <span class="pwr-unit" id="rim-unit-label">mm</span>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="tire-size">Tire width</label>
+                <div class="pwr-input-wrap">
+                  <input type="number" id="tire-size" value="25" min="1" step="1" required>
+                  <span class="pwr-unit" id="tire-unit-label">mm</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="input-group">
+                <label for="chainring">Chainring teeth</label>
+                <input type="number" id="chainring" value="50" min="1" step="1" required>
+              </div>
+              <div class="input-group">
+                <label for="cog">Cog teeth</label>
+                <input type="number" id="cog" value="17" min="1" step="1" required>
+              </div>
+            </div>
+
+            <h2 class="cadence-section-heading">Speed &amp; Cadence</h2>
+
+            <div class="input-row">
+              <div class="input-group">
+                <label for="cadence">Cadence</label>
+                <div class="pwr-input-wrap">
+                  <input type="number" id="cadence" value="90" min="1" max="220" step="1" required>
+                  <span class="pwr-unit">RPM</span>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="speed">Speed</label>
+                <div class="pwr-input-wrap">
+                  <input type="number" id="speed" value="33.5" min="0" step="0.1" required>
+                  <span class="pwr-unit" id="speed-unit-label">km/h</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-toggle">
+              <span class="unit-toggle-label">Speed unit</span>
+              <div class="unit-toggle-btns">
+                <button type="button" class="unit-btn active" data-speed="kmh">km/h</button>
+                <button type="button" class="unit-btn" data-speed="mph">mph</button>
+              </div>
+            </div>
+
+            <h3 class="orm-table-heading">Cadence Table</h3>
+            <p class="input-hint cadence-table-hint">Speed at each cadence for your current setup. Rows at 85–95 RPM are typical endurance cadence.</p>
+            <div class="orm-table-wrap">
+              <table class="orm-table cadence-table">
+                <thead>
+                  <tr>
+                    <th>Cadence (RPM)</th>
+                    <th>Speed (km/h)</th>
+                    <th>Speed (mph)</th>
+                  </tr>
+                </thead>
+                <tbody id="cadence-table-body">
+                  <tr><td colspan="3" class="text-muted">Calculating…</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </form>
+        </div>
+
+        <div class="seo-content">
+          <h2>Cycling Cadence Calculator – How It Works</h2>
+          <p>The Cycling Cadence Calculator helps you understand the relationship between your pedaling cadence (RPM), riding speed, and bike gearing setup. Whether you're training for endurance, optimizing your gear choice, or simply curious about your numbers, this tool gives you instant, accurate insights.</p>
+
+          <h2>How It Works</h2>
+          <p>The calculator uses standard bicycle gear mathematics to link three key variables: cadence, speed, and your bike setup.</p>
+
+          <h3>Core Formulas</h3>
+          <ul>
+            <li><strong>Wheel Circumference (in mm)</strong><br>π × (rim BSD + 2 × tire width)<br>You can enter rim and tire sizes in millimeters or inches — the calculator handles conversion automatically.</li>
+            <li><strong>Gear Ratio</strong><br>chainring teeth ÷ cog teeth<br>(Example: 50/17 = 2.94)</li>
+            <li><strong>Speed from Cadence (km/h)</strong><br>speed = cadence × gear ratio × wheel circumference (mm) × 0.00006</li>
+            <li><strong>Cadence from Speed</strong><br>The same formula solved for RPM.</li>
+          </ul>
+
+          <p><strong>Example (default values):</strong> 700×25c wheel, 50/17 gearing, 90 RPM → 33.5 km/h (≈ 20.8 mph)</p>
+
+          <h3>Inputs</h3>
+          <div class="table-wrap">
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th>Section</th>
+                  <th>Fields</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Bike Setup</td>
+                  <td>Wheel preset (Road, Gravel, MTB, etc.), Rim BSD, Tire width, Chainring teeth, Cog teeth</td>
+                </tr>
+                <tr>
+                  <td>Speed &amp; Cadence</td>
+                  <td>Enter either value — the other updates automatically (last edited field drives the calculation)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Live Results (Sidebar)</h3>
+          <ul>
+            <li>Speed in km/h and mph</li>
+            <li>Cadence (RPM)</li>
+            <li>Gear Ratio (e.g., 2.94:1)</li>
+            <li>Development (meters per pedal revolution)</li>
+            <li>Wheel Circumference (mm)</li>
+          </ul>
+
+          <h3>Cadence Table</h3>
+          <p>See how your speed changes across different cadences (50–130 RPM in 5 RPM steps) for your current bike setup. Rows between 85–95 RPM are highlighted — this is the typical sweet spot for endurance riding.</p>
+
+          <h2>Why This Calculator Is Better</h2>
+          <ul>
+            <li><strong>Live updates</strong> — no "Calculate" button needed. Results refresh instantly as you type.</li>
+            <li><strong>Bidirectional</strong> — change cadence or speed freely.</li>
+            <li><strong>Helpful presets</strong> — common wheel sizes for road, gravel, and mountain bikes.</li>
+            <li><strong>Smart unit conversion</strong> — toggle between mm/inches and km/h/mph.</li>
+            <li><strong>Extra insights</strong> — gear ratio, development, and circumference always visible.</li>
+            <li><strong>Practical cadence table</strong> — focused range with endurance highlighting (no more NaN errors).</li>
+          </ul>
+
+          <p>Whether you're fine-tuning your training, choosing the right gears, or just exploring bike geometry, this tool makes complex cycling math simple and fast.</p>
+        </div>
+      </div>
+
+      <aside class="results-card">
+        <h3>Gear Summary</h3>
+        <div class="cd-result-main">
+          <span class="cd-value" id="result-speed-kmh">—</span>
+          <span class="cd-label">Speed</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Speed (mph)</span>
+          <span class="result-value" id="result-speed-mph">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Cadence</span>
+          <span class="result-value" id="result-cadence">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Gear ratio</span>
+          <span class="result-value" id="result-gear-ratio">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Development</span>
+          <span class="result-value" id="result-development">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Wheel circumference</span>
+          <span class="result-value" id="result-circumference">—</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="related-section">
+      <h3>Related Calculators</h3>
+      <div class="related-links">
+        <a href="power-to-weight-calculator.html">Power-to-Weight Calculator</a>
+        <a href="running-pace-calculator.html">Running Pace Calculator</a>
+        <a href="calories-burned.html">Calories Burned Calculator</a>
+        <a href="heart-rate-zones.html">Heart Rate Zones</a>
+        <a href="vo2-max-calculator.html">VO2 Max Calculator</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/calculators/" class="footer-link">Calculators</a>
+          <a href="/guides/" class="footer-link">Guides</a>
+          <a href="/blog/" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../faq.html" class="footer-link">FAQ</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc. Free fitness calculators.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators..." autocomplete="off">
+        <div id="search-results" class="search-results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="../js/theme.min.js"></script>
+  <script defer src="../js/main.min.js"></script>
+  <script defer src="../js/search.min.js"></script>
+  <script defer src="../js/cycling-cadence-calculator.min.js"></script>
+</body>
+</html>
