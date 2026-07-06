@@ -77,10 +77,8 @@
       var cm = parseFloat(document.getElementById('gfr-child-height-cm').value);
       return cm > 0 ? cm : 0;
     }
-    var ft = parseFloat(document.getElementById('gfr-child-height-ft').value) || 0;
     var inch = parseFloat(document.getElementById('gfr-child-height-in').value) || 0;
-    var totalIn = ft * 12 + inch;
-    return totalIn > 0 ? totalIn * 2.54 : 0;
+    return inch > 0 ? inch * 2.54 : 0;
   }
 
   function setVisible(el, on) {
@@ -150,11 +148,11 @@
         var cmRow = document.getElementById('gfr-child-height-cm-wrap');
         var imRow = document.getElementById('gfr-child-height-im-wrap');
         if (u === 'cm') {
-          cmRow.hidden = false;
-          imRow.hidden = true;
+          setVisible(cmRow, true);
+          setVisible(imRow, false);
         } else {
-          cmRow.hidden = true;
-          imRow.hidden = false;
+          setVisible(cmRow, false);
+          setVisible(imRow, true);
         }
       });
     });
