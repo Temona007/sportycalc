@@ -28,6 +28,7 @@
     { title: 'Protein Intake', subtitle: 'Daily protein needs', href: 'protein-intake.html', keywords: 'protein intake daily muscle' },
     { title: 'Water Intake', subtitle: 'Daily hydration', href: 'water-intake.html', keywords: 'water intake hydration daily' },
     { title: 'Calories Burned', subtitle: 'Activity calories', href: 'calories-burned.html', keywords: 'calories burned activity exercise' },
+    { title: 'Burpee Calorie Calculator', subtitle: 'Calories burned from burpees', href: 'burpee-calorie-calculator.html', keywords: 'burpee calorie calculator burpees calories burned HIIT squat thrust' },
     { title: 'Power-to-Weight', subtitle: 'W/kg, hp/lb ratio', href: 'power-to-weight-calculator.html', keywords: 'power weight ratio pwr cycling watts' },
     { title: 'Calorie Deficit', subtitle: 'Time to reach target weight', href: 'calorie-deficit-calculator.html', keywords: 'calorie deficit weight loss diet target date' },
     { title: 'Healthy Weight Calculator', subtitle: 'Ideal body weight, Robinson, Miller, Devine, Hamwi', href: 'healthy-weight-calculator.html', keywords: 'ideal weight healthy weight IBW ideal body weight Robinson Miller Devine Hamwi BMI range' },
