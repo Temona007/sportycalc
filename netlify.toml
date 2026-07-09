@@ -3,12 +3,6 @@
   functions = "netlify/functions"
 
 [[redirects]]
-  from = "/ads.txt"
-  to = "https://srv.adstxtmanager.com/19390/sportycalc.com"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/api/subscribe"
   to = "/.netlify/functions/subscribe"
   status = 200
