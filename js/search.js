@@ -8,6 +8,7 @@
 
   const CALCULATORS = [
     { title: 'BMI Calculator', subtitle: 'Body Mass Index', href: 'bmi-calculator.html', keywords: 'bmi body mass index weight height' },
+    { title: 'Underweight BMI Screening', subtitle: 'BMI, underweight severity & risk factors', href: 'anorexic-bmi-calculator.html', keywords: 'underweight bmi screening anorexic bmi low bmi underweight eating disorder risk assessment calculator' },
     { title: 'BMR Calculator', subtitle: 'Basal Metabolic Rate', href: 'bmr-calculator.html', keywords: 'bmr metabolic rate calories base' },
     { title: 'TDEE Calculator', subtitle: 'Total Daily Energy Expenditure', href: 'tdee-calculator.html', keywords: 'tdee calories daily expenditure' },
     { title: 'Calorie Calculator', subtitle: 'Daily calorie needs', href: 'calorie-calculator.html', keywords: 'calorie calories daily needs diet' },

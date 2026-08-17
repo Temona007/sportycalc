@@ -1615,6 +1615,125 @@ body {
   cursor: pointer;
   font-size: 0.9rem;
 }
+
+/* ===================== Anorexic BMI calculator ===================== */
+.anorexic-alert {
+  margin: 0 0 1.5rem;
+}
+.anorexic-fieldset {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-btn, 0.75rem);
+  padding: 1rem 1rem 0.75rem;
+  margin: 1.25rem 0 0;
+}
+.anorexic-fieldset legend {
+  font-weight: 600;
+  padding: 0 0.35rem;
+  font-size: 0.95rem;
+}
+.anorexic-check-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.55rem 1rem;
+  margin-top: 0.5rem;
+}
+@media (min-width: 640px) {
+  .anorexic-check-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.anorexic-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+.anorexic-check input {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+.anorexic-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+.anorexic-risk-box {
+  margin: 1rem 0;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-btn, 0.75rem);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border: 1px solid var(--border);
+}
+.anorexic-risk-value {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+.anorexic-risk-value[data-tier="critical"],
+.anorexic-bmi-class[data-tier="life-threatening"] { color: #dc2626; }
+.anorexic-risk-value[data-tier="high"],
+.anorexic-bmi-class[data-tier="severe"] { color: #ea580c; }
+.anorexic-risk-value[data-tier="elevated"],
+.anorexic-bmi-class[data-tier="moderate"],
+.anorexic-bmi-class[data-tier="mild"] { color: #ca8a04; }
+.anorexic-risk-value[data-tier="low"],
+.anorexic-bmi-class[data-tier="not-underweight"] { color: var(--accent); }
+.anorexic-risk-desc {
+  margin: 0.4rem 0 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+.anorexic-advice {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+.anorexic-advice p { margin: 0 0 0.65rem; }
+.anorexic-crisis {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-btn, 0.75rem);
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  font-size: 0.9rem;
+}
+.anorexic-crisis ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+}
+.anorexic-bmi-legend {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+.anorexic-bmi-legend h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+}
+.anorexic-bmi-legend ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.anorexic-bmi-legend li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.25rem 0;
+  color: var(--text-secondary);
+}
+.anorexic-bmi-legend span { font-weight: 600; color: var(--text-primary); }
+.anorexic-scale .bmi-scale-ticks {
+  font-size: 0.7rem;
+}
+
 .water-result-main {
   text-align: center;
   margin-bottom: 1rem;
