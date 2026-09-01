@@ -37,6 +37,7 @@
     { title: 'Running Pace Calculator', subtitle: '5K, 10K, marathon finish time', href: 'running-pace-calculator.html', keywords: 'running pace calculator race time 5K 10K marathon pace' },
     { title: 'Marathon Calculator', subtitle: 'Goal time to training splits (Riegel)', href: 'marathon-calculator.html', keywords: 'marathon calculator goal time race time predictor Riegel formula half marathon splits training pace' },
     { title: 'Cycling Cadence Calculator', subtitle: 'Cadence, speed & gear ratio', href: 'cycling-cadence-calculator.html', keywords: 'cycling cadence calculator bike speed RPM gear ratio chainring cog wheel' },
+    { title: 'Triathlon Calculator', subtitle: 'Swim, bike, run & transition times', href: 'triathlon-calculator.html', keywords: 'triathlon calculator ironman 70.3 olympic sprint swim bike run pace transition T1 T2' },
     { title: 'VO2 Max Calculator', subtitle: 'Aerobic capacity estimate', href: 'vo2-max-calculator.html', keywords: 'vo2 max aerobic capacity oxygen uptake fitness cardio' },
     { title: 'Fitness Age Calculator', subtitle: 'How young does your body perform?', href: 'fitness-age-calculator.html', keywords: 'fitness age calculator vitality age VO2max resting heart rate aerobic fitness' },
     { title: 'Protein in Food Calculator', subtitle: 'Estimate protein in common foods', href: 'protein-in-food-calculator.html', keywords: 'protein in food protein calculator food nutrition' },

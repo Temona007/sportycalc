@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Ezoic Privacy Scripts -->
+  <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+  <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+  <!-- Ezoic Header Script -->
+  <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+  <script>
+    window.ezstandalone = window.ezstandalone || {};
+    ezstandalone.cmd = ezstandalone.cmd || [];
+  </script>
+  <script src="//ezoicanalytics.com/analytics.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8276223173310357"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Free Triathlon Calculator – Plan your race with accurate swim, bike, and run time predictions. Supports Sprint, Olympic, Half-Ironman, Ironman, and custom distances. Calculate total race time with transitions.">
+  <meta name="keywords" content="triathlon calculator, triathlon time calculator, ironman calculator, olympic triathlon pace, 70.3 calculator, swim bike run transitions">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/triathlon-calculator.html">
+  <title>Triathlon Calculator | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/triathlon-calculator.html">
+  <meta property="og:title" content="Triathlon Calculator | SportyCalc">
+  <meta property="og:description" content="Free Triathlon Calculator – Plan your race with accurate swim, bike, and run time predictions. Supports Sprint, Olympic, Half-Ironman, Ironman, and custom distances.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Triathlon Calculator | SportyCalc">
+  <meta name="twitter:description" content="Free Triathlon Calculator – Plan your race with accurate swim, bike, and run time predictions, including transitions.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.min.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Triathlon Calculator","url":"https://sportycalc.com/calculators/triathlon-calculator.html","description":"Free Triathlon Calculator – Plan your race with accurate swim, bike, and run time predictions. Supports Sprint, Olympic, Half-Ironman, Ironman, and custom distances. Calculate total race time with transitions.","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="SportyCalc" title="SportyCalc - Home" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="/calculators/" class="nav-link active">Calculators</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <a href="../fitness-quiz.html" class="nav-link nav-link-brand">Quiz</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="/calculators/" class="mobile-nav-link">Calculators</a>
+    <a href="/guides/" class="mobile-nav-link">Guides</a>
+    <a href="/blog/" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+    <a href="../fitness-quiz.html" class="mobile-nav-link mobile-nav-link-brand">Quiz</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/calculators/">Calculators</a>
+        <span>/</span>
+        <span>Triathlon Calculator</span>
+      </nav>
+      <h1>Triathlon Calculator</h1>
+      <p class="hero-desc">Enter pace, speed, or split times for swim, bike, and run — plus transitions — to get your total race time. Updates live as you type.</p>
+    </section>
+
+    <div class="ezoicad" data-mobile_sizes="300x250,336x280" data-desktop_sizes="728x90,970x250" data-location="under_page_title"></div>
+
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <form id="triathlon-form">
+            <div class="form-header">
+              <h2>Race Setup</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Units</span>
+                <div class="unit-toggle-btns">
+                  <button type="button" class="unit-btn active" data-unit="metric">Metric</button>
+                  <button type="button" class="unit-btn" data-unit="imperial">Imperial</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="unit-toggle">
+              <span class="unit-toggle-label">Distances</span>
+              <div class="unit-toggle-btns tri-preset-btns">
+                <button type="button" class="unit-btn active" data-preset="sprint">Sprint</button>
+                <button type="button" class="unit-btn" data-preset="olympic">Olympic</button>
+                <button type="button" class="unit-btn" data-preset="half">Half-Ironman</button>
+                <button type="button" class="unit-btn" data-preset="ironman">Ironman</button>
+                <button type="button" class="unit-btn" data-preset="custom">Custom</button>
+              </div>
+            </div>
+
+            <div class="input-row tri-dist-row">
+              <div class="input-group">
+                <label for="dist-swim">Swim</label>
+                <div class="pwr-input-wrap">
+                  <input type="number" id="dist-swim" value="0.75" min="0" step="0.01" inputmode="decimal" aria-label="Swim distance">
+                  <span class="pwr-unit" id="dist-swim-unit">km</span>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="dist-bike">Bike</label>
+                <div class="pwr-input-wrap">
+                  <input type="number" id="dist-bike" value="20" min="0" step="0.1" inputmode="decimal" aria-label="Bike distance">
+                  <span class="pwr-unit" id="dist-bike-unit">km</span>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="dist-run">Run</label>
+                <div class="pwr-input-wrap">
+                  <input type="number" id="dist-run" value="5" min="0" step="0.1" inputmode="decimal" aria-label="Run distance">
+                  <span class="pwr-unit" id="dist-run-unit">km</span>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="cadence-section-heading">Paces and Times</h2>
+            <div class="tri-splits-head">
+              <span></span>
+              <span>Pace / Speed</span>
+              <span>Time</span>
+            </div>
+
+            <div class="tri-split-row">
+              <div class="tri-split-label">Swim</div>
+              <div class="tri-split-pace">
+                <div class="time-input-row">
+                  <input type="number" id="swim-pace-min" min="0" max="99" step="1" placeholder="2" aria-label="Swim pace minutes">
+                  <span class="time-sep">min</span>
+                  <input type="number" id="swim-pace-sec" min="0" max="59" step="1" placeholder="00" aria-label="Swim pace seconds">
+                  <span class="time-sep" id="swim-pace-unit">/100m</span>
+                </div>
+              </div>
+              <div class="tri-split-time">
+                <div class="time-input-row">
+                  <input type="number" id="swim-h" value="0" min="0" max="99" step="1" aria-label="Swim hours">
+                  <span class="time-sep">h</span>
+                  <input type="number" id="swim-m" value="00" min="0" max="59" step="1" aria-label="Swim minutes">
+                  <span class="time-sep">min</span>
+                  <input type="number" id="swim-s" value="00" min="0" max="59" step="1" aria-label="Swim seconds">
+                  <span class="time-sep">sec</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tri-split-row tri-split-transit">
+              <div class="tri-split-label">T1</div>
+              <div class="tri-split-pace"><span class="tri-transit-hint">Swim → bike</span></div>
+              <div class="tri-split-time">
+                <div class="time-input-row">
+                  <input type="number" id="t1-m" value="2" min="0" max="99" step="1" aria-label="T1 minutes">
+                  <span class="time-sep">min</span>
+                  <input type="number" id="t1-s" value="00" min="0" max="59" step="1" aria-label="T1 seconds">
+                  <span class="time-sep">sec</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tri-split-row">
+              <div class="tri-split-label">Bike</div>
+              <div class="tri-split-pace">
+                <div class="pwr-input-wrap">
+                  <input type="number" id="bike-speed" min="0" step="0.1" placeholder="30" inputmode="decimal" aria-label="Bike speed">
+                  <span class="pwr-unit" id="bike-speed-unit">km/h</span>
+                </div>
+              </div>
+              <div class="tri-split-time">
+                <div class="time-input-row">
+                  <input type="number" id="bike-h" value="0" min="0" max="99" step="1" aria-label="Bike hours">
+                  <span class="time-sep">h</span>
+                  <input type="number" id="bike-m" value="00" min="0" max="59" step="1" aria-label="Bike minutes">
+                  <span class="time-sep">min</span>
+                  <input type="number" id="bike-s" value="00" min="0" max="59" step="1" aria-label="Bike seconds">
+                  <span class="time-sep">sec</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tri-split-row tri-split-transit">
+              <div class="tri-split-label">T2</div>
+              <div class="tri-split-pace"><span class="tri-transit-hint">Bike → run</span></div>
+              <div class="tri-split-time">
+                <div class="time-input-row">
+                  <input type="number" id="t2-m" value="2" min="0" max="99" step="1" aria-label="T2 minutes">
+                  <span class="time-sep">min</span>
+                  <input type="number" id="t2-s" value="00" min="0" max="59" step="1" aria-label="T2 seconds">
+                  <span class="time-sep">sec</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tri-split-row">
+              <div class="tri-split-label">Run</div>
+              <div class="tri-split-pace">
+                <div class="time-input-row">
+                  <input type="number" id="run-pace-min" min="0" max="99" step="1" placeholder="5" aria-label="Run pace minutes">
+                  <span class="time-sep">min</span>
+                  <input type="number" id="run-pace-sec" min="0" max="59" step="1" placeholder="00" aria-label="Run pace seconds">
+                  <span class="time-sep" id="run-pace-unit">/km</span>
+                </div>
+              </div>
+              <div class="tri-split-time">
+                <div class="time-input-row">
+                  <input type="number" id="run-h" value="0" min="0" max="99" step="1" aria-label="Run hours">
+                  <span class="time-sep">h</span>
+                  <input type="number" id="run-m" value="00" min="0" max="59" step="1" aria-label="Run minutes">
+                  <span class="time-sep">min</span>
+                  <input type="number" id="run-s" value="00" min="0" max="59" step="1" aria-label="Run seconds">
+                  <span class="time-sep">sec</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tri-total-bar">
+              <span class="tri-total-label">Total time</span>
+              <span class="tri-total-value" id="total-time">0:04:00</span>
+            </div>
+          </form>
+        </div>
+
+        <div class="seo-content">
+          <h2>Triathlon Calculator: Predict Your Race Time with Precision</h2>
+          <p>Planning a triathlon? Whether you’re racing a Sprint, Olympic, Half-Ironman, or full Ironman, knowing your expected finish time is essential for pacing and goal setting.</p>
+          <p>Our free Triathlon Calculator lets you estimate your total race time by combining swim, bike, and run performance — including transition times (T1 and T2).</p>
+
+          <h2>How the Triathlon Calculator Works</h2>
+          <p>Key features:</p>
+          <ul>
+            <li><strong>Unit Toggle</strong> — Switch between Metric and Imperial</li>
+            <li><strong>Race Presets</strong> — Sprint, Olympic, Half-Ironman (70.3), and Ironman (140.6)</li>
+            <li><strong>Custom Distances</strong> — Enter your own swim, bike, and run distances</li>
+            <li><strong>Live Pace ↔ Time Conversion</strong>
+              <ul>
+                <li>Swim: pace (min/100m or min/100yd) ↔ split time</li>
+                <li>Bike: speed (km/h or mph) ↔ split time</li>
+                <li>Run: pace (min/km or min/mi) ↔ split time</li>
+              </ul>
+            </li>
+            <li><strong>Transition Times</strong> — Add T1 (swim to bike) and T2 (bike to run)</li>
+            <li><strong>Real-time Results</strong> — Total time updates automatically</li>
+          </ul>
+
+          <h2>What You’ll See in the Results</h2>
+          <ul>
+            <li>Total estimated race time</li>
+            <li>Individual split times (Swim, T1, Bike, T2, Run)</li>
+            <li>Your swim pace, bike speed, and run pace</li>
+          </ul>
+
+          <h2>Supported Race Distances</h2>
+          <div class="table-wrap">
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th>Race Type</th>
+                  <th>Swim</th>
+                  <th>Bike</th>
+                  <th>Run</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sprint</td>
+                  <td>750 m</td>
+                  <td>20 km</td>
+                  <td>5 km</td>
+                </tr>
+                <tr>
+                  <td>Olympic</td>
+                  <td>1.5 km</td>
+                  <td>40 km</td>
+                  <td>10 km</td>
+                </tr>
+                <tr>
+                  <td>Half-Ironman</td>
+                  <td>1.9 km</td>
+                  <td>90 km</td>
+                  <td>21.1 km</td>
+                </tr>
+                <tr>
+                  <td>Ironman</td>
+                  <td>3.8 km</td>
+                  <td>180 km</td>
+                  <td>42.2 km</td>
+                </tr>
+                <tr>
+                  <td>Custom</td>
+                  <td>Your choice</td>
+                  <td>Your choice</td>
+                  <td>Your choice</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Why Use This Triathlon Calculator?</h2>
+          <ul>
+            <li>Set realistic race goals</li>
+            <li>Plan pacing strategy across all three disciplines</li>
+            <li>Experiment with different swim, bike, and run performances</li>
+            <li>Account for transition times (often overlooked)</li>
+            <li>Useful for both beginners and experienced triathletes</li>
+          </ul>
+
+          <h2>Pro Tips for Better Predictions</h2>
+          <ul>
+            <li>Use recent training data for more accurate inputs</li>
+            <li>Be conservative with transition times if you’re new to racing</li>
+            <li>Account for course conditions (hills, wind, open water)</li>
+            <li>Practice transitions in training — they can save valuable minutes</li>
+          </ul>
+          <p>Combine with other SportyCalc tools:</p>
+          <ul>
+            <li>Use the <a href="running-pace-calculator.html" title="Running Pace Calculator">Pace Calculator</a> to refine run and swim paces</li>
+            <li>Check your <a href="fitness-age-calculator.html" title="Fitness Age Calculator">Fitness Age</a> to track overall endurance progress</li>
+            <li>Plan nutrition with the <a href="tdee-calculator.html" title="TDEE Calculator">TDEE</a> and <a href="macro-calculator.html" title="Macro Calculator">Macro Calculators</a></li>
+          </ul>
+
+          <p><strong>Disclaimer:</strong> Race time predictions are estimates only. Actual performance depends on fitness level, course difficulty, weather, nutrition, and race-day conditions. This tool is for planning and educational purposes.</p>
+
+          <p><strong>Ready to plan your next triathlon?</strong> Enter your expected paces and speeds above to calculate your total race time.</p>
+        </div>
+      </div>
+
+      <aside class="results-card">
+        <h3>Race Breakdown</h3>
+        <div class="cd-result-main">
+          <span class="cd-value" id="sidebar-total">0:04:00</span>
+          <span class="cd-label">Total time</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Swim</span>
+          <span class="result-value" id="sidebar-swim">0:00:00</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Swim pace</span>
+          <span class="result-value" id="sidebar-swim-pace">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">T1</span>
+          <span class="result-value" id="sidebar-t1">0:02:00</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Bike</span>
+          <span class="result-value" id="sidebar-bike">0:00:00</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Bike speed</span>
+          <span class="result-value" id="sidebar-bike-speed">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">T2</span>
+          <span class="result-value" id="sidebar-t2">0:02:00</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Run</span>
+          <span class="result-value" id="sidebar-run">0:00:00</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Run pace</span>
+          <span class="result-value" id="sidebar-run-pace">—</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="ezoicad" data-sizes="300x250,336x280" data-location="mid_content"></div>
+
+
+    <div class="related-section">
+      <h3>Related Calculators</h3>
+      <div class="related-links">
+        <a href="running-pace-calculator.html">Running Pace Calculator</a>
+        <a href="marathon-calculator.html">Marathon Calculator</a>
+        <a href="cycling-cadence-calculator.html">Cycling Cadence Calculator</a>
+        <a href="calories-burned.html">Calories Burned Calculator</a>
+        <a href="vo2-max-calculator.html">VO2 Max Calculator</a>
+      </div>
+    </div>
+    <div class="ezoicad" data-mobile_sizes="300x250,336x280" data-desktop_sizes="728x90,970x250" data-location="bottom_of_page"></div>
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(".ezoicad");
+      });
+    </script>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/calculators/" class="footer-link">Calculators</a>
+          <a href="/guides/" class="footer-link">Guides</a>
+          <a href="/blog/" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../faq.html" class="footer-link">FAQ</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc. Free fitness calculators.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators..." autocomplete="off">
+        <div id="search-results" class="search-results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="../js/theme.min.js"></script>
+  <script defer src="../js/main.min.js"></script>
+  <script defer src="../js/search.min.js"></script>
+  <script defer src="../js/triathlon-calculator.min.js"></script>
+</body>
+</html>
