@@ -5182,12 +5182,33 @@ button.page-share-btn {
   background: var(--bg-elevated);
   border-top: none;
   border-radius: var(--radius-btn);
-  padding: 0.9rem 1rem 0.25rem;
-  margin: 0.35rem 0;
+  padding: 0.4rem 0.75rem;
+  margin: 0.2rem 0;
 }
 
-.tri-leg-transit .tri-leg-fields {
-  max-width: 20rem;
+.tri-transit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tri-leg-transit .tri-leg-title {
+  margin-bottom: 0;
+  font-size: 0.8125rem;
+}
+
+.tri-leg-transit .tri-compound {
+  flex: 0 1 11rem;
+  width: 11rem;
+  max-width: 100%;
+  gap: 0.35rem;
+}
+
+.tri-leg-transit .pwr-input-wrap input {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.875rem;
 }
 
 .tri-transit-hint {
