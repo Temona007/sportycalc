@@ -5125,54 +5125,74 @@ button.page-share-btn {
   }
 }
 
-.tri-splits-head {
-  display: none;
+.tri-leg {
+  padding: 1rem 0 0.25rem;
+  border-top: 1px solid var(--border);
 }
 
-.tri-split-row {
-  padding: 0.9rem 0;
-  border-bottom: 1px solid var(--border);
+.cadence-section-heading + .tri-leg {
+  border-top: none;
+  padding-top: 0;
 }
 
-.tri-split-row:last-of-type {
-  border-bottom: none;
+.tri-leg-fields.input-row {
+  grid-template-columns: 1fr;
 }
 
-.tri-split-label {
-  font-weight: 600;
+@media (min-width: 640px) {
+  .tri-leg-fields.input-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.tri-leg-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
   font-size: 0.9375rem;
+  font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.75rem;
 }
 
-.tri-split-pace,
-.tri-split-time {
-  margin-bottom: 0.65rem;
-}
-
-.tri-split-row .time-input-row {
-  flex-wrap: nowrap;
-}
-
-.tri-split-row .time-input-row input {
-  width: 3.35rem;
-  min-width: 0;
-}
-
-.tri-split-time {
+.tri-leg-fields {
   margin-bottom: 0;
 }
 
-.tri-split-transit {
+.tri-leg-fields .input-group {
+  margin-bottom: 0.75rem;
+}
+
+.tri-compound {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.tri-compound-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tri-compound .pwr-input-wrap input,
+.tri-leg-fields .pwr-input-wrap input {
+  min-width: 0;
+}
+
+.tri-leg-transit {
   background: var(--bg-elevated);
-  border-bottom: none;
+  border-top: none;
   border-radius: var(--radius-btn);
-  padding: 0.85rem 1rem;
+  padding: 0.9rem 1rem 0.25rem;
   margin: 0.35rem 0;
+}
+
+.tri-leg-transit .tri-leg-fields {
+  max-width: 20rem;
 }
 
 .tri-transit-hint {
   font-size: 0.8125rem;
+  font-weight: 400;
   color: var(--text-muted);
 }
 
@@ -5198,35 +5218,4 @@ button.page-share-btn {
   font-weight: 600;
   color: var(--primary);
   font-variant-numeric: tabular-nums;
-}
-
-@media (min-width: 720px) {
-  .tri-splits-head,
-  .tri-split-row {
-    display: grid;
-    grid-template-columns: 4.75rem minmax(0, 1fr) minmax(0, 1.15fr);
-    gap: 0.75rem 1rem;
-    align-items: center;
-  }
-
-  .tri-splits-head {
-    display: grid;
-    margin-bottom: 0.35rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-  }
-
-  .tri-split-label,
-  .tri-split-pace,
-  .tri-split-time {
-    margin-bottom: 0;
-  }
-
-  .tri-split-transit {
-    margin: 0.35rem 0;
-    padding: 0.75rem 1rem;
-  }
 }

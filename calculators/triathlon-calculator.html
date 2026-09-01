@@ -149,98 +149,143 @@
             </div>
 
             <h2 class="cadence-section-heading">Paces and Times</h2>
-            <div class="tri-splits-head">
-              <span></span>
-              <span>Pace / Speed</span>
-              <span>Time</span>
-            </div>
 
-            <div class="tri-split-row">
-              <div class="tri-split-label">Swim</div>
-              <div class="tri-split-pace">
-                <div class="time-input-row">
-                  <input type="number" id="swim-pace-min" min="0" max="99" step="1" placeholder="2" aria-label="Swim pace minutes">
-                  <span class="time-sep">min</span>
-                  <input type="number" id="swim-pace-sec" min="0" max="59" step="1" placeholder="00" aria-label="Swim pace seconds">
-                  <span class="time-sep" id="swim-pace-unit">/100m</span>
+            <div class="tri-leg">
+              <div class="tri-leg-title">Swim</div>
+              <div class="input-row tri-leg-fields">
+                <div class="input-group">
+                  <label for="swim-pace-min">Pace</label>
+                  <div class="tri-compound">
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="swim-pace-min" min="0" max="99" step="1" placeholder="2" aria-label="Swim pace minutes">
+                      <span class="pwr-unit">min</span>
+                    </div>
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="swim-pace-sec" min="0" max="59" step="1" placeholder="00" aria-label="Swim pace seconds">
+                      <span class="pwr-unit" id="swim-pace-unit">/100m</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="tri-split-time">
-                <div class="time-input-row">
-                  <input type="number" id="swim-h" value="0" min="0" max="99" step="1" aria-label="Swim hours">
-                  <span class="time-sep">h</span>
-                  <input type="number" id="swim-m" value="00" min="0" max="59" step="1" aria-label="Swim minutes">
-                  <span class="time-sep">min</span>
-                  <input type="number" id="swim-s" value="00" min="0" max="59" step="1" aria-label="Swim seconds">
-                  <span class="time-sep">sec</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="tri-split-row tri-split-transit">
-              <div class="tri-split-label">T1</div>
-              <div class="tri-split-pace"><span class="tri-transit-hint">Swim → bike</span></div>
-              <div class="tri-split-time">
-                <div class="time-input-row">
-                  <input type="number" id="t1-m" value="2" min="0" max="99" step="1" aria-label="T1 minutes">
-                  <span class="time-sep">min</span>
-                  <input type="number" id="t1-s" value="00" min="0" max="59" step="1" aria-label="T1 seconds">
-                  <span class="time-sep">sec</span>
+                <div class="input-group">
+                  <label for="swim-h">Time</label>
+                  <div class="tri-compound tri-compound-3">
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="swim-h" value="0" min="0" max="99" step="1" aria-label="Swim hours">
+                      <span class="pwr-unit">h</span>
+                    </div>
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="swim-m" value="00" min="0" max="59" step="1" aria-label="Swim minutes">
+                      <span class="pwr-unit">min</span>
+                    </div>
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="swim-s" value="00" min="0" max="59" step="1" aria-label="Swim seconds">
+                      <span class="pwr-unit">sec</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="tri-split-row">
-              <div class="tri-split-label">Bike</div>
-              <div class="tri-split-pace">
-                <div class="pwr-input-wrap">
-                  <input type="number" id="bike-speed" min="0" step="0.1" placeholder="30" inputmode="decimal" aria-label="Bike speed">
-                  <span class="pwr-unit" id="bike-speed-unit">km/h</span>
-                </div>
-              </div>
-              <div class="tri-split-time">
-                <div class="time-input-row">
-                  <input type="number" id="bike-h" value="0" min="0" max="99" step="1" aria-label="Bike hours">
-                  <span class="time-sep">h</span>
-                  <input type="number" id="bike-m" value="00" min="0" max="59" step="1" aria-label="Bike minutes">
-                  <span class="time-sep">min</span>
-                  <input type="number" id="bike-s" value="00" min="0" max="59" step="1" aria-label="Bike seconds">
-                  <span class="time-sep">sec</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="tri-split-row tri-split-transit">
-              <div class="tri-split-label">T2</div>
-              <div class="tri-split-pace"><span class="tri-transit-hint">Bike → run</span></div>
-              <div class="tri-split-time">
-                <div class="time-input-row">
-                  <input type="number" id="t2-m" value="2" min="0" max="99" step="1" aria-label="T2 minutes">
-                  <span class="time-sep">min</span>
-                  <input type="number" id="t2-s" value="00" min="0" max="59" step="1" aria-label="T2 seconds">
-                  <span class="time-sep">sec</span>
+            <div class="tri-leg tri-leg-transit">
+              <div class="tri-leg-title">T1 <span class="tri-transit-hint">Swim → bike</span></div>
+              <div class="input-row tri-leg-fields">
+                <div class="input-group">
+                  <label for="t1-m">Time</label>
+                  <div class="tri-compound">
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="t1-m" value="2" min="0" max="99" step="1" aria-label="T1 minutes">
+                      <span class="pwr-unit">min</span>
+                    </div>
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="t1-s" value="00" min="0" max="59" step="1" aria-label="T1 seconds">
+                      <span class="pwr-unit">sec</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="tri-split-row">
-              <div class="tri-split-label">Run</div>
-              <div class="tri-split-pace">
-                <div class="time-input-row">
-                  <input type="number" id="run-pace-min" min="0" max="99" step="1" placeholder="5" aria-label="Run pace minutes">
-                  <span class="time-sep">min</span>
-                  <input type="number" id="run-pace-sec" min="0" max="59" step="1" placeholder="00" aria-label="Run pace seconds">
-                  <span class="time-sep" id="run-pace-unit">/km</span>
+            <div class="tri-leg">
+              <div class="tri-leg-title">Bike</div>
+              <div class="input-row tri-leg-fields">
+                <div class="input-group">
+                  <label for="bike-speed">Speed</label>
+                  <div class="pwr-input-wrap">
+                    <input type="number" id="bike-speed" min="0" step="0.1" placeholder="30" inputmode="decimal" aria-label="Bike speed">
+                    <span class="pwr-unit" id="bike-speed-unit">km/h</span>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="bike-h">Time</label>
+                  <div class="tri-compound tri-compound-3">
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="bike-h" value="0" min="0" max="99" step="1" aria-label="Bike hours">
+                      <span class="pwr-unit">h</span>
+                    </div>
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="bike-m" value="00" min="0" max="59" step="1" aria-label="Bike minutes">
+                      <span class="pwr-unit">min</span>
+                    </div>
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="bike-s" value="00" min="0" max="59" step="1" aria-label="Bike seconds">
+                      <span class="pwr-unit">sec</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="tri-split-time">
-                <div class="time-input-row">
-                  <input type="number" id="run-h" value="0" min="0" max="99" step="1" aria-label="Run hours">
-                  <span class="time-sep">h</span>
-                  <input type="number" id="run-m" value="00" min="0" max="59" step="1" aria-label="Run minutes">
-                  <span class="time-sep">min</span>
-                  <input type="number" id="run-s" value="00" min="0" max="59" step="1" aria-label="Run seconds">
-                  <span class="time-sep">sec</span>
+            </div>
+
+            <div class="tri-leg tri-leg-transit">
+              <div class="tri-leg-title">T2 <span class="tri-transit-hint">Bike → run</span></div>
+              <div class="input-row tri-leg-fields">
+                <div class="input-group">
+                  <label for="t2-m">Time</label>
+                  <div class="tri-compound">
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="t2-m" value="2" min="0" max="99" step="1" aria-label="T2 minutes">
+                      <span class="pwr-unit">min</span>
+                    </div>
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="t2-s" value="00" min="0" max="59" step="1" aria-label="T2 seconds">
+                      <span class="pwr-unit">sec</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tri-leg">
+              <div class="tri-leg-title">Run</div>
+              <div class="input-row tri-leg-fields">
+                <div class="input-group">
+                  <label for="run-pace-min">Pace</label>
+                  <div class="tri-compound">
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="run-pace-min" min="0" max="99" step="1" placeholder="5" aria-label="Run pace minutes">
+                      <span class="pwr-unit">min</span>
+                    </div>
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="run-pace-sec" min="0" max="59" step="1" placeholder="00" aria-label="Run pace seconds">
+                      <span class="pwr-unit" id="run-pace-unit">/km</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="run-h">Time</label>
+                  <div class="tri-compound tri-compound-3">
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="run-h" value="0" min="0" max="99" step="1" aria-label="Run hours">
+                      <span class="pwr-unit">h</span>
+                    </div>
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="run-m" value="00" min="0" max="59" step="1" aria-label="Run minutes">
+                      <span class="pwr-unit">min</span>
+                    </div>
+                    <div class="pwr-input-wrap">
+                      <input type="number" id="run-s" value="00" min="0" max="59" step="1" aria-label="Run seconds">
+                      <span class="pwr-unit">sec</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
