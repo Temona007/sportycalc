@@ -19,20 +19,43 @@
 
   let currentUnit = 'mimi'; // min/mi or min/km
 
-  // Distances: { label, miles } - matches Strava exact values
-  const DISTANCES = [
-    { label: '1 mi', miles: 1, tier: 'short' },
-    { label: '2 mi', miles: 2, tier: 'short' },
-    { label: '5K', miles: 3.10686, tier: 'short' },
-    { label: '5 mi', miles: 5, tier: 'mid' },
-    { label: '10K', miles: 6.21372, tier: 'mid' },
-    { label: '10 mi', miles: 10, tier: 'mid' },
-    { label: 'Half Marathon', miles: 13.1094, tier: 'half' },
-    { label: 'Marathon', miles: 26.2188, tier: 'long' },
-    { label: '50K', miles: 31.0686, tier: 'long' }
+  const MILES_PER_KM = 0.621371;
+  const KM_PER_MILE = 1 / MILES_PER_KM;
+
+  // Official race distances in km; mile equivalents use the same constant so
+  // switching units keeps identical finish times for the same effort.
+  const RACE_KM = {
+    fiveK: 5,
+    tenK: 10,
+    half: 21.0975,
+    marathon: 42.195,
+    fiftyK: 50
+  };
+
+  // Distance lists switch with unit (Strava-style)
+  const DISTANCES_MI = [
+    { label: '1 mi', distance: 1, tier: 'short' },
+    { label: '2 mi', distance: 2, tier: 'short' },
+    { label: '5K', distance: RACE_KM.fiveK * MILES_PER_KM, tier: 'short' },
+    { label: '5 mi', distance: 5, tier: 'mid' },
+    { label: '10K', distance: RACE_KM.tenK * MILES_PER_KM, tier: 'mid' },
+    { label: '10 mi', distance: 10, tier: 'mid' },
+    { label: 'Half Marathon', distance: RACE_KM.half * MILES_PER_KM, tier: 'half' },
+    { label: 'Marathon', distance: RACE_KM.marathon * MILES_PER_KM, tier: 'long' },
+    { label: '50K', distance: RACE_KM.fiftyK * MILES_PER_KM, tier: 'long' }
   ];
 
-  const MILES_PER_KM = 0.621371;
+  const DISTANCES_KM = [
+    { label: '1 km', distance: 1, tier: 'short' },
+    { label: '2 km', distance: 2, tier: 'short' },
+    { label: '5K', distance: RACE_KM.fiveK, tier: 'short' },
+    { label: '10K', distance: RACE_KM.tenK, tier: 'mid' },
+    { label: '15 km', distance: 15, tier: 'mid' },
+    { label: '20 km', distance: 20, tier: 'mid' },
+    { label: 'Half Marathon', distance: RACE_KM.half, tier: 'half' },
+    { label: 'Marathon', distance: RACE_KM.marathon, tier: 'long' },
+    { label: '50K', distance: RACE_KM.fiftyK, tier: 'long' }
+  ];
 
   function formatTime(totalMinutes) {
     const totalSec = Math.round(totalMinutes * 60);
@@ -45,33 +68,40 @@
     return m + ':' + String(s).padStart(2, '0');
   }
 
-  function getPaceMinPerMile() {
+  function formatPaceParts(paceMinutes) {
+    const totalSec = Math.round(paceMinutes * 60);
+    const m = Math.floor(totalSec / 60);
+    const s = totalSec % 60;
+    return { min: m, sec: s, text: m + ':' + String(s).padStart(2, '0') };
+  }
+
+  function getPaceInputMinutes() {
     const min = parseFloat(paceMinInput.value) || 0;
     const sec = parseFloat(paceSecInput.value) || 0;
     return min + sec / 60;
   }
 
+  function setPaceInputs(paceMinutes) {
+    const parts = formatPaceParts(paceMinutes);
+    paceMinInput.value = String(parts.min);
+    paceSecInput.value = String(parts.sec);
+  }
+
+  function getDistances() {
+    return currentUnit === 'mimi' ? DISTANCES_MI : DISTANCES_KM;
+  }
+
   function runCalculation() {
-    const paceMinPerMile = getPaceMinPerMile();
-    if (!paceMinPerMile || paceMinPerMile <= 0) return;
+    const paceInput = getPaceInputMinutes();
+    if (!paceInput || paceInput <= 0) return;
 
-    let paceMinPerUnit;
-    let unitLabel;
-    if (currentUnit === 'mimi') {
-      paceMinPerUnit = paceMinPerMile;
-      unitLabel = 'mi';
-    } else {
-      paceMinPerUnit = paceMinPerMile / MILES_PER_KM; // min per km
-      unitLabel = 'km';
-    }
-
-    const paceStr = Math.floor(paceMinPerMile) + ':' + String(Math.round((paceMinPerMile % 1) * 60)).padStart(2, '0');
-    paceDisplay.textContent = 'At ' + paceStr + ' /' + (currentUnit === 'mimi' ? 'mi' : 'km');
+    const unitSuffix = currentUnit === 'mimi' ? 'mi' : 'km';
+    paceDisplay.textContent = 'At ' + formatPaceParts(paceInput).text + ' /' + unitSuffix;
 
     let html = '';
-    DISTANCES.forEach(function (d) {
-      const totalMinutes = paceMinPerMile * d.miles;
-      const timeStr = formatTime(totalMinutes);
+    getDistances().forEach(function (d) {
+      // Same-unit math: min/mi × miles, or min/km × km
+      const timeStr = formatTime(paceInput * d.distance);
       html += '<div class="pace-result-item pace-tier-' + d.tier + '">';
       html += '<span class="pace-result-label">' + d.label + '</span>';
       html += '<span class="pace-result-value">' + timeStr + '</span>';
@@ -85,8 +115,23 @@
     runCalculation();
   }
 
+  function convertPace(fromUnit, toUnit, paceMinutes) {
+    if (fromUnit === toUnit) return paceMinutes;
+    // 12:00/mi → ~7:27/km ; 7:27/km → ~12:00/mi
+    if (fromUnit === 'mimi' && toUnit === 'mikm') {
+      return paceMinutes * MILES_PER_KM;
+    }
+    return paceMinutes * KM_PER_MILE;
+  }
+
   function setUnit(unit) {
+    if (!unit || unit === currentUnit) return;
+
+    const previousUnit = currentUnit;
+    const converted = convertPace(previousUnit, unit, getPaceInputMinutes());
     currentUnit = unit;
+    setPaceInputs(converted);
+
     const mimiBtn = form.querySelector('.unit-btn[data-unit="mimi"]');
     const mikmBtn = form.querySelector('.unit-btn[data-unit="mikm"]');
     if (unit === 'mimi') {
