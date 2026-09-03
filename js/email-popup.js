@@ -1,12 +1,12 @@
 /**
  * Email capture popup - calculator pages only
- * Shows once per session, 10s after load. Closes on X, overlay click, or ESC.
+ * Shows once per session, 4 minutes after load. Closes on X, overlay click, or ESC.
  */
 (function () {
   'use strict';
 
   const STORAGE_KEY = 'sportycalc_email_popup_dismissed';
-  const DELAY_MS = 10000;
+  const DELAY_MS = 4 * 60 * 1000; // 4 minutes
 
   // Config: Formspree endpoint (Vercel). Override with window.SPORTYCALC_SUBSCRIBE_URL if needed
   const SUBSCRIBE_URL = typeof window.SPORTYCALC_SUBSCRIBE_URL !== 'undefined'
