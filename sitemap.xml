@@ -403,8 +403,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sportycalc.com/blog/heptathlon-scoring-explained.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://sportycalc.com/blog/</loc>
-    <lastmod>2026-02-20</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
