@@ -51,7 +51,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.min.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Body Fat Calculator","url":"https://sportycalc.com/calculators/body-fat-calculator.html","description":"Estimate body fat % with Navy method","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["WebApplication", "SoftwareApplication"],
+        "name": "Body Fat Calculator",
+        "url": "https://sportycalc.com/calculators/body-fat-calculator.html",
+        "description": "Estimate body fat % with Navy method",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "featureList": ["U.S. Navy circumference method", "Male and female formulas", "Body fat category"],
+        "publisher": {"@id": "https://sportycalc.com/#organization"},
+        "image": "https://sportycalc.com/images/og-image.png"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "How accurate is the Navy method?", "acceptedAnswer": {"@type": "Answer", "text": "It's about 3–4% off from lab tests for most people—great for home use but not medical-grade."}},
+          {"@type": "Question", "name": "What affects body fat percentage?", "acceptedAnswer": {"@type": "Answer", "text": "Age, gender, genetics, diet, and exercise; recalculate monthly for updates."}},
+          {"@type": "Question", "name": "Is low body fat always better?", "acceptedAnswer": {"@type": "Answer", "text": "No—essential fat is crucial for health; consult a professional if aiming below healthy levels."}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sportycalc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://sportycalc.com/calculators/"},
+          {"@type": "ListItem", "position": 3, "name": "Body Fat Calculator", "item": "https://sportycalc.com/calculators/body-fat-calculator.html"}
+        ]
+      }
+    ]
+  }
   </script>
 </head>
 <body>

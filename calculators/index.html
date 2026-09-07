@@ -47,7 +47,53 @@
   <meta name="twitter:description" content="Browse all fitness calculators: BMI, TDEE, BMR, macros, body fat, heart rate zones, 1RM, protein, water intake, calories burned.">
   <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"CollectionPage","name":"All Fitness Calculators | SportyCalc","url":"https://sportycalc.com/calculators/","description":"Browse all fitness calculators: BMI, TDEE, BMR, macros, body fat, heart rate zones, 1RM, protein, water intake, calories burned."}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://sportycalc.com/calculators/#page",
+        "name": "All Fitness Calculators | SportyCalc",
+        "url": "https://sportycalc.com/calculators/",
+        "description": "Browse all fitness calculators: BMI, TDEE, BMR, macros, body fat, heart rate zones, 1RM, protein, water intake, calories burned.",
+        "isPartOf": {"@id": "https://sportycalc.com/#website"},
+        "publisher": {"@id": "https://sportycalc.com/#organization"},
+        "mainEntity": {"@id": "https://sportycalc.com/calculators/#list"}
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://sportycalc.com/calculators/#list",
+        "name": "SportyCalc fitness calculators",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "BMI Calculator", "url": "https://sportycalc.com/calculators/bmi-calculator.html"},
+          {"@type": "ListItem", "position": 2, "name": "BMR Calculator", "url": "https://sportycalc.com/calculators/bmr-calculator.html"},
+          {"@type": "ListItem", "position": 3, "name": "TDEE Calculator", "url": "https://sportycalc.com/calculators/tdee-calculator.html"},
+          {"@type": "ListItem", "position": 4, "name": "Calorie Calculator", "url": "https://sportycalc.com/calculators/calorie-calculator.html"},
+          {"@type": "ListItem", "position": 5, "name": "Macro Calculator", "url": "https://sportycalc.com/calculators/macro-calculator.html"},
+          {"@type": "ListItem", "position": 6, "name": "Calorie Deficit Calculator", "url": "https://sportycalc.com/calculators/calorie-deficit-calculator.html"},
+          {"@type": "ListItem", "position": 7, "name": "Body Fat Calculator", "url": "https://sportycalc.com/calculators/body-fat-calculator.html"},
+          {"@type": "ListItem", "position": 8, "name": "Heart Rate Zones", "url": "https://sportycalc.com/calculators/heart-rate-zones.html"},
+          {"@type": "ListItem", "position": 9, "name": "1RM Calculator", "url": "https://sportycalc.com/calculators/1rm-calculator.html"},
+          {"@type": "ListItem", "position": 10, "name": "Protein Intake", "url": "https://sportycalc.com/calculators/protein-intake.html"},
+          {"@type": "ListItem", "position": 11, "name": "VO2 Max Calculator", "url": "https://sportycalc.com/calculators/vo2-max-calculator.html"},
+          {"@type": "ListItem", "position": 12, "name": "Fitness Age Calculator", "url": "https://sportycalc.com/calculators/fitness-age-calculator.html"},
+          {"@type": "ListItem", "position": 13, "name": "Army Body Fat Calculator", "url": "https://sportycalc.com/calculators/army-body-fat-calculator.html"},
+          {"@type": "ListItem", "position": 14, "name": "Air Force PT Calculator", "url": "https://sportycalc.com/calculators/air-force-pt-calculator.html"},
+          {"@type": "ListItem", "position": 15, "name": "Running Pace Calculator", "url": "https://sportycalc.com/calculators/running-pace-calculator.html"},
+          {"@type": "ListItem", "position": 16, "name": "Calories Burned", "url": "https://sportycalc.com/calculators/calories-burned.html"},
+          {"@type": "ListItem", "position": 17, "name": "Healthy Weight Calculator", "url": "https://sportycalc.com/calculators/healthy-weight-calculator.html"},
+          {"@type": "ListItem", "position": 18, "name": "Waist to Hip Ratio", "url": "https://sportycalc.com/calculators/waist-hip-ratio-calculator.html"}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sportycalc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://sportycalc.com/calculators/"}
+        ]
+      }
+    ]
+  }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

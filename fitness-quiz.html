@@ -51,7 +51,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"CollectionPage","name":"Fitness Quizzes","url":"https://sportycalc.com/fitness-quiz.html","description":"Free fitness quizzes to test your knowledge on BMI, TDEE, macros, nutrition, and more.","publisher":{"@type":"Organization","name":"SportyCalc"}}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "name": "Fitness Quizzes",
+        "url": "https://sportycalc.com/fitness-quiz.html",
+        "description": "Free fitness quizzes to test your knowledge on BMI, TDEE, macros, nutrition, and more.",
+        "publisher": {"@id": "https://sportycalc.com/#organization"},
+        "mainEntity": {"@id": "https://sportycalc.com/fitness-quiz.html#list"}
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://sportycalc.com/fitness-quiz.html#list",
+        "name": "SportyCalc fitness quizzes",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Are Your Heart Rate Zones Correct?", "url": "https://sportycalc.com/fitness-quiz/heart-rate-zones-quiz-2026.html"},
+          {"@type": "ListItem", "position": 2, "name": "What’s Your Real Fitness Age?", "url": "https://sportycalc.com/fitness-quiz/real-fitness-age-vo2-quiz-2026.html"},
+          {"@type": "ListItem", "position": 3, "name": "Fitness Age Quiz", "url": "https://sportycalc.com/fitness-quiz/fitness-age-quiz-2026.html"},
+          {"@type": "ListItem", "position": 4, "name": "Fitness IQ Quiz", "url": "https://sportycalc.com/fitness-quiz/fitness-iq-quiz-2026.html"},
+          {"@type": "ListItem", "position": 5, "name": "Fitness Knowledge", "url": "https://sportycalc.com/fitness-quiz/fitness-knowledge.html"},
+          {"@type": "ListItem", "position": 6, "name": "Nutrition Basics", "url": "https://sportycalc.com/fitness-quiz/nutrition-basics.html"},
+          {"@type": "ListItem", "position": 7, "name": "Army & Air Force PT Readiness", "url": "https://sportycalc.com/fitness-quiz/military-pt-readiness-quiz-2026.html"},
+          {"@type": "ListItem", "position": 8, "name": "Chipotle Edition", "url": "https://sportycalc.com/fitness-quiz/chipotle-health-quiz-2026.html"}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sportycalc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Quizzes", "item": "https://sportycalc.com/fitness-quiz.html"}
+        ]
+      }
+    ]
+  }
   </script>
 </head>
 <body>

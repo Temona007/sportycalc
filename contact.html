@@ -47,7 +47,25 @@
   <meta name="twitter:description" content="Contact SportyCalc. Send questions or feedback about our fitness calculators.">
   <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"ContactPage","name":"Contact SportyCalc","url":"https://sportycalc.com/contact.html","description":"Contact SportyCalc for questions or feedback about fitness calculators."}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "name": "Contact SportyCalc",
+        "url": "https://sportycalc.com/contact.html",
+        "description": "Contact SportyCalc for questions or feedback about fitness calculators.",
+        "publisher": {"@id": "https://sportycalc.com/#organization"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sportycalc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://sportycalc.com/contact.html"}
+        ]
+      }
+    ]
+  }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

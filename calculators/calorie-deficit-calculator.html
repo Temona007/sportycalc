@@ -50,7 +50,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.min.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Calorie Deficit Calculator","url":"https://sportycalc.com/calculators/calorie-deficit-calculator.html","description":"Estimate calorie deficit and time to reach target weight","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["WebApplication", "SoftwareApplication"],
+        "name": "Calorie Deficit Calculator",
+        "url": "https://sportycalc.com/calculators/calorie-deficit-calculator.html",
+        "description": "Estimate calorie deficit and time to reach target weight",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "featureList": ["TDEE-based deficit", "Time to target weight", "Recommended daily intake"],
+        "publisher": {"@id": "https://sportycalc.com/#organization"},
+        "image": "https://sportycalc.com/images/og-image.png"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "How much deficit is safe?", "acceptedAnswer": {"@type": "Answer", "text": "500–1,000 calories/day for 0.5–1 kg/week loss. Avoid over 30% to prevent health issues."}},
+          {"@type": "Question", "name": "Can I eat back exercise calories?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, for accuracy—use our Calories Burned Calculator to adjust."}},
+          {"@type": "Question", "name": "What's the difference from BMR?", "acceptedAnswer": {"@type": "Answer", "text": "BMR is resting burn; TDEE includes activity. Deficit targets are below TDEE."}},
+          {"@type": "Question", "name": "Is it good for building muscle?", "acceptedAnswer": {"@type": "Answer", "text": "For recomp (fat loss + muscle gain), use a small deficit with strength training—check our 1RM Calculator."}},
+          {"@type": "Question", "name": "How do I track calories?", "acceptedAnswer": {"@type": "Answer", "text": "Apps like MyFitnessPal work great; start with our Daily Calorie Calculator for estimates."}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sportycalc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://sportycalc.com/calculators/"},
+          {"@type": "ListItem", "position": 3, "name": "Calorie Deficit Calculator", "item": "https://sportycalc.com/calculators/calorie-deficit-calculator.html"}
+        ]
+      }
+    ]
+  }
   </script>
 </head>
 <body>

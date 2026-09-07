@@ -47,7 +47,37 @@
   <meta name="twitter:description" content="About SportyCalc: free, private, science-based fitness calculators.">
   <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"AboutPage","name":"About SportyCalc","url":"https://sportycalc.com/about.html","description":"About SportyCalc - free fitness calculators."}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "name": "About SportyCalc",
+        "url": "https://sportycalc.com/about.html",
+        "description": "About SportyCalc - free fitness calculators.",
+        "mainEntity": {"@id": "https://sportycalc.com/#organization"}
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://sportycalc.com/#organization",
+        "name": "SportyCalc",
+        "url": "https://sportycalc.com/",
+        "logo": {"@type": "ImageObject", "url": "https://sportycalc.com/images/sportycalc-logo.png"},
+        "description": "Free, private, science-based fitness calculators that run in the browser.",
+        "sameAs": [
+          "https://www.riyakadev.com/",
+          "https://www.strava.com/athletes/22196700"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sportycalc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "About", "item": "https://sportycalc.com/about.html"}
+        ]
+      }
+    ]
+  }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

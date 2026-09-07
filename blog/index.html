@@ -47,7 +47,39 @@
   <meta name="twitter:description" content="SportyCalc blog: weight loss tips, best fitness calculators, nutrition and metabolism insights.">
   <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Blog","name":"SportyCalc Blog","url":"https://sportycalc.com/blog/","description":"Weight loss tips, best fitness calculators, nutrition and metabolism insights."}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "name": "SportyCalc Blog",
+        "url": "https://sportycalc.com/blog/",
+        "description": "Weight loss tips, best fitness calculators, nutrition and metabolism insights.",
+        "publisher": {"@id": "https://sportycalc.com/#organization"}
+      },
+      {
+        "@type": "ItemList",
+        "name": "SportyCalc blog posts",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Heptathlon Scoring Explained", "url": "https://sportycalc.com/blog/heptathlon-scoring-explained.html"},
+          {"@type": "ListItem", "position": 2, "name": "How to Lower Resting Heart Rate", "url": "https://sportycalc.com/blog/how-to-lower-resting-heart-rate-30-day-plan.html"},
+          {"@type": "ListItem", "position": 3, "name": "Home Workout Fitness Plan 2026", "url": "https://sportycalc.com/blog/home-workout-fitness-plan-2026.html"},
+          {"@type": "ListItem", "position": 4, "name": "Heart Rate Zone 2 Training", "url": "https://sportycalc.com/blog/heart-rate-zone-2-training-2026.html"},
+          {"@type": "ListItem", "position": 5, "name": "Best Fitness Calculators 2026", "url": "https://sportycalc.com/blog/best-fitness-calculators-2026.html"},
+          {"@type": "ListItem", "position": 6, "name": "Weight Loss Calculation Tips", "url": "https://sportycalc.com/blog/weight-loss-calculation-tips.html"},
+          {"@type": "ListItem", "position": 7, "name": "Body Fat Percentage for Athletes", "url": "https://sportycalc.com/blog/body-fat-percentage-guide-athletes.html"},
+          {"@type": "ListItem", "position": 8, "name": "Workout Math: 1RM and Training Percentages", "url": "https://sportycalc.com/blog/workout-math-1rm-training-percentages.html"}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sportycalc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://sportycalc.com/blog/"}
+        ]
+      }
+    ]
+  }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

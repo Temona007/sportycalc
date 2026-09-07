@@ -47,7 +47,43 @@
   <meta name="twitter:description" content="Fitness and nutrition guides: TDEE, macros, calorie deficit diet, fitness metrics.">
   <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"CollectionPage","name":"Fitness Guides | SportyCalc","url":"https://sportycalc.com/guides/","description":"Fitness and nutrition guides: TDEE, macros, calorie deficit diet, fitness metrics."}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "name": "Fitness Guides | SportyCalc",
+        "url": "https://sportycalc.com/guides/",
+        "description": "Fitness and nutrition guides: TDEE, macros, calorie deficit diet, fitness metrics.",
+        "publisher": {"@id": "https://sportycalc.com/#organization"},
+        "mainEntity": {"@id": "https://sportycalc.com/guides/#list"}
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://sportycalc.com/guides/#list",
+        "name": "SportyCalc fitness guides",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Build Your 2026 Fitness Plan", "url": "https://sportycalc.com/guides/how-to-build-fitness-plan-2026-calculators.html"},
+          {"@type": "ListItem", "position": 2, "name": "Heart Rate Zones (2026)", "url": "https://sportycalc.com/guides/heart-rate-zones-guide-2026.html"},
+          {"@type": "ListItem", "position": 3, "name": "Lower Your Fitness Age", "url": "https://sportycalc.com/guides/how-to-lower-fitness-age-2026.html"},
+          {"@type": "ListItem", "position": 4, "name": "How to Calculate TDEE", "url": "https://sportycalc.com/guides/how-to-calculate-tdee.html"},
+          {"@type": "ListItem", "position": 5, "name": "Calorie Deficit Diet", "url": "https://sportycalc.com/guides/calorie-deficit-diet-guide.html"},
+          {"@type": "ListItem", "position": 6, "name": "Macro Nutrition Guide", "url": "https://sportycalc.com/guides/macro-nutrition-guide.html"},
+          {"@type": "ListItem", "position": 7, "name": "Fitness Metrics Explained", "url": "https://sportycalc.com/guides/fitness-metrics-explained.html"},
+          {"@type": "ListItem", "position": 8, "name": "Army Body Fat Calculator Guide", "url": "https://sportycalc.com/guides/army-body-fat-calculator-guide.html"},
+          {"@type": "ListItem", "position": 9, "name": "Body Fat Percentage Guide", "url": "https://sportycalc.com/guides/body-fat-percentage-guide.html"},
+          {"@type": "ListItem", "position": 10, "name": "Chipotle Without Ruining Fitness Goals", "url": "https://sportycalc.com/guides/how-to-use-chipotle-fitness-goals-2026.html"}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sportycalc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://sportycalc.com/guides/"}
+        ]
+      }
+    ]
+  }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

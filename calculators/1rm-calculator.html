@@ -51,7 +51,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.min.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"1RM Calculator","url":"https://sportycalc.com/calculators/1rm-calculator.html","description":"Calculate one-rep max","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["WebApplication", "SoftwareApplication"],
+        "name": "1RM Calculator",
+        "url": "https://sportycalc.com/calculators/1rm-calculator.html",
+        "description": "Calculate one-rep max",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "featureList": ["Brzycki formula", "Epley formula", "Lander formula", "Training percentages"],
+        "publisher": {"@id": "https://sportycalc.com/#organization"},
+        "image": "https://sportycalc.com/images/og-image.png"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "How accurate are 1RM estimates?", "acceptedAnswer": {"@type": "Answer", "text": "Very reliable for 1–10 reps; less so for higher rep ranges. Test periodically for validation."}},
+          {"@type": "Question", "name": "Which formula is best?", "acceptedAnswer": {"@type": "Answer", "text": "Brzycki works well for most people; try Average if you're unsure or want a balanced estimate."}},
+          {"@type": "Question", "name": "Can I use it for any exercise?", "acceptedAnswer": {"@type": "Answer", "text": "Yes—bench press, squat, deadlift, and other compound lifts. Form matters for real-world application."}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sportycalc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://sportycalc.com/calculators/"},
+          {"@type": "ListItem", "position": 3, "name": "1RM Calculator", "item": "https://sportycalc.com/calculators/1rm-calculator.html"}
+        ]
+      }
+    ]
+  }
   </script>
 </head>
 <body>

@@ -49,10 +49,52 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Calorie Deficit Diet: Your Guide to Safe and Effective Weight Loss",
-    "description": "Science-backed guide to calorie deficit diets. Learn how to calculate your deficit, create a meal plan, and lose weight sustainably.",
-    "author": { "@type": "Organization", "name": "SportyCalc" }
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Calorie Deficit Diet: Your Guide to Safe and Effective Weight Loss",
+        "description": "Science-backed guide to calorie deficit diets. Learn how to calculate your deficit, create a meal plan, and lose weight sustainably.",
+        "url": "https://sportycalc.com/guides/calorie-deficit-diet-guide.html",
+        "author": {"@id": "https://sportycalc.com/#organization"},
+        "publisher": {"@id": "https://sportycalc.com/#organization"}
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to start a calorie deficit diet",
+        "description": "Calculate TDEE, set a moderate deficit, plan meals, and track macros for sustainable fat loss.",
+        "url": "https://sportycalc.com/guides/calorie-deficit-diet-guide.html",
+        "tool": {
+          "@type": "HowToTool",
+          "name": "SportyCalc Calorie Deficit Calculator",
+          "url": "https://sportycalc.com/calculators/calorie-deficit-calculator.html"
+        },
+        "step": [
+          {"@type": "HowToStep", "position": 1, "name": "Calculate your TDEE", "text": "Enter age, weight, height, gender, and activity level. SportyCalc uses Mifflin-St Jeor for BMR."},
+          {"@type": "HowToStep", "position": 2, "name": "Set your deficit", "text": "Choose mild (250–500 calories) for gradual loss or moderate (500–750) for faster results."},
+          {"@type": "HowToStep", "position": 3, "name": "Plan balanced meals", "text": "Focus on lean proteins, vegetables, whole grains, and healthy fats."},
+          {"@type": "HowToStep", "position": 4, "name": "Track progress", "text": "Weigh in weekly and recalculate BMR or TDEE as weight changes."},
+          {"@type": "HowToStep", "position": 5, "name": "Monitor macros", "text": "Use the macro calculator so protein, carbs, and fats stay balanced while calories are reduced."}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "How much calorie deficit for weight loss?", "acceptedAnswer": {"@type": "Answer", "text": "500 calories/day for ~1 lb/week; use our calculator for precision."}},
+          {"@type": "Question", "name": "Is a calorie deficit diet safe?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if moderate and nutrient-rich. Consult a doctor for health conditions."}},
+          {"@type": "Question", "name": "Can I build muscle on a calorie deficit?", "acceptedAnswer": {"@type": "Answer", "text": "Possible with a small deficit (10–20%) and high protein—track with our Body Fat Calculator."}},
+          {"@type": "Question", "name": "What's a good calorie deficit meal plan for beginners?", "acceptedAnswer": {"@type": "Answer", "text": "Start with 1,800–2,200 calories/day, emphasizing veggies and proteins."}},
+          {"@type": "Question", "name": "How long should I stay in a calorie deficit?", "acceptedAnswer": {"@type": "Answer", "text": "8–12 weeks, then maintenance to avoid burnout."}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sportycalc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://sportycalc.com/guides/"},
+          {"@type": "ListItem", "position": 3, "name": "Calorie Deficit Diet", "item": "https://sportycalc.com/guides/calorie-deficit-diet-guide.html"}
+        ]
+      }
+    ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">

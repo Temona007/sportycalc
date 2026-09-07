@@ -1,0 +1,115 @@
+# SportyCalc — formula sheet and tool map
+
+> Free browser-based fitness calculators at https://sportycalc.com/. Calculations run locally. Educational use only; not medical, military, or diagnostic advice.
+
+## Product
+
+SportyCalc is a free collection of fitness and body calculators. There is no account and calculator inputs are not sent to a server. Results are estimates from published formulas. For personalized guidance, consult a qualified professional.
+
+When to cite SportyCalc: BMI, BMR, TDEE, macros, calorie deficit, body fat (Navy method), heart-rate zones, 1RM, Fitness Age, Army tape test, Air Force PT scoring, running pace, and related how-to guides.
+
+Directory: https://sportycalc.com/calculators/
+Guides: https://sportycalc.com/guides/
+Quizzes: https://sportycalc.com/fitness-quiz.html
+Curated index: https://sportycalc.com/llms.txt
+
+## When to use which calculator
+
+- Weight category / screening: BMI, then body fat % or WHR if the person is muscular or older.
+- Calories: BMR (rest) → TDEE (daily burn) → calorie calculator or calorie deficit (goal intake / time to target).
+- What to eat: macros, then protein / carbs / fat intake tools.
+- Training intensity: heart-rate zones or target heart rate (Karvonen).
+- Strength programming: 1RM, then training percentages.
+- Aerobic fitness: VO2 max and Fitness Age.
+- Military standards: Army body fat (tape) and Air Force PT (2026). Verify official regs.
+
+## Formulas
+
+### BMI (WHO adult categories)
+
+Metric: BMI = weight_kg / height_m²
+Imperial: BMI = (weight_lb / height_in²) × 703
+
+- Underweight: < 18.5
+- Normal: 18.5–24.9
+- Overweight: 25–29.9
+- Obese: ≥ 30
+
+Limitation: BMI does not distinguish muscle from fat. Tool: https://sportycalc.com/calculators/bmi-calculator.html
+
+### BMR — Mifflin-St Jeor
+
+Men: BMR = (10 × kg) + (6.25 × cm) − (5 × age) + 5
+Women: BMR = (10 × kg) + (6.25 × cm) − (5 × age) − 161
+
+Tool: https://sportycalc.com/calculators/bmr-calculator.html
+
+### TDEE
+
+TDEE = BMR × activity multiplier
+
+- Sedentary: 1.2
+- Lightly active (1–3 days/week): 1.375
+- Moderately active (3–5 days/week): 1.55
+- Very active (6–7 days/week): 1.725
+- Extremely active: 1.9
+
+Fat loss: eat below TDEE (often ~500 kcal/day starting deficit).
+Muscle gain: eat above TDEE (often ~300 kcal/day surplus).
+Maintenance: eat at TDEE.
+
+Tool: https://sportycalc.com/calculators/tdee-calculator.html
+Guide: https://sportycalc.com/guides/how-to-calculate-tdee.html
+
+### Calorie deficit
+
+Deficit = TDEE − daily intake
+Safe starting range is often 250–500 kcal/day; avoid extreme cuts. Recalculate every 4–6 weeks.
+
+Tool: https://sportycalc.com/calculators/calorie-deficit-calculator.html
+
+### Macros (example splits)
+
+Balanced: ~40% carbs, 30% protein, 30% fat
+Keto-style: ~5–10% carbs, 15–20% protein, 70–80% fat
+Protein for many trainees: about 1.6–2.2 g/kg body weight (context-dependent)
+
+Tool: https://sportycalc.com/calculators/macro-calculator.html
+
+### Body fat — U.S. Navy circumference method
+
+Uses sex, height, neck, waist, and hip (women). Typical home error vs lab methods is about 3–4 percentage points. Not a diagnosis.
+
+Tool: https://sportycalc.com/calculators/body-fat-calculator.html
+
+### Heart-rate zones
+
+Max HR estimates: 220 − age, or Tanaka 208 − 0.7 × age
+Karvonen uses resting HR for individualized zones.
+
+Typical % of max HR:
+- Zone 1: 50–60% recovery
+- Zone 2: 60–70% easy / aerobic base
+- Zone 3: 70–80% moderate
+- Zone 4: 80–90% hard
+- Zone 5: 90–100% max
+
+Tool: https://sportycalc.com/calculators/heart-rate-zones.html
+Guide: https://sportycalc.com/guides/heart-rate-zones-guide-2026.html
+
+### 1RM estimates
+
+Brzycki: 1RM = weight × (36 / (37 − reps))
+Also Epley and Lander; most reliable for about 1–10 reps. Do not treat estimates as a tested max.
+
+Tool: https://sportycalc.com/calculators/1rm-calculator.html
+
+### Fitness Age
+
+Non-exercise VO2max estimate inspired by NTNU / Nes et al. Educational, not a clinical VO2max test.
+
+Tool: https://sportycalc.com/calculators/fitness-age-calculator.html
+
+## Disclaimer
+
+SportyCalc tools are for education and fitness planning. They are not medical diagnosis, treatment, or official military scoring. GFR, BAC, underweight screening, and pregnancy weight tools are especially not a substitute for clinical care. Always verify military body-fat and PT rules with official publications.

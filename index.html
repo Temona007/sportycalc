@@ -48,7 +48,64 @@
   <meta name="twitter:title" content="SportyCalc – Free Fitness Calculators">
   <meta name="twitter:description" content="Free BMI, TDEE, BMR, macro, body fat, calorie calculators. Science-based, 100% private.">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"SportyCalc","url":"https://sportycalc.com/","description":"Free online fitness calculators for BMI, TDEE, and more. Science-based, 100% private.","applicationCategory":"HealthApplication","operatingSystem":"Web"}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://sportycalc.com/#organization",
+        "name": "SportyCalc",
+        "url": "https://sportycalc.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://sportycalc.com/images/sportycalc-logo.png"
+        },
+        "description": "Free, private, science-based fitness calculators that run in the browser.",
+        "sameAs": [
+          "https://www.riyakadev.com/",
+          "https://www.strava.com/athletes/22196700"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "url": "https://sportycalc.com/contact.html"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://sportycalc.com/#website",
+        "url": "https://sportycalc.com/",
+        "name": "SportyCalc",
+        "description": "Free fitness calculators for BMI, TDEE, BMR, macros, body fat, and more.",
+        "inLanguage": "en-US",
+        "publisher": { "@id": "https://sportycalc.com/#organization" }
+      },
+      {
+        "@type": ["WebApplication", "SoftwareApplication"],
+        "@id": "https://sportycalc.com/#app",
+        "name": "SportyCalc",
+        "url": "https://sportycalc.com/",
+        "description": "Free online fitness calculators for BMI, TDEE, BMR, macros, body fat, heart rate zones, and more. Science-based, 100% private.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "image": "https://sportycalc.com/images/og-image.png",
+        "publisher": { "@id": "https://sportycalc.com/#organization" },
+        "featureList": [
+          "BMI calculator",
+          "BMR calculator",
+          "TDEE calculator",
+          "Macro calculator",
+          "Calorie deficit calculator",
+          "Body fat calculator",
+          "Heart rate zones",
+          "1RM calculator"
+        ]
+      }
+    ]
+  }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

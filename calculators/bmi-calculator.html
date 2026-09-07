@@ -51,7 +51,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"BMI Calculator","url":"https://sportycalc.com/calculators/bmi-calculator.html","description":"Calculate your Body Mass Index (BMI) with metric or imperial units","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["WebApplication", "SoftwareApplication"],
+        "name": "BMI Calculator",
+        "url": "https://sportycalc.com/calculators/bmi-calculator.html",
+        "description": "Calculate your Body Mass Index (BMI) with metric or imperial units",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "featureList": ["Metric and imperial units", "WHO BMI categories", "Visual BMI scale"],
+        "publisher": {"@id": "https://sportycalc.com/#organization"},
+        "image": "https://sportycalc.com/images/og-image.png"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "What is a healthy BMI?", "acceptedAnswer": {"@type": "Answer", "text": "A BMI between 18.5 and 24.9 is considered healthy for most adults. However, optimal BMI varies by age, sex, and muscle mass. Consult your doctor for personalized guidance."}},
+          {"@type": "Question", "name": "How accurate is BMI?", "acceptedAnswer": {"@type": "Answer", "text": "BMI is a useful screening tool but has limitations. It may overestimate body fat in athletes and underestimate it in older adults. Use it alongside other measurements for best results."}},
+          {"@type": "Question", "name": "Does BMI apply to children?", "acceptedAnswer": {"@type": "Answer", "text": "Children use age and sex-specific BMI percentiles rather than adult categories. A pediatrician can interpret your child's BMI correctly."}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sportycalc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://sportycalc.com/calculators/"},
+          {"@type": "ListItem", "position": 3, "name": "BMI Calculator", "item": "https://sportycalc.com/calculators/bmi-calculator.html"}
+        ]
+      }
+    ]
+  }
   </script>
 </head>
 <body>
@@ -168,6 +202,7 @@
         <div class="seo-content">
           <h2>Understanding BMI (Body Mass Index)</h2>
           <p>BMI is a simple screening tool that uses height and weight to estimate body fat. While it doesn't measure body fat directly, BMI correlates with more precise measurements and helps identify potential weight-related health risks.</p>
+          <p><strong>Formula used:</strong> Metric: BMI = weight (kg) ÷ height² (m²). Imperial: BMI = (weight (lb) ÷ height² (in²)) × 703. Educational screening only; not a diagnosis.</p>
           <h3>BMI Categories</h3>
           <ul>
             <li><strong>Obese:</strong> BMI 30 or higher</li>

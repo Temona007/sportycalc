@@ -1,0 +1,54 @@
+# SportyCalc
+
+> Free, privacy-first fitness calculators that run in the browser. No sign-up. Inputs never leave the device. Formulas include Mifflin-St Jeor (BMR/TDEE), U.S. Navy circumference (body fat), Epley/Brzycki (1RM), WHO waist-to-hip ratio, and Karvonen heart-rate zones.
+
+SportyCalc is a collection of science-based health and fitness tools at https://sportycalc.com/. Educational use only; not medical advice. Full formula notes: https://sportycalc.com/llms-full.txt
+
+## Core calculators
+
+- [BMI Calculator](https://sportycalc.com/calculators/bmi-calculator.html): Body mass index, metric/imperial, WHO categories
+- [BMR Calculator](https://sportycalc.com/calculators/bmr-calculator.html): Basal metabolic rate (Mifflin-St Jeor)
+- [TDEE Calculator](https://sportycalc.com/calculators/tdee-calculator.html): Total daily energy expenditure and activity multipliers
+- [Calorie Calculator](https://sportycalc.com/calculators/calorie-calculator.html): Daily calorie needs from BMR and activity
+- [Calorie Deficit Calculator](https://sportycalc.com/calculators/calorie-deficit-calculator.html): Time to target weight from a calorie deficit
+- [Macro Calculator](https://sportycalc.com/calculators/macro-calculator.html): Protein, carbs, and fat targets
+- [Protein Intake Calculator](https://sportycalc.com/calculators/protein-intake.html): Daily protein needs
+- [Body Fat Calculator](https://sportycalc.com/calculators/body-fat-calculator.html): U.S. Navy circumference method
+- [Heart Rate Zones](https://sportycalc.com/calculators/heart-rate-zones.html): Training zones (220−age, Tanaka, Karvonen)
+- [1RM Calculator](https://sportycalc.com/calculators/1rm-calculator.html): One-rep max (Brzycki, Epley, Lander)
+
+## More tools
+
+- [All calculators](https://sportycalc.com/calculators/): Full directory including VO2 max, Fitness Age, Army body fat, Air Force PT, running, triathlon, and nutrition meal builders
+- [Healthy Weight Calculator](https://sportycalc.com/calculators/healthy-weight-calculator.html): Ideal weight ranges (Devine, Robinson, Miller, Hamwi)
+- [VO2 Max Calculator](https://sportycalc.com/calculators/vo2-max-calculator.html): Aerobic capacity estimate
+- [Fitness Age Calculator](https://sportycalc.com/calculators/fitness-age-calculator.html): Non-exercise VO2max / biological fitness age (NTNU Nes et al.)
+- [Army Body Fat Calculator](https://sportycalc.com/calculators/army-body-fat-calculator.html): One-site tape method (Army Directive 2023-11)
+- [Air Force PT Calculator](https://sportycalc.com/calculators/air-force-pt-calculator.html): 2026 PFRA scoring, WHtR, run, push-ups, sit-ups
+- [Running Pace Calculator](https://sportycalc.com/calculators/running-pace-calculator.html): 5K, 10K, marathon finish time
+- [Marathon Calculator](https://sportycalc.com/calculators/marathon-calculator.html): Goal time to training splits (Riegel)
+- [Calories Burned](https://sportycalc.com/calculators/calories-burned.html): Activity calorie estimates (MET values)
+- [Fitness quizzes](https://sportycalc.com/fitness-quiz.html): Knowledge and readiness quizzes
+
+## Guides
+
+- [How to calculate TDEE](https://sportycalc.com/guides/how-to-calculate-tdee.html): Mifflin-St Jeor BMR, activity multipliers, deficit/surplus
+- [Build a 2026 fitness plan](https://sportycalc.com/guides/how-to-build-fitness-plan-2026-calculators.html): Assessment, calories, macros, Zone 2, progress tracking
+- [Calorie deficit diet](https://sportycalc.com/guides/calorie-deficit-diet-guide.html): Safe deficit, meal planning, common mistakes
+- [Heart rate zones (2026)](https://sportycalc.com/guides/heart-rate-zones-guide-2026.html): Max HR, five zones, Zone 2, 80/20 training
+- [How to lower Fitness Age](https://sportycalc.com/guides/how-to-lower-fitness-age-2026.html): Zone 2, body composition, sleep, tracking
+- [Macro nutrition](https://sportycalc.com/guides/macro-nutrition-guide.html): Protein, carbs, fat for fitness goals
+- [Fitness metrics explained](https://sportycalc.com/guides/fitness-metrics-explained.html): BMI, BMR, TDEE, body fat, 1RM
+- [Army body fat calculator guide](https://sportycalc.com/guides/army-body-fat-calculator-guide.html): Tape method, PASS/FAIL standards
+
+## Optional
+
+- [About](https://sportycalc.com/about.html): Privacy-first, no-server design, formulas used
+- [FAQ](https://sportycalc.com/faq.html): BMI formula, categories, and limitations
+- [Privacy](https://sportycalc.com/privacy.html): How SportyCalc handles data
+- [Terms](https://sportycalc.com/terms.html): Terms of use
+- [Contact](https://sportycalc.com/contact.html): Questions and feedback
+- [Sitemap](https://sportycalc.com/sitemap.xml): All public pages
+- [llms-full.txt](https://sportycalc.com/llms-full.txt): Formula cheat sheet and when to use which calculator
+
+Educational screening tools (GFR, BAC, underweight BMI, pregnancy weight gain) are not medical diagnosis. Verify military standards with official regulations.

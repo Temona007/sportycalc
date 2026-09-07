@@ -51,7 +51,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.min.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"BMR Calculator","url":"https://sportycalc.com/calculators/bmr-calculator.html","description":"Calculate Basal Metabolic Rate","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["WebApplication", "SoftwareApplication"],
+        "name": "BMR Calculator",
+        "url": "https://sportycalc.com/calculators/bmr-calculator.html",
+        "description": "Calculate Basal Metabolic Rate using the Mifflin-St Jeor equation",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "featureList": ["Mifflin-St Jeor formula", "Metric and imperial units", "BMR vs activity comparison"],
+        "publisher": {"@id": "https://sportycalc.com/#organization"},
+        "image": "https://sportycalc.com/images/og-image.png"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Is BMR the same as RMR?", "acceptedAnswer": {"@type": "Answer", "text": "Resting Metabolic Rate (RMR) is similar but includes slight activity; BMR is strictly at rest."}},
+          {"@type": "Question", "name": "How often should I recalculate?", "acceptedAnswer": {"@type": "Answer", "text": "Update every few months or after significant weight changes."}},
+          {"@type": "Question", "name": "Can BMR change?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with age, muscle building, or hormonal shifts—recalculate as needed."}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sportycalc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://sportycalc.com/calculators/"},
+          {"@type": "ListItem", "position": 3, "name": "BMR Calculator", "item": "https://sportycalc.com/calculators/bmr-calculator.html"}
+        ]
+      }
+    ]
+  }
   </script>
 </head>
 <body>

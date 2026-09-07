@@ -51,7 +51,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.min.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"TDEE Calculator","url":"https://sportycalc.com/calculators/tdee-calculator.html","description":"Calculate Total Daily Energy Expenditure","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["WebApplication", "SoftwareApplication"],
+        "name": "TDEE Calculator",
+        "url": "https://sportycalc.com/calculators/tdee-calculator.html",
+        "description": "Calculate Total Daily Energy Expenditure using Mifflin-St Jeor BMR and activity multipliers",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "featureList": ["Mifflin-St Jeor BMR", "Activity multipliers", "Maintenance calorie estimate"],
+        "publisher": {"@id": "https://sportycalc.com/#organization"},
+        "image": "https://sportycalc.com/images/og-image.png"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "How does TDEE differ from BMR?", "acceptedAnswer": {"@type": "Answer", "text": "BMR is your resting burn; TDEE adds daily movement and activities."}},
+          {"@type": "Question", "name": "Should I recalculate often?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, every 4-6 weeks or after lifestyle changes like starting a new workout routine."}},
+          {"@type": "Question", "name": "Is TDEE accurate for everyone?", "acceptedAnswer": {"@type": "Answer", "text": "It's a strong estimate, but factors like muscle mass or hormones can vary—use it as a starting point."}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sportycalc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://sportycalc.com/calculators/"},
+          {"@type": "ListItem", "position": 3, "name": "TDEE Calculator", "item": "https://sportycalc.com/calculators/tdee-calculator.html"}
+        ]
+      }
+    ]
+  }
   </script>
 </head>
 <body>

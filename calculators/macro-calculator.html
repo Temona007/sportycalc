@@ -51,7 +51,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.min.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Macro Calculator","url":"https://sportycalc.com/calculators/macro-calculator.html","description":"Calculate protein, carbs, and fat split","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["WebApplication", "SoftwareApplication"],
+        "name": "Macro Calculator",
+        "url": "https://sportycalc.com/calculators/macro-calculator.html",
+        "description": "Calculate protein, carbs, and fat split",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "featureList": ["Protein, carbs, and fat grams", "Diet-style ratios", "Calorie-to-macro split"],
+        "publisher": {"@id": "https://sportycalc.com/#organization"},
+        "image": "https://sportycalc.com/images/og-image.png"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "What are standard macro ratios?", "acceptedAnswer": {"@type": "Answer", "text": "Balanced: 40% carbs, 30% protein, 30% fat; Keto: 5–10% carbs, 15–20% protein, 70–80% fat—adjust based on goals."}},
+          {"@type": "Question", "name": "Do I need to track macros daily?", "acceptedAnswer": {"@type": "Answer", "text": "For best results, yes, using apps; but start with estimates and refine over time."}},
+          {"@type": "Question", "name": "Can it handle special diets?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely—options for vegan, paleo, or custom tweaks ensure inclusivity."}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sportycalc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://sportycalc.com/calculators/"},
+          {"@type": "ListItem", "position": 3, "name": "Macro Calculator", "item": "https://sportycalc.com/calculators/macro-calculator.html"}
+        ]
+      }
+    ]
+  }
   </script>
 </head>
 <body>
