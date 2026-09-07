@@ -35,6 +35,7 @@
     { title: 'Healthy Weight Calculator', subtitle: 'Ideal body weight, Robinson, Miller, Devine, Hamwi', href: 'healthy-weight-calculator.html', keywords: 'ideal weight healthy weight IBW ideal body weight Robinson Miller Devine Hamwi BMI range' },
     { title: 'Ideal Body Weight Calculator', subtitle: 'IBW, Robinson, Miller, Devine, Hamwi', href: 'ideal-body-weight-calculator.html', keywords: 'ideal body weight IBW calculator Devine Robinson Miller Hamwi formula' },
     { title: 'Running Pace Calculator', subtitle: '5K, 10K, marathon finish time', href: 'running-pace-calculator.html', keywords: 'running pace calculator race time 5K 10K marathon pace' },
+    { title: 'Running Speed Converter', subtitle: 'Pace ↔ speed (min/km, km/h, mph)', href: 'running-speed-converter.html', keywords: 'running speed converter pace to speed min/km km/h mph min/mi how fast can humans run' },
     { title: 'Marathon Calculator', subtitle: 'Goal time to training splits (Riegel)', href: 'marathon-calculator.html', keywords: 'marathon calculator goal time race time predictor Riegel formula half marathon splits training pace' },
     { title: 'Cycling Cadence Calculator', subtitle: 'Cadence, speed & gear ratio', href: 'cycling-cadence-calculator.html', keywords: 'cycling cadence calculator bike speed RPM gear ratio chainring cog wheel' },
     { title: 'Triathlon Calculator', subtitle: 'Swim, bike, run & transition times', href: 'triathlon-calculator.html', keywords: 'triathlon calculator ironman 70.3 olympic sprint swim bike run pace transition T1 T2' },
