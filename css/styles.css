@@ -5240,3 +5240,216 @@ button.page-share-btn {
   color: var(--primary);
   font-variant-numeric: tabular-nums;
 }
+
+/* Bowling Score Calculator */
+.bowl-card {
+  overflow: hidden;
+}
+
+.bowl-score-hero {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.bowl-score-value {
+  display: block;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.bowl-score-label {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+.bowl-board-wrap {
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bowl-board {
+  display: flex;
+  min-width: 640px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-btn);
+  overflow: hidden;
+}
+
+.bowl-frame {
+  flex: 1 1 0;
+  min-width: 56px;
+  border-right: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.bowl-frame:last-child {
+  border-right: none;
+}
+
+.bowl-frame-tenth {
+  flex: 1.4 1 0;
+  min-width: 80px;
+}
+
+.bowl-frame-current {
+  background: rgba(249, 87, 0, 0.08);
+}
+
+.bowl-frame-num {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 0.35rem 0.2rem;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+}
+
+.bowl-frame-current .bowl-frame-num {
+  color: var(--primary);
+}
+
+.bowl-frame-rolls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.bowl-frame-tenth .bowl-frame-rolls {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.bowl-roll {
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-right: 1px solid var(--border);
+  font-variant-numeric: tabular-nums;
+}
+
+.bowl-roll:last-child {
+  border-right: none;
+}
+
+.bowl-roll-mark {
+  color: var(--primary);
+}
+
+.bowl-frame-score {
+  min-height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.bowl-pad {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+}
+
+.bowl-key {
+  min-height: 48px;
+  padding: 0.65rem 0.25rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-btn);
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), color var(--transition), transform 0.15s ease;
+}
+
+.bowl-key:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.bowl-key:active:not(:disabled) {
+  transform: translateY(0) scale(0.97);
+}
+
+.bowl-key:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.bowl-key-spare,
+.bowl-key-strike {
+  background: rgba(249, 87, 0, 0.1);
+  border-color: rgba(249, 87, 0, 0.35);
+  color: var(--primary);
+}
+
+.bowl-key-spare:disabled,
+.bowl-key-strike:disabled {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  color: var(--text-primary);
+}
+
+.bowl-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.bowl-action {
+  width: 100%;
+  padding: 0.9rem 1.25rem;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius-btn);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.bowl-action:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.bowl-action:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.bowl-action-ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.bowl-action-ghost:hover:not(:disabled) {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+@media (max-width: 479px) {
+  .bowl-pad {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
