@@ -29,6 +29,7 @@ SportyCalc is a collection of science-based health and fitness tools at https://
 - [Marathon Calculator](https://sportycalc.com/calculators/marathon-calculator.html): Goal time to training splits (Riegel)
 - [Calories Burned](https://sportycalc.com/calculators/calories-burned.html): Activity calorie estimates (MET values)
 - [Bowling Score Calculator](https://sportycalc.com/calculators/bowling-score-calculator.html): Live ten-pin score sheet with strikes, spares, and 10th-frame scoring
+- [Decathlon Calculator](https://sportycalc.com/calculators/decathlon-calculator.html): World Athletics points from results, or results from points, for all 10 events
 - [Fitness quizzes](https://sportycalc.com/fitness-quiz.html): Knowledge and readiness quizzes
 
 ## Guides

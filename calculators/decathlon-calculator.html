@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Ezoic Privacy Scripts -->
+  <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+  <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+  <!-- Ezoic Header Script -->
+  <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+  <script>
+    window.ezstandalone = window.ezstandalone || {};
+    ezstandalone.cmd = ezstandalone.cmd || [];
+  </script>
+  <script src="//ezoicanalytics.com/analytics.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8276223173310357"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Free Decathlon Calculator – Convert performances to points and points to performances for all 10 events. Uses official World Athletics (IAAF) scoring formulas. Supports Day 1, Day 2, and total score.">
+  <meta name="keywords" content="decathlon calculator, decathlon score calculator, IAAF points, World Athletics combined events, decathlon points converter">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/decathlon-calculator.html">
+  <title>Decathlon Calculator: Points &amp; Performance Converter | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/decathlon-calculator.html">
+  <meta property="og:title" content="Decathlon Calculator: Points &amp; Performance Converter | SportyCalc">
+  <meta property="og:description" content="Free Decathlon Calculator – Convert performances to points and points to performances for all 10 events. Uses official World Athletics (IAAF) scoring formulas.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Decathlon Calculator | SportyCalc">
+  <meta name="twitter:description" content="Convert performances to points and points to performances for all 10 events. Official World Athletics scoring formulas.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.min.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":["WebApplication","SoftwareApplication"],"name":"Decathlon Calculator","url":"https://sportycalc.com/calculators/decathlon-calculator.html","description":"Free Decathlon Calculator – Convert performances to points and points to performances for all 10 events. Uses official World Athletics (IAAF) scoring formulas. Supports Day 1, Day 2, and total score.","applicationCategory":"SportsApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isAccessibleForFree":true,"publisher":{"@id":"https://sportycalc.com/#organization"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="SportyCalc" title="SportyCalc - Home" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="/calculators/" class="nav-link active">Calculators</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <a href="../fitness-quiz.html" class="nav-link nav-link-brand">Quiz</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="/calculators/" class="mobile-nav-link">Calculators</a>
+    <a href="/guides/" class="mobile-nav-link">Guides</a>
+    <a href="/blog/" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+    <a href="../fitness-quiz.html" class="mobile-nav-link mobile-nav-link-brand">Quiz</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/calculators/">Calculators</a>
+        <span>/</span>
+        <span>Decathlon Calculator</span>
+      </nav>
+      <h1>Decathlon Calculator: Points &amp; Performance Converter</h1>
+      <p class="hero-desc">Calculate accurate decathlon scores instantly with our free Decathlon Calculator. Convert results into points or points into target performances for all 10 events using the official World Athletics scoring tables.</p>
+    </section>
+
+    <div class="ezoicad" data-mobile_sizes="300x250,336x280" data-desktop_sizes="728x90,970x250" data-location="under_page_title"></div>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card dec-card">
+          <form id="decathlon-form" autocomplete="off">
+            <div class="form-header">
+              <h2>Score</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Calculate</span>
+                <div class="unit-toggle-btns dec-mode-btns">
+                  <button type="button" class="unit-btn active" data-dec-mode="result">Results → points</button>
+                  <button type="button" class="unit-btn" data-dec-mode="points">Points → results</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="dec-day">
+              <h3 class="dec-day-title">Day 1</h3>
+
+              <div class="dec-row" data-dec-event="run100">
+                <span class="dec-event-name">100m</span>
+                <div class="dec-result-wrap">
+                  <input type="text" id="dec-result-run100" class="dec-input" data-dec-field="result" inputmode="decimal" placeholder="10.50" autocomplete="off" aria-label="100m result">
+                  <span class="dec-unit">s</span>
+                </div>
+                <div class="dec-points-wrap">
+                  <input type="number" id="dec-points-run100" class="dec-input" data-dec-field="points" min="0" max="1400" step="1" placeholder="0" inputmode="numeric" autocomplete="off" aria-label="100m points" readonly>
+                  <span class="dec-unit">pts</span>
+                </div>
+                <label class="dec-manual">
+                  <input type="checkbox" data-dec-manual>
+                  Manual timing
+                </label>
+              </div>
+
+              <div class="dec-row" data-dec-event="longJump">
+                <span class="dec-event-name">Long jump</span>
+                <div class="dec-result-wrap">
+                  <input type="text" id="dec-result-longJump" class="dec-input" data-dec-field="result" inputmode="decimal" placeholder="750" autocomplete="off" aria-label="Long jump result">
+                  <span class="dec-unit">cm</span>
+                </div>
+                <div class="dec-points-wrap">
+                  <input type="number" id="dec-points-longJump" class="dec-input" data-dec-field="points" min="0" max="1400" step="1" placeholder="0" inputmode="numeric" autocomplete="off" aria-label="Long jump points" readonly>
+                  <span class="dec-unit">pts</span>
+                </div>
+                <span class="dec-manual-slot" aria-hidden="true"></span>
+              </div>
+
+              <div class="dec-row" data-dec-event="shotPut">
+                <span class="dec-event-name">Shot put</span>
+                <div class="dec-result-wrap">
+                  <input type="text" id="dec-result-shotPut" class="dec-input" data-dec-field="result" inputmode="decimal" placeholder="14.00" autocomplete="off" aria-label="Shot put result">
+                  <span class="dec-unit">m</span>
+                </div>
+                <div class="dec-points-wrap">
+                  <input type="number" id="dec-points-shotPut" class="dec-input" data-dec-field="points" min="0" max="1400" step="1" placeholder="0" inputmode="numeric" autocomplete="off" aria-label="Shot put points" readonly>
+                  <span class="dec-unit">pts</span>
+                </div>
+                <span class="dec-manual-slot" aria-hidden="true"></span>
+              </div>
+
+              <div class="dec-row" data-dec-event="highJump">
+                <span class="dec-event-name">High jump</span>
+                <div class="dec-result-wrap">
+                  <input type="text" id="dec-result-highJump" class="dec-input" data-dec-field="result" inputmode="decimal" placeholder="200" autocomplete="off" aria-label="High jump result">
+                  <span class="dec-unit">cm</span>
+                </div>
+                <div class="dec-points-wrap">
+                  <input type="number" id="dec-points-highJump" class="dec-input" data-dec-field="points" min="0" max="1400" step="1" placeholder="0" inputmode="numeric" autocomplete="off" aria-label="High jump points" readonly>
+                  <span class="dec-unit">pts</span>
+                </div>
+                <span class="dec-manual-slot" aria-hidden="true"></span>
+              </div>
+
+              <div class="dec-row" data-dec-event="run400">
+                <span class="dec-event-name">400m</span>
+                <div class="dec-result-wrap">
+                  <input type="text" id="dec-result-run400" class="dec-input" data-dec-field="result" inputmode="decimal" placeholder="48.00" autocomplete="off" aria-label="400m result">
+                  <span class="dec-unit">s</span>
+                </div>
+                <div class="dec-points-wrap">
+                  <input type="number" id="dec-points-run400" class="dec-input" data-dec-field="points" min="0" max="1400" step="1" placeholder="0" inputmode="numeric" autocomplete="off" aria-label="400m points" readonly>
+                  <span class="dec-unit">pts</span>
+                </div>
+                <label class="dec-manual">
+                  <input type="checkbox" data-dec-manual>
+                  Manual timing
+                </label>
+              </div>
+
+              <div class="dec-subtotal">
+                <span>1st day points</span>
+                <strong id="dec-day1">0</strong>
+              </div>
+            </div>
+
+            <div class="dec-day">
+              <h3 class="dec-day-title">Day 2</h3>
+
+              <div class="dec-row" data-dec-event="hurdles110">
+                <span class="dec-event-name">110m hurdles</span>
+                <div class="dec-result-wrap">
+                  <input type="text" id="dec-result-hurdles110" class="dec-input" data-dec-field="result" inputmode="decimal" placeholder="14.50" autocomplete="off" aria-label="110m hurdles result">
+                  <span class="dec-unit">s</span>
+                </div>
+                <div class="dec-points-wrap">
+                  <input type="number" id="dec-points-hurdles110" class="dec-input" data-dec-field="points" min="0" max="1400" step="1" placeholder="0" inputmode="numeric" autocomplete="off" aria-label="110m hurdles points" readonly>
+                  <span class="dec-unit">pts</span>
+                </div>
+                <label class="dec-manual">
+                  <input type="checkbox" data-dec-manual>
+                  Manual timing
+                </label>
+              </div>
+
+              <div class="dec-row" data-dec-event="discus">
+                <span class="dec-event-name">Discus throw</span>
+                <div class="dec-result-wrap">
+                  <input type="text" id="dec-result-discus" class="dec-input" data-dec-field="result" inputmode="decimal" placeholder="45.00" autocomplete="off" aria-label="Discus throw result">
+                  <span class="dec-unit">m</span>
+                </div>
+                <div class="dec-points-wrap">
+                  <input type="number" id="dec-points-discus" class="dec-input" data-dec-field="points" min="0" max="1400" step="1" placeholder="0" inputmode="numeric" autocomplete="off" aria-label="Discus throw points" readonly>
+                  <span class="dec-unit">pts</span>
+                </div>
+                <span class="dec-manual-slot" aria-hidden="true"></span>
+              </div>
+
+              <div class="dec-row" data-dec-event="poleVault">
+                <span class="dec-event-name">Pole vault</span>
+                <div class="dec-result-wrap">
+                  <input type="text" id="dec-result-poleVault" class="dec-input" data-dec-field="result" inputmode="decimal" placeholder="480" autocomplete="off" aria-label="Pole vault result">
+                  <span class="dec-unit">cm</span>
+                </div>
+                <div class="dec-points-wrap">
+                  <input type="number" id="dec-points-poleVault" class="dec-input" data-dec-field="points" min="0" max="1400" step="1" placeholder="0" inputmode="numeric" autocomplete="off" aria-label="Pole vault points" readonly>
+                  <span class="dec-unit">pts</span>
+                </div>
+                <span class="dec-manual-slot" aria-hidden="true"></span>
+              </div>
+
+              <div class="dec-row" data-dec-event="javelin">
+                <span class="dec-event-name">Javelin throw</span>
+                <div class="dec-result-wrap">
+                  <input type="text" id="dec-result-javelin" class="dec-input" data-dec-field="result" inputmode="decimal" placeholder="65.00" autocomplete="off" aria-label="Javelin throw result">
+                  <span class="dec-unit">m</span>
+                </div>
+                <div class="dec-points-wrap">
+                  <input type="number" id="dec-points-javelin" class="dec-input" data-dec-field="points" min="0" max="1400" step="1" placeholder="0" inputmode="numeric" autocomplete="off" aria-label="Javelin throw points" readonly>
+                  <span class="dec-unit">pts</span>
+                </div>
+                <span class="dec-manual-slot" aria-hidden="true"></span>
+              </div>
+
+              <div class="dec-row" data-dec-event="run1500">
+                <span class="dec-event-name">1500m</span>
+                <div class="dec-result-wrap">
+                  <input type="text" id="dec-result-run1500" class="dec-input" data-dec-field="result" inputmode="text" placeholder="4:30.00" autocomplete="off" aria-label="1500m result">
+                  <span class="dec-unit">m:ss</span>
+                </div>
+                <div class="dec-points-wrap">
+                  <input type="number" id="dec-points-run1500" class="dec-input" data-dec-field="points" min="0" max="1400" step="1" placeholder="0" inputmode="numeric" autocomplete="off" aria-label="1500m points" readonly>
+                  <span class="dec-unit">pts</span>
+                </div>
+                <span class="dec-manual-slot" aria-hidden="true"></span>
+              </div>
+
+              <div class="dec-subtotal">
+                <span>2nd day points</span>
+                <strong id="dec-day2">0</strong>
+              </div>
+            </div>
+
+            <div class="dec-total-bar">
+              <span class="dec-total-label">Total points</span>
+              <span class="dec-total-value" id="dec-total">0</span>
+            </div>
+
+            <button type="button" class="dec-reset" id="dec-reset">Reset</button>
+          </form>
+        </div>
+
+        <div class="seo-content">
+          <p>Calculate accurate decathlon scores instantly with our free Decathlon Calculator. Convert results into points or points into target performances for all 10 events using the official World Athletics scoring tables.</p>
+
+          <h2>How the Decathlon Calculator Works</h2>
+          <h3>Key Features</h3>
+          <ul>
+            <li><strong>Two-way conversion:</strong> Enter results to get points, or enter target points to see required performances</li>
+            <li>All 10 events covered (Day 1 + Day 2)</li>
+            <li>Live scoring – Day 1, Day 2, and total points update as you type</li>
+            <li>Manual timing support for 100m, 400m, and 110m hurdles</li>
+            <li>Uses official World Athletics (IAAF 1984) formulas</li>
+          </ul>
+
+          <h2>Events Included</h2>
+          <h3>Day 1</h3>
+          <ul>
+            <li>100 metres</li>
+            <li>Long Jump</li>
+            <li>Shot Put</li>
+            <li>High Jump</li>
+            <li>400 metres</li>
+          </ul>
+          <h3>Day 2</h3>
+          <ul>
+            <li>110 metres Hurdles</li>
+            <li>Discus Throw</li>
+            <li>Pole Vault</li>
+            <li>Javelin Throw</li>
+            <li>1500 metres</li>
+          </ul>
+
+          <h2>Units Used</h2>
+          <ul>
+            <li>Running events: seconds (or m:ss for 1500m)</li>
+            <li>Jumps: centimetres</li>
+            <li>Throws: metres</li>
+          </ul>
+
+          <h2>Manual Timing Adjustments</h2>
+          <p>When using manual timing:</p>
+          <ul>
+            <li>100m and 110m Hurdles: +0.24 seconds</li>
+            <li>400m: +0.14 seconds</li>
+          </ul>
+
+          <h2>Scoring System</h2>
+          <p>Points are calculated using the official World Athletics formulas.</p>
+          <p>Example:</p>
+          <ul>
+            <li>10.00s in the 100m = 1096 points</li>
+            <li>10.55s in the 100m = 963 points</li>
+          </ul>
+
+          <h2>Why Use This Calculator?</h2>
+          <ul>
+            <li>Instant and accurate scoring</li>
+            <li>Useful for athletes and coaches planning target performances</li>
+            <li>Easy way to track progress across all events</li>
+            <li>Helps identify strengths and weak events</li>
+            <li>Perfect for training and competition preparation</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="results-card">
+        <h3>Score</h3>
+        <div class="cd-result-main">
+          <span class="cd-value" id="dec-side-total">0</span>
+          <span class="cd-label">Total points</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Day 1</span>
+          <span class="result-value" id="dec-side-day1">0</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Day 2</span>
+          <span class="result-value" id="dec-side-day2">0</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Events</span>
+          <span class="result-value" id="dec-side-filled">0 / 10</span>
+        </div>
+        <h4 class="results-card-heading">Events</h4>
+        <div id="dec-side-list"></div>
+      </aside>
+    </div>
+
+    <div class="ezoicad" data-sizes="300x250,336x280" data-location="mid_content"></div>
+
+    <div class="related-section">
+      <h3>Related Calculators</h3>
+      <div class="related-links">
+        <a href="triathlon-calculator.html">Triathlon Calculator</a>
+        <a href="running-pace-calculator.html">Running Pace Calculator</a>
+        <a href="marathon-calculator.html">Marathon Calculator</a>
+        <a href="vo2-max-calculator.html">VO2 Max Calculator</a>
+        <a href="bowling-score-calculator.html">Bowling Score Calculator</a>
+      </div>
+    </div>
+    <div class="ezoicad" data-mobile_sizes="300x250,336x280" data-desktop_sizes="728x90,970x250" data-location="bottom_of_page"></div>
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(".ezoicad");
+      });
+    </script>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/calculators/" class="footer-link">Calculators</a>
+          <a href="/guides/" class="footer-link">Guides</a>
+          <a href="/blog/" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../faq.html" class="footer-link">FAQ</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc. Free fitness calculators.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators..." autocomplete="off">
+        <div id="search-results" class="search-results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="../js/theme.min.js"></script>
+  <script defer src="../js/main.min.js"></script>
+  <script defer src="../js/search.min.js"></script>
+  <script defer src="../js/decathlon-calculator.js"></script>
+</body>
+</html>

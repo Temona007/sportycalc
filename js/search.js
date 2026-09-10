@@ -50,7 +50,8 @@
     { title: 'Sports Wager Calculator', subtitle: 'Odds, payout, parlay & implied probability', href: 'sports-wager-calculator.html', keywords: 'sports wager calculator betting odds parlay payout implied probability american decimal fractional' },
     { title: 'Pregnancy Weight Gain Calculator', subtitle: 'IOM guidelines, healthy gain range', href: 'pregnancy-weight-gain-calculator.html', keywords: 'pregnancy weight gain calculator pregnancy weight IOM guidelines healthy pregnancy' },
     { title: 'Bra Size Calculator', subtitle: 'US, UK, EU sizes from measurements', href: 'bra-size-calculator.html', keywords: 'bra size calculator cup size underbust bust bra converter US UK EU' },
-    { title: 'Bowling Score Calculator', subtitle: 'Ten-pin score sheet, strikes & spares', href: 'bowling-score-calculator.html', keywords: 'bowling score calculator ten pin strike spare bowling score sheet frame' }
+    { title: 'Bowling Score Calculator', subtitle: 'Ten-pin score sheet, strikes & spares', href: 'bowling-score-calculator.html', keywords: 'bowling score calculator ten pin strike spare bowling score sheet frame' },
+    { title: 'Decathlon Calculator', subtitle: 'World Athletics points from results or targets', href: 'decathlon-calculator.html', keywords: 'decathlon calculator decathlon score IAAF World Athletics combined events 100m long jump shot put high jump 400m hurdles discus pole vault javelin 1500m' }
   ];
 
   function getCalcBasePath() {
