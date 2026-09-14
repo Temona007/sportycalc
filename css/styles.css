@@ -5674,3 +5674,16 @@ button.page-share-btn {
     grid-template-columns: 1fr;
   }
 }
+
+/* Duckpin bowling: three throw boxes in every frame */
+.bowl-board-duck {
+  min-width: 820px;
+}
+
+.bowl-frame-duck {
+  min-width: 72px;
+}
+
+.bowl-frame-rolls-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
