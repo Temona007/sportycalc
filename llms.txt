@@ -40,6 +40,7 @@ SportyCalc is a collection of science-based health and fitness tools at https://
 - [Calorie deficit diet](https://sportycalc.com/guides/calorie-deficit-diet-guide.html): Safe deficit, meal planning, common mistakes
 - [Heart rate zones (2026)](https://sportycalc.com/guides/heart-rate-zones-guide-2026.html): Max HR, five zones, Zone 2, 80/20 training
 - [How to lower Fitness Age](https://sportycalc.com/guides/how-to-lower-fitness-age-2026.html): Zone 2, body composition, sleep, tracking
+- [How to calculate VO2 Max](https://sportycalc.com/guides/how-to-calculate-vo2-max.html): Estimation methods, training implications, and SportyCalc tools
 - [Macro nutrition](https://sportycalc.com/guides/macro-nutrition-guide.html): Protein, carbs, fat for fitness goals
 - [Fitness metrics explained](https://sportycalc.com/guides/fitness-metrics-explained.html): BMI, BMR, TDEE, body fat, 1RM
 - [Army body fat calculator guide](https://sportycalc.com/guides/army-body-fat-calculator-guide.html): Tape method, PASS/FAIL standards

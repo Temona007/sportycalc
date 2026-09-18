@@ -109,6 +109,8 @@ Tool: https://sportycalc.com/calculators/1rm-calculator.html
 Non-exercise VO2max estimate inspired by NTNU / Nes et al. Educational, not a clinical VO2max test.
 
 Tool: https://sportycalc.com/calculators/fitness-age-calculator.html
+VO2 Max tool: https://sportycalc.com/calculators/vo2-max-calculator.html
+Guide: https://sportycalc.com/guides/how-to-calculate-vo2-max.html
 
 ## Disclaimer
 
