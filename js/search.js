@@ -52,6 +52,7 @@
     { title: 'Bra Size Calculator', subtitle: 'US, UK, EU sizes from measurements', href: 'bra-size-calculator.html', keywords: 'bra size calculator cup size underbust bust bra converter US UK EU' },
     { title: 'Bowling Score Calculator', subtitle: 'Ten-pin score sheet, strikes & spares', href: 'bowling-score-calculator.html', keywords: 'bowling score calculator ten pin strike spare bowling score sheet frame' },
     { title: 'Duckpin Bowling Score Calculator', subtitle: 'Three balls per frame, duckpin & candlepin', href: 'duckpin-bowling-score-calculator.html', keywords: 'duckpin bowling score calculator candlepin bowling three ball strike spare duckpin score sheet' },
+    { title: 'Golf Calorie Calculator', subtitle: 'Calories burned walking, cart, or carrying clubs', href: 'golf-calorie-calculator.html', keywords: 'golf calorie calculator calories burned golf carrying clubs pull cart buggy MET 9 holes 18 holes' },
     { title: 'Decathlon Calculator', subtitle: 'World Athletics points from results or targets', href: 'decathlon-calculator.html', keywords: 'decathlon calculator decathlon score IAAF World Athletics combined events 100m long jump shot put high jump 400m hurdles discus pole vault javelin 1500m' }
   ];
 

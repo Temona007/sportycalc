@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Ezoic Privacy Scripts -->
+  <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+  <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+  <!-- Ezoic Header Script -->
+  <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+  <script>
+    window.ezstandalone = window.ezstandalone || {};
+    ezstandalone.cmd = ezstandalone.cmd || [];
+  </script>
+  <script src="//ezoicanalytics.com/analytics.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8276223173310357"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Free Golf Calorie Calculator – Estimate how many calories you burn playing golf. Calculate based on body weight, duration, and whether you carry clubs, pull a cart, or ride. Supports 9 holes, 18 holes, and practice sessions.">
+  <meta name="keywords" content="golf calorie calculator, calories burned golf, golf MET, walking golf vs cart">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/golf-calorie-calculator.html">
+  <title>Golf Calorie Calculator | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/golf-calorie-calculator.html">
+  <meta property="og:title" content="Golf Calorie Calculator | SportyCalc">
+  <meta property="og:description" content="Free Golf Calorie Calculator – Estimate how many calories you burn playing golf. Calculate based on body weight, duration, and whether you carry clubs, pull a cart, or ride. Supports 9 holes, 18 holes, and practice sessions.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Golf Calorie Calculator | SportyCalc">
+  <meta name="twitter:description" content="Free Golf Calorie Calculator – Estimate how many calories you burn playing golf. Calculate based on body weight, duration, and whether you carry clubs, pull a cart, or ride.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.min.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":["WebApplication","SoftwareApplication"],"name":"Golf Calorie Calculator","url":"https://sportycalc.com/calculators/golf-calorie-calculator.html","description":"Free Golf Calorie Calculator – Estimate how many calories you burn playing golf. Calculate based on body weight, duration, and whether you carry clubs, pull a cart, or ride. Supports 9 holes, 18 holes, and practice sessions.","applicationCategory":"SportsApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isAccessibleForFree":true,"publisher":{"@id":"https://sportycalc.com/#organization"}}
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="SportyCalc" title="SportyCalc - Home" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="/calculators/" class="nav-link active">Calculators</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <a href="../fitness-quiz.html" class="nav-link nav-link-brand">Quiz</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="/calculators/" class="mobile-nav-link">Calculators</a>
+    <a href="/guides/" class="mobile-nav-link">Guides</a>
+    <a href="/blog/" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+    <a href="../fitness-quiz.html" class="mobile-nav-link mobile-nav-link-brand">Quiz</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/calculators/">Calculators</a>
+        <span>/</span>
+        <span>Golf Calorie Calculator</span>
+      </nav>
+      <h1>Golf Calorie Calculator: How Many Calories Do You Burn Playing Golf?</h1>
+      <p class="hero-desc">Golf may not look like a high-intensity workout, but walking 18 holes while carrying clubs can burn a surprising number of calories. Estimate your round from body weight, time, and how you move around the course.</p>
+    </section>
+
+    <div class="ezoicad" data-mobile_sizes="300x250,336x280" data-desktop_sizes="728x90,970x250" data-location="under_page_title"></div>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <form id="golf-calorie-form">
+            <div class="form-header">
+              <h2>Round details</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Units</span>
+                <div class="unit-toggle-btns">
+                  <button type="button" class="unit-btn" data-unit="lb">lb</button>
+                  <button type="button" class="unit-btn active" data-unit="kg">kg</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="golf-weight">Body weight</label>
+              <div class="protein-weight-wrap">
+                <input type="number" id="golf-weight" value="70" min="1" step="0.1" required>
+                <span class="protein-weight-unit" id="golf-weight-unit">kg</span>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <span class="unit-toggle-label">Duration</span>
+              <div class="unit-toggle-btns tri-preset-btns" role="group" aria-label="Typical round length">
+                <button type="button" class="unit-btn" data-golf-preset="nine">9 holes · 2–3h</button>
+                <button type="button" class="unit-btn active" data-golf-preset="eighteen">18 holes · 4–5h</button>
+                <button type="button" class="unit-btn" data-golf-preset="practice">Practice · 1–2h</button>
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="input-group">
+                <label for="golf-hours">Hours</label>
+                <input type="number" id="golf-hours" value="4" min="0" max="12" step="1">
+              </div>
+              <div class="input-group">
+                <label for="golf-minutes">Minutes</label>
+                <input type="number" id="golf-minutes" value="30" min="0" max="59" step="1">
+              </div>
+            </div>
+
+            <div class="input-group">
+              <span class="unit-toggle-label">Golf mode</span>
+              <div class="golf-mode-grid" role="group" aria-label="Golf mode">
+                <button type="button" class="golf-mode-btn active" data-golf-mode="carry">
+                  <span class="golf-mode-name">Carrying clubs</span>
+                  <span class="golf-mode-met">MET 4.3</span>
+                </button>
+                <button type="button" class="golf-mode-btn" data-golf-mode="pull">
+                  <span class="golf-mode-name">Pulling a cart</span>
+                  <span class="golf-mode-met">MET 4.5</span>
+                </button>
+                <button type="button" class="golf-mode-btn" data-golf-mode="cart">
+                  <span class="golf-mode-name">Riding a cart</span>
+                  <span class="golf-mode-met">MET 3.5</span>
+                </button>
+                <button type="button" class="golf-mode-btn" data-golf-mode="general">
+                  <span class="golf-mode-name">General / mixed</span>
+                  <span class="golf-mode-met">MET 4.5</span>
+                </button>
+              </div>
+              <span class="input-hint">Higher MET means more physical work and more calories burned.</span>
+            </div>
+
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate</button>
+          </form>
+        </div>
+
+        <div class="seo-content">
+          <p>Golf may not look like a high-intensity workout, but walking 18 holes while carrying clubs can burn a surprising number of calories.</p>
+          <p>Our free Golf Calorie Calculator helps you estimate exactly how many calories you burn based on your body weight, playing time, and how you move around the course.</p>
+
+          <h2>How the Golf Calorie Calculator Works</h2>
+          <p>The calculator uses the standard MET (Metabolic Equivalent of Task) formula:</p>
+          <p><strong>Calories = MET × Body Weight (kg) × Duration (hours)</strong></p>
+          <p>MET values used:</p>
+          <div class="table-wrap">
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th>Playing Style</th>
+                  <th>MET Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Carrying clubs</td><td>4.3</td></tr>
+                <tr><td>Pulling a cart</td><td>4.5</td></tr>
+                <tr><td>Riding a cart</td><td>3.5</td></tr>
+                <tr><td>General / Mixed</td><td>4.5</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Inputs</h3>
+          <ul>
+            <li>Body weight (kg or lbs)</li>
+            <li>Duration (hours + minutes)</li>
+            <li>Playing mode (carrying, pulling, riding, or mixed)</li>
+          </ul>
+
+          <h3>Outputs</h3>
+          <ul>
+            <li>Total calories burned</li>
+            <li>Calories per hour</li>
+            <li>Comparison vs riding a cart</li>
+          </ul>
+
+          <h2>Quick Presets</h2>
+          <ul>
+            <li>9 holes → 2 hours 30 minutes</li>
+            <li>18 holes → 4 hours 30 minutes</li>
+            <li>Practice session → 1 hour 30 minutes</li>
+          </ul>
+
+          <h2>Example Calculations</h2>
+          <ul>
+            <li>80 kg, 4.5 hours, carrying clubs → 1,548 kcal</li>
+            <li>70 kg, 4 hours, riding a cart → 980 kcal</li>
+          </ul>
+
+          <h2>Why Tracking Golf Calories Matters</h2>
+          <ul>
+            <li>Helps you understand the real energy cost of your rounds</li>
+            <li>Useful for weight management and nutrition planning</li>
+            <li>Shows the difference between walking and riding</li>
+            <li>Motivates more active play (carrying or pulling instead of riding)</li>
+          </ul>
+
+          <h2>Tips to Burn More Calories on the Course</h2>
+          <ul>
+            <li>Walk instead of riding whenever possible</li>
+            <li>Carry your bag or use a push/pull cart</li>
+            <li>Play longer courses or add a practice session</li>
+            <li>Stay consistent with regular rounds</li>
+          </ul>
+          <p>Combine with other SportyCalc tools:</p>
+          <ul>
+            <li>Use the <a href="tdee-calculator.html">TDEE Calculator</a> to see how a round fits into your daily calorie needs</li>
+            <li>Check the <a href="macro-calculator.html">Macro Calculator</a> to plan post-round nutrition</li>
+            <li>Track overall fitness progress with the <a href="fitness-age-calculator.html">Fitness Age Calculator</a></li>
+          </ul>
+
+          <p class="health-advisory" role="alert"><strong>Disclaimer:</strong> This calculator provides estimates based on average MET values. Actual calories burned can vary depending on terrain, walking speed, temperature, and individual metabolism.</p>
+        </div>
+      </div>
+
+      <aside class="results-card" id="golf-result-card">
+        <h3>Calories burned</h3>
+        <div class="calories-result-main">
+          <div class="result-item calories-result-row">
+            <span class="result-label">Estimated total</span>
+            <span class="calories-value-wrap">
+              <span class="result-value calories-value" id="golf-result-kcal">—</span>
+              <span class="calories-unit">kcal</span>
+            </span>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Mode</span>
+          <span class="result-value" id="golf-result-mode">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">MET</span>
+          <span class="result-value" id="golf-result-met">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Duration</span>
+          <span class="result-value" id="golf-result-duration">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Burn rate</span>
+          <span class="result-value" id="golf-result-rate">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Vs cart</span>
+          <span class="result-value" id="golf-result-compare">—</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="ezoicad" data-sizes="300x250,336x280" data-location="mid_content"></div>
+
+    <div class="related-section">
+      <h3>Related Calculators</h3>
+      <div class="related-links">
+        <a href="calories-burned.html">Calories Burned Calculator</a>
+        <a href="tdee-calculator.html">TDEE Calculator</a>
+        <a href="calorie-calculator.html">Calorie Calculator</a>
+        <a href="calorie-deficit-calculator.html">Calorie Deficit Calculator</a>
+        <a href="macro-calculator.html">Macro Calculator</a>
+        <a href="fitness-age-calculator.html">Fitness Age Calculator</a>
+      </div>
+    </div>
+    <div class="ezoicad" data-mobile_sizes="300x250,336x280" data-desktop_sizes="728x90,970x250" data-location="bottom_of_page"></div>
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(".ezoicad");
+      });
+    </script>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/calculators/" class="footer-link">Calculators</a>
+          <a href="/guides/" class="footer-link">Guides</a>
+          <a href="/blog/" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../faq.html" class="footer-link">FAQ</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc. Free fitness calculators.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators..." autocomplete="off">
+        <div id="search-results" class="search-results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="../js/theme.min.js"></script>
+  <script defer src="../js/main.min.js"></script>
+  <script defer src="../js/search.min.js"></script>
+  <script defer src="../js/golf-calorie-calculator.js"></script>
+</body>
+</html>

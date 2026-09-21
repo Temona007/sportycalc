@@ -5687,3 +5687,58 @@ button.page-share-btn {
 .bowl-frame-rolls-3 {
   grid-template-columns: 1fr 1fr 1fr;
 }
+
+/* Golf calorie modes */
+.golf-mode-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.golf-mode-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  min-height: 3.25rem;
+  padding: 0.65rem 0.75rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-btn);
+  color: var(--text-primary);
+  font-family: var(--font);
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.golf-mode-btn:hover {
+  border-color: var(--primary);
+}
+
+.golf-mode-btn.active {
+  background: rgba(249, 87, 0, 0.1);
+  border-color: rgba(249, 87, 0, 0.45);
+  color: var(--primary);
+}
+
+.golf-mode-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.golf-mode-met {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.golf-mode-btn.active .golf-mode-met {
+  color: var(--primary);
+}
+
+@media (max-width: 419px) {
+  .golf-mode-grid {
+    grid-template-columns: 1fr;
+  }
+}
