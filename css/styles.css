@@ -5742,3 +5742,29 @@ button.page-share-btn {
     grid-template-columns: 1fr;
   }
 }
+
+.zwift-advanced {
+  margin: 0.25rem 0 1rem;
+}
+
+.zwift-advanced summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.zwift-advanced[open] summary {
+  margin-bottom: 0.85rem;
+}
+
+.zwift-zones-heading {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+#zwift-download-zwo {
+  margin-top: 0.75rem;
+}

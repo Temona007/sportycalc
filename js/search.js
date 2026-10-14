@@ -38,6 +38,7 @@
     { title: 'Running Speed Converter', subtitle: 'Pace ↔ speed (min/km, km/h, mph)', href: 'running-speed-converter.html', keywords: 'running speed converter pace to speed min/km km/h mph min/mi how fast can humans run' },
     { title: 'Marathon Calculator', subtitle: 'Goal time to training splits (Riegel)', href: 'marathon-calculator.html', keywords: 'marathon calculator goal time race time predictor Riegel formula half marathon splits training pace' },
     { title: 'Cycling Cadence Calculator', subtitle: 'Cadence, speed & gear ratio', href: 'cycling-cadence-calculator.html', keywords: 'cycling cadence calculator bike speed RPM gear ratio chainring cog wheel' },
+    { title: 'Zwift FTP & VO2 Max Calculator', subtitle: 'Ramp test to FTP, MAP, and zones', href: 'zwift-ftp-calculator.html', keywords: 'zwift FTP calculator ramp test MAP VO2 max GP Lama coggan power zones zwo workout cycling' },
     { title: 'Triathlon Calculator', subtitle: 'Swim, bike, run & transition times', href: 'triathlon-calculator.html', keywords: 'triathlon calculator ironman 70.3 olympic sprint swim bike run pace transition T1 T2' },
     { title: 'VO2 Max Calculator', subtitle: 'Aerobic capacity estimate', href: 'vo2-max-calculator.html', keywords: 'vo2 max aerobic capacity oxygen uptake fitness cardio' },
     { title: 'Fitness Age Calculator', subtitle: 'How young does your body perform?', href: 'fitness-age-calculator.html', keywords: 'fitness age calculator vitality age VO2max resting heart rate aerobic fitness' },

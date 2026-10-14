@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Ezoic Privacy Scripts -->
+  <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+  <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+  <!-- Ezoic Header Script -->
+  <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+  <script>
+    window.ezstandalone = window.ezstandalone || {};
+    ezstandalone.cmd = ezstandalone.cmd || [];
+  </script>
+  <script src="//ezoicanalytics.com/analytics.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH137XCNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FH137XCNSH');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8276223173310357"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Calculate your FTP, MAP, VO2 max, Coggan power zones, and 20-minute target from a Zwift ramp test. Download a matching .zwo workout. Free, in-browser.">
+  <meta name="keywords" content="zwift FTP calculator, ramp test MAP, cycling VO2 max, GP Lama, Coggan power zones, zwo workout">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sportycalc.com/calculators/zwift-ftp-calculator.html">
+  <title>Zwift FTP &amp; VO2 Max Calculator | SportyCalc</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sportycalc.com/calculators/zwift-ftp-calculator.html">
+  <meta property="og:title" content="Zwift FTP &amp; VO2 Max Calculator | SportyCalc">
+  <meta property="og:description" content="Calculate your FTP, MAP, VO2 max, power zones, and 20-minute target from a ramp test. Download a matching .zwo workout file for Zwift.">
+  <meta property="og:image" content="https://sportycalc.com/images/og-image.png">
+  <meta property="og:site_name" content="SportyCalc">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zwift FTP &amp; VO2 Max Calculator | SportyCalc">
+  <meta name="twitter:description" content="Calculate your FTP, MAP, VO2 max, power zones, and 20-minute target from a ramp test. Download a matching .zwo for Zwift.">
+  <meta name="twitter:image" content="https://sportycalc.com/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.min.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["WebApplication", "SoftwareApplication"],
+        "name": "Zwift FTP & VO2 Max Calculator",
+        "url": "https://sportycalc.com/calculators/zwift-ftp-calculator.html",
+        "description": "Calculate your FTP, MAP, VO2 max, power zones, and 20-minute target from a ramp test. Download a matching .zwo workout file for Zwift.",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "Web",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "isAccessibleForFree": true,
+        "publisher": {"@id": "https://sportycalc.com/#organization"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "What is the difference between MAP and FTP?", "acceptedAnswer": {"@type": "Answer", "text": "MAP is peak aerobic power from the ramp. FTP is the highest power you can roughly sustain for about an hour and is estimated as a percentage of MAP (usually 75%, or 82.5% for the GP Lama protocol)."}},
+          {"@type": "Question", "name": "Why interpolate the unfinished stage?", "acceptedAnswer": {"@type": "Answer", "text": "Stopping part-way through a step means you produced more work than the previous completed stage. Linear interpolation gives a fairer MAP than simply taking the last finished step."}},
+          {"@type": "Question", "name": "Is the VO2 max estimate accurate?", "acceptedAnswer": {"@type": "Answer", "text": "It uses the published Hawley–Noakes (1992) relationship between peak power and VO2 max and is a solid field estimate for trained cyclists. It is not a substitute for laboratory gas-exchange testing."}},
+          {"@type": "Question", "name": "Should I validate the FTP?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, especially the first time you use a new protocol. Aim for roughly FTP / 0.95 as a 20-minute average, or simply watch how the zones feel over the next 1–2 weeks and adjust if needed."}},
+          {"@type": "Question", "name": "How do I use the .zwo file?", "acceptedAnswer": {"@type": "Answer", "text": "Download the file, place it in your Zwift workouts folder, set in-game FTP to 100 W, and start the workout in ERG mode."}},
+          {"@type": "Question", "name": "Does weight affect FTP?", "acceptedAnswer": {"@type": "Answer", "text": "No. Weight is used only for W/kg and relative VO2 max."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="../images/sportycalc-logo.png" alt="SportyCalc" title="SportyCalc - Home" class="nav-logo-img"><span class="nav-logo-text">SportyCalc</span></a>
+      <div class="nav-links">
+        <a href="/calculators/" class="nav-link active">Calculators</a>
+        <a href="/guides/" class="nav-link">Guides</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="bmi-calculator.html" class="nav-link nav-link-brand">BMI</a>
+        <a href="../fitness-quiz.html" class="nav-link nav-link-brand">Quiz</a>
+        <button id="search-trigger" class="search-trigger" aria-label="Search calculators" title="Search calculators (/)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <span class="theme-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-sun" aria-hidden="true" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="/calculators/" class="mobile-nav-link">Calculators</a>
+    <a href="/guides/" class="mobile-nav-link">Guides</a>
+    <a href="/blog/" class="mobile-nav-link">Blog</a>
+    <a href="bmi-calculator.html" class="mobile-nav-link mobile-nav-link-brand">BMI</a>
+    <a href="../fitness-quiz.html" class="mobile-nav-link mobile-nav-link-brand">Quiz</a>
+  </div>
+
+  <main class="wrapper">
+    <section class="hero calculator-page">
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/calculators/">Calculators</a>
+        <span>/</span>
+        <span>Zwift FTP &amp; VO2 Max Calculator</span>
+      </nav>
+      <h1>Zwift FTP &amp; VO2 Max Calculator</h1>
+      <p class="hero-desc">Calculate your FTP, MAP, VO2 max, power zones, and 20-minute target from a ramp test. Download a matching .zwo workout file for Zwift.</p>
+    </section>
+
+    <div class="ezoicad" data-mobile_sizes="300x250,336x280" data-desktop_sizes="728x90,970x250" data-location="under_page_title"></div>
+
+    <div class="calculator-layout">
+      <div class="calc-main">
+        <div class="calc-form-card">
+          <form id="zwift-ftp-form">
+            <div class="form-header">
+              <h2>Ramp test</h2>
+              <div class="unit-toggle unit-toggle-top-right">
+                <span class="unit-toggle-label">Weight</span>
+                <div class="unit-toggle-btns">
+                  <button type="button" class="unit-btn" data-unit="lb">lb</button>
+                  <button type="button" class="unit-btn active" data-unit="kg">kg</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <span class="unit-toggle-label">Protocol</span>
+              <div class="golf-mode-grid" role="group" aria-label="Test protocol">
+                <button type="button" class="golf-mode-btn active" data-zwift-protocol="male">
+                  <span class="golf-mode-name">Non-elite male</span>
+                  <span class="golf-mode-met">25W · 1:00 · 75%</span>
+                </button>
+                <button type="button" class="golf-mode-btn" data-zwift-protocol="female">
+                  <span class="golf-mode-name">Female</span>
+                  <span class="golf-mode-met">15W · 1:00 · 75%</span>
+                </button>
+                <button type="button" class="golf-mode-btn" data-zwift-protocol="elite">
+                  <span class="golf-mode-name">Elite male</span>
+                  <span class="golf-mode-met">20W · 1:00 · 75%</span>
+                </button>
+                <button type="button" class="golf-mode-btn" data-zwift-protocol="gplama">
+                  <span class="golf-mode-name">GP Lama</span>
+                  <span class="golf-mode-met">25W · 2:30 · 82.5%</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="input-group">
+                <label for="zwift-last-stage">Last completed stage</label>
+                <div class="pwr-input-wrap">
+                  <input type="number" id="zwift-last-stage" value="250" min="1" step="1" required>
+                  <span class="pwr-unit">W</span>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="zwift-unfinished">Unfinished stage</label>
+                <div class="pwr-input-wrap">
+                  <input type="number" id="zwift-unfinished" value="30" min="0" max="60" step="1">
+                  <span class="pwr-unit">sec</span>
+                </div>
+                <span class="input-hint" id="zwift-unfinished-hint">Seconds into the final incomplete stage (0–60).</span>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="zwift-weight">Body weight (optional)</label>
+              <div class="protein-weight-wrap">
+                <input type="number" id="zwift-weight" value="70" min="0" step="0.1">
+                <span class="protein-weight-unit" id="zwift-weight-unit">kg</span>
+              </div>
+              <span class="input-hint">Needed for W/kg and relative VO2 max.</span>
+            </div>
+
+            <details class="zwift-advanced">
+              <summary>Advanced settings</summary>
+              <div class="input-row">
+                <div class="input-group">
+                  <label for="zwift-step-watts">Step size</label>
+                  <div class="pwr-input-wrap">
+                    <input type="number" id="zwift-step-watts" value="25" min="1" step="1">
+                    <span class="pwr-unit">W</span>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="zwift-step-seconds">Step duration</label>
+                  <div class="pwr-input-wrap">
+                    <input type="number" id="zwift-step-seconds" value="60" min="1" step="1">
+                    <span class="pwr-unit">sec</span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-group">
+                  <label for="zwift-ftp-factor">FTP factor</label>
+                  <div class="pwr-input-wrap">
+                    <input type="number" id="zwift-ftp-factor" value="75" min="50" max="95" step="0.5">
+                    <span class="pwr-unit">%</span>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="zwift-start-watts">Workout start</label>
+                  <div class="pwr-input-wrap">
+                    <input type="number" id="zwift-start-watts" value="100" min="1" step="1">
+                    <span class="pwr-unit">W</span>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <button type="submit" class="calc-btn calc-btn-animated">Calculate FTP</button>
+            <button type="button" class="bowl-action bowl-action-ghost" id="zwift-download-zwo">Download Zwift .zwo</button>
+            <span class="input-hint">Set in-game FTP to 100 W before running the downloaded workout so ERG targets match the watt steps.</span>
+          </form>
+        </div>
+
+        <div class="seo-content">
+          <p>Turn your Zwift ramp-test results into accurate training numbers in seconds. Enter the last completed stage power and how long you lasted in the final incomplete stage. The calculator applies proper MAP interpolation, multiplies by the protocol-specific FTP factor, estimates VO2 max with the Hawley–Noakes equation, builds Coggan zones, and lets you download a ready-to-ride .zwo file.</p>
+          <p>Everything runs in your browser. No account, no data sent to servers.</p>
+
+          <h2>How the Calculator Works</h2>
+
+          <h3>1. MAP (Maximal Aerobic Power) interpolation</h3>
+          <p>MAP is the highest power you reached, adjusted for the unfinished stage:</p>
+          <p><strong>MAP = last completed watts + (unfinished seconds ÷ step duration) × step size</strong></p>
+          <p>Unfinished time is capped at the protocol’s step length so a partial stage never exceeds a full step.</p>
+          <p><strong>Examples</strong></p>
+          <ul>
+            <li>Last completed 250 W, 30 s unfinished, male protocol (25 W / 60 s) → MAP = 250 + (30/60) × 25 = 262.5 W (displayed as 263 W).</li>
+            <li>GP Lama: 375 W completed + 120 s of a 150 s stage → MAP = 375 + (120/150) × 25 = 395 W.</li>
+          </ul>
+
+          <h3>2. FTP from MAP</h3>
+          <p><strong>FTP = MAP × factor</strong></p>
+          <div class="table-wrap">
+            <table class="guide-table">
+              <thead>
+                <tr>
+                  <th>Protocol</th>
+                  <th>Steps</th>
+                  <th>Factor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Non-elite male</td><td>25 W / 60 s</td><td>75%</td></tr>
+                <tr><td>Female</td><td>15 W / 60 s</td><td>75%</td></tr>
+                <tr><td>Elite male</td><td>20 W / 60 s</td><td>75%</td></tr>
+                <tr><td>GP Lama</td><td>25 W / 150 s</td><td>82.5%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Advanced settings let you override step size, step duration, FTP percentage, and workout start power.</p>
+
+          <h3>3. VO2 max (Hawley–Noakes 1992)</h3>
+          <p><strong>VO2max (L/min) = 0.01141 × MAP + 0.435</strong></p>
+          <p><strong>VO2max (ml/kg/min) = VO2max (L/min) × 1000 ÷ body weight (kg)</strong></p>
+          <p>Weight is optional. Without it, W/kg and relative VO2 max stay blank. Pair this estimate with the <a href="vo2-max-calculator.html">VO2 Max Calculator</a> or the <a href="../guides/how-to-calculate-vo2-max.html">how to calculate VO2 max</a> guide.</p>
+
+          <h3>4. 20-minute target &amp; Coggan zones</h3>
+          <p><strong>20-min target = FTP ÷ 0.95</strong> (the classic conversion from a 20-minute test).</p>
+          <p>Zones are standard Coggan percentages of FTP. Compare W/kg with the <a href="power-to-weight-calculator.html">Power-to-Weight Calculator</a>.</p>
+
+          <h2>Download the Matching Zwift Workout (.zwo)</h2>
+          <p>Generate a .zwo file that matches the exact protocol you selected (including any advanced overrides).</p>
+          <p><strong>Important:</strong> The .zwo file expresses power as a fraction of 100 W. Set your in-game FTP to 100 W before starting the workout in ERG mode so the steps land at the correct absolute watts.</p>
+
+          <h2>Which Protocol Should You Use?</h2>
+          <ul>
+            <li><strong>Non-elite male (25 W / 60 s, 75%)</strong> — Most common starting point for male riders of average fitness.</li>
+            <li><strong>Female (15 W / 60 s, 75%)</strong> — Smaller steps improve resolution and reduce the chance of overshooting.</li>
+            <li><strong>Elite male (20 W / 60 s, 75%)</strong> — Slightly finer steps for higher-level athletes.</li>
+            <li><strong>GP Lama (25 W / 150 s, 82.5%)</strong> — Longer stages and higher conversion factor popularized by Shane Miller. Can produce higher FTP numbers; validate with training or a 20-minute test if the result feels optimistic.</li>
+          </ul>
+          <p>Ramp tests are highly reproducible and require no pacing skill, but they can overestimate FTP for anaerobic-dominant riders and slightly underestimate for strong diesel engines. Many athletes confirm the number with a 20-minute effort or simply monitor how the resulting zones feel in subsequent workouts.</p>
+
+          <h2>What You Get</h2>
+          <ul>
+            <li>MAP (interpolated)</li>
+            <li>FTP</li>
+            <li>W/kg (if weight entered)</li>
+            <li>Estimated VO2 max (absolute and relative)</li>
+            <li>20-minute power target</li>
+            <li>Full Coggan power zones</li>
+            <li>Downloadable .zwo workout file for Zwift</li>
+          </ul>
+          <p>For indoor bike setup, try the <a href="cycling-cadence-calculator.html">Cycling Cadence Calculator</a>. For heart-rate based training, use <a href="heart-rate-zones.html">Heart Rate Zones</a>.</p>
+
+          <h2>FAQ</h2>
+          <div class="faq-item">
+            <h3>What is the difference between MAP and FTP?</h3>
+            <p>MAP is peak aerobic power from the ramp. FTP is the highest power you can roughly sustain for about an hour and is estimated as a percentage of MAP (usually 75%, or 82.5% for the GP Lama protocol).</p>
+          </div>
+          <div class="faq-item">
+            <h3>Why interpolate the unfinished stage?</h3>
+            <p>Stopping part-way through a step means you produced more work than the previous completed stage. Linear interpolation gives a fairer MAP than simply taking the last finished step.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is the VO2 max estimate accurate?</h3>
+            <p>It uses the published Hawley–Noakes (1992) relationship between peak power and VO2 max and is a solid field estimate for trained cyclists. It is not a substitute for laboratory gas-exchange testing.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Should I validate the FTP?</h3>
+            <p>Yes, especially the first time you use a new protocol. Aim for roughly FTP / 0.95 as a 20-minute average, or simply watch how the zones feel over the next 1–2 weeks and adjust if needed.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How do I use the .zwo file?</h3>
+            <p>Download the file, place it in your Zwift workouts folder, set in-game FTP to 100 W, then start the workout in ERG mode.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Does weight affect FTP?</h3>
+            <p>No. Weight is used only for W/kg and relative VO2 max.</p>
+          </div>
+
+          <p class="health-advisory" role="alert"><strong>Disclaimer:</strong> Ramp-test FTP and VO2 max estimates are for training guidance only. They are not a medical diagnosis or a substitute for laboratory testing. Speak with a qualified professional before changing your training if you have a health condition.</p>
+        </div>
+      </div>
+
+      <aside class="results-card" id="zwift-result-card">
+        <h3>Results</h3>
+        <div class="calories-result-main">
+          <div class="result-item calories-result-row">
+            <span class="result-label">Estimated FTP</span>
+            <span class="calories-value-wrap">
+              <span class="result-value calories-value" id="zwift-result-ftp">—</span>
+              <span class="calories-unit">W</span>
+            </span>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="result-label">MAP (W)</span>
+          <span class="result-value" id="zwift-result-map">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">FTP (W/kg)</span>
+          <span class="result-value" id="zwift-result-ftp-kg">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">MAP (W/kg)</span>
+          <span class="result-value" id="zwift-result-map-kg">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">VO2 max (L/min)</span>
+          <span class="result-value" id="zwift-result-vo2l">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">VO2 max (ml/kg/min)</span>
+          <span class="result-value" id="zwift-result-vo2rel">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">20-min target (W)</span>
+          <span class="result-value" id="zwift-result-20min">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Protocol</span>
+          <span class="result-value" id="zwift-result-protocol">—</span>
+        </div>
+        <h4 class="zwift-zones-heading">Coggan power zones</h4>
+        <div class="table-wrap">
+          <table class="guide-table">
+            <thead>
+              <tr><th>Zone</th><th>Watts</th></tr>
+            </thead>
+            <tbody id="zwift-zones-body"></tbody>
+          </table>
+        </div>
+      </aside>
+    </div>
+
+    <div class="ezoicad" data-sizes="300x250,336x280" data-location="mid_content"></div>
+
+    <div class="related-section">
+      <h3>Related Calculators</h3>
+      <div class="related-links">
+        <a href="power-to-weight-calculator.html">Power-to-Weight Calculator</a>
+        <a href="cycling-cadence-calculator.html">Cycling Cadence Calculator</a>
+        <a href="vo2-max-calculator.html">VO2 Max Calculator</a>
+        <a href="heart-rate-zones.html">Heart Rate Zones</a>
+        <a href="triathlon-calculator.html">Triathlon Calculator</a>
+        <a href="fitness-age-calculator.html">Fitness Age Calculator</a>
+      </div>
+    </div>
+    <div class="ezoicad" data-mobile_sizes="300x250,336x280" data-desktop_sizes="728x90,970x250" data-location="bottom_of_page"></div>
+    <script>
+      ezstandalone.cmd.push(function () {
+        ezstandalone.showAds(".ezoicad");
+      });
+    </script>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/calculators/" class="footer-link">Calculators</a>
+          <a href="/guides/" class="footer-link">Guides</a>
+          <a href="/blog/" class="footer-link">Blog</a>
+          <a href="../about.html" class="footer-link">About</a>
+          <a href="../faq.html" class="footer-link">FAQ</a>
+          <a href="../contact.html" class="footer-link">Contact</a>
+          <a href="../privacy.html" class="footer-link">Privacy</a>
+          <a href="../terms.html" class="footer-link">Terms</a>
+        </div>
+        <p class="footer-copy">© 2026 SportyCalc. Free fitness calculators.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-overlay-inner">
+      <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Search calculators..." autocomplete="off">
+        <div id="search-results" class="search-results"></div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="../js/theme.min.js"></script>
+  <script defer src="../js/main.min.js"></script>
+  <script defer src="../js/search.min.js"></script>
+  <script defer src="../js/zwift-ftp-calculator.js"></script>
+</body>
+</html>
