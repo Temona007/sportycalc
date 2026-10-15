@@ -25,6 +25,7 @@ SportyCalc is a collection of science-based health and fitness tools at https://
 - [Fitness Age Calculator](https://sportycalc.com/calculators/fitness-age-calculator.html): Non-exercise VO2max / biological fitness age (NTNU Nes et al.)
 - [Army Body Fat Calculator](https://sportycalc.com/calculators/army-body-fat-calculator.html): One-site tape method (Army Directive 2023-11)
 - [Air Force PT Calculator](https://sportycalc.com/calculators/air-force-pt-calculator.html): 2026 PFRA scoring, WHtR, run, push-ups, sit-ups
+- [Waist to Height Ratio Calculator](https://sportycalc.com/calculators/waist-height-ratio-calculator.html): WHtR, Ashwell shape-chart cut-offs (0.4 / 0.5 / 0.6)
 - [Running Pace Calculator](https://sportycalc.com/calculators/running-pace-calculator.html): 5K, 10K, marathon finish time
 - [Marathon Calculator](https://sportycalc.com/calculators/marathon-calculator.html): Goal time to training splits (Riegel)
 - [Zwift FTP & VO2 Max Calculator](https://sportycalc.com/calculators/zwift-ftp-calculator.html): Ramp-test MAP, FTP, W/kg, Hawley–Noakes VO2 max, Coggan zones

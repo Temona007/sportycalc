@@ -22,6 +22,7 @@
     { title: 'Body Surface Area Calculator', subtitle: 'BSA: Du Bois, Mosteller, Haycock', href: 'body-surface-area-calculator.html', keywords: 'body surface area BSA calculator Du Bois Mosteller Haycock metabolic' },
     { title: 'GFR Calculator', subtitle: 'eGFR: MDRD, CKD-EPI, Mayo, Schwartz', href: 'gfr-calculator.html', keywords: 'GFR calculator eGFR glomerular filtration rate creatinine MDRD CKD EPI kidney' },
     { title: 'Waist to Hip Ratio', subtitle: 'WHR calculator, WHO thresholds', href: 'waist-hip-ratio-calculator.html', keywords: 'waist hip ratio WHR body shape health risk' },
+    { title: 'Waist to Height Ratio Calculator', subtitle: 'WHtR, Ashwell shape chart', href: 'waist-height-ratio-calculator.html', keywords: 'waist to height ratio WHtR calculator Ashwell shape chart central obesity waist height' },
     { title: 'Lean Body Mass Calculator', subtitle: 'Boer formula, LBM estimate', href: 'lean-body-mass-calculator.html', keywords: 'lean body mass LBM fat free mass Boer formula body composition' },
     { title: 'Heart Rate Zones', subtitle: 'Training zones', href: 'heart-rate-zones.html', keywords: 'heart rate zones cardio training' },
     { title: 'Target Heart Rate Calculator', subtitle: 'Zones, Karvonen, Borg RPE', href: 'target-heart-rate-calculator.html', keywords: 'target heart rate Karvonen Borg RPE max HR training zones' },
